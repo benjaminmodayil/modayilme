@@ -1,6 +1,6 @@
 import React from 'react';
 
-export default function IllAvatar(props) {
+export default function MyComponent(props) {
   return (
     <svg width="101px" height="151px" viewBox="0 0 101 151" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink" {...props}>
         {/* Generator: Sketch 47.1 (45422) - http://www.bohemiancoding.com/sketch */}

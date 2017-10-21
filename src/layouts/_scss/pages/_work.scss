@@ -27,17 +27,15 @@
 }
 
 .work__header-inner {
-  @include wrapper;
-
   @include breakpoint(min-width 1200px) {
     width: 100%;
   }
+
   h1 {
+    @include fluid-type(600px, 1440px, 28px, 36px);
     color: white;
     font-weight: 600;
     margin: 0 0 0 0;
-
-    @include fluid-type(600px, 1440px, 28px, 36px);
 
     &:not(span) {
       text-shadow: 2px 2px 2px lighten(color(black), 10%);

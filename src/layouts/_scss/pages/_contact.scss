@@ -4,15 +4,12 @@
   section {
     padding-bottom: 16.2vh;
     padding-top: 12.2vh;
-
-    @include wrapper;
   }
 
-  .heading-level-1 {
+  .h-1 {
     @include fluid-type(600px, 1440px, 28px, 36px);
     font-weight: 300;
     margin-bottom: multiBase(2);
-    text-shadow: 2px 2px 2px lighten(color(black), 65%);
 
     span {
       color: color(red);

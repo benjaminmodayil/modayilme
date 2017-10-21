@@ -12,8 +12,8 @@ export default function Template({ data }) {
     <main className="work__preview-page">
       <article className="post">
         <header className="post__header">
-          <div className="post__header-inner">
-            <h1>{post.frontmatter.title}</h1>
+          <div className="post__header-inner wrapper wrapper--medium margin-center">
+            <h1 className="h-1">{post.frontmatter.title}</h1>
             <p>
               <span>tl;dr</span>Creating todos are my jam and most likely they are yours
               too.
@@ -23,7 +23,7 @@ export default function Template({ data }) {
         </header>
 
         <section className="work__preview__body">
-          <div className="work__preview__container">
+          <div className="work__preview__container wrapper wrapper--medium margin-center">
             <blockquote className="col__left post__blockquote-work-preview">
               I want to change how text-based games are envisioned. Why just text?
             </blockquote>

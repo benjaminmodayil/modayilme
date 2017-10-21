@@ -13,8 +13,8 @@ export default function Template({ data }) {
     <main className="post__page">
       <article className="post">
         <header className="post__header">
-          <div className="post__header-inner">
-            <h1 className="heading-level-1">{post.frontmatter.title}</h1>
+          <div className="post__header-inner wrapper wrapper--medium margin-center">
+            <h1 className="h-1">{post.frontmatter.title}</h1>
             <p>
               <span>tl;dr</span>
               {post.frontmatter.tldr}
@@ -23,38 +23,24 @@ export default function Template({ data }) {
           </div>
         </header>
         <section className="post__body">
-          <div dangerouslySetInnerHTML={{ __html: post.html }} />
-          <div className="post__blockquote-main">
+          <div className="wrapper wrapper--medium margin-center">
+            <div
+              className="post__body__inner"
+              dangerouslySetInnerHTML={{ __html: post.html }}
+            />
+            {/* <div className="post__blockquote-main">
             <blockquote>
               The future of the web is now. Integrating trends with practice produces
               progression.
             </blockquote>
-          </div>
-          <p>
-            Creating todos are my jam and most likely they are yours too. For a whole lot
-            of us there is a joyous feeling of being organized and having things todo. But
-            simply, we hate actually doing them.
-          </p>
-          <p>
-            Creating todos are my jam and most likely they are yours too. For a whole lot
-            of us there is a joyous feeling of being organized and having things todo. But
-            simply, we hate actually doing them.
-          </p>
-          <blockquote className="post__blockquote-alt">
+          </div> */}
+
+            {/* <blockquote className="post__blockquote-alt">
             The future of the web is now. Integrating trends with practice produces
             progression.
-          </blockquote>
-          <p>
-            Creating todos are my jam and most likely they are yours too. For a whole lot
-            of us there is a joyous feeling of being organized and having things todo. But
-            simply, we hate actually doing them.
-          </p>
-          <p>
-            Creating todos are my jam and most likely they are yours too. For a whole lot
-            of us there is a joyous feeling of being organized and having things todo. But
-            simply, we hate actually doing them.
-          </p>
-          <small className="post__signature">Ben M.</small>
+          </blockquote> */}
+            <small className="post__signature">Ben M.</small>
+          </div>
         </section>
 
         <div className="post__misc">

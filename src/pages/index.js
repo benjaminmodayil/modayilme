@@ -11,10 +11,6 @@ import IconResume from '../assets/icons/IconResume.js'
 import IconSocial from '../assets/icons/IconSocial.js'
 import Updates from '../_includes/Updates.js'
 
-// const scrollPlease = () => {
-//   document.getElementById('bio')
-// }
-
 class IndexPage extends React.Component {
   componentDidMount() {}
 
@@ -29,9 +25,9 @@ class IndexPage extends React.Component {
     return (
       <main className="home-page">
         <section className="home__section-one">
-          <header className="home__section-one__header row">
+          <header className="home__section-one__header row wrapper wrapper--tablet margin-center">
             <div className="home__section-one__header__col-left">
-              <h1 className="heading-level-1">Benjamin Modayil</h1>
+              <h1 className="h-1">Benjamin Modayil</h1>
               <p>is a Front-End Developer from Philadelphia, Pennsylvannia.</p>
               <a
                 href="#"
@@ -45,7 +41,7 @@ class IndexPage extends React.Component {
               <RandomAnimation />
             </div>
           </header>
-          <h2 className="heading-level-2">
+          <h2 className="h-2">
             my <span>writings</span>
           </h2>
           <ul className="article-loop">
@@ -56,7 +52,7 @@ class IndexPage extends React.Component {
                   return (
                     <li>
                       <Link key={post.node.id} to={post.node.frontmatter.path}>
-                        <h3 className="heading-level-3">{post.node.frontmatter.title}</h3>
+                        <h3 className="h-3">{post.node.frontmatter.title}</h3>
                         <p>{post.node.frontmatter.tldr}</p>
                       </Link>
                     </li>
@@ -68,29 +64,27 @@ class IndexPage extends React.Component {
         </section>
 
         <section className="home__section-two" ref="about">
-          <div className="home__section-two__row row">
-            <div className="home__section-two__row__col-left" id="bio">
-              <p className="text-level text-level-big">
-                Okay. Enough third-person talk. I’m a{' '}
-                <a href="https://en.wikipedia.org/wiki/Front-end_web_development">
-                  Front-End Developer
-                </a>{' '}
-                currently living in{' '}
-                <a href="https://www.google.com/maps/place/Falls+Church,+VA/@38.8860194,-77.1898726,14z/data=!3m1!4b1!4m5!3m4!1s0x89b64b6e7a4663ad:0x6e536688973d9759!8m2!3d38.882334!4d-77.1710914">
-                  Falls Church, VA{' '}
-                </a>. I work with <a href="https://www.viget.com">Viget</a> in the same
-                position, but as an apprentice learning about the industry.
-              </p>
-              <p className="text-level text-level-big">
-                If you’re looking for work examples you can check out one of the studies
-                linked below:
-              </p>
-            </div>
-            <div className="home__section-two__row__col-right">
-              <IllAvatar />
-            </div>
+          <div
+            className="home__section-two__row wrapper wrapper--medium margin-center section-padding"
+            id="bio"
+          >
+            <p className="text-level text-level-big">
+              Okay. Enough third-person talk. I’m a{' '}
+              <a href="https://en.wikipedia.org/wiki/Front-end_web_development">
+                Front-End Developer
+              </a>{' '}
+              currently living in{' '}
+              <a href="https://www.google.com/maps/place/Falls+Church,+VA/@38.8860194,-77.1898726,14z/data=!3m1!4b1!4m5!3m4!1s0x89b64b6e7a4663ad:0x6e536688973d9759!8m2!3d38.882334!4d-77.1710914">
+                Falls Church, VA{' '}
+              </a>. I work with <a href="https://www.viget.com">Viget</a> in the same
+              position, but as an apprentice learning about the industry.
+            </p>
+            <p className="text-level text-level-big">
+              If you’re looking for work examples you can check out one of the studies
+              linked below:
+            </p>
           </div>
-          <h2 className="heading-level-2">
+          <h2 className="h-2">
             my <span>work</span>
           </h2>
           <ul className="article-loop">
@@ -99,7 +93,7 @@ class IndexPage extends React.Component {
                 return (
                   <li>
                     <Link key={post.node.id} to={post.node.frontmatter.path}>
-                      <h3 className="heading-level-3">{post.node.frontmatter.title}</h3>
+                      <h3 className="h-3">{post.node.frontmatter.title}</h3>
                       <p>{post.node.frontmatter.tldr}</p>
                     </Link>
                   </li>
@@ -108,8 +102,8 @@ class IndexPage extends React.Component {
             })}
           </ul>
         </section>
-        <section className="home__section-three">
-          <div className="home__section-three__row row">
+        <section className="home__section-three section-margin">
+          <div className="home__section-three__row row wrapper wrapper--tablet margin-center">
             <div className="home__section-three__row__col-left">
               <p className="text-level text-level-medium">
                 I really love learning technologies. I’m not lying here. Here’s a few
@@ -121,11 +115,11 @@ class IndexPage extends React.Component {
               <IconWebSkills />
             </div>
           </div>
-          <div className="home__section-three__row row">
+          <div className="home__section-three__row row wrapper wrapper--tablet margin-center">
             <div className="home__section-three__row__col-left">
               <p className="text-level text-level-medium">
-                If you need a <a href="/assets/files/resumeModayil.pdf"> resume </a> then
-                just click on that keyword. Also feel free to check-out my{' '}
+                If you need a <a href="./static/resumeModayil.pdf"> resume </a> then just
+                click on that keyword. Also feel free to check-out my{' '}
                 <a href="https://codepen.io/modayilme">Codepen</a> and below for more
                 examples of this things I like to learn.
               </p>
@@ -135,7 +129,7 @@ class IndexPage extends React.Component {
               <IconResume />
             </div>
           </div>
-          <div className="home__section-three__row row">
+          <div className="home__section-three__row row wrapper wrapper--tablet margin-center">
             <div className="home__section-three__row__col-left">
               <p className="text-level text-level-medium">
                 If you’re wondering what I’m like outside of work, well, sorry to be a

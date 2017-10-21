@@ -29,8 +29,6 @@
 .featured__inner {
   min-height: 300px;
 
-  @include wrapper;
-
   h3 {
     color: white;
     margin-top: 10.7vh;
@@ -50,8 +48,6 @@
 }
 
 .archive__list {
-  @include wrapper;
-
   h2 {
     font-weight: 600;
     margin-bottom: multiBase(2);

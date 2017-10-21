@@ -93,12 +93,12 @@
 }
 
 .header__container {
+  @include clearfix();
   display: flex;
   flex-direction: column;
 
-  @include clearfix();
-  @include wrapper;
   justify-content: space-between;
+
   @include breakpoint(min-width 900px) {
     flex-direction: row;
   }

@@ -12,8 +12,8 @@ class Footer extends Component {
   render() {
     return (
       <footer className="home__footer">
-        <div className="footer__inner">
-          <h2 className="heading-level-2">
+        <div className="footer__inner wrapper wrapper--tablet margin-center">
+          <h2 className="h-2">
             this is my <span>footer</span>
           </h2>
           <ul>

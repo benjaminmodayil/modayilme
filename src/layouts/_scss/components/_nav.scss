@@ -1,6 +1,5 @@
 .nav {
   @include clearfix();
-  background-color: color(bg-grey);
   max-width: 1800px;
   width: 100%;
 
@@ -9,11 +8,10 @@
 
     @include breakpoint(min-width 600px) {
       display: flex;
+      justify-content: center;
       margin: 0 auto;
       max-width: 1800px;
       width: rd($smallWidth, 414);
-
-      justify-content: center;
 
       ul {
         bottom: 0;
@@ -21,9 +19,20 @@
         width: 100%;
       }
     }
+
+    @include breakpoint(min-width 600px) {
+      .icon-home,
+      .icon-archive,
+      .icon-contact,
+      .icon-work {
+        fill: color(bg-grey);
+        opacity: 0.8;
+      }
+    }
   }
 
   .site__title {
+    @include fluid-type(600px, 1440px, 28px, 36px);
     color: color(red);
     display: block;
     font-family: $font-heading;
@@ -31,10 +40,8 @@
     margin: 0 auto;
     padding: multiBase(1) 0;
     text-decoration: none;
-    text-shadow: 2px 2px 1px lighten(color(black), 10%);
     width: 92%;
 
-    @include fluid-type(600px, 1440px, 28px, 36px);
     @include breakpoint(min-width 900px) {
       width: 91.7874396135%;
     }
@@ -79,7 +86,7 @@
           }
 
           span {
-            color: white;
+            color: color(text);
           }
         }
       }

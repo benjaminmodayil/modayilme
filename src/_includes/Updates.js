@@ -5,11 +5,11 @@ import IconContactWithColor from '../assets/icons/IconContactWithColor.js'
 class Updates extends Component {
   render() {
     return (
-      <div className="banner-newsletter">
+      <div className="banner-newsletter wrapper wrapper--tablet margin-center">
         <div className="component__updates">
           <div className="component__updates__inner">
             <div className="component__updates__col-left">
-              <h2 className="heading-level-2">
+              <h2 className="h-2">
                 Want to stay <span>updated?</span>
               </h2>
               <p>Probs not, but you still should signup.</p>

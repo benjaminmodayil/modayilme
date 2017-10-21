@@ -8,7 +8,7 @@
     padding: rem(48) 0;
   }
 
-  .heading-level-2 {
+  .h-2 {
     @include fluid-type(600px, 1440px, 24px, 28px);
 
     color: white;
@@ -95,8 +95,4 @@
     fill: #292929;
     transition: all 0.2s ease;
   }
-}
-
-.footer__inner {
-  @include wrapper;
 }

@@ -12,18 +12,42 @@
 $smallWidth: 380;
 $wideWidth: 1000;
 
-@mixin wrapper {
-  margin: 0 auto;
-  max-width: 1200px;
-  width: rd($smallWidth, 414);
+.wrapper {
+  padding: 0 20px;
 
-  @include breakpoint(min-width 1200px) {
-    width: rd($wideWidth, 1440);
+  &.wrapper--wide {
+    max-width: 1200px;
   }
-  @include breakpoint(min-width 1600px) {
-    min-width: 1200px;
-    max-width: 80%;
+
+  &.wrapper--tablet {
+    max-width: 1000px;
   }
+
+  &.wrapper--medium {
+    max-width: 800px;
+  }
+}
+
+.row {
+  display: flex;
+}
+
+.margin-center {
+  margin: 0 auto;
+}
+
+.section-padding {
+  padding-bottom: 10vh;
+  padding-top: 10vh;
+}
+
+.section-margin {
+  margin-bottom: 15vh;
+  margin-top: 10vh;
+}
+
+.section-margin--bottom {
+  margin-bottom: 15vh;
 }
 
 @mixin text-sizing($size) {

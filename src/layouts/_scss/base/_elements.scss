@@ -7,7 +7,7 @@
 html,
 body {
   min-height: 100%;
-  // scroll-behavior: smooth;
+  overflow-x: hidden;
 }
 
 h1,
@@ -31,6 +31,12 @@ figcaption {
     color: white;
     text-shadow: none;
   }
+}
+
+ul,
+ol {
+  list-style: none;
+  list-style-position: inside;
 }
 
 a {
@@ -95,6 +101,7 @@ p {
     }
   }
 }
+
 .text-level-big {
   @include text-sizing('big');
 }
