@@ -1,0 +1,17 @@
+@import url('https://fonts.googleapis.com/css?family=Merriweather:300,300i,400,400i,700,700i|Raleway:200,300,400,400i,500,500i,600,600i,700,700i');
+
+$font-heading: 'Raleway', sans-serif;
+$font-body: 'Merriweather', serif;
+
+body {
+  font-family: $font-body;
+}
+
+.heading-level-1,
+.heading-level-2,
+.heading-level-3,
+.heading-level-4,
+.heading-level-5,
+.heading-level-6 {
+  font-family: $font-heading;
+}

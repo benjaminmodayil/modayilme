@@ -1,0 +1,37 @@
+.screenreader-only {
+  border: 0;
+  clip: rect(0 0 0 0);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  width: 1px;
+}
+
+$smallWidth: 380;
+$wideWidth: 1000;
+
+@mixin wrapper {
+  margin: 0 auto;
+  max-width: 1200px;
+  width: rd($smallWidth, 414);
+
+  @include breakpoint(min-width 1200px) {
+    width: rd($wideWidth, 1440);
+  }
+  @include breakpoint(min-width 1600px) {
+    min-width: 1200px;
+    max-width: 80%;
+  }
+}
+
+@mixin text-sizing($size) {
+  @if $size == 'big' {
+    @include fluid-type(600px, 1400px, 24px, 28px);
+  } @else if $size == 'medium' {
+    @include fluid-type(600px, 1400px, 20px, 24px);
+  } @else {
+    @include fluid-type(600px, 1400px, 14px, 16px);
+  }
+}

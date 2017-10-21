@@ -1,0 +1,97 @@
+.work__page {
+  .row {
+    @include breakpoint(min-width 900px) {
+      margin-bottom: multiBase(6);
+    }
+  }
+}
+
+.work__header {
+  background-color: color(bg-grey);
+  margin-bottom: 15vh;
+  padding-bottom: 5vh;
+  padding-top: 10vh;
+
+  @include breakpoint(min-width 900px) {
+    padding-bottom: 10vh;
+  }
+
+  .right__column {
+    align-self: flex-end;
+    margin-top: 10vh;
+
+    @include breakpoint(min-width 900px) {
+      margin-top: -20px;
+    }
+  }
+}
+
+.work__header-inner {
+  @include wrapper;
+
+  @include breakpoint(min-width 1200px) {
+    width: 100%;
+  }
+  h1 {
+    color: white;
+    font-weight: 600;
+    margin: 0 0 0 0;
+
+    @include fluid-type(600px, 1440px, 28px, 36px);
+
+    &:not(span) {
+      text-shadow: 2px 2px 2px lighten(color(black), 10%);
+    }
+  }
+
+  p {
+    color: white;
+    font-size: 1rem;
+    font-weight: 200;
+    line-height: 1.5;
+    margin: rem(42) 0 0 0;
+
+    span {
+      color: white;
+      display: block;
+      font-weight: 600;
+      margin: 0 0 0.6rem 0;
+
+      @include fluid-type(600px, 1440px, 16px, 16px);
+    }
+  }
+}
+
+.featured__work,
+.lab__experiments,
+.work__skills {
+  margin-bottom: 20vh;
+
+  @include breakpoint(min-width 900px) {
+    margin-bottom: 0vh;
+  }
+}
+
+.work__skills {
+  max-width: 350px;
+
+  h2 {
+    margin-bottom: multiBase(1);
+  }
+
+  ul {
+    display: flex;
+    flex-direction: row;
+    max-width: 500px;
+    flex-wrap: wrap;
+  }
+
+  li {
+    background-color: white;
+    color: color(red);
+    margin: 0.5rem;
+    padding: 0.5rem;
+    text-align: center;
+    flex: 1 1 25%;
+  }
+}

@@ -1,0 +1,102 @@
+.home__footer {
+  background-color: color(bg-grey);
+  padding: rem(48) 0 rem(96) 0;
+  position: relative;
+  bottom: -1px;
+
+  @include breakpoint(min-width 1000px) {
+    padding: rem(48) 0;
+  }
+
+  .heading-level-2 {
+    @include fluid-type(600px, 1440px, 24px, 28px);
+
+    color: white;
+    font-weight: 600;
+    margin-bottom: rem(28);
+    text-shadow: 2px 2px 2px lighten(color(black), 10%);
+
+    span {
+      color: color(red);
+    }
+  }
+}
+
+.footer__process {
+  border: 1px dotted transparent;
+  color: white;
+  display: inline-block;
+  text-decoration: none;
+  text-shadow: 2px 2px 2px lighten(color(black), 10%);
+
+  p {
+    @include fluid-type(600px, 1440px, 16px, 18px);
+    color: white;
+    font-family: $font-heading;
+    font-weight: 600;
+  }
+
+  span {
+    @include fluid-type(600px, 1440px, 14px, 16px);
+    color: white;
+    display: block;
+    margin: 0.5rem 0 0 0;
+  }
+
+  &:hover {
+    border: 1px dotted color(red);
+    text-decoration: none;
+  }
+}
+
+.links__inner {
+  margin: rem(54) 0 0 0;
+
+  @include breakpoint(min-width 1000px) {
+    display: flex;
+    max-width: rd(700, 940);
+
+    ul {
+      flex-basis: 50%;
+    }
+  }
+
+  li {
+    margin: 0 0 1rem 0;
+    max-width: 200px;
+
+    span {
+      color: white;
+      font-weight: 600;
+      margin-left: rd(36, 375);
+    }
+
+    a {
+      align-items: center;
+      border: 1px dotted transparent;
+      display: flex;
+      flex-direction: row;
+      text-decoration: none;
+      transition: all 0.2s ease;
+
+      &:hover,
+      &:focus {
+        border: 1px dotted color(red);
+
+        svg g,
+        svg path {
+          fill: color(red);
+        }
+      }
+    }
+  }
+  svg g,
+  svg path {
+    fill: #292929;
+    transition: all 0.2s ease;
+  }
+}
+
+.footer__inner {
+  @include wrapper;
+}

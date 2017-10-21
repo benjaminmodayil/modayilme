@@ -1,0 +1,61 @@
+@mixin clearfix {
+  &:after {
+    content: '';
+    display: table;
+    clear: both;
+  }
+}
+
+// replace in home css
+@mixin fluid-size($min-value, $max-value, $min-vw, $max-vw) {
+  font-size: $min-value + px;
+
+  @media screen and (min-width: $min-vw, $min-vw, $max-vw) {
+    font-size: calc(
+      #{$min-value} + #{strip-unit($max-value - $min-value)} * (100vw - #{$min-vw}) / #{strip-unit(
+          $max-vw - $min-vw
+        )} + px
+    );
+  }
+
+  @media screen and (min-width: $max-vw) {
+    font-size: $max-value + px;
+  }
+}
+
+@function strip-unit($value) {
+  @return $value / ($value * 0 + 1);
+}
+//
+
+// new responsive font-size
+@function strip-unit($value) {
+  @return $value / ($value * 0 + 1);
+}
+
+@mixin fluid-type($min-vw, $max-vw, $min-font-size, $max-font-size) {
+  $u1: unit($min-vw);
+  $u2: unit($max-vw);
+  $u3: unit($min-font-size);
+  $u4: unit($max-font-size);
+
+  @if $u1 == $u2 and $u1 == $u3 and $u1 == $u4 {
+    & {
+      font-size: $min-font-size;
+      @media screen and (min-width: $min-vw) {
+        font-size: calc(
+          #{$min-font-size} + #{strip-unit($max-font-size - $min-font-size)} * ((100vw - #{$min-vw}) /
+                #{strip-unit($max-vw - $min-vw)})
+        );
+      }
+
+      @media screen and (min-width: $max-vw) {
+        font-size: $max-font-size;
+      }
+    }
+  }
+}
+
+@function color($key) {
+  @return map-get($colors, '#{ $key }');
+}

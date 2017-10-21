@@ -1,0 +1,64 @@
+.contact__page {
+  display: block;
+
+  section {
+    padding-bottom: 16.2vh;
+    padding-top: 12.2vh;
+
+    @include wrapper;
+  }
+
+  .heading-level-1 {
+    @include fluid-type(600px, 1440px, 28px, 36px);
+    font-weight: 300;
+    margin-bottom: multiBase(2);
+    text-shadow: 2px 2px 2px lighten(color(black), 65%);
+
+    span {
+      color: color(red);
+    }
+  }
+
+  p {
+    line-height: 1.6;
+    margin-bottom: multiBase(1);
+    max-width: 500px;
+
+    @include fluid-type(600px, 1440px, 15px, 16px);
+    &:nth-of-type(2) {
+      margin-bottom: multiBase(3);
+    }
+  }
+
+  form > * {
+    display: block;
+  }
+
+  form {
+    label {
+      color: color(red);
+      font-family: $font-heading;
+      font-weight: 600;
+      margin-bottom: multiBase(0.5);
+      margin-top: multiBase(2);
+    }
+
+    input,
+    textarea {
+      max-width: 500px;
+      width: 100%;
+    }
+
+    input {
+      min-height: 40px;
+    }
+
+    input:focus + label {
+      position: relative;
+    }
+
+    textarea {
+      min-height: 130px;
+    }
+  }
+}

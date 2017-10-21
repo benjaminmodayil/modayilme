@@ -1,0 +1,63 @@
+.work__preview__body {
+  @include wrapper;
+  @include clearfix();
+  margin-bottom: multiBase(6);
+  margin-top: multiBase(4);
+
+  p {
+    line-height: 1.7;
+    width: 100%;
+  }
+
+  .post__signature {
+    flex-wrap: nowrap;
+    flex: 1 1 200px;
+  }
+}
+
+.work__preview__container {
+  margin-top: 5vh;
+
+  blockquote {
+    color: color(red);
+    font-style: italic;
+    line-height: 1.4;
+  }
+
+  p,
+  ul,
+  ol,
+  blockquote,
+  svg,
+  img {
+    margin-bottom: multiBase(2);
+  }
+
+  svg,
+  img {
+    display: block;
+    height: auto;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 650px;
+    width: 100%;
+  }
+
+  .component__list {
+    position: relative;
+
+    li {
+      margin: 0 0 0.5rem 1.2rem;
+    }
+  }
+}
+
+.post__blockquote-work-preview {
+  @include fluid-type(600px, 900px, 16px, 18px);
+  background-color: white;
+  border: 1px solid color(red);
+  color: color(red);
+  font-style: italic;
+  margin-bottom: multiBase(2);
+  padding: multiBase(2) 5.8% multiBase(1.5) 5.8%;
+}
