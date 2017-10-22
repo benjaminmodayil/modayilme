@@ -5,7 +5,7 @@
   position: relative;
 
   .h-1 {
-    @include fluid-type(600px, 1440px, 28px, 36px);
+    @include fluid-type(601px, 1440px, 28px, 36px);
     color: color(red);
     font-weight: 600;
   }
@@ -50,7 +50,7 @@
 }
 
 .post__body {
-  @include fluid-type(600px, 900px, 14px, 16px);
+  @include fluid-type(601px, 900px, 14px, 16px);
   @include clearfix();
 
   color: color(text);
@@ -158,7 +158,7 @@ blockquote {
   padding: multiBase(2) 0;
 
   p {
-    @include fluid-type(600px, 900px, 18px, 24px);
+    @include fluid-type(601px, 900px, 18px, 24px);
     color: color(red);
     font-style: italic;
     font-weight: 300;
@@ -167,7 +167,7 @@ blockquote {
 }
 
 .post__blockquote-main {
-  @include fluid-type(600px, 900px, 18px, 28px);
+  @include fluid-type(601px, 900px, 18px, 28px);
   background-color: white;
   border: 1px solid color(red);
   font-weight: 300;
@@ -176,7 +176,7 @@ blockquote {
 }
 
 .post__blockquote-alt {
-  @include fluid-type(600px, 900px, 16px, 18px);
+  @include fluid-type(601px, 900px, 16px, 18px);
   background-color: white;
   border: 1px solid color(red);
   margin: 0 auto;
@@ -184,32 +184,10 @@ blockquote {
   max-width: 400px;
   padding: multiBase(2) multiBase(1.5) multiBase(2) multiBase(2);
 
-  @include breakpoint(min-width 600px) {
+  @include breakpoint(min-width 601px) {
     float: right;
     margin-left: 1%;
     max-width: 300px;
-  }
-}
-
-.post__misc {
-  margin-bottom: multiBase(5);
-
-  @include breakpoint(min-width 750px) {
-    display: flex;
-    justify-content: space-between;
-  }
-
-  @include breakpoint(min-width 1200px) {
-    margin-top: multiBase(5);
-  }
-
-  .component__updates {
-    margin-bottom: multiBase(6);
-    margin-top: 0;
-
-    @include breakpoint(min-width 900px) {
-      min-width: 400px;
-    }
   }
 }
 
@@ -223,7 +201,6 @@ blockquote {
   max-height: 50px;
   max-width: 150px;
   padding: 0.8rem multiBase(2);
-  text-align: center;
-
   justify-self: flex-end;
+  text-align: center;
 }

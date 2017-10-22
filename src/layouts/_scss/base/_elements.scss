@@ -67,7 +67,7 @@ p {
   font-weight: 300;
   margin-top: multiBase(1);
 
-  @include fluid-type(600px, 1440px, 14px, 16px);
+  @include fluid-type(601px, 1440px, 14px, 16px);
 }
 
 .site__container {
@@ -111,7 +111,7 @@ p {
 }
 
 .btn--bg {
-  @include fluid-type(600px, 1400px, 14px, 16px);
+  @include fluid-type(601px, 1400px, 14px, 16px);
   align-self: flex-end;
   background-color: color(red);
   border: 2px solid transparent;

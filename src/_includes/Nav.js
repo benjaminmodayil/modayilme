@@ -10,7 +10,7 @@ class Nav extends Component {
   render() {
     return (
       <nav className="nav">
-        <div className="nav__inner">
+        <div className="nav__inner wrapper wrapper--tablet margin-center padding-top-and-bottom">
           <Link className="site__title" to="/">
             modayil.me
           </Link>

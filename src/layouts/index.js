@@ -40,3 +40,6 @@ TemplateWrapper.propTypes = {
 }
 
 export default TemplateWrapper
+
+// to get related post blog data
+// -> create another component wrapper around the post template

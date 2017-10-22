@@ -29,7 +29,7 @@
     font-weight: 700;
     margin: 0 0 0 0;
 
-    @include fluid-type(600px, 1440px, 36px, 76px);
+    @include fluid-type(601px, 1440px, 36px, 76px);
 
     &:not(span) {
       text-shadow: 2px 2px 2px lighten(color(black), 10%);
@@ -43,7 +43,7 @@
     font-weight: 200;
     margin: 0 0 0.6rem 0;
 
-    @include fluid-type(600px, 1440px, 24px, 56px);
+    @include fluid-type(601px, 1440px, 24px, 56px);
   }
 
   p {
@@ -56,7 +56,7 @@
       color: white;
       font-weight: 600;
 
-      @include fluid-type(600px, 1440px, 16px, 16px);
+      @include fluid-type(601px, 1440px, 16px, 16px);
     }
   }
 

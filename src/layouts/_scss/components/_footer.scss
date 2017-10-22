@@ -9,7 +9,7 @@
   }
 
   .h-2 {
-    @include fluid-type(600px, 1440px, 24px, 28px);
+    @include fluid-type(601px, 1440px, 24px, 28px);
 
     color: white;
     font-weight: 600;
@@ -30,14 +30,14 @@
   text-shadow: 2px 2px 2px lighten(color(black), 10%);
 
   p {
-    @include fluid-type(600px, 1440px, 16px, 18px);
+    @include fluid-type(601px, 1440px, 16px, 18px);
     color: white;
     font-family: $font-heading;
     font-weight: 600;
   }
 
   span {
-    @include fluid-type(600px, 1440px, 14px, 16px);
+    @include fluid-type(601px, 1440px, 14px, 16px);
     color: white;
     display: block;
     margin: 0.5rem 0 0 0;

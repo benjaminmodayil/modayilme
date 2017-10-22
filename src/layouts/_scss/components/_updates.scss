@@ -49,7 +49,8 @@
   @include breakpoint(min-width 1200px) {
     width: rd(($wideWidth + 100), 1440);
   }
-  @include breakpoint(min-width 1600px) {
+
+  @include breakpoint(min-width 1601px) {
     min-width: 1200px;
     max-width: 100%;
   }
@@ -73,7 +74,7 @@
     span {
       color: color(red);
     }
-    @include fluid-type(600px, 1400px, 24px, 28px);
+    @include fluid-type(601px, 1400px, 24px, 28px);
     font-family: $font-heading;
     font-weight: 400;
     margin-bottom: multiBase(1);

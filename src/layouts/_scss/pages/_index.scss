@@ -33,7 +33,7 @@
   }
 
   .h-1 {
-    @include fluid-type(600px, 1400px, 28px, 36px);
+    @include fluid-type(601px, 1400px, 28px, 36px);
     color: color(red);
     font-family: $font-body;
     font-weight: 600;
@@ -41,7 +41,7 @@
   }
 
   p {
-    @include fluid-type(600px, 1400px, 24px, 28px);
+    @include fluid-type(601px, 1400px, 24px, 28px);
     font-family: $font-body;
     font-weight: 300;
     line-height: 1.5;
@@ -56,7 +56,7 @@
 .home__section-one,
 .home__section-two {
   .h-2 {
-    @include fluid-type(600px, 1400px, 24px, 28px);
+    @include fluid-type(601px, 1400px, 24px, 28px);
     color: color(black);
     font-weight: 300;
     font-style: italic;
@@ -113,7 +113,7 @@
   }
 
   .h-3 {
-    @include fluid-type(600px, 1400px, 20px, 24px);
+    @include fluid-type(601px, 1400px, 20px, 24px);
     font-weight: 300;
     margin-bottom: multiBase(1);
   }
@@ -128,7 +128,7 @@
   }
 
   p {
-    @include fluid-type(600px, 1800px, 14px, 16px);
+    @include fluid-type(601px, 1800px, 14px, 16px);
     color: color(black);
     opacity: 0.83;
   }
@@ -226,7 +226,7 @@
     }
 
     p {
-      max-width: 600px;
+      max-width: 601px;
     }
   }
 }

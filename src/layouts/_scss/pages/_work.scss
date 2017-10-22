@@ -32,7 +32,7 @@
   }
 
   h1 {
-    @include fluid-type(600px, 1440px, 28px, 36px);
+    @include fluid-type(601px, 1440px, 28px, 36px);
     color: white;
     font-weight: 600;
     margin: 0 0 0 0;
@@ -55,7 +55,7 @@
       font-weight: 600;
       margin: 0 0 0.6rem 0;
 
-      @include fluid-type(600px, 1440px, 16px, 16px);
+      @include fluid-type(601px, 1440px, 16px, 16px);
     }
   }
 }

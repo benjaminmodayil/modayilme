@@ -20,6 +20,8 @@ class IndexPage extends React.Component {
     console.log('click')
   }
 
+  test = 'hi'
+
   render() {
     const { data } = this.props
     return (
@@ -51,7 +53,11 @@ class IndexPage extends React.Component {
                 if (post.node.frontmatter.type == 'blog') {
                   return (
                     <li>
-                      <Link key={post.node.id} to={post.node.frontmatter.path}>
+                      <Link
+                        key={post.node.id}
+                        to={post.node.frontmatter.path}
+                        previous={post.node.frontmatter.title}
+                      >
                         <h3 className="h-3">{post.node.frontmatter.title}</h3>
                         <p>{post.node.frontmatter.tldr}</p>
                       </Link>
@@ -126,7 +132,9 @@ class IndexPage extends React.Component {
             </div>
 
             <div className="home__section-three__row__col-right">
-              <IconResume />
+              <a href="./static/resumeModayil.pdf">
+                <IconResume />
+              </a>
             </div>
           </div>
           <div className="home__section-three__row row wrapper wrapper--tablet margin-center">
