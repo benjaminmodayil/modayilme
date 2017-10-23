@@ -1,3 +1,9 @@
+.position-right {
+  position: absolute;
+  right: 0;
+  top: 20px;
+}
+
 .home-page {
   display: flex;
   flex-direction: column;
@@ -73,7 +79,6 @@
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
-  // margin-bottom: 10vh;
 
   a {
     height: 100%;
@@ -146,7 +151,6 @@
   display: flex;
   flex-direction: column;
   flex-wrap: nowrap;
-  margin-bottom: 3.5rem;
 
   @include breakpoint(min-width 900px) {
     flex: 0 0 49%;
@@ -203,21 +207,15 @@
 
 .home__section-three__row {
   flex-wrap: wrap;
-
-  &.row {
-    margin-bottom: 5vh;
-  }
-
-  .home__section-three__row__col-left {
-    margin-bottom: 2.5rem;
-  }
+  position: relative;
 
   p {
     line-height: 1.8;
+    padding: 2rem;
   }
 
   p ~ p {
-    margin-top: multiBase(3.8);
+    padding-top: multiBase(3.8);
   }
 
   @include breakpoint(min-width 901) {
@@ -233,7 +231,6 @@
 
 .home__section-three__row__col-left {
   flex: 0 0 100%;
-  // margin-bottom: 10vh;
 
   @include breakpoint(min-width 900px) {
     flex: 0 0 75%;
@@ -249,5 +246,19 @@
 
   @include breakpoint(min-width 900px) {
     flex: 0 0 25%;
+  }
+}
+
+@include breakpoint(max-width 900px) {
+  .home__section-three__row p {
+    padding: 0;
+  }
+
+  .home__section-three__row__col-right {
+    position: relative;
+  }
+
+  .home__section-three__row .u-background-white {
+    background-color: transparent;
   }
 }

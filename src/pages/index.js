@@ -10,17 +10,14 @@ import IconWebSkills from '../assets/icons/IconWebSkills.js'
 import IconResume from '../assets/icons/IconResume.js'
 import IconSocial from '../assets/icons/IconSocial.js'
 import Updates from '../_includes/Updates.js'
+import DetailsList from '../_includes/DetailsList.js'
 
 class IndexPage extends React.Component {
-  componentDidMount() {}
-
   handleClick(e) {
     e.preventDefault()
     this.refs.about.scrollIntoView({ behavior: 'smooth' })
     console.log('click')
   }
-
-  test = 'hi'
 
   render() {
     const { data } = this.props
@@ -32,7 +29,7 @@ class IndexPage extends React.Component {
               <h1 className="h-1">Benjamin Modayil</h1>
               <p>is a Front-End Developer from Philadelphia, Pennsylvannia.</p>
               <a
-                href="#"
+                href="#about"
                 className="home__section-one__header__link link__read"
                 onClick={this.handleClick.bind(this)}
               >
@@ -69,7 +66,7 @@ class IndexPage extends React.Component {
           </ul>
         </section>
 
-        <section className="home__section-two" ref="about">
+        <section className="home__section-two" id="about" ref="about">
           <div
             className="home__section-two__row wrapper wrapper--medium margin-center section-padding"
             id="bio"
@@ -90,6 +87,7 @@ class IndexPage extends React.Component {
               linked below:
             </p>
           </div>
+
           <h2 className="h-2">
             my <span>work</span>
           </h2>
@@ -111,19 +109,20 @@ class IndexPage extends React.Component {
         <section className="home__section-three section-margin">
           <div className="home__section-three__row row wrapper wrapper--tablet margin-center">
             <div className="home__section-three__row__col-left">
-              <p className="text-level text-level-medium">
+              <p className="text-level text-level-medium u-background-white">
                 I really love learning technologies. I’m not lying here. Here’s a few
                 things that I have been able to add to my skillset.
               </p>
             </div>
 
-            <div className="home__section-three__row__col-right">
-              <IconWebSkills />
+            <div className="home__section-three__row__col-right position-right">
+              <DetailsList />
+              {/* <IconWebSkills /> */}
             </div>
           </div>
           <div className="home__section-three__row row wrapper wrapper--tablet margin-center">
             <div className="home__section-three__row__col-left">
-              <p className="text-level text-level-medium">
+              <p className="text-level text-level-medium u-background-white">
                 If you need a <a href="./static/resumeModayil.pdf"> resume </a> then just
                 click on that keyword. Also feel free to check-out my{' '}
                 <a href="https://codepen.io/modayilme">Codepen</a> and below for more
@@ -131,15 +130,14 @@ class IndexPage extends React.Component {
               </p>
             </div>
 
-            <div className="home__section-three__row__col-right">
-              <a href="./static/resumeModayil.pdf">
-                <IconResume />
-              </a>
+            <div className="home__section-three__row__col-right position-right">
+              <DetailsList />
+              {/* <IconResume /> */}
             </div>
           </div>
           <div className="home__section-three__row row wrapper wrapper--tablet margin-center">
             <div className="home__section-three__row__col-left">
-              <p className="text-level text-level-medium">
+              <p className="text-level text-level-medium u-background-white">
                 If you’re wondering what I’m like outside of work, well, sorry to be a
                 bummer, but I like to work. Usually I’m learning something new code-wise,
                 reading a{' '}
@@ -148,7 +146,7 @@ class IndexPage extends React.Component {
                 </a>/comics, listening to a podcast, or perhaps, on the rare occasion,
                 relaxing.
               </p>
-              <p className="text-level text-level-medium">
+              <p className="text-level text-level-medium u-background-white">
                 Interested in following me or keeping updated on things I write or do?
                 Sign up for my newsletter below, follow me on my{' '}
                 <a href="https://twitter.com/modayilme">Twitter</a>,{' '}
@@ -159,8 +157,8 @@ class IndexPage extends React.Component {
                 </a>.
               </p>
             </div>
-            <div className="home__section-three__row__col-right">
-              <IconSocial />
+            <div className="home__section-three__row__col-right position-right">
+              <DetailsList />
             </div>
           </div>
         </section>
