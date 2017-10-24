@@ -14,7 +14,6 @@ export default function Template({ data }, props) {
         <header className="post__header">
           <div className="post__header-inner wrapper wrapper--medium margin-center">
             <h1 className="h-1">{post.frontmatter.title}</h1>
-            <h1 className="h-1">{test}</h1>
             <p>
               <span>tl;dr</span>
               {post.frontmatter.tldr}

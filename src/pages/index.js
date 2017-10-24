@@ -1,8 +1,9 @@
 import React from 'react'
+import ReactDOM from 'react-dom'
 import Link from 'gatsby-link'
 
 require('smoothscroll-polyfill').polyfill()
-
+import HomeHeader from '../_includes/homepage/HomeHeader'
 import RandomAnimation from '../assets/RandomAnimation.js'
 import IllAvatar from '../assets/IllAvatar.js'
 import IconContactWithColor from '../assets/icons/IconContactWithColor.js'
@@ -13,10 +14,8 @@ import Updates from '../_includes/Updates.js'
 import DetailsList from '../_includes/DetailsList.js'
 
 class IndexPage extends React.Component {
-  handleClick(e) {
-    e.preventDefault()
+  handleClick() {
     this.refs.about.scrollIntoView({ behavior: 'smooth' })
-    console.log('click')
   }
 
   render() {
@@ -24,23 +23,8 @@ class IndexPage extends React.Component {
     return (
       <main className="home-page">
         <section className="home__section-one">
-          <header className="home__section-one__header row wrapper wrapper--tablet margin-center">
-            <div className="home__section-one__header__col-left">
-              <h1 className="h-1">Benjamin Modayil</h1>
-              <p>is a Front-End Developer from Philadelphia, Pennsylvannia.</p>
-              <a
-                href="#about"
-                className="home__section-one__header__link link__read"
-                onClick={this.handleClick.bind(this)}
-              >
-                learn more
-              </a>
-            </div>
-            <div className="home__section-one__header__col-right">
-              <RandomAnimation />
-            </div>
-          </header>
-          <h2 className="h-2">
+          <HomeHeader onClick={this.handleClick.bind(this)} />
+          <h2 className="h-2 wrapper wrapper--extra-wide margin-center">
             my <span>writings</span>
           </h2>
           <ul className="article-loop">
@@ -66,7 +50,7 @@ class IndexPage extends React.Component {
           </ul>
         </section>
 
-        <section className="home__section-two" id="about" ref="about">
+        <section className="home__section-two" ref="about">
           <div
             className="home__section-two__row wrapper wrapper--medium margin-center section-padding"
             id="bio"
@@ -88,7 +72,7 @@ class IndexPage extends React.Component {
             </p>
           </div>
 
-          <h2 className="h-2">
+          <h2 className="h-2 wrapper wrapper--extra-wide margin-center">
             my <span>work</span>
           </h2>
           <ul className="article-loop">
@@ -115,7 +99,7 @@ class IndexPage extends React.Component {
               </p>
             </div>
 
-            <div className="home__section-three__row__col-right position-right">
+            <div className="home__section-three__row__col-right html-details position-right">
               <DetailsList />
               {/* <IconWebSkills /> */}
             </div>
@@ -130,11 +114,19 @@ class IndexPage extends React.Component {
               </p>
             </div>
 
-            <div className="home__section-three__row__col-right position-right">
-              <DetailsList />
-              {/* <IconResume /> */}
+            <div className="home__section-three__row__col-right position-right html-list">
+              <div className="details-container" ref="detailsContainer">
+                <h2 className="h-2">
+                  Resume <span>(very profesh.)</span>
+                  <img src="#todo" alt="" />
+                </h2>
+                <div className="details-container__inner">
+                  <a href="resume">{<IconResume />}</a>
+                </div>
+              </div>
             </div>
           </div>
+
           <div className="home__section-three__row row wrapper wrapper--tablet margin-center">
             <div className="home__section-three__row__col-left">
               <p className="text-level text-level-medium u-background-white">
@@ -157,8 +149,38 @@ class IndexPage extends React.Component {
                 </a>.
               </p>
             </div>
-            <div className="home__section-three__row__col-right position-right">
-              <DetailsList />
+            <div className="home__section-three__row__col-right position-right html-list">
+              <div className="details-container" ref="detailsContainer">
+                <h2 className="h-2">
+                  Social <span>(HMU)</span>
+                </h2>
+                <ul className="details-container__inner">
+                  <li>
+                    <a href="#todo">
+                      <span>Twitter</span>
+                      <img src="#todo" alt="" />
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#todo">
+                      <span>Instagram</span>
+                      <img src="#todo" alt="" />
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#todo">
+                      <span>LinkedIn</span>
+                      <img src="#todo" alt="" />
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#todo">
+                      <span>Github</span>
+                      <img src="#todo" alt="" />
+                    </a>
+                  </li>
+                </ul>
+              </div>
             </div>
           </div>
         </section>

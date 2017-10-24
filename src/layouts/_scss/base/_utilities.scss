@@ -15,6 +15,10 @@ $wideWidth: 1000;
 .wrapper {
   padding: 0 20px;
 
+  &.wrapper--extra-wide {
+    max-width: 1440px;
+  }
+
   &.wrapper--wide {
     max-width: 1200px;
   }
@@ -86,4 +90,14 @@ $wideWidth: 1000;
   } @else {
     @include fluid-type(601px, 1400px, 14px, 16px);
   }
+}
+
+.a-spacing--y {
+  transform: translateY(150px);
+}
+
+.position-right {
+  position: absolute;
+  right: 0;
+  z-index: 2;
 }

@@ -1,17 +1,24 @@
 import React, { Component } from 'react'
 
 class DetailsList extends Component {
-  getDetails = () => {
-    console.log(this.refs.detailsContainer)
+  toggleLists() {
+    const lists = Array.from(document.querySelectorAll('.html-list'))
+    console.log(lists)
+    lists.map(item => {
+      console.log(item)
+      item.classList.toggle('a-spacing--y')
+    })
   }
 
   render() {
     return (
       <div className="details-container" ref="detailsContainer">
-        <h2 className="h-2">List Title</h2>
-        <ul>
+        <h2 className="h-2">
+          Skills <span>(to pay the bills)</span>
+        </h2>
+        <ul className="details-container__inner">
           <li>
-            <details onClick={this.getDetails}>
+            <details onClick={this.toggleLists}>
               <summary>HTML, CSS</summary>
               <article>
                 <p>More info about the details.</p>
@@ -19,7 +26,7 @@ class DetailsList extends Component {
             </details>
           </li>
           <li>
-            <details>
+            <details onClick={this.toggleLists}>
               <summary>Javascript</summary>
               <article>
                 <p>More info about the details.</p>
@@ -27,7 +34,7 @@ class DetailsList extends Component {
             </details>
           </li>
           <li>
-            <details>
+            <details onClick={this.toggleLists}>
               <summary>ReactJS</summary>
               <article>
                 <p>More info about the details.</p>
@@ -35,7 +42,7 @@ class DetailsList extends Component {
             </details>
           </li>
           <li>
-            <details>
+            <details onClick={this.toggleLists}>
               <summary>
                 <span>Craft CMS</span>{' '}
                 <svg width="24" height="24" viewBox="0 0 24 24">
