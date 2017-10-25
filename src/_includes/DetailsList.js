@@ -1,13 +1,50 @@
 import React, { Component } from 'react'
+import IconMore from '../assets/icons/IconMore.js'
 
 class DetailsList extends Component {
-  toggleLists() {
-    const lists = Array.from(document.querySelectorAll('.html-list'))
-    console.log(lists)
-    lists.map(item => {
-      console.log(item)
-      item.classList.toggle('a-spacing--y')
-    })
+  constructor() {
+    super()
+
+    this.addLists = () => {
+      const lists = Array.from(document.querySelectorAll('.html-list'))
+      lists.map(item => {
+        item.classList.add('a-spacing--y')
+      })
+    }
+
+    this.removeLists = () => {
+      const lists = Array.from(document.querySelectorAll('.html-list'))
+      lists.map(item => {
+        item.classList.remove('a-spacing--y')
+      })
+    }
+  }
+
+  triggerDetails = e => {
+    e.stopPropagation()
+    e.preventDefault()
+
+    const details = Array.from(document.querySelectorAll('.html-details details'))
+
+    const current = e.currentTarget
+    console.log(current)
+
+    if (current.getAttribute('aria-expanded') == 'true') {
+      current.setAttribute('aria-expanded', 'false')
+      current.removeAttribute('open')
+      this.removeLists()
+    } else {
+      details.map(item => {
+        if (item.hasAttribute('open')) {
+          item.removeAttribute('open')
+          item.setAttribute('aria-expanded', 'false')
+        }
+
+        current.setAttribute('aria-expanded', 'true')
+        current.setAttribute('open', '')
+        this.addLists()
+      })
+    }
   }
 
   render() {
@@ -18,36 +55,43 @@ class DetailsList extends Component {
         </h2>
         <ul className="details-container__inner">
           <li>
-            <details onClick={this.toggleLists}>
-              <summary>HTML, CSS</summary>
-              <article>
-                <p>More info about the details.</p>
-              </article>
-            </details>
-          </li>
-          <li>
-            <details onClick={this.toggleLists}>
-              <summary>Javascript</summary>
-              <article>
-                <p>More info about the details.</p>
-              </article>
-            </details>
-          </li>
-          <li>
-            <details onClick={this.toggleLists}>
-              <summary>ReactJS</summary>
-              <article>
-                <p>More info about the details.</p>
-              </article>
-            </details>
-          </li>
-          <li>
-            <details onClick={this.toggleLists}>
+            <details aria-expanded="false" onClick={e => this.triggerDetails(e)}>
               <summary>
-                <span>Craft CMS</span>{' '}
-                <svg width="24" height="24" viewBox="0 0 24 24">
-                  <path d="M16,12A2,2 0 0,1 18,10A2,2 0 0,1 20,12A2,2 0 0,1 18,14A2,2 0 0,1 16,12M10,12A2,2 0 0,1 12,10A2,2 0 0,1 14,12A2,2 0 0,1 12,14A2,2 0 0,1 10,12M4,12A2,2 0 0,1 6,10A2,2 0 0,1 8,12A2,2 0 0,1 6,14A2,2 0 0,1 4,12Z" />
-                </svg>
+                <span>HTML, CSS</span>
+                <IconMore />
+              </summary>
+              <article>
+                <p>More info about the details.</p>
+              </article>
+            </details>
+          </li>
+          <li>
+            <details aria-expanded="false" onClick={e => this.triggerDetails(e)}>
+              <summary>
+                <span>JavaScript</span>
+                <IconMore />
+              </summary>
+              <article>
+                <p>More info about the details.</p>
+              </article>
+            </details>
+          </li>
+          <li>
+            <details aria-expanded="false" onClick={e => this.triggerDetails(e)}>
+              <summary>
+                <span>ReactJS</span>
+                <IconMore />
+              </summary>
+              <article>
+                <p>More info about the details.</p>
+              </article>
+            </details>
+          </li>
+          <li>
+            <details aria-expanded="false" onClick={e => this.triggerDetails(e)}>
+              <summary>
+                <span>Craft CMS</span>
+                <IconMore />
               </summary>
               <article>
                 <p>More info about the details.</p>

@@ -120,7 +120,7 @@ class IndexPage extends React.Component {
                   Resume <span>(very profesh.)</span>
                   <img src="#todo" alt="" />
                 </h2>
-                <div className="details-container__inner">
+                <div className="details-container__inner details-container__inner-resume">
                   <a href="resume">{<IconResume />}</a>
                 </div>
               </div>
