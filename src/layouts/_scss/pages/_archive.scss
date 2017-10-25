@@ -71,7 +71,7 @@
     margin-bottom: multiBase(3);
     width: 100%;
 
-    @include breakpoint(min-width 900px) {
+    @include breakpoint(min-width 901px) {
       max-width: 48%;
 
       flex: 1 1 50%;

@@ -58,22 +58,31 @@ p {
 
   a {
     font-weight: 600;
+    border: 1px solid transparent;
   }
 }
 
 .link__read {
+  @include fluid-type(601px, 1440px, 14px, 16px);
+  border: 1px dotted transparent;
   color: color(red);
   display: block;
   font-weight: 300;
   margin-top: multiBase(1);
+  padding: 1rem;
 
-  @include fluid-type(601px, 1440px, 14px, 16px);
+  transition: all 0.3s ease;
+
+  &:hover,
+  &:focus {
+    border: 1px dotted color(red);
+  }
 }
 
 .site__container {
   border: 1.5vw solid color(red);
 
-  @include breakpoint(min-width 900px) {
+  @include breakpoint(min-width 901px) {
     border: 1vw solid color(red);
   }
 
@@ -97,7 +106,6 @@ p {
     &:focus,
     &:active {
       border: 1px dotted color(red);
-      transform: scale(1.1);
     }
   }
 }

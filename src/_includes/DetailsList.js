@@ -51,7 +51,8 @@ class DetailsList extends Component {
     return (
       <div className="details-container" ref="detailsContainer">
         <h2 className="h-2">
-          Skills <span>(to pay the bills)</span>
+          Skills <span className="details-container__sub-title">(to pay the bills)</span>
+          <span className="details-container__emoji">👨‍💻</span>
         </h2>
         <ul className="details-container__inner">
           <li>

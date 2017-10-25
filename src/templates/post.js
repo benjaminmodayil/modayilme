@@ -22,9 +22,9 @@ export default function Template({ data }, props) {
           </div>
         </header>
         <section className="post__body">
-          <div className="wrapper wrapper--medium margin-center">
+          <div className="wrapper wrapper--medium margin-center section-padding--bottom-heavy">
             <div
-              className="post__body__inner"
+              className="post-work__body"
               dangerouslySetInnerHTML={{ __html: post.html }}
             />
             <small className="post__signature">Ben M.</small>

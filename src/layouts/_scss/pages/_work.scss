@@ -1,38 +1,9 @@
-.work__page {
-  .row {
-    @include breakpoint(min-width 900px) {
-      margin-bottom: multiBase(6);
-    }
-  }
-}
-
 .work__header {
   background-color: color(bg-grey);
-  margin-bottom: 15vh;
-  padding-bottom: 5vh;
-  padding-top: 10vh;
+  min-height: 80vh;
 
-  @include breakpoint(min-width 900px) {
-    padding-bottom: 10vh;
-  }
-
-  .right__column {
-    align-self: flex-end;
-    margin-top: 10vh;
-
-    @include breakpoint(min-width 900px) {
-      margin-top: -20px;
-    }
-  }
-}
-
-.work__header-inner {
-  @include breakpoint(min-width 1200px) {
-    width: 100%;
-  }
-
-  h1 {
-    @include fluid-type(601px, 1440px, 28px, 36px);
+  .h-1 {
+    @include fluid-type(601px, 1440px, 28px, 56px);
     color: white;
     font-weight: 600;
     margin: 0 0 0 0;
@@ -40,6 +11,56 @@
     &:not(span) {
       text-shadow: 2px 2px 2px lighten(color(black), 10%);
     }
+
+    line-height: 1.5;
+  }
+}
+
+.work__header-inner {
+  display: flex;
+  flex-wrap: nowrap;
+}
+
+.work__header-inner--left {
+  margin-top: 30vh;
+}
+
+.work__header-inner--right {
+  margin-top: 20vh;
+
+  img,
+  svg {
+    max-width: 100%;
+  }
+}
+
+@include breakpoint(max-width 900px) {
+  .work__header-inner {
+    flex-wrap: wrap;
+    justify-content: space-around;
+    margin: 0 auto;
+  }
+
+  .work__header-inner--left {
+    margin-top: 20vh;
+  }
+
+  .work__header-inner--right {
+    margin-top: 20vh;
+    margin-bottom: 20vh;
+  }
+}
+
+@include breakpoint(min-width 901px) {
+  .work__header-inner {
+    flex-wrap: nowrap;
+    justify-content: space-between;
+  }
+}
+
+.work__header-inner {
+  @include breakpoint(min-width 1200px) {
+    width: 100%;
   }
 
   p {
@@ -65,7 +86,7 @@
 .work__skills {
   margin-bottom: 20vh;
 
-  @include breakpoint(min-width 900px) {
+  @include breakpoint(min-width 901px) {
     margin-bottom: 0vh;
   }
 }

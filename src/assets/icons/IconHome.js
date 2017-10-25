@@ -4,8 +4,8 @@ export default function IconHome(props) {
   return (
     <svg
       className="icon-home"
-      width={30}
-      height={25}
+      width={25}
+      height={20}
       viewBox="0 0 30 25"
       xmlns="http://www.w3.org/2000/svg"
       {...props}

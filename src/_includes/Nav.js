@@ -10,19 +10,19 @@ class Nav extends Component {
   render() {
     return (
       <nav className="nav">
-        <div className="nav__inner wrapper wrapper--tablet margin-center padding-top-and-bottom">
-          <Link className="site__title" to="/">
+        <div className="nav__inner wrapper wrapper--tablet margin-center padding-top-and-bottom--small">
+          <Link className="site__title padding-top-and-bottom--small" to="/">
             modayil.me
           </Link>
           <ul>
             <li>
-              <Link to="/">
+              <Link to="/" className="padding-top-and-bottom--small">
                 <IconHome />
                 <span>Home</span>
               </Link>
             </li>
             <li>
-              <Link to="/contact">
+              <Link to="/contact" className="padding-top-and-bottom--small">
                 <IconContact />
                 <span>Contact</span>
               </Link>

@@ -9,6 +9,17 @@ type: work
 # New Beginnings
 Most of what this post covers is how I made this new rendition of my site. If you're curious to learn <b>why</b> I made this new site, then click [here](http://google.com). 
 
+<div class="component-colors">
+<h2 class="h-2">Color Pallete</h2>
+  <ul>
+    <li style="background-color: blue"><span>Blue</span></li>
+    <li style="background-color: black"><span>Black</span></li>
+    <li style="background-color: green"><span>Green</span></li>
+    <li style="background-color: purple"><span>Purple</span></li>
+    <li style="background-color: yellow"><span>Yellow</span></li>
+  </ul>
+</div>
+
 ## A brief history
 The first time I built my website was in Balsamiq Mockups. For those of you that don't know, Balsamiq Mockups is for making... mockups, but very low-fidelity versions. That was when I was just learning how to make websites in my first web design class. Thank God, that my teacher encouraged me to hold off on designing a portfolio site early on and point me into a more capable program for high-fidelity designs. 
 
@@ -76,8 +87,11 @@ Know how much I don't care about what others think about my design choices? I ha
 **Fonts:**
 Raleway and Merriweather
 
+<blockquote class="twitter-tweet" data-lang="en"><p lang="en" dir="ltr">When you realize it&#39;s 9:30am and you already had three cups of coffee ☕</p>&mdash; Benjamin Modayil 🤷 (@modayilme) <a href="https://twitter.com/modayilme/status/922816270965276672?ref_src=twsrc%5Etfw">October 24, 2017</a></blockquote>
+
 **Colors** (*give or take a few digits with how Chrome/Safari adjusts colors slightly*: 
 
 Mineshaft: #393D3F
 Botticelli: #C9D9DE
+
 

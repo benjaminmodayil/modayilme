@@ -22,7 +22,7 @@
     display: flex;
     flex-direction: column;
 
-    @include breakpoint(min-width 900px) {
+    @include breakpoint(min-width 901px) {
       max-width: 440px;
     }
   }
@@ -40,20 +40,10 @@
 
 .banner-newsletter {
   background-color: white;
-  box-shadow: 3px 3px 18px 0px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
   margin: 0 auto;
-  max-width: 1400px;
   padding: multiBase(2.8) 0 multiBase(2) 0;
   width: rd($smallWidth, 414);
-
-  @include breakpoint(min-width 1200px) {
-    width: rd(($wideWidth + 100), 1440);
-  }
-
-  @include breakpoint(min-width 1601px) {
-    min-width: 1200px;
-    max-width: 100%;
-  }
 
   .component__updates {
     max-width: none;
@@ -66,7 +56,7 @@
     margin: 0 auto;
     width: 90%;
 
-    @include breakpoint(min-width 900px) {
+    @include breakpoint(min-width 901px) {
     }
   }
 
@@ -88,7 +78,7 @@
   flex: 0 0 100%;
   margin-bottom: 5vh;
 
-  @include breakpoint(min-width 900px) {
+  @include breakpoint(min-width 901px) {
     flex: 0 0 75%;
     margin-bottom: 0;
   }
@@ -101,7 +91,7 @@
   justify-content: space-around;
   padding-right: 5%;
 
-  @include breakpoint(min-width 900px) {
+  @include breakpoint(min-width 901px) {
     flex: 0 0 25%;
   }
 }

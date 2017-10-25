@@ -28,13 +28,13 @@
   }
 
   .site__title {
-    @include fluid-type(601px, 1440px, 28px, 36px);
+    border: 3px solid transparent;
     color: fade-out($color: color(text), $amount: 0.4);
     font-family: $font-heading;
+    font-size: 1.5rem;
     font-weight: 600;
-    transition: all 0.2s ease;
-    border: 3px solid transparent;
     text-decoration: none;
+    transition: all 0.2s ease;
 
     &:hover {
       color: color(red);
@@ -90,6 +90,7 @@
       span {
         color: white;
       }
+
       &:hover,
       &:focus {
         .icon-home,
@@ -129,7 +130,6 @@
     border: 2px solid transparent;
     display: flex;
     flex-direction: column;
-    padding: multiBase(0.5);
     text-align: center;
     text-decoration: none;
 
@@ -141,16 +141,16 @@
   }
 
   span {
+    @include fluid-type(601px, 1440px, 14px, 15px);
     border-bottom: 1px solid transparent;
     bottom: -1px;
     position: relative;
-
-    @include fluid-type(601px, 1440px, 14px, 15px);
   }
 }
 
 .nav__inner {
   width: 100%;
+
   ul {
     bottom: 0;
     left: 0;
@@ -166,5 +166,7 @@
 }
 
 @include breakpoint(min-width 601px) {
-  display: inline-block;
+  .site__title {
+    display: inline-block;
+  }
 }

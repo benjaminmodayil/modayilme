@@ -7,7 +7,7 @@
   padding: multiBase(3) 0 1.6rem 0;
   position: relative;
 
-  @include breakpoint(min-width 900px) {
+  @include breakpoint(min-width 901px) {
     display: flex;
     flex-direction: column;
 
@@ -76,7 +76,7 @@
   }
 }
 
-@include breakpoint(min-width 900px) {
+@include breakpoint(min-width 901px) {
   .desktop-only {
     display: block;
   }
@@ -99,7 +99,7 @@
 
   justify-content: space-between;
 
-  @include breakpoint(min-width 900px) {
+  @include breakpoint(min-width 901px) {
     flex-direction: row;
   }
 }

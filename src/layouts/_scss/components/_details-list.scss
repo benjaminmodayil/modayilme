@@ -15,13 +15,7 @@
     font-size: 1rem;
     font-weight: bold;
     padding: 8px 10px;
-
-    span {
-      color: white;
-      font-style: italic;
-      font-size: 0.75rem;
-      font-weight: 400;
-    }
+    position: relative;
   }
 
   details summary::-webkit-details-marker {
@@ -52,26 +46,35 @@
   font-weight: 400;
 }
 
-.html-details {
-  top: 20px;
+.details-container__emoji {
+  position: absolute;
+  right: 20px;
+}
 
+.html-details {
   summary {
     position: relative;
   }
 }
 
-.html-list {
-  top: 40px;
-  margin-top: 3rem;
-  transition: all 0.3s ease;
+.details-container-resume {
+  .h-2 {
+    background-color: white;
+  }
+
+  .details-container__sub-title {
+    color: color(text);
+  }
 }
 
-.details-container__inner {
-  background-color: white;
-  padding: 16px 30px 41px 16px;
+.html-list--social {
+  li {
+    position: relative;
+  }
 
-  &.details-container__inner-resume {
-    background-color: color(bg-grey);
+  img {
+    position: absolute;
+    right: 20px;
   }
 }
 
@@ -79,5 +82,46 @@ a[href='resume'] {
   svg {
     display: block;
     margin: 0 auto;
+  }
+}
+
+.details-container__inner {
+  background-color: white;
+  padding: 24px 16px 41px 16px;
+
+  &.details-container__inner-resume {
+    background-color: color(bg-grey);
+    padding: 3rem 0 2rem 0;
+  }
+}
+
+@include breakpoint(max-width 900px) {
+  .position-absolute {
+    position: relative;
+  }
+}
+
+@include breakpoint(min-width 901px) {
+  .home__section-three__row__col-right {
+    right: 20px;
+  }
+
+  .html-details {
+    top: 20px;
+  }
+
+  .html-list {
+    top: 40px;
+    margin-top: 3rem;
+    transition: all 0.3s ease;
+  }
+
+  .html-list--resume {
+    bottom: -150px;
+  }
+
+  .html-list--social {
+    bottom: 0;
+    margin-top: 8rem;
   }
 }

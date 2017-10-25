@@ -41,22 +41,4 @@
     max-width: 650px;
     width: 100%;
   }
-
-  .component__list {
-    position: relative;
-
-    li {
-      margin: 0 0 0.5rem 1.2rem;
-    }
-  }
-}
-
-.post__blockquote-work-preview {
-  @include fluid-type(601px, 900px, 16px, 18px);
-  background-color: white;
-  border: 1px solid color(red);
-  color: color(red);
-  font-style: italic;
-  margin-bottom: multiBase(2);
-  padding: multiBase(2) 5.8% multiBase(1.5) 5.8%;
 }

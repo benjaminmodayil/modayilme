@@ -49,7 +49,7 @@
   }
 }
 
-.post__body {
+.post-work__body {
   @include fluid-type(601px, 900px, 14px, 16px);
   @include clearfix();
 
@@ -57,7 +57,6 @@
   font-size: 1em;
   font-weight: 400;
   line-height: 1.6;
-  margin-bottom: multiBase(8);
   padding-top: rem(80);
 
   p {

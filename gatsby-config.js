@@ -13,6 +13,7 @@ module.exports = {
         name: `pages`
       }
     },
-    `gatsby-transformer-remark`
+    `gatsby-transformer-remark`,
+    `gatsby-plugin-twitter`
   ]
 }

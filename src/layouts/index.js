@@ -24,6 +24,10 @@ class TemplateWrapper extends React.Component {
             { name: 'description', content: 'Sample' },
             { name: 'keywords', content: 'sample, something' }
           ]}
+          link={[
+            { rel: 'shortcut icon', href: '/favicon.ico', type: 'image/x-icon' },
+            { rel: 'icon', href: '/favicon.ico', type: 'image/x-icon' }
+          ]}
         />
         <div className="site__inner">
           {this.renderNav()}

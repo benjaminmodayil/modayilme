@@ -4,12 +4,14 @@ import Link from 'gatsby-link'
 
 require('smoothscroll-polyfill').polyfill()
 import HomeHeader from '../_includes/homepage/HomeHeader'
-import RandomAnimation from '../assets/RandomAnimation.js'
 import IllAvatar from '../assets/IllAvatar.js'
 import IconContactWithColor from '../assets/icons/IconContactWithColor.js'
 import IconWebSkills from '../assets/icons/IconWebSkills.js'
 import IconResume from '../assets/icons/IconResume.js'
-import IconSocial from '../assets/icons/IconSocial.js'
+import IconGithub from '../assets/icons/details-list/icon-github.svg'
+import IconTwitter from '../assets/icons/details-list/icon-twitter.svg'
+import IconInstagram from '../assets/icons/details-list/icon-instagram.svg'
+import IconLinkedin from '../assets/icons/details-list/icon-linkedin.svg'
 import Updates from '../_includes/Updates.js'
 import DetailsList from '../_includes/DetailsList.js'
 
@@ -27,7 +29,7 @@ class IndexPage extends React.Component {
           <h2 className="h-2 wrapper wrapper--extra-wide margin-center">
             my <span>writings</span>
           </h2>
-          <ul className="article-loop">
+          <ul className="article-loop wrapper wrapper--extra-wide margin-center">
             {data.allMarkdownRemark.edges
               .filter(i => i.node.frontmatter.type == 'blog')
               .map(post => {
@@ -62,7 +64,7 @@ class IndexPage extends React.Component {
               </a>{' '}
               currently living in{' '}
               <a href="https://www.google.com/maps/place/Falls+Church,+VA/@38.8860194,-77.1898726,14z/data=!3m1!4b1!4m5!3m4!1s0x89b64b6e7a4663ad:0x6e536688973d9759!8m2!3d38.882334!4d-77.1710914">
-                Falls Church, VA{' '}
+                Falls Church, VA
               </a>. I work with <a href="https://www.viget.com">Viget</a> in the same
               position, but as an apprentice learning about the industry.
             </p>
@@ -75,7 +77,7 @@ class IndexPage extends React.Component {
           <h2 className="h-2 wrapper wrapper--extra-wide margin-center">
             my <span>work</span>
           </h2>
-          <ul className="article-loop">
+          <ul className="article-loop wrapper wrapper--extra-wide margin-center">
             {data.allMarkdownRemark.edges.map(post => {
               if (post.node.frontmatter.type == 'work') {
                 return (
@@ -91,9 +93,9 @@ class IndexPage extends React.Component {
           </ul>
         </section>
         <section className="home__section-three section-margin">
-          <div className="home__section-three__row row wrapper wrapper--tablet margin-center">
+          <div className="home__section-three__row row wrapper wrapper--wide margin-center">
             <div className="home__section-three__row__col-left">
-              <p className="text-level text-level-medium u-background-white">
+              <p className="text-level text-level-medium u-background-white paragraph-padding">
                 I really love learning technologies. I’m not lying here. Here’s a few
                 things that I have been able to add to my skillset.
               </p>
@@ -104,7 +106,7 @@ class IndexPage extends React.Component {
               {/* <IconWebSkills /> */}
             </div>
           </div>
-          <div className="home__section-three__row row wrapper wrapper--tablet margin-center">
+          <div className="home__section-three__row row wrapper wrapper--wide margin-center">
             <div className="home__section-three__row__col-left">
               <p className="text-level text-level-medium u-background-white">
                 If you need a <a href="./static/resumeModayil.pdf"> resume </a> then just
@@ -114,11 +116,15 @@ class IndexPage extends React.Component {
               </p>
             </div>
 
-            <div className="home__section-three__row__col-right position-right html-list">
-              <div className="details-container" ref="detailsContainer">
+            <div className="home__section-three__row__col-right position-right html-list html-list--resume">
+              <div
+                className="details-container details-container-resume"
+                ref="detailsContainer"
+              >
                 <h2 className="h-2">
-                  Resume <span>(very profesh.)</span>
-                  <img src="#todo" alt="" />
+                  Resume{' '}
+                  <span className="details-container__sub-title">(very profesh.)</span>
+                  <span className="details-container__emoji">💼</span>
                 </h2>
                 <div className="details-container__inner details-container__inner-resume">
                   <a href="resume">{<IconResume />}</a>
@@ -127,7 +133,7 @@ class IndexPage extends React.Component {
             </div>
           </div>
 
-          <div className="home__section-three__row row wrapper wrapper--tablet margin-center">
+          <div className="home__section-three__row row wrapper wrapper--wide margin-center">
             <div className="home__section-three__row__col-left">
               <p className="text-level text-level-medium u-background-white">
                 If you’re wondering what I’m like outside of work, well, sorry to be a
@@ -149,34 +155,36 @@ class IndexPage extends React.Component {
                 </a>.
               </p>
             </div>
-            <div className="home__section-three__row__col-right position-right html-list">
+
+            <div className="home__section-three__row__col-right position-right html-list html-list--social">
               <div className="details-container" ref="detailsContainer">
                 <h2 className="h-2">
-                  Social <span>(HMU)</span>
+                  Social <span className="details-container__sub-title">(HMU)</span>
+                  <span className="details-container__emoji">📱</span>
                 </h2>
                 <ul className="details-container__inner">
                   <li>
                     <a href="#todo">
                       <span>Twitter</span>
-                      <img src="#todo" alt="" />
+                      <img src={IconTwitter} alt="" />
                     </a>
                   </li>
                   <li>
                     <a href="#todo">
                       <span>Instagram</span>
-                      <img src="#todo" alt="" />
+                      <img src={IconInstagram} alt="" />
                     </a>
                   </li>
                   <li>
                     <a href="#todo">
                       <span>LinkedIn</span>
-                      <img src="#todo" alt="" />
+                      <img src={IconLinkedin} alt="" />
                     </a>
                   </li>
                   <li>
                     <a href="#todo">
                       <span>Github</span>
-                      <img src="#todo" alt="" />
+                      <img src={IconGithub} alt="" />
                     </a>
                   </li>
                 </ul>
