@@ -9,7 +9,7 @@
   }
 
   .h-2 {
-    background-color: #393d3f;
+    background-color: white;
     color: lighten($color: color(red), $amount: 2%);
     font-family: $font-heading;
     font-size: 1rem;
@@ -40,7 +40,6 @@
 }
 
 .details-container__sub-title {
-  color: white;
   font-style: italic;
   font-size: 0.75rem;
   font-weight: 400;
@@ -78,10 +77,19 @@
   }
 }
 
-a[href='resume'] {
+.details-container__inner__resume {
   svg {
     display: block;
     margin: 0 auto;
+  }
+}
+
+a {
+  text-decoration: none;
+
+  &:hover {
+    color: var(--bg);
+    text-decoration: underline;
   }
 }
 
@@ -93,6 +101,19 @@ a[href='resume'] {
     background-color: color(bg-grey);
     padding: 3rem 0 2rem 0;
   }
+}
+
+.details-container__inner__list {
+  padding-top: 16px;
+  margin-left: 16px;
+
+  li {
+    list-style: disc;
+  }
+}
+
+.home__section-three__row .details-container__inner p {
+  padding: 1rem 0;
 }
 
 @include breakpoint(max-width 900px) {

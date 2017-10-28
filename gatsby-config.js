@@ -1,7 +1,11 @@
 module.exports = {
   siteMetadata: {
     title: 'modayil.me',
-    skillset: ['HTML', 'CSS', 'JAVASCRIPT', 'REACT', 'SKETCH', 'MEMES']
+    skillset: ['HTML', 'CSS', 'JAVASCRIPT', 'REACT', 'SKETCH', 'MEMES'],
+    twitter: 'https://twitter.com/modayilme',
+    instagram: 'https://www.instagram.com/modayilme/',
+    linkedIn: 'https://www.linkedin.com/in/benjamin-modayil/',
+    github: 'https://github.com/benjaminmodayil'
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
@@ -14,6 +18,12 @@ module.exports = {
       }
     },
     `gatsby-transformer-remark`,
-    `gatsby-plugin-twitter`
+    `gatsby-plugin-twitter`,
+    {
+      resolve: `gatsby-plugin-typography`,
+      options: {
+        pathToConfigModule: `src/utils/typography.js`
+      }
+    }
   ]
 }

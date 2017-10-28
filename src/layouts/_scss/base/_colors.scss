@@ -1,3 +1,11 @@
+:root {
+  --bg: color(red);
+}
+
+// body {
+//   background-color: var(--bg);
+// }
+
 $colors: (
   'black': #292929,
   'text': #292929,
@@ -6,3 +14,8 @@ $colors: (
   'bg': #f2f2f2,
   'bg-grey': #393d3f
 );
+// 'bg': #f2f2f2,
+// 'red': #ff545a,
+// FFEFD5
+// 6A3E37
+// #3993dd

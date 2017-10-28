@@ -7,8 +7,6 @@ type: blog
 category: ['health', 'fitness', 'code']
 ---
 
-## GroundRulesCo
-
 *[Visit the site](website)*
 
 I wish the tl;dr above was created by me, but it was created by our amazing copywriter [Elyse](http://www.google.com). 

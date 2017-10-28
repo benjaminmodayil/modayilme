@@ -50,7 +50,6 @@ a {
 
 body {
   background-color: color(bg);
-  // border: 2vw solid #f7484e;
 }
 
 p {
@@ -80,10 +79,11 @@ p {
 }
 
 .site__container {
-  border: 1.5vw solid color(red);
+  --bg: color(red);
+  // border: 1.5vw solid var(--bg);
 
   @include breakpoint(min-width 901px) {
-    border: 1vw solid color(red);
+    // border: 1vw solid var(--bg);
   }
 
   main {

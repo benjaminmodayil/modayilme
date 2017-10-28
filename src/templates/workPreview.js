@@ -1,23 +1,38 @@
 import React from 'react'
 import Helmet from 'react-helmet'
 import Link from 'gatsby-link'
-import Updates from '../_includes/Updates.js'
+import Updates from '../_includes/Updates'
+import IconKeurig from '../assets/work-images/IconKeurig'
+import * as invert from '../utils/invertColor'
 
 export default function Template({ data }) {
   const { markdownRemark: post } = data
+  const attempt = document.querySelector('.site__container')
+  // attempt.style.borderColor = post.frontmatter.themeColor
   // const post = data.markdownRemark;
   // post.frontmatter.category = "productivity",
-  // color = blah, then pass this into the post for an inline style on the header.
+
+  // console.log(invert.invertColor(post.frontmatter.themeColor))
+  let note
+  if (post.frontmatter.imageNote) {
+    note = <p dangerouslySetInnerHTML={{ __html: post.frontmatter.imageNote }} />
+  }
+
   return (
     <main className="work__preview-page">
       <article className="work">
-        <header className="work__header">
+        <header
+          className="work__header"
+          style={{ backgroundColor: post.frontmatter.themeColor }}
+        >
           <div className="work__header-inner wrapper wrapper--wide margin-center">
             <div className="work__header-inner--left container--medium-to-small ">
               <h1 className="h-1">{post.frontmatter.title}</h1>
+              <p>{post.frontmatter.tldr}</p>
             </div>
             <div className="work__header-inner--right">
-              <img src="https://picsum.photos/g/500/300" alt="" />
+              <IconKeurig />
+              {note}
             </div>
           </div>
         </header>
@@ -47,6 +62,10 @@ export const workQuery = graphql`
       frontmatter {
         path
         title
+        tldr
+        website
+        themeColor
+        imageNote
       }
     }
   }

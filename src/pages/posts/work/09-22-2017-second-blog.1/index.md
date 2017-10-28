@@ -5,11 +5,11 @@ title: 'GroundRulesCo'
 tldr: 'Viget Interns make a website about coffee showing others how to make coffee'
 type: work
 website: https://groundrules.co/
+themeColor: '#2D4DAF'
+imageNote: Design/Illustration by <a href="http://www.vivianzwang.com/ground-rules">Vivian Wang</a>
 ---
 
-# GroundRulesCo
-
-*[Visit the site](website)*
+*[Visit the site](https://www.groundrules.co/)*
 
 I wish the tl;dr above was created by me, but it was created by our amazing copywriter [Elyse](http://www.google.com). 
 

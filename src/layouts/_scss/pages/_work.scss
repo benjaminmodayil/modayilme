@@ -1,5 +1,6 @@
 .work__header {
   background-color: color(bg-grey);
+  display: flex;
   min-height: 80vh;
 
   .h-1 {
@@ -17,26 +18,30 @@
 }
 
 .work__header-inner {
+  align-items: center;
+  justify-content: center;
   display: flex;
   flex-wrap: nowrap;
 }
 
-.work__header-inner--left {
-  margin-top: 30vh;
-}
-
 .work__header-inner--right {
-  margin-top: 20vh;
-
   img,
   svg {
+    height: auto;
     max-width: 100%;
+    width: 500px;
+  }
+
+  p {
+    font-style: italic;
+    text-align: center;
+    font-size: 0.8rem;
   }
 }
 
 @include breakpoint(max-width 900px) {
   .work__header-inner {
-    flex-wrap: wrap;
+    flex-direction: column;
     justify-content: space-around;
     margin: 0 auto;
   }
@@ -59,58 +64,19 @@
 }
 
 .work__header-inner {
-  @include breakpoint(min-width 1200px) {
-    width: 100%;
-  }
-
   p {
     color: white;
-    font-size: 1rem;
+    font-size: 0.8rem;
     font-weight: 200;
-    line-height: 1.5;
+    line-height: 1.6;
     margin: rem(42) 0 0 0;
 
     span {
       color: white;
       display: block;
+      font-size: 1rem;
       font-weight: 600;
       margin: 0 0 0.6rem 0;
-
-      @include fluid-type(601px, 1440px, 16px, 16px);
     }
-  }
-}
-
-.featured__work,
-.lab__experiments,
-.work__skills {
-  margin-bottom: 20vh;
-
-  @include breakpoint(min-width 901px) {
-    margin-bottom: 0vh;
-  }
-}
-
-.work__skills {
-  max-width: 350px;
-
-  h2 {
-    margin-bottom: multiBase(1);
-  }
-
-  ul {
-    display: flex;
-    flex-direction: row;
-    max-width: 500px;
-    flex-wrap: wrap;
-  }
-
-  li {
-    background-color: white;
-    color: color(red);
-    margin: 0.5rem;
-    padding: 0.5rem;
-    text-align: center;
-    flex: 1 1 25%;
   }
 }

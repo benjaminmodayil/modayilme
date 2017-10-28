@@ -62,7 +62,17 @@ class DetailsList extends Component {
                 <IconMore />
               </summary>
               <article>
-                <p>More info about the details.</p>
+                <ul className="details-container__inner__list">
+                  <li>
+                    <a href="#todo">Item</a>
+                  </li>
+                  <li>
+                    <a href="#todo">Item</a>
+                  </li>
+                  <li>
+                    <a href="#todo">Item</a>
+                  </li>
+                </ul>
               </article>
             </details>
           </li>
@@ -73,7 +83,17 @@ class DetailsList extends Component {
                 <IconMore />
               </summary>
               <article>
-                <p>More info about the details.</p>
+                <ul className="details-container__inner__list">
+                  <li>
+                    <a href="#todo">Item</a>
+                  </li>
+                  <li>
+                    <a href="#todo">Item</a>
+                  </li>
+                  <li>
+                    <a href="#todo">Item</a>
+                  </li>
+                </ul>
               </article>
             </details>
           </li>
@@ -84,7 +104,17 @@ class DetailsList extends Component {
                 <IconMore />
               </summary>
               <article>
-                <p>More info about the details.</p>
+                <ul className="details-container__inner__list">
+                  <li>
+                    <a href="#todo">Item</a>
+                  </li>
+                  <li>
+                    <a href="#todo">Item</a>
+                  </li>
+                  <li>
+                    <a href="#todo">Item</a>
+                  </li>
+                </ul>
               </article>
             </details>
           </li>
@@ -95,7 +125,17 @@ class DetailsList extends Component {
                 <IconMore />
               </summary>
               <article>
-                <p>More info about the details.</p>
+                <ul className="details-container__inner__list">
+                  <li>
+                    <a href="#todo">Item</a>
+                  </li>
+                  <li>
+                    <a href="#todo">Item</a>
+                  </li>
+                  <li>
+                    <a href="#todo">Item</a>
+                  </li>
+                </ul>
               </article>
             </details>
           </li>

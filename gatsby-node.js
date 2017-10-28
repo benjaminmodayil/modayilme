@@ -43,7 +43,7 @@ exports.createPages = ({ boundActionCreators, graphql }) => {
       }
 
       createPage({
-        path: node.frontmatter.path,
+        path: node.frontmatter.path ? node.frontmatter.path : '',
         component: checkType()
       })
     })

@@ -23,7 +23,7 @@
     flex-direction: column;
 
     @include breakpoint(min-width 901px) {
-      max-width: 440px;
+      max-width: 650px;
     }
   }
 

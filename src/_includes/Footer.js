@@ -12,10 +12,8 @@ class Footer extends Component {
   render() {
     return (
       <footer className="home__footer">
-        <div className="footer__inner wrapper wrapper--tablet margin-center">
-          <h2 className="h-2">
-            this is my <span>footer</span>
-          </h2>
+        <div className="footer__inner wrapper wrapper--responsive margin-center">
+          <h2 className="h-2">Thanks for stopping by!</h2>
           <ul>
             <li>
               <Link to="/" className="footer__process">

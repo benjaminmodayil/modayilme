@@ -1,3 +1,107 @@
+//index waves animation
+.animation-waves {
+  bottom: 0;
+  left: 0;
+  right: 0;
+  position: fixed;
+  width: 100%;
+  z-index: -1;
+}
+
+
+//work/ground-rules animations
+
+#waterBottle {
+  animation: waterShake 3s 4s both ease infinite;
+  transform-origin: 138px 182px;
+}
+
+#vinegarBottle {
+  animation: vinegarShake 3s 4s both ease infinite;
+  transform-origin: 0px 253px;
+}
+
+@keyframes waterShake {
+  0% {
+    transform: translate(138px, 80px) rotate(0deg);
+  }
+
+  10% {
+    transform: translate(138px, 80px) rotate(0deg);
+  }
+  20% {
+    transform: translate(138px, 80px) rotate(0deg);
+  }
+  30% {
+    transform: translate(180px, -125px) rotate(0deg);
+  }
+  40% {
+    transform: translate(180px, -125px) rotate(-10deg);
+  }
+  50% {
+    transform: translate(180px, -125px) rotate(10deg);
+  }
+  60% {
+    transform: translate(180px, -125px) rotate(-10deg);
+  }
+  70% {
+    transform: translate(180px, -125px) rotate(10deg);
+  }
+  80% {
+    transform: translate(180px, -125px) rotate(-10deg);
+  }
+  90% {
+    transform: translate(138px, 80px) rotate(0deg);
+  }
+  100% {
+    transform: translate(138px, 80px) rotate(0deg);
+  }
+}
+
+@keyframes vinegarShake {
+  0% {
+    transform: translate(0px, 250px) rotate(0deg);
+  }
+
+  10% {
+    transform: translate(0px, 250px) rotate(0deg);
+  }
+
+  20% {
+    transform: translate(0px, 250px) rotate(0deg);
+  }
+  30% {
+    transform: translate(-30px, 43px) rotate(10deg);
+  }
+
+  40% {
+    transform: translate(-30px, 43px) rotate(-10deg);
+  }
+  50% {
+    transform: translate(-30px, 43px) rotate(10deg);
+  }
+
+  60% {
+    transform: translate(-30px, 43px) rotate(-10deg);
+  }
+
+  70% {
+    transform: translate(-30px, 43px) rotate(10deg);
+  }
+
+  80% {
+    transform: translate(-30px, 43px) rotate(-10deg);
+  }
+
+  90% {
+    transform: translate(0px, 250px) rotate(0deg);
+  }
+
+  100% {
+    transform: translate(0px, 250px) rotate(0deg);
+  }
+}
+
 // lighthouse and animations
 .icon-lighthouse {
   position: absolute;
@@ -5,14 +109,17 @@
   left: 0;
   overflow: hidden;
 }
+
 #icon-lighthouse {
   position: absolute;
   bottom: 0;
 }
+
 #Clipped {
   transform-origin: center;
   overflow: hidden;
 }
+
 #clipped-inner {
   // animation: clipped 20s both infinite ease-in-out;
 }
@@ -35,6 +142,7 @@
   animation: light 18.5s both infinite ease-in-out;
   opacity: 0.8;
 }
+
 @keyframes light {
   0% {
     opacity: 0.7;

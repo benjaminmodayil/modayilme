@@ -15,6 +15,9 @@ import IconLinkedin from '../assets/icons/details-list/icon-linkedin.svg'
 import Updates from '../_includes/Updates.js'
 import DetailsList from '../_includes/DetailsList.js'
 
+import AnimationWaves from '../assets/randomAnimations/AnimationWaves'
+
+
 class IndexPage extends React.Component {
   handleClick() {
     this.refs.about.scrollIntoView({ behavior: 'smooth' })
@@ -25,31 +28,45 @@ class IndexPage extends React.Component {
     return (
       <main className="home-page">
         <section className="home__section-one">
-          <HomeHeader onClick={this.handleClick.bind(this)} />
-          <h2 className="h-2 wrapper wrapper--extra-wide margin-center">
-            my <span>writings</span>
-          </h2>
-          <ul className="article-loop wrapper wrapper--extra-wide margin-center">
-            {data.allMarkdownRemark.edges
-              .filter(i => i.node.frontmatter.type == 'blog')
-              .map(post => {
-                if (post.node.frontmatter.type == 'blog') {
-                  return (
-                    <li>
-                      <Link
-                        key={post.node.id}
-                        to={post.node.frontmatter.path}
-                        previous={post.node.frontmatter.title}
-                      >
-                        <h3 className="h-3">{post.node.frontmatter.title}</h3>
-                        <p>{post.node.frontmatter.tldr}</p>
-                      </Link>
-                    </li>
-                  )
-                }
-              })
-              .filter((i, index) => (index = 3))}
-          </ul>
+          <HomeHeader onClick={this.handleClick.bind(this)} info={data} />
+          <AnimationWaves/>
+          <div className="wrapper--loop margin-center">
+            <h2 className="h-2">
+              my <span>writings</span>
+            </h2>
+            <ul className="article-loop">
+              {data.allMarkdownRemark.edges
+                .filter(i => i.node.frontmatter.type == 'blog')
+                .map(post => {
+                  if (post.node.frontmatter.type == 'blog') {
+                    if (post.node.frontmatter.external) {
+                      return (
+                        <li>
+                          <a
+                            key={post.node.id}
+                            href={post.node.frontmatter.external}
+                            target="_blank"
+                          >
+                            <h3 className="h-3">{post.node.frontmatter.title}</h3>
+                            <p>{post.node.frontmatter.tldr}</p>
+                          </a>
+                        </li>
+                      )
+                    } else {
+                      return (
+                        <li>
+                          <Link key={post.node.id} to={post.node.frontmatter.path}>
+                            <h3 className="h-3">{post.node.frontmatter.title}</h3>
+                            <p>{post.node.frontmatter.tldr}</p>
+                          </Link>
+                        </li>
+                      )
+                    }
+                  }
+                })
+                .filter((i, index) => (index = 3))}
+            </ul>
+          </div>
         </section>
 
         <section className="home__section-two" ref="about">
@@ -73,28 +90,29 @@ class IndexPage extends React.Component {
               linked below:
             </p>
           </div>
-
-          <h2 className="h-2 wrapper wrapper--extra-wide margin-center">
-            my <span>work</span>
-          </h2>
-          <ul className="article-loop wrapper wrapper--extra-wide margin-center">
-            {data.allMarkdownRemark.edges.map(post => {
-              if (post.node.frontmatter.type == 'work') {
-                return (
-                  <li>
-                    <Link key={post.node.id} to={post.node.frontmatter.path}>
-                      <h3 className="h-3">{post.node.frontmatter.title}</h3>
-                      <p>{post.node.frontmatter.tldr}</p>
-                    </Link>
-                  </li>
-                )
-              }
-            })}
-          </ul>
+          <div className="wrapper--loop margin-center">
+            <h2 className="h-2">
+              my <span>work</span>
+            </h2>
+            <ul className="article-loop">
+              {data.allMarkdownRemark.edges.map(post => {
+                if (post.node.frontmatter.type == 'work') {
+                  return (
+                    <li>
+                      <Link key={post.node.id} to={post.node.frontmatter.path}>
+                        <h3 className="h-3">{post.node.frontmatter.title}</h3>
+                        <p>{post.node.frontmatter.tldr}</p>
+                      </Link>
+                    </li>
+                  )
+                }
+              })}
+            </ul>
+          </div>
         </section>
         <section className="home__section-three section-margin">
-          <div className="home__section-three__row row wrapper wrapper--wide margin-center">
-            <div className="home__section-three__row__col-left">
+          <div className="home__section-three__row row wrapper wrapper--responsive margin-center">
+            <div className="home__section-three__row__col-left container--medium-to-tablet">
               <p className="text-level text-level-medium u-background-white paragraph-padding">
                 I really love learning technologies. I’m not lying here. Here’s a few
                 things that I have been able to add to my skillset.
@@ -103,13 +121,12 @@ class IndexPage extends React.Component {
 
             <div className="home__section-three__row__col-right html-details position-right">
               <DetailsList />
-              {/* <IconWebSkills /> */}
             </div>
           </div>
-          <div className="home__section-three__row row wrapper wrapper--wide margin-center">
-            <div className="home__section-three__row__col-left">
+          <div className="home__section-three__row row wrapper wrapper--responsive margin-center">
+            <div className="home__section-three__row__col-left container--medium-to-tablet">
               <p className="text-level text-level-medium u-background-white">
-                If you need a <a href="./static/resumeModayil.pdf"> resume </a> then just
+                If you need a <a href="./static/modayilResume.pdf"> resume </a> then just
                 click on that keyword. Also feel free to check-out my{' '}
                 <a href="https://codepen.io/modayilme">Codepen</a> and below for more
                 examples of this things I like to learn.
@@ -127,14 +144,19 @@ class IndexPage extends React.Component {
                   <span className="details-container__emoji">💼</span>
                 </h2>
                 <div className="details-container__inner details-container__inner-resume">
-                  <a href="resume">{<IconResume />}</a>
+                  <a
+                    className="details-container__inner__resume"
+                    href="./static/modayilResume.pdf"
+                  >
+                    {<IconResume />}
+                  </a>
                 </div>
               </div>
             </div>
           </div>
 
-          <div className="home__section-three__row row wrapper wrapper--wide margin-center">
-            <div className="home__section-three__row__col-left">
+          <div className="home__section-three__row row wrapper wrapper--responsive margin-center">
+            <div className="home__section-three__row__col-left container--medium-to-tablet">
               <p className="text-level text-level-medium u-background-white">
                 If you’re wondering what I’m like outside of work, well, sorry to be a
                 bummer, but I like to work. Usually I’m learning something new code-wise,
@@ -147,12 +169,9 @@ class IndexPage extends React.Component {
               <p className="text-level text-level-medium u-background-white">
                 Interested in following me or keeping updated on things I write or do?
                 Sign up for my newsletter below, follow me on my{' '}
-                <a href="https://twitter.com/modayilme">Twitter</a>,{' '}
-                <a href="https://www.instagram.com/modayilme/">Instagram</a>, or connect
-                with me on{' '}
-                <a href="https://www.linkedin.com/in/benjamin-modayil-89136411a/">
-                  LinkedIn
-                </a>.
+                <a href={data.site.siteMetadata.twitter}>Twitter</a>,{' '}
+                <a href={data.site.siteMetadata.instagram}>Instagram</a>, or connect with
+                me on <a href={data.site.siteMetadata.linkedIn}>LinkedIn</a>.
               </p>
             </div>
 
@@ -164,25 +183,25 @@ class IndexPage extends React.Component {
                 </h2>
                 <ul className="details-container__inner">
                   <li>
-                    <a href="#todo">
+                    <a href={data.site.siteMetadata.twitter}>
                       <span>Twitter</span>
                       <img src={IconTwitter} alt="" />
                     </a>
                   </li>
                   <li>
-                    <a href="#todo">
+                    <a href={data.site.siteMetadata.instagram}>
                       <span>Instagram</span>
                       <img src={IconInstagram} alt="" />
                     </a>
                   </li>
                   <li>
-                    <a href="#todo">
+                    <a href={data.site.siteMetadata.linkedIn}>
                       <span>LinkedIn</span>
                       <img src={IconLinkedin} alt="" />
                     </a>
                   </li>
                   <li>
-                    <a href="#todo">
+                    <a href={data.site.siteMetadata.github}>
                       <span>Github</span>
                       <img src={IconGithub} alt="" />
                     </a>
@@ -200,7 +219,7 @@ class IndexPage extends React.Component {
 
 export const indexBlogListingQuery = graphql`
   query IndexingQuery {
-    allMarkdownRemark(limit: 6) {
+    allMarkdownRemark(limit: 20) {
       edges {
         node {
           id
@@ -209,8 +228,17 @@ export const indexBlogListingQuery = graphql`
             tldr
             path
             type
+            external
           }
         }
+      }
+    }
+    site {
+      siteMetadata {
+        twitter
+        instagram
+        linkedIn
+        github
       }
     }
   }

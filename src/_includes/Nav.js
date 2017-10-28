@@ -9,8 +9,8 @@ import IconContact from '../assets/icons/IconContact.js'
 class Nav extends Component {
   render() {
     return (
-      <nav className="nav">
-        <div className="nav__inner wrapper wrapper--tablet margin-center padding-top-and-bottom--small">
+      <nav className="nav margin-center">
+        <div className="nav__inner wrapper wrapper--tablet padding-top-and-bottom--small">
           <Link className="site__title padding-top-and-bottom--small" to="/">
             modayil.me
           </Link>

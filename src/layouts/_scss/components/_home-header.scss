@@ -1,110 +1,48 @@
-.desktop-only {
-  display: none;
+.home__section-one__header {
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+
+  min-height: 80vh;
+  align-items: center;
 }
 
-.home__header {
-  background-color: color(bg-grey);
-  padding: multiBase(3) 0 1.6rem 0;
-  position: relative;
-
-  @include breakpoint(min-width 901px) {
+.home__section-one {
+  header {
     display: flex;
-    flex-direction: column;
-
+    justify-content: space-between;
+    flex-direction: row;
     flex-wrap: wrap;
+    padding-bottom: 20vh;
+    padding-top: 20vh;
 
-    .right__column {
-      display: flex;
-      flex-direction: column;
-      width: 50%;
+    p {
+      line-height: 1.7;
+    }
+
+    @include breakpoint(min-width 901px) {
+      padding-top: 24vh;
+      padding-bottom: 20.2vh;
     }
   }
 
-  .right__column {
-    margin-top: 2.5rem;
-  }
-
-  h1 {
+  .h-1 {
+    @include fluid-type(601px, 2000px, 28px, 36px);
     color: color(red);
-    font-weight: 700;
-    margin: 0 0 0 0;
-
-    @include fluid-type(601px, 1440px, 36px, 76px);
-
-    &:not(span) {
-      text-shadow: 2px 2px 2px lighten(color(black), 10%);
-    }
-  }
-
-  h1 span,
-  p span {
-    color: white;
-    display: block;
-    font-weight: 200;
-    margin: 0 0 0.6rem 0;
-
-    @include fluid-type(601px, 1440px, 24px, 56px);
+    font-family: $font-body;
+    font-weight: 600;
+    margin-bottom: 1rem;
   }
 
   p {
-    color: white;
-    font-size: 1rem;
+    @include fluid-type(601px, 1400px, 24px, 28px);
+    font-family: $font-body;
+    font-weight: 300;
     line-height: 1.5;
-    margin: rem(42) 0 0 0;
-
-    span {
-      color: white;
-      font-weight: 600;
-
-      @include fluid-type(601px, 1440px, 16px, 16px);
-    }
-  }
-
-  a {
-    display: block;
-    font-weight: 400;
-    margin: 1rem 0 0 0;
-    text-shadow: 2px 2px 2px lighten(color(black), 10%);
-  }
-
-  .header__svg {
-    height: auto;
-    max-width: 400px;
-    width: 100%;
-
-    align-self: flex-end;
   }
 }
 
-@include breakpoint(min-width 901px) {
-  .desktop-only {
-    display: block;
-  }
-
-  .mobile-only {
-    display: none;
-  }
-}
-
-@include breakpoint(min-width 1000px) {
-  .home__header {
-    padding: 10vh 0 10vh 0;
-  }
-}
-
-.header__container {
-  @include clearfix();
-  display: flex;
-  flex-direction: column;
-
-  justify-content: space-between;
-
-  @include breakpoint(min-width 901px) {
-    flex-direction: row;
-  }
-}
-
-.home__header-temp {
-  min-height: 100vh;
-  padding-top: 10vh;
+.home__section-one__header__link {
+  justify-content: flex-end;
+  align-self: flex-end;
 }

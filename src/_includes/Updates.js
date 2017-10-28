@@ -5,7 +5,7 @@ import IconContactWithColor from '../assets/icons/IconContactWithColor.js'
 class Updates extends Component {
   render() {
     return (
-      <div className="banner-newsletter wrapper wrapper--wide margin-center">
+      <div className="banner-newsletter wrapper--responsive margin-center">
         <div className="component__updates">
           <div className="component__updates__inner">
             <div className="component__updates__col-left">
