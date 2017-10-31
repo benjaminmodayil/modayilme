@@ -2,7 +2,6 @@ import React from 'react'
 import ReactDOM from 'react-dom'
 import Link from 'gatsby-link'
 
-// require('smoothscroll-polyfill').polyfill()
 import HomeHeader from '../_includes/homepage/HomeHeader'
 import IllAvatar from '../assets/IllAvatar.js'
 import IconContactWithColor from '../assets/icons/IconContactWithColor.js'
@@ -12,6 +11,7 @@ import IconGithub from '../assets/icons/details-list/icon-github.svg'
 import IconTwitter from '../assets/icons/details-list/icon-twitter.svg'
 import IconInstagram from '../assets/icons/details-list/icon-instagram.svg'
 import IconLinkedin from '../assets/icons/details-list/icon-linkedin.svg'
+import IconLink from '../assets/icons/IconLink.js'
 import Updates from '../_includes/Updates.js'
 import DetailsList from '../_includes/DetailsList.js'
 
@@ -19,52 +19,54 @@ import AnimationWaves from '../assets/randomAnimations/AnimationWaves'
 
 
 class IndexPage extends React.Component {
-  // handleClick() {
-  //   this.refs.about.scrollIntoView({ behavior: 'smooth' })
-  // }
+  componentDidMount() {
+    require('smoothscroll-polyfill').polyfill()
+  }
+
+  handleClick() {
+    this.refs.about.scrollIntoView({ behavior: 'smooth' })
+  }
 
   render() {
     const { data } = this.props
+    const blogPosts = data.allMarkdownRemark.edges
+                          .filter((i, index) => i.node.frontmatter.type == 'blog')
+                          .slice(0, 3)
+    const caseStudies = data.allMarkdownRemark.edges
+                            .filter(i => i.node.frontmatter.type == 'work')
+                            .slice(0, 3)
     return (
       <main className="home-page">
         <section className="home__section-one">
-          {/* <HomeHeader onClick={this.handleClick.bind(this)} info={data} /> */}
-          <AnimationWaves/>
+          <HomeHeader onClick={this.handleClick.bind(this)} />
+          <AnimationWaves />
           <div className="wrapper--loop margin-center">
             <h2 className="h-2">
               my <span>writings</span>
             </h2>
             <ul className="article-loop">
-              {data.allMarkdownRemark.edges
-                .filter(i => i.node.frontmatter.type == 'blog')
-                .map(post => {
-                  if (post.node.frontmatter.type == 'blog') {
-                    if (post.node.frontmatter.external) {
-                      return (
-                        <li>
-                          <a
-                            key={post.node.id}
-                            href={post.node.frontmatter.external}
-                            target="_blank"
-                          >
-                            <h3 className="h-3">{post.node.frontmatter.title}</h3>
-                            <p>{post.node.frontmatter.tldr}</p>
-                          </a>
-                        </li>
-                      )
-                    } else {
-                      return (
-                        <li>
-                          <Link key={post.node.id} to={post.node.frontmatter.path}>
-                            <h3 className="h-3">{post.node.frontmatter.title}</h3>
-                            <p>{post.node.frontmatter.tldr}</p>
-                          </Link>
-                        </li>
-                      )
-                    }
-                  }
-                })
-                .filter((i, index) => (index = 3))}
+            {blogPosts.map(post => {
+                if (post.node.frontmatter.external) {
+                  return (
+                    <li key={post.node.id}>
+                      <a href={post.node.frontmatter.external} target="_blank">
+                        <h3 className="h-3">{post.node.frontmatter.title}</h3>
+                        <p>{post.node.frontmatter.tldr}</p>
+                        <IconLink />
+                      </a>
+                    </li>
+                  )
+                } else {
+                  return (
+                    <li key={post.node.id}>
+                      <Link to={post.node.frontmatter.path}>
+                        <h3 className="h-3">{post.node.frontmatter.title}</h3>
+                        <p>{post.node.frontmatter.tldr}</p>
+                      </Link>
+                    </li>
+                  )
+                }
+              })}
             </ul>
           </div>
         </section>
@@ -95,18 +97,16 @@ class IndexPage extends React.Component {
               my <span>work</span>
             </h2>
             <ul className="article-loop">
-              {data.allMarkdownRemark.edges.map(post => {
-                if (post.node.frontmatter.type == 'work') {
-                  return (
-                    <li>
-                      <Link key={post.node.id} to={post.node.frontmatter.path}>
-                        <h3 className="h-3">{post.node.frontmatter.title}</h3>
-                        <p>{post.node.frontmatter.tldr}</p>
-                      </Link>
-                    </li>
-                  )
-                }
-              })}
+            {caseStudies.map(post => {
+                return (
+                  <li key={post.node.id}>
+                    <Link to={post.node.frontmatter.path}>
+                      <h3 className="h-3">{post.node.frontmatter.title}</h3>
+                      <p>{post.node.frontmatter.tldr}</p>
+                    </Link>
+                  </li>
+                )
+               })}
             </ul>
           </div>
         </section>
@@ -148,7 +148,7 @@ class IndexPage extends React.Component {
                     className="details-container__inner__resume"
                     href="./static/modayilResume.pdf"
                   >
-                    {<IconResume />}
+                    <IconResume />
                   </a>
                 </div>
               </div>

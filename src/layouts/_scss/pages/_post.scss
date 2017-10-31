@@ -114,10 +114,16 @@
       }
     }
   }
+
+  input {
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+  }
 }
 
 blockquote {
   background-color: white;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+  margin: 2rem 0;
   padding: multiBase(2) 0;
 
   p {

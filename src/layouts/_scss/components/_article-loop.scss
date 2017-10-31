@@ -3,6 +3,11 @@
   flex-direction: column;
   flex-wrap: wrap;
 
+  icon-link {
+    position: absolute;
+    right: 20px;
+  }
+
   a {
     height: 100%;
     padding: 64px 20px;

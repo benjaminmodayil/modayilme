@@ -32,9 +32,9 @@ exports.createPages = ({ boundActionCreators, graphql }) => {
 
     res.data.allMarkdownRemark.edges.forEach(({ node }) => {
       const checkType = () => {
-        if (node.frontmatter.layout.includes('post')) {
+        if (node.frontmatter.layout == 'post') {
           return postTemplate
-        } else if (node.frontmatter.layout.includes('work')) {
+        } else if (node.frontmatter.layout == 'work') {
           return workPreviewTemplate
         } else {
           return postTemplate
@@ -42,8 +42,11 @@ exports.createPages = ({ boundActionCreators, graphql }) => {
       }
 
       createPage({
-        path: node.frontmatter.path ? node.frontmatter.path : '',
-        component: checkType()
+        path: node.frontmatter.path,
+        component: checkType(),
+        context: {
+          path: node.frontmatter.path
+        }
       })
     })
   })

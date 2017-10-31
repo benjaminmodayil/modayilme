@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import Link from 'gatsby-link'
 import IconMore from '../assets/icons/IconMore.js'
 
 class DetailsList extends Component {
@@ -29,9 +30,9 @@ class DetailsList extends Component {
     const current = e.currentTarget
     console.log(current)
 
-    if (current.getAttribute('aria-expanded') == 'true') {
-      current.setAttribute('aria-expanded', 'false')
-      current.removeAttribute('open')
+    if (current.parentNode.getAttribute('aria-expanded') == 'true') {
+      current.parentNode.setAttribute('aria-expanded', 'false')
+      current.parentNode.removeAttribute('open')
       this.removeLists()
     } else {
       details.map(item => {
@@ -40,8 +41,8 @@ class DetailsList extends Component {
           item.setAttribute('aria-expanded', 'false')
         }
 
-        current.setAttribute('aria-expanded', 'true')
-        current.setAttribute('open', '')
+        current.parentNode.setAttribute('aria-expanded', 'true')
+        current.parentNode.setAttribute('open', '')
         this.addLists()
       })
     }
@@ -56,15 +57,38 @@ class DetailsList extends Component {
         </h2>
         <ul className="details-container__inner">
           <li>
-            <details aria-expanded="false" onClick={e => this.triggerDetails(e)}>
-              <summary>
-                <span>HTML, CSS</span>
+            <details aria-expanded="false">
+              <summary onClick={e => this.triggerDetails(e)}>
+                <span>HTML, CSS, JS</span>
                 <IconMore />
               </summary>
               <article>
                 <ul className="details-container__inner__list">
                   <li>
-                    <a href="#todo">Item</a>
+                    <Link to="/work/ground-rules">Ground Rules</Link>
+                  </li>
+                  <li>
+                    <a href="http://www.jennifermoorespeech.com/">Jennifer Moore</a>
+                  </li>
+                  <li>
+                    <a href="https://ctl2.cedarville.edu/cove/">The Cove</a>
+                  </li>
+                </ul>
+              </article>
+            </details>
+          </li>
+          <li>
+            <details aria-expanded="false">
+              <summary onClick={e => this.triggerDetails(e)}>
+                <span>Web Animations</span>
+                <IconMore />
+              </summary>
+              <article>
+                <ul className="details-container__inner__list">
+                  <li>
+                    <a href="https://codepen.io/modayilme/pen/ybXErO">
+                    Lighthouse Hill preview
+                    </a>
                   </li>
                   <li>
                     <a href="#todo">Item</a>
@@ -77,63 +101,33 @@ class DetailsList extends Component {
             </details>
           </li>
           <li>
-            <details aria-expanded="false" onClick={e => this.triggerDetails(e)}>
-              <summary>
-                <span>JavaScript</span>
-                <IconMore />
-              </summary>
-              <article>
-                <ul className="details-container__inner__list">
-                  <li>
-                    <a href="#todo">Item</a>
-                  </li>
-                  <li>
-                    <a href="#todo">Item</a>
-                  </li>
-                  <li>
-                    <a href="#todo">Item</a>
-                  </li>
-                </ul>
-              </article>
-            </details>
-          </li>
-          <li>
-            <details aria-expanded="false" onClick={e => this.triggerDetails(e)}>
-              <summary>
+            <details aria-expanded="false">
+              <summary onClick={e => this.triggerDetails(e)}>
                 <span>ReactJS</span>
                 <IconMore />
               </summary>
               <article>
                 <ul className="details-container__inner__list">
                   <li>
-                    <a href="#todo">Item</a>
+                    <a href="#todo">Blog Thingy</a>
                   </li>
                   <li>
-                    <a href="#todo">Item</a>
-                  </li>
-                  <li>
-                    <a href="#todo">Item</a>
+                    <a href="#todo">Todo app</a>
                   </li>
                 </ul>
               </article>
             </details>
           </li>
           <li>
-            <details aria-expanded="false" onClick={e => this.triggerDetails(e)}>
-              <summary>
+            <details aria-expanded="false">
+              <summary onClick={e => this.triggerDetails(e)}>
                 <span>Craft CMS</span>
                 <IconMore />
               </summary>
               <article>
                 <ul className="details-container__inner__list">
                   <li>
-                    <a href="#todo">Item</a>
-                  </li>
-                  <li>
-                    <a href="#todo">Item</a>
-                  </li>
-                  <li>
-                    <a href="#todo">Item</a>
+                    <a href="#todo">Silent Sentinels (ask to see)</a>
                   </li>
                 </ul>
               </article>

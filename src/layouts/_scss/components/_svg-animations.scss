@@ -2,22 +2,76 @@
 .animation-waves {
   bottom: 0;
   left: 0;
-  right: 0;
+  height: 50%;
   position: fixed;
+  right: 0;
   width: 100%;
   z-index: -1;
 }
 
+#wave1 {
+  animation: waveOne 7s forwards ease-in-out infinite;
+}
+
+@keyframes waveOne {
+  0% {
+    transform: translate(0px, 0px);
+  }
+
+  50% {
+    transform: translate(15px, -10px);
+  }
+
+  100% {
+    transform: translate(0px, 0px);
+  }
+}
+
+#wave2 {
+  animation: waveTwo 7s forwards ease-in-out infinite;
+}
+
+@keyframes waveTwo {
+  0% {
+    transform: translate(0px, 0px);
+  }
+
+  50% {
+    transform: translate(35px, 0px);
+  }
+
+  100% {
+    transform: translate(0px, 0px);
+  }
+}
+
+#wave3 {
+  animation: waveThree 7s forwards ease-in-out infinite;
+}
+
+@keyframes waveThree {
+  0% {
+    transform: translate(0px, 0px);
+  }
+
+  50% {
+    transform: translate(-25px, 0px);
+  }
+
+  100% {
+    transform: translate(0px, 0px);
+  }
+}
 
 //work/ground-rules animations
 
 #waterBottle {
-  animation: waterShake 3s 4s both ease infinite;
+  animation: waterShake 3s 2s both ease infinite;
   transform-origin: 138px 182px;
 }
 
 #vinegarBottle {
-  animation: vinegarShake 3s 4s both ease infinite;
+  animation: vinegarShake 3s 2s both ease infinite;
   transform-origin: 0px 253px;
 }
 

@@ -5,9 +5,7 @@ import Updates from '../_includes/Updates.js'
 
 export default function Template({ data }, props) {
   const { markdownRemark: post } = data
-  // const post = data.markdownRemark;
-  // post.frontmatter.category = "productivity",
-  // color = blah, then pass this into the post for an inline style on the header.
+
   return (
     <main className="post__page">
       <article className="post">

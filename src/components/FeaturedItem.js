@@ -5,8 +5,6 @@ import featuredImage from '../assets/featured-item/preview.png'
 
 class FeaturedItem extends Component {
   render() {
-    // const data = this.props.info
-
     return (
       <div className="home__featured">
         <img src={featuredImage} alt="" />

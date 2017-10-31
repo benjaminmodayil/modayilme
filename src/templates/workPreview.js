@@ -7,11 +7,7 @@ import * as invert from '../utils/invertColor'
 
 export default function Template({ data }) {
   const { markdownRemark: post } = data
-  // attempt.style.borderColor = post.frontmatter.themeColor
-  // const post = data.markdownRemark;
-  // post.frontmatter.category = "productivity",
 
-  // console.log(invert.invertColor(post.frontmatter.themeColor))
   let note
   if (post.frontmatter.imageNote) {
     note = <p dangerouslySetInnerHTML={{ __html: post.frontmatter.imageNote }} />
@@ -57,6 +53,7 @@ export default function Template({ data }) {
 export const workQuery = graphql`
   query WorkStudyByPath($path: String!) {
     markdownRemark(frontmatter: { path: { eq: $path } }) {
+      id
       html
       frontmatter {
         path

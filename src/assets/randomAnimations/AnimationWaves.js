@@ -2,7 +2,7 @@ import React from 'react';
 
 export default function AnimationWaves(props) {
   return (
-    <svg className="animation-waves" viewBox="0 0 1440 428" xmlns="http://www.w3.org/2000/svg" {...props}>
+    <svg className="animation-waves" xmlns="http://www.w3.org/2000/svg" {...props}>
       <g id="v.4" fill="none" fillRule="evenodd" opacity=".397">
         <g id="new3-copy-2">
           <g id="waves">

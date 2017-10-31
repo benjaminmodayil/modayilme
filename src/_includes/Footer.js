@@ -16,7 +16,7 @@ class Footer extends Component {
           <h2 className="h-2">Thanks for stopping by!</h2>
           <ul>
             <li>
-              <Link to="/" className="footer__process">
+              <Link to="/work/how-i-made-my-site" className="footer__process">
                 <p>Handcrafted through trial and error</p>
                 <span>Learn how I built my website.</span>
               </Link>
@@ -37,7 +37,7 @@ class Footer extends Component {
                     </a>
                   </li>
                   <li>
-                    <a href="https://www.linkedin.com/in/benjamin-modayil-89136411a">
+                    <a href="https://www.linkedin.com/in/benjamin-modayil">
                       <IconLinkedIn />
                       <span>LinkedIn</span>
                     </a>
