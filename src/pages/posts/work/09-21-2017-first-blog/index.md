@@ -4,24 +4,22 @@ path: '/work/how-i-made-my-site'
 title: 'Handcrafted through trial and error'
 tldr: 'Learn how I built my site'
 type: work
+website: https://modayil.me/
+themeColor: '#F7484E'
+svgName: 'IllustrationAvatar'
 ---
 
-# New Beginnings
-Most of what this post covers is how I made this new rendition of my site. If you're curious to learn <b>why</b> I made this new site, then click [here](http://google.com). 
+> **Note**: This site is currently being worked on (as of October 31st 👻). If you've managed to find your way here, stay tuned for some 👌🏾 looking things on November 6th.
 
-<div class="component-colors">
-<h2 class="h-2">Color Pallete</h2>
-  <ul>
-    <li style="background-color: blue"><span>Blue</span></li>
-    <li style="background-color: black"><span>Black</span></li>
-    <li style="background-color: green"><span>Green</span></li>
-    <li style="background-color: purple"><span>Purple</span></li>
-    <li style="background-color: yellow"><span>Yellow</span></li>
-  </ul>
-</div>
+# New Beginnings
+If you've been on my site before, pre-November 2017, you'll notice things are quite different. In the past you might have seen a wide variety of adaptations of the site. *Currently*, I'm sticking with this one, but treating it like good ol' HTML, a living standard.
+
+I don't know what this site will hold in the future, but I know what it's good for now, a place to learn, grow, experiment, and vent.
 
 ## A brief history
-The first time I built my website was in Balsamiq Mockups. For those of you that don't know, Balsamiq Mockups is for making... mockups, but very low-fidelity versions. That was when I was just learning how to make websites in my first web design class. Thank God, that my teacher encouraged me to hold off on designing a portfolio site early on and point me into a more capable program for high-fidelity designs. 
+The first time I built my website was in Balsamiq Mockups. For those of you that don't know, Balsamiq Mockups is for making... mockups, but very low-fidelity versions. In fact, I would argue that they are just wireframes at their core.
+
+That was when I was just learning how to make websites in my first web design class. Thank God, my teacher encouraged me to hold off on designing a portfolio site early on and point me into a more capable program for high-fidelity designs.
 
 *Sadly, I do not have the old comps from Balsamiq to display. Just know that they looked like poor sketches with bright colors.*
 

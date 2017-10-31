@@ -20,4 +20,4 @@ I think we need to stop treating a todo list as a life changing object. Todo lis
 
 For me, I’ll just stick to Excel.
 
-![Excel for ToDos](/blog/todoPost.png)
+![Excel for ToDos](./todoPost.png)
