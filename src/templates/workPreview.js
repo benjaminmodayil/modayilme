@@ -14,9 +14,13 @@ export default function Template({ data }) {
   }
 
   let svgAlias
+  let value
   if (post.frontmatter.svgName) {
-      svgAlias = post.frontmatter.svgName
-    }
+    svgAlias = post.frontmatter.svgName
+  }
+  if (IconKeurig.name == svgAlias) {
+    value = true
+  }
 
   return (
     <main className="work__preview-page">
@@ -31,8 +35,8 @@ export default function Template({ data }) {
               <p>{post.frontmatter.tldr}</p>
             </div>
             <div className="work__header-inner--right">
-              { IconKeurig.name == svgAlias ? <IconKeurig /> : null }
-              { note }
+              {value == true ? <IconKeurig /> : undefined}
+              {note}
             </div>
           </div>
         </header>
