@@ -2,7 +2,7 @@ import React from 'react'
 import ReactDOM from 'react-dom'
 import Link from 'gatsby-link'
 
-require('smoothscroll-polyfill').polyfill()
+// require('smoothscroll-polyfill').polyfill()
 import HomeHeader from '../_includes/homepage/HomeHeader'
 import IllAvatar from '../assets/IllAvatar.js'
 import IconContactWithColor from '../assets/icons/IconContactWithColor.js'
@@ -19,16 +19,16 @@ import AnimationWaves from '../assets/randomAnimations/AnimationWaves'
 
 
 class IndexPage extends React.Component {
-  handleClick() {
-    this.refs.about.scrollIntoView({ behavior: 'smooth' })
-  }
+  // handleClick() {
+  //   this.refs.about.scrollIntoView({ behavior: 'smooth' })
+  // }
 
   render() {
     const { data } = this.props
     return (
       <main className="home-page">
         <section className="home__section-one">
-          <HomeHeader onClick={this.handleClick.bind(this)} info={data} />
+          {/* <HomeHeader onClick={this.handleClick.bind(this)} info={data} /> */}
           <AnimationWaves/>
           <div className="wrapper--loop margin-center">
             <h2 className="h-2">
@@ -228,7 +228,6 @@ export const indexBlogListingQuery = graphql`
             tldr
             path
             type
-            external
           }
         }
       }

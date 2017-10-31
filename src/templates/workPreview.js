@@ -7,7 +7,6 @@ import * as invert from '../utils/invertColor'
 
 export default function Template({ data }) {
   const { markdownRemark: post } = data
-  const attempt = document.querySelector('.site__container')
   // attempt.style.borderColor = post.frontmatter.themeColor
   // const post = data.markdownRemark;
   // post.frontmatter.category = "productivity",

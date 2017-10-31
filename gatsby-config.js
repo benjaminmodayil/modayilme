@@ -17,13 +17,6 @@ module.exports = {
         name: `pages`
       }
     },
-    `gatsby-transformer-remark`,
-    `gatsby-plugin-twitter`,
-    {
-      resolve: `gatsby-plugin-typography`,
-      options: {
-        pathToConfigModule: `src/utils/typography.js`
-      }
-    }
+    `gatsby-transformer-remark`
   ]
 }
