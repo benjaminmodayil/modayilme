@@ -1,0 +1,2 @@
+webpackJsonp([0x82f4f4e7d994],{343:function(t,o){t.exports={data:{markdownRemark:{html:"<h1>Work Study Test</h1>\n<p>This is a test</p>",frontmatter:{path:"/work/third-post",title:"Second blog post",tldr:"Too asdfa did not read",website:null,themeColor:null,imageNote:null}}},pathContext:{_PARENT:"SOURCE"}}}});
+//# sourceMappingURL=path---work-third-post-945ce6810102dd62241d.js.map
