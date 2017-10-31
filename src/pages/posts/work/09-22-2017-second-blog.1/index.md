@@ -7,6 +7,7 @@ type: work
 website: https://groundrules.co/
 themeColor: '#2D4DAF'
 imageNote: Design/Illustration by <a href="http://www.vivianzwang.com/ground-rules">Vivian Wang</a>
+svgName: 'IconKeurig'
 ---
 
 *[Visit the site](https://www.groundrules.co/)*

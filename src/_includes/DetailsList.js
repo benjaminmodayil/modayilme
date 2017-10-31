@@ -101,7 +101,7 @@ class DetailsList extends Component {
             </details>
           </li>
           <li>
-            <details aria-expanded="false">
+            {/* <details aria-expanded="false">
               <summary onClick={e => this.triggerDetails(e)}>
                 <span>ReactJS</span>
                 <IconMore />
@@ -116,7 +116,7 @@ class DetailsList extends Component {
                   </li>
                 </ul>
               </article>
-            </details>
+            </details> */}
           </li>
           <li>
             <details aria-expanded="false">
@@ -127,7 +127,7 @@ class DetailsList extends Component {
               <article>
                 <ul className="details-container__inner__list">
                   <li>
-                    <a href="#todo">Silent Sentinels (ask to see)</a>
+                    Silent Sentinels (ask to see)
                   </li>
                 </ul>
               </article>

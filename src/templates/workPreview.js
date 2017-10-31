@@ -13,6 +13,11 @@ export default function Template({ data }) {
     note = <p dangerouslySetInnerHTML={{ __html: post.frontmatter.imageNote }} />
   }
 
+  let svgAlias
+  if (post.frontmatter.svgName) {
+      svgAlias = post.frontmatter.svgName
+    }
+
   return (
     <main className="work__preview-page">
       <article className="work">
@@ -26,8 +31,8 @@ export default function Template({ data }) {
               <p>{post.frontmatter.tldr}</p>
             </div>
             <div className="work__header-inner--right">
-              <IconKeurig />
-              {note}
+              { IconKeurig.name == svgAlias ? <IconKeurig /> : null }
+              { note }
             </div>
           </div>
         </header>
@@ -62,6 +67,7 @@ export const workQuery = graphql`
         website
         themeColor
         imageNote
+        svgName
       }
     }
   }

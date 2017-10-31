@@ -1,38 +1,23 @@
 ---
 layout: blog
-path: '/blog/second-post'
-title: 'Second blog post'
-tldr: 'Ben tries todo things'
 type: blog
-category: ['health', 'fitness', 'code']
+title:  A New Way ToDo
+path: '/blog/second-post'
+tldr: 'Ben tries todo things'
 ---
 
-*[Visit the site](website)*
+Creating todos are my jam and most likely they are yours too. For a whole lot of us there is a joyous feeling of being organized and having things todo. But simply, we hate actually doing them.
 
-I wish the tl;dr above was created by me, but it was created by our amazing copywriter [Elyse](http://www.google.com). 
+Unless those todos relate themselves to a passion, they will most likely not get done on time… or ever.
 
-It was an ongoing joke for the project. At Viget, interns aren't expected to fetch coffee, or do miscellaneous tasks, we are there to learn and create something cool.
+I always tell myself that finding the right todo list will actually make me productive. That it will make me want to get stuff done.
 
-The purpose of this post is to convey things that I've learned about Front-End Development and things I struggled learning.
+I’ve actually bought and downloaded multiple types of todo list applications over the last few years. None of them changed me, and in turn, I’ve given up on todo lists that were designed to be used in a certain way.
 
-If you're looking for other writings about this project check out the introduction of this project to the world or a design case study on it.
-- [World, Meet Ground Rules](https://www.viget.com/articles/world-meet-ground-rules) by Elyse
-- [Ground Rules (design case study)](http://vivianzwang.com/ground-rules) by Vivian
+> I’m tired of using a todo list as an excuse to not getting things done.
 
-- working with another Front-End Developer 
-  - initial thoughts
-    - scared
-  - after thoughts
-- SVG
-  - Issues
-    - Weird transformations in certain browsers
-    - Issues where the tool for compresssion would change the colors of the initial design
-  - Learned
-    - Better to export and minimize by hand
-    - don't let your compressor clean the IDs of the layer names in your SVG, this will cause issues with other SVG's using those same ID names.
-- Git Gud
-  - We all had issues working with developers on the same project
+I think we need to stop treating a todo list as a life changing object. Todo lists won’t change our desire to be productive. Only practicing being productive will make us productive.  
 
-- General
-  - Codepen is amazing at quickly prototyping projects
-  - BEM naming standard
+For me, I’ll just stick to Excel.
+
+![Excel for ToDos](/blog/todoPost.png)

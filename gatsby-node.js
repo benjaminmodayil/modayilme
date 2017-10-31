@@ -32,9 +32,9 @@ exports.createPages = ({ boundActionCreators, graphql }) => {
 
     res.data.allMarkdownRemark.edges.forEach(({ node }) => {
       const checkType = () => {
-        if (node.frontmatter.layout == 'post') {
+        if (node.frontmatter.layout.includes('post')) {
           return postTemplate
-        } else if (node.frontmatter.layout == 'work') {
+        } else if (node.frontmatter.layout.includes('work')) {
           return workPreviewTemplate
         } else {
           return postTemplate

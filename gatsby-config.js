@@ -1,4 +1,5 @@
 module.exports = {
+  pathPrefix: `/modayilme`,
   siteMetadata: {
     title: 'modayil.me',
     skillset: ['HTML', 'CSS', 'JAVASCRIPT', 'REACT', 'SKETCH', 'MEMES'],
