@@ -19,7 +19,7 @@ export default function Template({ data }) {
     svgAlias = post.frontmatter.svgName
   }
   if (IconKeurig.name == svgAlias) {
-    value = true
+    value = <IconKeurig />
   }
 
   return (
@@ -35,7 +35,7 @@ export default function Template({ data }) {
               <p>{post.frontmatter.tldr}</p>
             </div>
             <div className="work__header-inner--right">
-              {value == true ? <IconKeurig /> : undefined}
+              {value}
               {note}
             </div>
           </div>

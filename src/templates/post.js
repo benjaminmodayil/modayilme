@@ -16,7 +16,6 @@ export default function Template({ data }, props) {
               <span>tl;dr</span>
               {post.frontmatter.tldr}
             </p>
-            <img src="/assets/blog/icon-todoList.svg" alt="" />
           </div>
         </header>
         <section className="post__body">
