@@ -16,7 +16,7 @@ I’ve actually bought and downloaded multiple types of todo list applications o
 
 > I’m tired of using a todo list as an excuse to not getting things done.
 
-I think we need to stop treating a todo list as a life changing object. Todo lists won’t change our desire to be productive. Only practicing being productive will make us productive.  
+I think we need to stop treating a todo list as a life changing object. Todo lists won’t change our desire to be productive. Only practicing being productive will make us productive.
 
 For me, I’ll just stick to Excel.
 

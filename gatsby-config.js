@@ -19,6 +19,29 @@ module.exports = {
       }
     },
     `gatsby-transformer-remark`,
-    `gatsby-plugin-netlify`
+    {
+      resolve: `gatsby-transformer-remark`,
+      options: {
+        plugins: [
+          `gatsby-remark-copy-linked-files`,
+          `gatsby-remark-autolink-headers`,
+          `gatsby-remark-smartypants`,
+          `gatsby-remark-emoji`,
+          {
+            resolve: `gatsby-remark-images`,
+            options: {
+              // It's important to specify the maxWidth (in pixels) of
+              // the content container as this plugin uses this as the
+              // base for generating different widths of each image.
+              maxWidth: 800,
+              // Remove the default behavior of adding a link to each
+              // image.
+              linkImagesToOriginal: false
+            }
+          }
+        ]
+      }
+    },
+    `gatsby-plugin-catch-links`
   ]
 }
