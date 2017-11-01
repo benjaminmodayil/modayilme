@@ -3,7 +3,6 @@ import ReactDOM from 'react-dom'
 import Link from 'gatsby-link'
 
 import HomeHeader from '../_includes/homepage/HomeHeader'
-import IllAvatar from '../assets/IllAvatar.js'
 import IconContactWithColor from '../assets/icons/IconContactWithColor.js'
 import IconWebSkills from '../assets/icons/IconWebSkills.js'
 import IconResume from '../assets/icons/IconResume.js'
@@ -17,7 +16,6 @@ import DetailsList from '../_includes/DetailsList.js'
 
 import AnimationWaves from '../assets/randomAnimations/AnimationWaves'
 
-
 class IndexPage extends React.Component {
   componentDidMount() {
     require('smoothscroll-polyfill').polyfill()
@@ -30,11 +28,11 @@ class IndexPage extends React.Component {
   render() {
     const { data } = this.props
     const blogPosts = data.allMarkdownRemark.edges
-                          .filter((i, index) => i.node.frontmatter.type == 'blog')
-                          .slice(0, 3)
+      .filter((i, index) => i.node.frontmatter.type == 'blog')
+      .slice(0, 3)
     const caseStudies = data.allMarkdownRemark.edges
-                            .filter(i => i.node.frontmatter.type == 'work')
-                            .slice(0, 3)
+      .filter(i => i.node.frontmatter.type == 'work')
+      .slice(0, 3)
     return (
       <main className="home-page">
         <section className="home__section-one">
@@ -45,10 +43,10 @@ class IndexPage extends React.Component {
               my <span>writings</span>
             </h2>
             <ul className="article-loop">
-            {blogPosts.map(post => {
+              {blogPosts.map(post => {
                 if (post.node.frontmatter.external) {
                   return (
-                    <li key={post.node.id}>
+                    <li key={post.node.frontmatter.path}>
                       <a href={post.node.frontmatter.external} target="_blank">
                         <h3 className="h-3">{post.node.frontmatter.title}</h3>
                         <p>{post.node.frontmatter.tldr}</p>
@@ -58,7 +56,7 @@ class IndexPage extends React.Component {
                   )
                 } else {
                   return (
-                    <li key={post.node.id}>
+                    <li key={post.node.frontmatter.path}>
                       <Link to={post.node.frontmatter.path}>
                         <h3 className="h-3">{post.node.frontmatter.title}</h3>
                         <p>{post.node.frontmatter.tldr}</p>
@@ -97,16 +95,16 @@ class IndexPage extends React.Component {
               my <span>work</span>
             </h2>
             <ul className="article-loop">
-            {caseStudies.map(post => {
+              {caseStudies.map(post => {
                 return (
-                  <li key={post.node.id}>
+                  <li key={post.node.frontmatter.path}>
                     <Link to={post.node.frontmatter.path}>
                       <h3 className="h-3">{post.node.frontmatter.title}</h3>
                       <p>{post.node.frontmatter.tldr}</p>
                     </Link>
                   </li>
                 )
-               })}
+              })}
             </ul>
           </div>
         </section>
@@ -217,12 +215,13 @@ class IndexPage extends React.Component {
   }
 }
 
+export default IndexPage
+
 export const indexBlogListingQuery = graphql`
   query IndexingQuery {
-    allMarkdownRemark(limit: 20) {
+    allMarkdownRemark(limit: 100) {
       edges {
         node {
-          id
           frontmatter {
             title
             tldr
@@ -242,5 +241,3 @@ export const indexBlogListingQuery = graphql`
     }
   }
 `
-
-export default IndexPage

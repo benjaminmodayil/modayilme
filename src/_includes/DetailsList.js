@@ -87,14 +87,14 @@ class DetailsList extends Component {
                 <ul className="details-container__inner__list">
                   <li>
                     <a href="https://codepen.io/modayilme/pen/ybXErO">
-                    Lighthouse Hill preview
+                      Lighthouse Hill preview
                     </a>
                   </li>
                   <li>
-                    <a href="#todo">Item</a>
+                    <a href="https://codepen.io/modayilme/pen/dNozqe">Logo Animation</a>
                   </li>
                   <li>
-                    <a href="#todo">Item</a>
+                    <a href="https://codepen.io/modayilme/pen/ryOpmG">Icon Animation</a>
                   </li>
                 </ul>
               </article>
@@ -126,9 +126,7 @@ class DetailsList extends Component {
               </summary>
               <article>
                 <ul className="details-container__inner__list">
-                  <li>
-                    Silent Sentinels (ask to see)
-                  </li>
+                  <li>Silent Sentinels (ask to see)</li>
                 </ul>
               </article>
             </details>

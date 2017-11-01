@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import Link from 'gatsby-link'
 
 import IconContactWithColor from '../assets/icons/IconContactWithColor.js'
 
@@ -21,7 +22,7 @@ class Updates extends Component {
                 <button className="btn--bg">Subscribe</button>
               </form>
               <p className="contact__callout">
-                ...or perhaps you were trying to <a href="/contact.html">contact me?</a>
+                ...or perhaps you were trying to <Link to="/contact">contact me?</Link>
               </p>
             </div>
             <div className="component__updates__col-right">
