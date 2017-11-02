@@ -18,7 +18,7 @@ class Updates extends Component {
                 <label className="screenreader-only" htmlFor="email">
                   email address
                 </label>
-                <input type="email" placeholder="pls let me eat yer email ԅ( ͒ ۝ ͒ )ᕤ" />
+                <input type="email" placeholder="currently disabled ԅ( ͒ ۝ ͒ )ᕤ" />
                 <button className="btn--bg">Subscribe</button>
               </form>
               <p className="contact__callout">

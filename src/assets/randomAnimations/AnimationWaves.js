@@ -4,7 +4,7 @@ export default function AnimationWaves(props) {
   return (
     <svg className="animation-waves" xmlns="http://www.w3.org/2000/svg" {...props}>
       <title>waves</title>
-      <g id="Page-1" fill="none" fillRule="evenodd" opacity=".397">
+      <g id="Page-1" fill="none" fillRule="evenodd" opacity=".25">
         <g id="waves" fillRule="nonzero">
           <g id="animation-waves">
             <g id="v.4">

@@ -30,6 +30,16 @@ class TemplateWrapper extends React.Component {
           ]}
         />
         <div className="site__inner">
+          <div className="site-alert">
+            <div className="wrapper wrapper--responsive margin-center">
+              <strong>Note:</strong>
+              <p>
+                This site is under construction 👷🏾‍♂️. Feel free to look around, but
+                note, pages, even posts aren't completed. Stay tuned for November 6th,
+                where the site will be 💯 live.
+              </p>
+            </div>
+          </div>
           {this.renderNav()}
           {this.props.children()}
           <Footer />

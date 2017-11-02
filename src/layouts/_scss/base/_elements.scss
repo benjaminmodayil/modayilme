@@ -144,3 +144,23 @@ p {
     margin-bottom: 5vh;
   }
 }
+
+.site-alert {
+  background-color: color(bg-grey);
+  padding: 1rem 0 0.5rem 0;
+
+  strong {
+    font-weight: 700;
+  }
+
+  p {
+    line-height: 1.6;
+    margin-left: 3rem;
+  }
+
+  strong,
+  p {
+    color: white;
+    font-family: $font-heading;
+  }
+}

@@ -168,8 +168,12 @@ blockquote {
   width: 100%;
   text-align: left;
 
+  p {
+    color: white;
+  }
+
   em {
-    font-weight: 700;
+    font-style: italic;
     text-decoration: underline;
     text-transform: uppercase;
   }
@@ -188,4 +192,3 @@ blockquote {
     font-weight: 600;
   }
 }
-

@@ -1,8 +1,8 @@
 {
   "assetsByChunkName": {
     "component---src-pages-index-js": [
-      "component---src-pages-index-js-5029ed5416a1f66bd2d8.js",
-      "component---src-pages-index-js-5029ed5416a1f66bd2d8.js.map"
+      "component---src-pages-index-js-19175f6acb1ed76e74db.js",
+      "component---src-pages-index-js-19175f6acb1ed76e74db.js.map"
     ],
     "path---blog": [
       "path---blog-1db04e5021b40904aca6.js",
@@ -17,20 +17,20 @@
       "component---src-pages-contact-js-43686261b15dac8a6226.js.map"
     ],
     "path---work-ground-rules": [
-      "path---work-ground-rules-f0766ceff474d9f8bbfe.js",
-      "path---work-ground-rules-f0766ceff474d9f8bbfe.js.map"
+      "path---work-ground-rules-b0fd887e583d96730014.js",
+      "path---work-ground-rules-b0fd887e583d96730014.js.map"
     ],
     "component---src-templates-work-preview-js": [
-      "component---src-templates-work-preview-js-b359caf0ebf44d915abe.js",
-      "component---src-templates-work-preview-js-b359caf0ebf44d915abe.js.map"
+      "component---src-templates-work-preview-js-fae045044e597c2f13f5.js",
+      "component---src-templates-work-preview-js-fae045044e597c2f13f5.js.map"
     ],
     "path---blog-a-new-way-todo": [
       "path---blog-a-new-way-todo-15cf5edcecf38fd0cde7.js",
       "path---blog-a-new-way-todo-15cf5edcecf38fd0cde7.js.map"
     ],
     "component---src-layouts-index-js": [
-      "component---src-layouts-index-js-1ad8e6691a6708cb6a94.js",
-      "component---src-layouts-index-js-1ad8e6691a6708cb6a94.js.map"
+      "component---src-layouts-index-js-d4072873331065392a9b.js",
+      "component---src-layouts-index-js-d4072873331065392a9b.js.map"
     ],
     "path---index": [
       "path---index-91a84a752059301b9a76.js",
@@ -57,8 +57,8 @@
       "path---contact-1db04e5021b40904aca6.js.map"
     ],
     "component---src-templates-post-js": [
-      "component---src-templates-post-js-fe37697a4bc94d6a1f37.js",
-      "component---src-templates-post-js-fe37697a4bc94d6a1f37.js.map"
+      "component---src-templates-post-js-696a2b0bd655f5a1c6ad.js",
+      "component---src-templates-post-js-696a2b0bd655f5a1c6ad.js.map"
     ],
     "component---src-pages-blog-js": [
       "component---src-pages-blog-js-81de963f99dbfe3f884b.js",
