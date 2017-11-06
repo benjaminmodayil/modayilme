@@ -34,23 +34,37 @@ $wideWidth: 1000;
 }
 
 .wrapper {
-  @include clearfix();
-  padding: 0 20px;
+  @include clearfix;
+  padding-left: 20px;
+  padding-right: 20px;
+
+  .wrapper {
+    padding-left: 0;
+    padding-right: 0;
+  }
 
   &.wrapper--extra-wide {
     max-width: 1440px;
   }
 
   &.wrapper--wide {
-    max-width: 1200px;
+    max-width: 1260px;
   }
 
   &.wrapper--tablet {
     max-width: 1000px;
   }
 
+  &.wrapper--960 {
+    max-width: 960px;
+  }
+
   &.wrapper--medium {
     max-width: 800px;
+  }
+
+  &.wrapper--780 {
+    max-width: 780px;
   }
 
   &.wrapper--medium--alt {
@@ -79,11 +93,7 @@ $wideWidth: 1000;
 }
 
 .container--medium-to-small {
-  max-width: 550px;
-}
-
-.row {
-  display: flex;
+  max-width: 600px;
 }
 
 .margin-center {
@@ -105,34 +115,6 @@ $wideWidth: 1000;
   margin-top: 10vh;
 }
 
-.section-margin--bottom {
-  margin-bottom: 15vh;
-}
-
-.padding-top-and-bottom {
-  padding-top: 16px;
-  padding-bottom: 16px;
-}
-
-.padding-top-and-bottom--small {
-  padding-top: 8px;
-  padding-bottom: 8px;
-}
-
-.u-background-white {
-  background-color: white;
-}
-
-@mixin text-sizing($size) {
-  @if $size == 'big' {
-    @include fluid-type(601px, 1400px, 24px, 28px);
-  } @else if $size == 'medium' {
-    @include fluid-type(601px, 1400px, 20px, 24px);
-  } @else {
-    @include fluid-type(601px, 1400px, 14px, 16px);
-  }
-}
-
 @include breakpoint(min-width 901px) {
   .position-right {
     position: absolute;
@@ -145,6 +127,9 @@ $wideWidth: 1000;
   }
 }
 
+.display--block {
+  display: block;
+}
 // work documentation
 
 .component-colors {
@@ -178,4 +163,49 @@ $wideWidth: 1000;
       margin-bottom: 5vh;
     }
   }
+}
+
+// margin
+$spacings: '8', '14', '16', '32', '48', '64', '80', '96';
+
+@each $spacing in $spacings {
+  .margin-top--#{$spacing} {
+    margin-top: #{$spacing}px;
+  }
+
+  .margin-bottom--#{$spacing} {
+    margin-bottom: #{$spacing}px;
+  }
+
+  .margin-top-and-bottom--#{$spacing} {
+    margin-bottom: #{$spacing}px;
+    margin-top: #{$spacing}px;
+  }
+
+  .padding-top-and-bottom--#{$spacing} {
+    padding-bottom: #{$spacing}px;
+    padding-top: #{$spacing}px;
+  }
+}
+
+//height
+
+.min-height--50vh {
+  min-height: 50vh;
+}
+
+.min-height--85vh {
+  min-height: 85vh;
+}
+
+.min-height--100vh {
+  min-height: 100vh;
+}
+
+.home__big-text {
+  @include text-sizing(big);
+}
+
+.home__medium-text {
+  @include text-sizing(medium);
 }

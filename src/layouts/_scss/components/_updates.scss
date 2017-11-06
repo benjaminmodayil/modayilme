@@ -62,7 +62,7 @@
 
   .h-2 {
     span {
-      color: color(red);
+      color: color(link);
     }
     @include fluid-type(601px, 1400px, 24px, 28px);
     font-family: $font-heading;

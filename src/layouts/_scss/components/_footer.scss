@@ -1,58 +1,32 @@
 .home__footer {
-  background-color: color(bg-grey);
-  padding: rem(48) 0 rem(96) 0;
   position: relative;
-  bottom: -1px;
-
-  @include breakpoint(min-width 1000px) {
-    padding: rem(48) 0;
-  }
 
   .h-2 {
-    @include fluid-type(601px, 1440px, 24px, 28px);
-
-    color: white;
-    font-weight: 600;
-    margin-bottom: rem(28);
-    text-shadow: 2px 2px 2px lighten(color(black), 10%);
-
-    span {
-      color: color(red);
-    }
+    @include fluid-type(601px, 1440px, 56px, 96px);
   }
 }
 
 .footer__process {
   border: 1px dotted transparent;
-  color: white;
   display: inline-block;
   text-decoration: none;
-  text-shadow: 2px 2px 2px lighten(color(black), 10%);
 
   p {
     @include fluid-type(601px, 1440px, 16px, 18px);
-    color: white;
-    font-family: $font-heading;
-    font-weight: 600;
   }
 
   span {
     @include fluid-type(601px, 1440px, 14px, 16px);
-    color: white;
-    display: block;
-    margin: 0.5rem 0 0 0;
   }
 
   &:hover {
-    border: 1px dotted color(red);
+    border: 1px dotted color(link);
     text-decoration: none;
   }
 }
 
 .links__inner {
-  margin: rem(54) 0 0 0;
-
-  @include breakpoint(min-width 1000px) {
+  @include breakpoint(min-width 1001px) {
     display: flex;
     max-width: rd(700, 940);
 
@@ -62,12 +36,10 @@
   }
 
   li {
-    margin: 0 0 1rem 0;
     max-width: 200px;
 
     span {
       color: white;
-      font-weight: 600;
       margin-left: rd(36, 375);
     }
 
@@ -81,11 +53,11 @@
 
       &:hover,
       &:focus {
-        border: 1px dotted color(red);
+        border: 1px dotted color(link);
 
         svg g,
         svg path {
-          fill: color(red);
+          fill: color(link);
         }
       }
     }
@@ -93,7 +65,45 @@
 
   svg g,
   svg path {
-    fill: #292929;
+    fill: color(white);
     transition: all 0.2s ease;
   }
+}
+
+.footer__inner__callout__hmu {
+  @include fluid-type(600px, 1400px, 36px, 56px);
+  text-decoration: underline;
+}
+
+@include breakpoint(min-width 641px) {
+  .footer__links__container {
+    float: right;
+    position: relative;
+    top: -150px;
+  }
+
+  .link-how-i-made,
+  .link-social-accounts {
+    ul {
+      display: flex;
+      flex-direction: row;
+      max-width: 600px;
+      min-width: 350px;
+    }
+  }
+
+  .link-how-i-made {
+    li {
+      flex: 1 1 100%;
+    }
+  }
+  .link-social-accounts {
+    li {
+      flex: 0 0 33.333%;
+    }
+  }
+}
+
+footer {
+  margin: 0 10% !important;
 }

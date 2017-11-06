@@ -1,48 +1,49 @@
 .home__section-one__header {
-  flex-direction: row;
-  flex-wrap: wrap;
-  justify-content: space-between;
-
-  min-height: 80vh;
   align-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
-.home__section-one {
-  header {
-    display: flex;
-    justify-content: space-between;
-    flex-direction: row;
-    flex-wrap: wrap;
-    padding-bottom: 20vh;
-    padding-top: 20vh;
-
-    p {
-      line-height: 1.7;
-    }
-
-    @include breakpoint(min-width 901px) {
-      padding-top: 24vh;
-      padding-bottom: 20.2vh;
-    }
-  }
+.home__section-one__header__intro {
+  flex: 1 1 70%;
 
   .h-1 {
-    @include fluid-type(601px, 2000px, 28px, 36px);
-    color: color(red);
-    font-family: $font-body;
-    font-weight: 600;
-    margin-bottom: 1rem;
+    @include fluid-type(600px, 1400px, 36px, 96px);
   }
 
   p {
-    @include fluid-type(601px, 1400px, 24px, 28px);
-    font-family: $font-body;
-    font-weight: 300;
-    line-height: 1.5;
+    @include fluid-type(600px, 1400px, 20px, 28px);
+
+    span {
+      @include fluid-type(600px, 1400px, 28px, 48px);
+    }
   }
 }
 
+.home__header__lead {
+  @include fluid-type(600px, 1400px, 20px, 28px);
+}
+
+.home__section-one__header__updates {
+  flex: 1 1 30%;
+}
+
 .home__section-one__header__link {
-  justify-content: flex-end;
-  align-self: flex-end;
+  // align-self: flex-end;
+  // justify-content: flex-end;
+}
+
+@include breakpoint(max-width 800px) {
+  .home__section-one__header {
+    span {
+      display: block;
+    }
+  }
+}
+
+@include breakpoint(min-width 801px) {
+  .home__section-one__header {
+    flex-direction: row;
+  }
 }

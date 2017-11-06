@@ -28,7 +28,6 @@ class DetailsList extends Component {
     const details = Array.from(document.querySelectorAll('.html-details details'))
 
     const current = e.currentTarget
-    console.log(current)
 
     if (current.parentNode.getAttribute('aria-expanded') == 'true') {
       current.parentNode.setAttribute('aria-expanded', 'false')

@@ -3,9 +3,9 @@ import Link from 'gatsby-link'
 
 const Contact = () => (
   <main className="contact__page">
-    <section className="wrapper wrapper--tablet margin-center">
-      <h1 className="h-1">
-        <span>contact</span> me
+    <section className="wrapper wrapper--tablet margin-center color--white">
+      <h1 className="h-1 color--white font-weight--bold margin-bottom--16 margin-bottom--32">
+        contact me
       </h1>
       <p>Have anything to say? Maybe 👋🏽, 😠, 💼, or 👍?</p>
       <p>

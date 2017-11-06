@@ -5,18 +5,13 @@
     line-height: 1.7;
     width: 100%;
   }
-
-  .post__signature {
-    flex-wrap: nowrap;
-    flex: 1 1 200px;
-  }
 }
 
 .work__preview__container {
-  margin-top: 5vh;
+  padding-top: 5vh;
 
   blockquote {
-    color: color(red);
+    color: color(link);
     font-style: italic;
     line-height: 1.4;
   }
@@ -31,7 +26,8 @@
   }
 
   svg,
-  img {
+  img,
+  .gatsby-resp-image-wrapper {
     display: block;
     height: auto;
     margin: 2rem auto;

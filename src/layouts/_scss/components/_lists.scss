@@ -15,7 +15,7 @@
       h3,
       p {
         text-decoration: underline;
-        text-decoration-color: color(red);
+        text-decoration-color: color(link);
       }
     }
   }
@@ -36,7 +36,7 @@
     &:focus,
     &:hover {
       &:before {
-        color: color(red);
+        color: color(link);
       }
     }
   }

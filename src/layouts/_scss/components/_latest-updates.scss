@@ -1,0 +1,15 @@
+.latest-updates {
+  li {
+    min-width: 250px;
+    max-width: 350px;
+  }
+
+  a {
+    text-decoration: none;
+
+    &:hover,
+    &:focus {
+      text-decoration: underline;
+    }
+  }
+}

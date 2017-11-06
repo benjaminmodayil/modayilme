@@ -1,27 +1,20 @@
 .contact__page {
-  display: block;
-
   section {
     padding-bottom: 16.2vh;
     padding-top: 12.2vh;
   }
 
   .h-1 {
-    @include fluid-type(601px, 1440px, 28px, 36px);
-    font-weight: 300;
-    margin-bottom: multiBase(2);
-
-    span {
-      color: color(red);
-    }
+    @include fluid-type(600px, 1400px, 36px, 96px);
   }
 
   p {
+    @include fluid-type(601px, 1440px, 15px, 16px);
+
     line-height: 1.6;
     margin-bottom: multiBase(1);
     max-width: 500px;
 
-    @include fluid-type(601px, 1440px, 15px, 16px);
     &:nth-of-type(2) {
       margin-bottom: multiBase(3);
     }
@@ -33,7 +26,7 @@
 
   form {
     label {
-      color: color(red);
+      color: color(link);
       font-family: $font-heading;
       font-weight: 600;
       margin-bottom: multiBase(0.5);

@@ -27,7 +27,7 @@
 
     &:first-of-type {
       .h-3 {
-        color: color(red);
+        color: color(link);
       }
     }
 
@@ -51,7 +51,7 @@
   }
 
   span {
-    color: color(red);
+    color: color(link);
     display: block;
     font-style: italic;
     font-weight: 600;

@@ -11,17 +11,32 @@ import IconCodepen from '../assets/icons/IconCodepen.js'
 class Footer extends Component {
   render() {
     return (
-      <footer className="home__footer">
-        <div className="footer__inner wrapper wrapper--responsive margin-center">
-          <h2 className="h-2">Thanks for stopping by!</h2>
-          <ul>
-            <li>
-              <Link to="/work/how-i-made-my-site" className="footer__process">
-                <p>Handcrafted through trial and error</p>
-                <span>Learn how I built my website.</span>
+      <footer className="home__footer wrapper wrapper--wide margin-center">
+        <div className="footer__inner">
+          <div className="footer__inner__callout margin-bottom--96">
+            <h2 className="h-2 font-size--96 color--white margin-bottom--32">
+              <span className="display--block">Like what</span> you see?
+            </h2>
+            <Link
+              className="font-style--italic footer__inner__callout__hmu"
+              to="/contact"
+            >
+              HMU
+            </Link>
+          </div>
+          <ul className="footer__links__container">
+            <li className="footer__links link-how-i-made margin-bottom--32">
+              <Link
+                to="/work/how-i-made-my-site"
+                className="footer__process color--white"
+              >
+                <p className="font-family--heading font-weight--bold margin-bottom--8">
+                  Handcrafted through trial and error
+                </p>
+                <span className="font-family--body">Learn how I built my website.</span>
               </Link>
             </li>
-            <li className="footer__links">
+            <li className="footer__links link-social-accounts">
               <div className="links__inner">
                 <ul>
                   <li>

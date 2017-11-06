@@ -21,7 +21,7 @@
       .icon-archive,
       .icon-contact,
       .icon-work {
-        fill: color(bg-grey);
+        fill: color(white);
         opacity: 0.8;
       }
     }
@@ -29,15 +29,11 @@
 
   .site__title {
     border: 3px solid transparent;
-    color: fade-out($color: color(text), $amount: 0.4);
-    font-family: $font-heading;
-    font-size: 1.5rem;
-    font-weight: 600;
     text-decoration: none;
     transition: all 0.2s ease;
 
     &:hover {
-      color: color(red);
+      color: color(link);
     }
   }
 
@@ -76,11 +72,7 @@
           justify-content: center;
 
           &:focus {
-            border: 2px dotted color(red);
-          }
-
-          span {
-            color: color(text);
+            border: 2px dotted color(link);
           }
         }
       }
@@ -135,13 +127,12 @@
 
     &:hover {
       span {
-        border-bottom: 1px solid color(red);
+        border-bottom: 1px solid color(link);
       }
     }
   }
 
   span {
-    @include fluid-type(601px, 1440px, 14px, 15px);
     border-bottom: 1px solid transparent;
     bottom: -1px;
     position: relative;

@@ -22,12 +22,11 @@ ul,
 li,
 span,
 figcaption {
-  color: color(black);
   margin: 0;
   padding: 0;
 
   &::selection {
-    background-color: color(red);
+    background-color: color(link);
     color: white;
     text-shadow: none;
   }
@@ -40,20 +39,24 @@ ol {
 }
 
 a {
-  color: color(red);
+  color: color(link);
 
   &::selection {
-    background-color: color(red);
+    background-color: color(link);
     color: white;
   }
 }
 
 body {
   background-color: color(bg);
+
+  @include breakpoint(max-width 600px) {
+    padding-bottom: 15vh;
+  }
 }
 
 p {
-  line-height: 1.4;
+  line-height: 1.5;
 
   a {
     font-weight: 600;
@@ -64,7 +67,7 @@ p {
 .link__read {
   @include fluid-type(601px, 1440px, 14px, 16px);
   border: 1px dotted transparent;
-  color: color(red);
+  color: color(link);
   display: block;
   font-weight: 300;
   margin-top: multiBase(1);
@@ -74,12 +77,12 @@ p {
 
   &:hover,
   &:focus {
-    border: 1px dotted color(red);
+    border: 1px dotted color(link);
   }
 }
 
 .site__container {
-  --bg: color(red);
+  --bg: color(link);
   // border: 1.5vw solid var(--bg);
 
   @include breakpoint(min-width 901px) {
@@ -91,37 +94,10 @@ p {
   }
 }
 
-.text-level {
-  color: color(black);
-  font-family: $font-body;
-  font-weight: 300;
-
-  a {
-    border: 1px solid transparent;
-    color: color(red);
-
-    transition: all 0.2s ease;
-
-    &:hover,
-    &:focus,
-    &:active {
-      border: 1px dotted color(red);
-    }
-  }
-}
-
-.text-level-big {
-  @include text-sizing('big');
-}
-
-.text-level-medium {
-  @include text-sizing('medium');
-}
-
 .btn--bg {
   @include fluid-type(601px, 1400px, 14px, 16px);
   align-self: flex-end;
-  background-color: color(red);
+  background-color: color(link);
   border: 2px solid transparent;
   border-radius: 4px;
   color: white;
@@ -135,7 +111,7 @@ p {
   &:hover,
   &:focus {
     box-shadow: 3px 3px 18px 0px rgba(0, 0, 0, 0.2);
-    border: 2px solid color(red);
+    border: 2px solid color(link);
   }
 
   @include breakpoint(max-width 400px) {
@@ -162,5 +138,33 @@ p {
   p {
     color: white;
     font-family: $font-heading;
+  }
+}
+
+@include breakpoint(min-width 1101px) {
+  .content-align {
+    .h-1,
+    .tldr {
+      left: -(percentage(225/780));
+      max-width: 500px;
+      position: relative;
+    }
+
+    .h-2,
+    h2,
+    .h-3,
+    h3,
+    .h-4,
+    h4,
+    .h-5,
+    h5,
+    .h-6,
+    h6,
+    img,
+    svg,
+    figure {
+      left: -(percentage(125/780));
+      position: relative;
+    }
   }
 }

@@ -9,10 +9,6 @@ themeColor: '#2D4DAF'
 imageNote: Design/Illustration by <a href="http://www.vivianzwang.com/ground-rules">Vivian Wang</a>
 svgName: 'IconKeurig'
 ---
-<div class="post-note">
-<em>Note:</em>
-<p>This site is currently being worked on (as of October 31st 👻). If you've managed to find your way here, stay tuned for some 👌🏾 looking things on November 6th.</p>
-</div>
 
 *[Visit the site](https://www.groundrules.co/)*
 

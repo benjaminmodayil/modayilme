@@ -9,28 +9,23 @@ export default function Template({ data }, props) {
   return (
     <main className="post__page">
       <article className="post">
-        <header className="post__header">
-          <div className="post__header-inner wrapper wrapper--medium margin-center">
-            <h1 className="h-1">{post.frontmatter.title}</h1>
-            <p>
-              <span>tl;dr</span>
-              {post.frontmatter.tldr}
-            </p>
-          </div>
-        </header>
         <section className="post__body">
-          <div className="wrapper wrapper--medium margin-center section-padding--bottom-heavy">
-            <div
-              className="post-work__body"
-              dangerouslySetInnerHTML={{ __html: post.html }}
-            />
-            <small className="post__signature">Ben M.</small>
+          <div className="wrapper wrapper--wide margin-center">
+            <div className="align-right wrapper content-align wrapper--780 margin-center section-padding--bottom-heavy color--white">
+              <header className="post__header">
+                <h1 className="h-1">{post.frontmatter.title}</h1>
+                <p className="tldr margin-top--32 ">
+                  <span>tl;dr</span>
+                  {post.frontmatter.tldr}
+                </p>
+              </header>
+              <div
+                className="post-work__body"
+                dangerouslySetInnerHTML={{ __html: post.html }}
+              />
+            </div>
           </div>
         </section>
-
-        <div className="post__misc">
-          <Updates />
-        </div>
       </article>
     </main>
   )

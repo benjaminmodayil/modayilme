@@ -40,7 +40,7 @@
   }
 
   span {
-    color: color(red);
+    color: color(link);
     display: block;
     font-style: italic;
     margin-bottom: 0.8rem;
@@ -55,7 +55,7 @@
 
     @include fluid-type(601px, 1440px, 24px, 28px);
     span {
-      color: color(red);
+      color: color(link);
     }
   }
 
@@ -97,13 +97,13 @@
 
     &:hover {
       * {
-        border-bottom: 1px solid color(red);
+        border-bottom: 1px solid color(link);
       }
     }
 
     &:focus {
       * {
-        border: 2px dotted color(red);
+        border: 2px dotted color(link);
       }
     }
   }

@@ -10,7 +10,7 @@
 
   .h-2 {
     background-color: white;
-    color: lighten($color: color(red), $amount: 2%);
+    color: lighten($color: color(link), $amount: 2%);
     font-family: $font-heading;
     font-size: 1rem;
     font-weight: bold;
@@ -123,10 +123,6 @@ a {
 }
 
 @include breakpoint(min-width 901px) {
-  .home__section-three__row__col-right {
-    right: 20px;
-  }
-
   .html-details {
     top: 20px;
   }
@@ -135,14 +131,5 @@ a {
     top: 40px;
     margin-top: 3rem;
     transition: all 0.3s ease;
-  }
-
-  .html-list--resume {
-    bottom: -150px;
-  }
-
-  .html-list--social {
-    bottom: 0;
-    margin-top: 8rem;
   }
 }

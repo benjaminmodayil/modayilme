@@ -14,4 +14,47 @@ body {
 .h-5,
 .h-6 {
   font-family: $font-heading;
+  font-weight: bold;
+}
+
+$font-sizes: '14', '16', '18', '20', '24', '28', '36', '48', '56', '96';
+
+@each $font-size, $size in $font-sizes {
+  .font-size--#{$font-size} {
+    font-size: #{$font-size}px;
+  }
+}
+
+.font-family--heading {
+  font-family: $font-heading;
+}
+
+.font-family--body {
+  font-family: $font-body;
+}
+
+.font-weight--bold {
+  font-weight: bold;
+}
+
+.font-weight--normal {
+  font-weight: 300;
+}
+
+.font-weight--light {
+  font-weight: 300;
+}
+
+.font-style--italic {
+  font-style: italic;
+}
+
+@mixin text-sizing($size) {
+  @if $size == 'big' {
+    @include fluid-type(601px, 1400px, 24px, 28px);
+  } @else if $size == 'medium' {
+    @include fluid-type(601px, 1400px, 20px, 24px);
+  } @else {
+    @include fluid-type(601px, 1400px, 14px, 16px);
+  }
 }

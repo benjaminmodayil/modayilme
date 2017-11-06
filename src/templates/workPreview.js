@@ -13,7 +13,6 @@ class Template extends React.Component {
   }
 
   componentDidMount() {
-    // console.log(this.svgRender())
     this.forceUpdate()
   }
 
@@ -35,7 +34,9 @@ class Template extends React.Component {
             <div className="work__header-inner wrapper wrapper--wide margin-center">
               <div className="work__header-inner--left container--medium-to-small ">
                 <h1 className="h-1">{post.frontmatter.title}</h1>
-                <p>{post.frontmatter.tldr}</p>
+                <p className="font-size--16 font-style--italic">
+                  {post.frontmatter.tldr}
+                </p>
               </div>
               {post.frontmatter.svgName == IconKeurig.name ? (
                 <div className="work__header-inner--right">
@@ -44,20 +45,25 @@ class Template extends React.Component {
               ) : null}
             </div>
           </header>
+          <div className="post-note color--white">
+            <em>Note:</em>
+            <p>
+              This site is currently being worked on (as of October 31st 👻). If you've
+              managed to find your way here, stay tuned for some 👌🏾 looking things on
+              November 6th.
+            </p>
+          </div>
 
           <section className="work__preview__body">
-            <div className="work__preview__container wrapper wrapper--medium margin-center section-padding--bottom-heavy">
-              <div
-                className="post-work__body"
-                dangerouslySetInnerHTML={{ __html: post.html }}
-              />
-              <small className="post__signature col__left">Ben M.</small>
+            <div className="wrapper wrapper--wide margin-center">
+              <div className="work__preview__container wrapper wrapper--780 margin-center section-padding--bottom-heavy">
+                <div
+                  className="post-work__body color--white"
+                  dangerouslySetInnerHTML={{ __html: post.html }}
+                />
+              </div>
             </div>
           </section>
-
-          <div className="post__misc">
-            <Updates />
-          </div>
         </article>
       </main>
     )
@@ -79,6 +85,7 @@ export const workQuery = graphql`
         themeColor
         imageNote
         svgName
+        script
       }
     }
   }
