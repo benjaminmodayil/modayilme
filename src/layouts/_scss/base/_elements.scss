@@ -149,22 +149,5 @@ p {
       max-width: 500px;
       position: relative;
     }
-
-    .h-2,
-    h2,
-    .h-3,
-    h3,
-    .h-4,
-    h4,
-    .h-5,
-    h5,
-    .h-6,
-    h6,
-    img,
-    svg,
-    figure {
-      left: -(percentage(125/780));
-      position: relative;
-    }
   }
 }
