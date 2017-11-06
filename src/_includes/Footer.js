@@ -39,19 +39,19 @@ class Footer extends Component {
             <li className="footer__links link-social-accounts">
               <div className="links__inner">
                 <ul>
-                  <li>
+                  <li className="margin-bottom--16">
                     <Link to="/contact">
                       <IconContact />
                       <span>Contact</span>
                     </Link>
                   </li>
-                  <li>
+                  <li className="margin-bottom--16">
                     <a href="http://www.codepen.io/modayilme">
                       <IconCodepen />
                       <span>Codepen</span>
                     </a>
                   </li>
-                  <li>
+                  <li className="margin-bottom--16">
                     <a href="https://www.linkedin.com/in/benjamin-modayil">
                       <IconLinkedIn />
                       <span>LinkedIn</span>

@@ -45,14 +45,6 @@ class Template extends React.Component {
               ) : null}
             </div>
           </header>
-          <div className="post-note color--white">
-            <em>Note:</em>
-            <p>
-              This site is currently being worked on (as of October 31st 👻). If you've
-              managed to find your way here, stay tuned for some 👌🏾 looking things on
-              November 6th.
-            </p>
-          </div>
 
           <section className="work__preview__body">
             <div className="wrapper wrapper--wide margin-center">

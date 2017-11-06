@@ -12,6 +12,10 @@ const Contact = () => (
         I would love to get in touch with you, feel free to message me below and include
         your email if you wish for a response.
       </p>
+      <p className="">
+        This form isn't setup at the moment. It will be soon! Send emails and inquiries to{' '}
+        <a href="mailto:modayilme@gmail.com">modayilme@gmail.com</a>
+      </p>
 
       <form action="">
         <label for="email">email</label>

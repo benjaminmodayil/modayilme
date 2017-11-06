@@ -1,9 +1,10 @@
 ---
 layout: blog
 type: blog
-title:  A New Way ToDo
-path: '/blog/second-post'
-tldr: 'Ben tries todo things'
+title:  'Text-Snippets for Work and Play'
+path: '/external/alssdfasdf'
+tldr: 'Text-snippets can save you valuable time whether for Work or Play.'
+external: 'https://www.viget.com/articles/text-snippets-for-work-and-play'
 ---
 
 Creating todos are my jam and most likely they are yours too. For a whole lot of us there is a joyous feeling of being organized and having things todo. But simply, we hate actually doing them.

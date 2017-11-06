@@ -1,8 +1,11 @@
 import React, { Component } from 'react'
+import Link from 'gatsby-link'
+import IconLink from '../../assets/icons/IconLink.js'
 
 class HomeHeader extends Component {
   render() {
-    const data = this.props.info
+    const data = this.props.info.slice(0, 3)
+
     return (
       <header className="home__section-one__header row margin-center min-height--85vh margin-top-and-bottom--64">
         <div className="home__section-one__header__intro margin-bottom--64">
@@ -37,36 +40,36 @@ class HomeHeader extends Component {
               The Latest
             </h2>
             <ul>
-              <li className="margin-bottom--32">
-                <a href="#todo">
-                  <h3 className="h-3 font-size--18 color--red margin-bottom--14">
-                    A New Way TODO
-                  </h3>
-                  <p className="font-size--16 color--white">
-                    Creating todos are my jam and most likely they are yours too.{' '}
-                  </p>
-                </a>
-              </li>
-              <li className="margin-bottom--32">
-                <a href="#todo">
-                  <h3 className="h-3 font-size--18 color--red margin-bottom--14">
-                    A New Way TODO
-                  </h3>
-                  <p className="font-size--16 color--white">
-                    Creating todos are my jam and most likely they are yours too.{' '}
-                  </p>
-                </a>
-              </li>
-              <li className="margin-bottom--32">
-                <a href="#todo">
-                  <h3 className="h-3 font-size--18 color--red margin-bottom--14">
-                    A New Way TODO
-                  </h3>
-                  <p className="font-size--16 color--white">
-                    Creating todos are my jam and most likely they are yours too.{' '}
-                  </p>
-                </a>
-              </li>
+              {data.map(post => {
+                if (post.node.frontmatter.external) {
+                  return (
+                    <li className="margin-bottom--32" key={post.node.frontmatter.path}>
+                      <a href={post.node.frontmatter.external}>
+                        <h3 className="h-3 font-size--18 color--red margin-bottom--14">
+                          {post.node.frontmatter.title}
+                        </h3>
+                        <p className="font-size--16 color--white">
+                          {post.node.frontmatter.tldr}
+                        </p>
+                        <IconLink className="margin-top--16" />
+                      </a>
+                    </li>
+                  )
+                } else {
+                  return (
+                    <li className="margin-bottom--32" key={post.node.frontmatter.path}>
+                      <Link to={post.node.frontmatter.path}>
+                        <h3 className="h-3 font-size--18 color--red margin-bottom--14">
+                          {post.node.frontmatter.title}
+                        </h3>
+                        <p className="font-size--16 color--white">
+                          {post.node.frontmatter.tldr}
+                        </p>
+                      </Link>
+                    </li>
+                  )
+                }
+              })}
             </ul>
           </div>
         </div>

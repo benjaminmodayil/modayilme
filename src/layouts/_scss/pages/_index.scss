@@ -4,9 +4,15 @@
   }
 }
 
-.home__big-text {
+.home__big-text,
+.home__medium-text {
   a {
     text-decoration: underline;
+
+    &:hover,
+    &:focus {
+      color: color(white);
+    }
   }
 }
 
@@ -53,8 +59,8 @@
   .home__section-two__text-and-image__image {
     display: block;
     position: absolute;
-    right: -100%;
-    top: 100px;
+    right: -80%;
+    top: 40px;
   }
 }
 
@@ -75,7 +81,8 @@
   }
 
   @include breakpoint(max-width 900px) {
-    * {
+    .home__section-three__row__col-left,
+    .home__section-three__row__col-right {
       margin-left: auto;
       margin-right: auto;
     }

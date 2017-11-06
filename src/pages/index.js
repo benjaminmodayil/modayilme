@@ -25,21 +25,22 @@ class IndexPage extends React.Component {
 
   render() {
     const { data } = this.props
-    const blogPosts = data.allMarkdownRemark.edges
+    const allPosts = data.allMarkdownRemark.edges
+    const blogPosts = allPosts
       .filter((i, index) => i.node.frontmatter.type == 'blog')
-      .slice(0, 3)
-    const caseStudies = data.allMarkdownRemark.edges
+      .slice(0, 4)
+    const caseStudies = allPosts
       .filter(i => i.node.frontmatter.type == 'work')
-      .slice(0, 3)
+      .slice(0, 4)
 
     return (
       <main className="home-page wrapper wrapper--wide margin-center">
         <section className="home__section-one">
-          <HomeHeader onClick={this.handleClick.bind(this)} />
+          <HomeHeader onClick={this.handleClick.bind(this)} info={allPosts} />
         </section>
 
         <section
-          className="home__section-two min-height--85vh color--white font-weight--normal margin-bottom--64"
+          className="home__section-two color--white font-weight--normal margin-bottom--15vh"
           ref="about"
         >
           <div className="home__section-two__text-and-image" id="bio">
@@ -72,18 +73,34 @@ class IndexPage extends React.Component {
               </h2>
               <ul>
                 {caseStudies.map(post => {
-                  return (
-                    <li className="margin-bottom--32" key={post.node.frontmatter.path}>
-                      <Link to={post.node.frontmatter.path}>
-                        <h3 className="h-3 font-size--18 color--red margin-bottom--14">
-                          {post.node.frontmatter.title}
-                        </h3>
-                        <p className="font-size--16 color--white">
-                          {post.node.frontmatter.tldr}
-                        </p>
-                      </Link>
-                    </li>
-                  )
+                  if (post.node.frontmatter.external) {
+                    return (
+                      <li className="margin-bottom--32" key={post.node.frontmatter.path}>
+                        <a href={post.node.frontmatter.external}>
+                          <h3 className="h-3 font-size--18 color--red margin-bottom--14">
+                            {post.node.frontmatter.title}
+                          </h3>
+                          <p className="font-size--16 color--white">
+                            {post.node.frontmatter.tldr}
+                          </p>
+                          <IconLink className="margin-top--16" />
+                        </a>
+                      </li>
+                    )
+                  } else {
+                    return (
+                      <li className="margin-bottom--32" key={post.node.frontmatter.path}>
+                        <Link to={post.node.frontmatter.path}>
+                          <h3 className="h-3 font-size--18 color--red margin-bottom--14">
+                            {post.node.frontmatter.title}
+                          </h3>
+                          <p className="font-size--16 color--white">
+                            {post.node.frontmatter.tldr}
+                          </p>
+                        </Link>
+                      </li>
+                    )
+                  }
                 })}
               </ul>
             </div>
@@ -91,7 +108,7 @@ class IndexPage extends React.Component {
         </section>
 
         <section
-          className="home__section-two min-height--85vh color--white wrapper wrapper--780 margin-center font-weight--normal margin-top-and-bottom--96"
+          className="home__section-two color--white wrapper wrapper--780 margin-center font-weight--normal margin-bottom--15vh"
           ref="about"
         >
           <div className="home__section-two__inner">
@@ -106,18 +123,34 @@ class IndexPage extends React.Component {
               </h2>
               <ul>
                 {blogPosts.map(post => {
-                  return (
-                    <li className="margin-bottom--32" key={post.node.frontmatter.path}>
-                      <Link to={post.node.frontmatter.path}>
-                        <h3 className="h-3 font-size--18 color--red margin-bottom--14">
-                          {post.node.frontmatter.title}
-                        </h3>
-                        <p className="font-size--16 color--white">
-                          {post.node.frontmatter.tldr}
-                        </p>
-                      </Link>
-                    </li>
-                  )
+                  if (post.node.frontmatter.external) {
+                    return (
+                      <li className="margin-bottom--32" key={post.node.frontmatter.path}>
+                        <a href={post.node.frontmatter.external}>
+                          <h3 className="h-3 font-size--18 color--red margin-bottom--14">
+                            {post.node.frontmatter.title}
+                          </h3>
+                          <p className="font-size--16 color--white">
+                            {post.node.frontmatter.tldr}
+                          </p>
+                          <IconLink className="margin-top--16" />
+                        </a>
+                      </li>
+                    )
+                  } else {
+                    return (
+                      <li className="margin-bottom--32" key={post.node.frontmatter.path}>
+                        <Link to={post.node.frontmatter.path}>
+                          <h3 className="h-3 font-size--18 color--red margin-bottom--14">
+                            {post.node.frontmatter.title}
+                          </h3>
+                          <p className="font-size--16 color--white">
+                            {post.node.frontmatter.tldr}
+                          </p>
+                        </Link>
+                      </li>
+                    )
+                  }
                 })}
               </ul>
             </div>
@@ -133,7 +166,7 @@ class IndexPage extends React.Component {
               </p>
             </div>
 
-            <div className="home__section-three__row__col-right html-details position-right margin-top-and-bottom--32">
+            <div className="home__section-three__row__col-right html-details position-right margin-top-and-bottom--64">
               <DetailsList />
             </div>
           </div>
@@ -168,7 +201,7 @@ class IndexPage extends React.Component {
               </p>
             </div>
 
-            <div className="home__section-three__row__col-right position-right html-list html-list--social margin-top-and-bottom--32">
+            <div className="home__section-three__row__col-right position-right html-list html-list--social margin-top-and-bottom--64">
               <div className="details-container" ref="detailsContainer">
                 <h2 className="h-2">
                   Social <span className="details-container__sub-title">(HMU)</span>
@@ -221,6 +254,7 @@ export const indexBlogListingQuery = graphql`
             tldr
             path
             type
+            external
           }
         }
       }

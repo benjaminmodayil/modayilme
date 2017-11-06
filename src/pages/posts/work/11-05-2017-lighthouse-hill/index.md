@@ -4,14 +4,14 @@ path: '/work/lighthouse-hill-preview'
 title: 'Lighthouse Hill Preview'
 tldr: 'Ben learns Javascript by making a game.'
 type: 'work'
-website: '[Lighthouse Hill](https://codepen.io/modayilme/pen/ybXErO/)'
+website: 'https://codepen.io/modayilme/pen/ybXErO/'
 themeColor: '#262232'
 script: '<script async src="https://production-assets.codepen.io/assets/embed/ei.js"></script>'
 ---
 
 ## To learn Javascript
 
-Around my Junior year of college, I wanted to Javascript a lot more.  I already knew how to do basic D.O.M manipulation through jQuery, but I felt as though I were using a crutch. 
+Around my Junior year of college, I wanted to learn Javascript. I already knew how to do basic D.O.M manipulation through jQuery, but I felt as though I were leaning a crutch. 
 
 Around this time as well, I’ve been hearing more and more about the whole jQuery size dependency issue and realized if all I was needing Javascript was for adding, removing, and toggling classes, then why would I resort to use such a unnecessary dependency just to make things interactive? Why not write the extra code to trigger something after all these were how adding a class looked for jQuery and vanilla Javascript.
 
