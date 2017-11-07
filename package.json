@@ -32,5 +32,6 @@
   "devDependencies": {
     "gh-pages": "^1.0.0",
     "prettier": "^1.6.1"
-  }
+  },
+  "browserslist": ["> 1%", "IE >= 10", "last 2 versions"]
 }
