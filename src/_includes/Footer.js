@@ -21,8 +21,9 @@ class Footer extends Component {
               className="font-style--italic footer__inner__callout__hmu"
               to="/contact"
             >
-              HMU
+              <abbr title="Hit Me Up (Contact Me)">HMU</abbr>
             </Link>
+            <span className="font-size--56">📱</span>
           </div>
           <ul className="footer__links__container">
             <li className="footer__links link-how-i-made margin-bottom--32">

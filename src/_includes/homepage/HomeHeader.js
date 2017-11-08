@@ -7,16 +7,18 @@ class HomeHeader extends Component {
     const data = this.props.info.slice(0, 3)
 
     return (
-      <header className="home__section-one__header row margin-center min-height--85vh margin-top-and-bottom--64">
+      <header className="home__section-one__header row margin-center margin-top-and-bottom--96">
         <div className="home__section-one__header__intro margin-bottom--64">
           <div className="container--medium-to-small">
+            <span className="home__header__lead color--white font-weight--normal font-style--italic font-family--heading margin-bottom--16 display--block">
+              Hi there! I'm
+            </span>
             <h1 className="h-1 color--white font-weight--bold margin-bottom--16">
               <span className="display--block margin-bottom--14">Benjamin</span> Modayil
             </h1>
             <p className="color--white font-weight--normal">
-              is a{' '}
               <span className="color--red font-weight--bold">
-                Front-End Developer
+                Front-End Developer 👨‍💻
               </span>{' '}
               from Philadelphia, Pennsylvannia.
             </p>
@@ -40,26 +42,32 @@ class HomeHeader extends Component {
               {data.map(post => {
                 if (post.node.frontmatter.external) {
                   return (
-                    <li className="margin-bottom--32" key={post.node.frontmatter.path}>
+                    <li
+                      className="margin-bottom--32 padding-left-and-right--16 padding-top-and-bottom--16"
+                      key={post.node.frontmatter.path}
+                    >
                       <a href={post.node.frontmatter.external}>
                         <h3 className="h-3 font-size--18 color--red margin-bottom--14">
                           {post.node.frontmatter.title}
                         </h3>
-                        <p className="font-size--16 color--white">
+                        <p className="font-size--16 color--text">
                           {post.node.frontmatter.tldr}
                         </p>
-                        <IconLink className="margin-top--16" />
+                        <IconLink />
                       </a>
                     </li>
                   )
                 } else {
                   return (
-                    <li className="margin-bottom--32" key={post.node.frontmatter.path}>
+                    <li
+                      className="margin-bottom--32 padding-left-and-right--16 padding-top-and-bottom--16"
+                      key={post.node.frontmatter.path}
+                    >
                       <Link to={post.node.frontmatter.path}>
                         <h3 className="h-3 font-size--18 color--red margin-bottom--14">
                           {post.node.frontmatter.title}
                         </h3>
-                        <p className="font-size--16 color--white">
+                        <p className="font-size--16 color--text">
                           {post.node.frontmatter.tldr}
                         </p>
                       </Link>

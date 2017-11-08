@@ -1,15 +1,37 @@
 .home__section-one__header {
-  align-items: center;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+
+  @include breakpoint(600px 1000px) {
+    ul {
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+
+      li {
+        flex: 1 1 31.1%;
+        max-width: 280px;
+        margin-right: 16px;
+
+        &:last-of-type {
+          margin-right: 0;
+        }
+      }
+    }
+  }
+
+  span {
+    display: block;
+  }
 }
 
 .home__section-one__header__intro {
   flex: 1 1 70%;
 
   .h-1 {
-    @include fluid-type(600px, 1400px, 36px, 96px);
+    @include fluid-type(1001px, 1400px, 36px, 96px);
+    @include fluid-type(600px, 1000px, 72px, 96px);
   }
 
   p {
@@ -25,25 +47,17 @@
   @include fluid-type(600px, 1400px, 20px, 28px);
 }
 
-.home__section-one__header__updates {
-  flex: 1 1 30%;
-}
-
-.home__section-one__header__link {
-  // align-self: flex-end;
-  // justify-content: flex-end;
-}
-
-@include breakpoint(max-width 800px) {
+@include breakpoint(min-width 1001px) {
   .home__section-one__header {
-    span {
-      display: block;
-    }
-  }
-}
-
-@include breakpoint(min-width 801px) {
-  .home__section-one__header {
+    align-items: center;
     flex-direction: row;
   }
 }
+
+// @include breakpoint(600px 1000px) {
+//   .home__section-one__header {
+//     ul {
+//       display: flex;
+//     }
+//   }
+// }
