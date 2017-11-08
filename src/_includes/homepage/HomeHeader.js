@@ -10,9 +10,6 @@ class HomeHeader extends Component {
       <header className="home__section-one__header row margin-center min-height--85vh margin-top-and-bottom--64">
         <div className="home__section-one__header__intro margin-bottom--64">
           <div className="container--medium-to-small">
-            <span className="home__header__lead color--white font-weight--bold font-style--italic font-family--heading margin-bottom--16 display--block">
-              it's yerr boy
-            </span>
             <h1 className="h-1 color--white font-weight--bold margin-bottom--16">
               <span className="display--block margin-bottom--14">Benjamin</span> Modayil
             </h1>
