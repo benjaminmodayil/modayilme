@@ -217,8 +217,7 @@ class IndexPage extends React.Component {
               </p>
               <p className="home__medium-text color--white margin-bottom--32">
                 Interested in following me or keeping updated on things I write or do?
-                Sign up for my newsletter below, follow me on my{' '}
-                <a href={data.site.siteMetadata.twitter}>Twitter</a>,{' '}
+                Follow me on my <a href={data.site.siteMetadata.twitter}>Twitter</a>,{' '}
                 <a href={data.site.siteMetadata.instagram}>Instagram</a>, or connect with
                 me on <a href={data.site.siteMetadata.linkedIn}>LinkedIn</a>.
               </p>
