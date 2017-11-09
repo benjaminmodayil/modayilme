@@ -1,10 +1,48 @@
 .latest-updates {
+  .icon-link {
+    position: absolute;
+    right: 16px;
+    top: 16px;
+    transition: all 0.3s ease;
+  }
+
+  #icon-link {
+    fill: color(red);
+  }
+
   li {
-    min-width: 250px;
+    background-color: white;
+    border-radius: 5px;
     max-width: 350px;
+    min-width: 250px;
+    position: relative;
+    transition: all 0.3s ease;
+
+    &:hover,
+    &:focus {
+      background-color: color(red);
+      transform: scale(1.06);
+
+      .icon-link {
+        transform: scale(1.2);
+      }
+
+      #icon-link {
+        fill: color(white);
+      }
+
+      .color--red,
+      .color--text {
+        color: white;
+      }
+    }
   }
 
   a {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    min-height: 100px;
     text-decoration: none;
 
     &:hover,

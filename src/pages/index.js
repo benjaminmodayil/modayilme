@@ -52,9 +52,10 @@ class IndexPage extends React.Component {
                 </a>{' '}
                 currently living in{' '}
                 <a href="https://www.google.com/maps/place/Falls+Church,+VA/@38.8860194,-77.1898726,14z/data=!3m1!4b1!4m5!3m4!1s0x89b64b6e7a4663ad:0x6e536688973d9759!8m2!3d38.882334!4d-77.1710914">
-                  Falls Church, VA
-                </a>. I work with <a href="https://www.viget.com">Viget</a> in the same
-                position, but as an apprentice learning about the industry.
+                  Philadelphia, PA
+                </a>. I recently finished an apprenticeship with{' '}
+                <a href="https://www.viget.com">Viget</a> in the same position, but as an
+                apprentice learning about working within an agency.
               </p>
             </div>
             <div className="home__section-two__text-and-image__image margin-top--48">
@@ -63,8 +64,18 @@ class IndexPage extends React.Component {
           </div>
           <div className="wrapper wrapper--780 font-weight--normal margin-bottom--64 align-center-under--1200">
             <p className="home__big-text margin-top--48">
-              If you’re looking for work examples you can check out one of the studies
-              linked below:
+              If you're looking to hire a <abbr title="Front-End Developer">FED</abbr>,
+              don't feel shy and{' '}
+              <Link to="/contact">
+                <abbr title="Hit Me Up">HMU</abbr>
+              </Link>
+            </p>
+            <p className="home__big-text margin-top--48">
+              If you’re looking for{' '}
+              <span role="img" aria-label="work">
+                👷🏾‍♂️{' '}
+              </span>{' '}
+              examples you can check out one of the studies linked below:
             </p>
 
             <div className="latest-updates margin-top--64">
@@ -75,12 +86,15 @@ class IndexPage extends React.Component {
                 {caseStudies.map(post => {
                   if (post.node.frontmatter.external) {
                     return (
-                      <li className="margin-bottom--32" key={post.node.frontmatter.path}>
+                      <li
+                        className="margin-bottom--32 padding-left-and-right--16 padding-top-and-bottom--16"
+                        key={post.node.frontmatter.path}
+                      >
                         <a href={post.node.frontmatter.external}>
                           <h3 className="h-3 font-size--18 color--red margin-bottom--14">
                             {post.node.frontmatter.title}
                           </h3>
-                          <p className="font-size--16 color--white">
+                          <p className="font-size--16 color--text">
                             {post.node.frontmatter.tldr}
                           </p>
                           <IconLink className="margin-top--16" />
@@ -89,12 +103,15 @@ class IndexPage extends React.Component {
                     )
                   } else {
                     return (
-                      <li className="margin-bottom--32" key={post.node.frontmatter.path}>
+                      <li
+                        className="margin-bottom--32 padding-left-and-right--16 padding-top-and-bottom--16"
+                        key={post.node.frontmatter.path}
+                      >
                         <Link to={post.node.frontmatter.path}>
                           <h3 className="h-3 font-size--18 color--red margin-bottom--14">
                             {post.node.frontmatter.title}
                           </h3>
-                          <p className="font-size--16 color--white">
+                          <p className="font-size--16 color--text">
                             {post.node.frontmatter.tldr}
                           </p>
                         </Link>
@@ -125,26 +142,32 @@ class IndexPage extends React.Component {
                 {blogPosts.map(post => {
                   if (post.node.frontmatter.external) {
                     return (
-                      <li className="margin-bottom--32" key={post.node.frontmatter.path}>
+                      <li
+                        className="margin-bottom--32 padding-left-and-right--16 padding-top-and-bottom--16"
+                        key={post.node.frontmatter.path}
+                      >
                         <a href={post.node.frontmatter.external}>
                           <h3 className="h-3 font-size--18 color--red margin-bottom--14">
                             {post.node.frontmatter.title}
                           </h3>
-                          <p className="font-size--16 color--white">
+                          <p className="font-size--16 color--text">
                             {post.node.frontmatter.tldr}
                           </p>
-                          <IconLink className="margin-top--16" />
+                          <IconLink />
                         </a>
                       </li>
                     )
                   } else {
                     return (
-                      <li className="margin-bottom--32" key={post.node.frontmatter.path}>
+                      <li
+                        className="margin-bottom--32 padding-left-and-right--16 padding-top-and-bottom--16"
+                        key={post.node.frontmatter.path}
+                      >
                         <Link to={post.node.frontmatter.path}>
                           <h3 className="h-3 font-size--18 color--red margin-bottom--14">
                             {post.node.frontmatter.title}
                           </h3>
-                          <p className="font-size--16 color--white">
+                          <p className="font-size--16 color--text">
                             {post.node.frontmatter.tldr}
                           </p>
                         </Link>
@@ -157,12 +180,12 @@ class IndexPage extends React.Component {
           </div>
         </section>
 
-        <section className="home__section-three align-right section-margin wrapper wrapper--960 font-weight--normal align-center-under--1200">
+        <section className="home__section-three section-margin wrapper wrapper--960 margin-center font-weight--normal align-center-under--1200">
           <div className="home__section-three__row">
             <div className="home__section-three__row__col-left container--medium-to-small">
               <p className="home__medium-text color--white margin-bottom--32">
-                I really love learning technologies. I’m not lying here. Here’s a few
-                things that I have been able to add to my skillset.
+                I really love learning new things related to development. I’m not lying.
+                Here’s a few things that I have been able to add to my skillset.
               </p>
             </div>
 

@@ -190,9 +190,18 @@ $spacings: '8', '14', '16', '32', '48', '64', '80', '96';
     padding-bottom: #{$spacing}px;
     padding-top: #{$spacing}px;
   }
+
+  .padding-left-and-right--#{$spacing} {
+    padding-left: #{$spacing}px;
+    padding-right: #{$spacing}px;
+  }
 }
 
 .margin-bottom--15vh {
+  margin-bottom: 15vh;
+}
+
+.margin-top--15vh {
   margin-bottom: 15vh;
 }
 //height
@@ -203,7 +212,6 @@ $spacings: '8', '14', '16', '32', '48', '64', '80', '96';
 }
 
 .min-height--85vh {
-  height: 85vh;
   max-height: 800px;
 }
 
