@@ -21,8 +21,22 @@ $colors: (
   @return map-get($colors, '#{ $key }');
 }
 
+@mixin variable($property, $variable, $fallback) {
+  #{$property}: $fallback;
+  #{$property}: var($variable);
+}
+
+// runs like: @include variable(background, --theme-primary-color, color(blue));
+
+:root {
+  @each $color, $variableColor in $colors {
+    --#{$color}: #{$variableColor};
+  }
+}
+
 @each $color, $textColor in $colors {
   .color--#{$color} {
     color: #{$textColor};
+    color: var(--#{$color});
   }
 }
