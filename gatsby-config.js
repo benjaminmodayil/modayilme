@@ -41,6 +41,13 @@ module.exports = {
         ]
       }
     },
-    `gatsby-plugin-catch-links`
+    `gatsby-plugin-catch-links`,
+    {
+      resolve: `gatsby-plugin-google-analytics`,
+      options: {
+        trackingId: 'UA-90258518-1',
+        anonymize: true
+      }
+    }
   ]
 }
