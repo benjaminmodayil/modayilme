@@ -4,6 +4,7 @@ path: '/blog/first-post'
 title: 'Welcome'
 tldr: 'Welcome to the new site'
 type: blog
+category: ['health', 'fitness', 'code']
 ---
 
 ## Hey there!
