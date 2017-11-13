@@ -2,7 +2,7 @@
 layout: work
 path: '/work/ground-rules'
 title: 'GroundRulesCo'
-tldr: 'Viget Interns make a website about coffee showing others how to make coffee'
+tldr: 'Interns make a site showing others how to make their own coffee'
 type: work
 website: https://groundrules.co/
 themeColor: '#2D4DAF'
