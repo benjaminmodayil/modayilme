@@ -5,10 +5,9 @@ import Helmet from 'react-helmet'
 import Nav from '../_includes/Nav.js'
 import Footer from '../_includes/Footer.js'
 // import ColorTheme from '../components/ColorTheme.js'
-// <ColorTheme />
 
 import './index.scss'
-
+// <ColorTheme />
 class TemplateWrapper extends React.Component {
   renderNav = () => {
     if (this.props.location.pathname != '/') {
@@ -30,6 +29,7 @@ class TemplateWrapper extends React.Component {
             { rel: 'icon', href: '/favicon.ico', type: 'image/x-icon' }
           ]}
         />
+
         <div className="site__inner">
           {this.renderNav()}
           {this.props.children()}
