@@ -26,7 +26,7 @@ figcaption {
   padding: 0;
 
   &::selection {
-    background-color: color(link);
+    background-color: lighten(color(link), 12%);
     color: white;
     text-shadow: none;
   }
@@ -48,7 +48,7 @@ a {
 }
 
 body {
-  background-color: color(bg);
+  @include variable(background, --bg, color(bg));
 
   @include breakpoint(max-width 600px) {
     padding-bottom: 15vh;
@@ -143,11 +143,8 @@ p {
 
 @include breakpoint(min-width 1101px) {
   .content-align {
-    .h-1,
-    .tldr {
-      left: -(percentage(225/780));
+    .h-1 {
       max-width: 500px;
-      position: relative;
     }
   }
 }

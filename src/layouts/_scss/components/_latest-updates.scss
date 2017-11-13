@@ -51,3 +51,26 @@
     }
   }
 }
+
+@include breakpoint(max-width 830px) {
+  .home__section-one__header ul li {
+    margin-right: 0;
+    &:first-of-type {
+      margin-right: 16px;
+    }
+  }
+
+  .latest-updates {
+    li {
+      max-width: none;
+    }
+  }
+}
+
+@include breakpoint(max-width 600px) {
+  .home__section-one__header ul li {
+    &:first-of-type {
+      margin-right: 0;
+    }
+  }
+}

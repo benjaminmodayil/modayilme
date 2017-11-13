@@ -11,7 +11,7 @@ export default function Template({ data }, props) {
       <article className="post">
         <section className="post__body">
           <div className="wrapper wrapper--wide margin-center">
-            <div className="align-right wrapper content-align wrapper--780 margin-center section-padding--bottom-heavy color--white">
+            <div className="wrapper content-align wrapper--780 margin-center section-padding--bottom-heavy color--white">
               <header className="post__header">
                 <h1 className="h-1">{post.frontmatter.title}</h1>
                 <p className="tldr margin-top--32 ">

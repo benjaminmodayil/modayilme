@@ -3,7 +3,7 @@
   flex-direction: column;
   justify-content: space-between;
 
-  @include breakpoint(600px 1000px) {
+  @include breakpoint(601px 1000px) {
     ul {
       display: flex;
       justify-content: space-between;
@@ -11,7 +11,7 @@
 
       li {
         flex: 1 1 31.1%;
-        max-width: 280px;
+        // max-width: 280px;
         margin-right: 16px;
 
         &:last-of-type {

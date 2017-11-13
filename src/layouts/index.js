@@ -4,6 +4,8 @@ import Link from 'gatsby-link'
 import Helmet from 'react-helmet'
 import Nav from '../_includes/Nav.js'
 import Footer from '../_includes/Footer.js'
+// import ColorTheme from '../components/ColorTheme.js'
+// <ColorTheme />
 
 import './index.scss'
 
@@ -14,36 +16,9 @@ class TemplateWrapper extends React.Component {
     }
   }
 
-  themify = () => {
-    // Yank theme color from localStorage and use it.
-    document.documentElement.style.setProperty('--red', 'blue')
-
-    // // document.documentElement.style.setProperty(
-    // //   '--mainColor',
-    // //   localStorage.getItem('userThemeColor')
-    // // )
-
-    // localStorage.setItem('userThemeColor', this.value)
-
-    // var colorInput = document.querySelector('#choose-theme-color')
-
-    // colorInput.addEventListener('change', function() {
-    //   // Theme the site!
-    //   document.documentElement.style.setProperty('--mainColor', this.value)
-
-    //   // Save the value for next time page is visited.
-    //   document.documentElement.style.setProperty(
-    //     '--mainColor',
-    //     localStorage.getItem('userThemeColor')
-    //   )
-    //   localStorage.setItem('userThemeColor', this.value)
-    // })
-  }
-
   render() {
     return (
       <div className="site__container">
-        {this.themify()}
         <Helmet
           title="Welcome to modayil.me"
           meta={[
