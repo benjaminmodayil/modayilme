@@ -30,6 +30,8 @@
   flex: 1 1 30%;
 
   img {
+    display: block;
+    margin: 0 auto;
     max-width: 100%;
   }
 }
@@ -59,7 +61,7 @@
   .home__section-two__text-and-image__image {
     display: block;
     position: absolute;
-    right: -80%;
+    right: -54%;
     top: 40px;
     z-index: -1;
   }

@@ -74,3 +74,11 @@
     }
   }
 }
+
+@include breakpoint(min-width 1001px) {
+  .latest-updates {
+    li {
+      min-width: 300px;
+    }
+  }
+}

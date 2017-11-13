@@ -11,7 +11,6 @@
 
       li {
         flex: 1 1 31.1%;
-        // max-width: 280px;
         margin-right: 16px;
 
         &:last-of-type {
@@ -53,11 +52,3 @@
     flex-direction: row;
   }
 }
-
-// @include breakpoint(600px 1000px) {
-//   .home__section-one__header {
-//     ul {
-//       display: flex;
-//     }
-//   }
-// }
