@@ -4,10 +4,6 @@
       "component---src-pages-index-js-49bc5a5f5994d2451920.js",
       "component---src-pages-index-js-49bc5a5f5994d2451920.js.map"
     ],
-    "path---blog": [
-      "path---blog-1db04e5021b40904aca6.js",
-      "path---blog-1db04e5021b40904aca6.js.map"
-    ],
     "path---": [
       "path----557518bd178906f8d58a.js",
       "path----557518bd178906f8d58a.js.map"
@@ -33,12 +29,12 @@
       "path---blog-a-new-way-todo-8ffb66908a7f2de72fe1.js.map"
     ],
     "component---src-layouts-index-js": [
-      "component---src-layouts-index-js-e814609a35dc1ba73b83.js",
-      "component---src-layouts-index-js-e814609a35dc1ba73b83.js.map"
+      "component---src-layouts-index-js-2d644d44e90838e8fcf9.js",
+      "component---src-layouts-index-js-2d644d44e90838e8fcf9.js.map"
     ],
     "path---index": [
-      "path---index-0be1244c522a89757d48.js",
-      "path---index-0be1244c522a89757d48.js.map"
+      "path---index-035ef4d1b4a87f37733f.js",
+      "path---index-035ef4d1b4a87f37733f.js.map"
     ],
     "path---work-lighthouse-hill-preview": [
       "path---work-lighthouse-hill-preview-0500289a30098eda98fa.js",
@@ -65,16 +61,12 @@
       "path---contact-1db04e5021b40904aca6.js.map"
     ],
     "component---src-templates-post-js": [
-      "component---src-templates-post-js-998552a29120f3e1c175.js",
-      "component---src-templates-post-js-998552a29120f3e1c175.js.map"
-    ],
-    "component---src-pages-blog-js": [
-      "component---src-pages-blog-js-81de963f99dbfe3f884b.js",
-      "component---src-pages-blog-js-81de963f99dbfe3f884b.js.map"
+      "component---src-templates-post-js-0e5dea98e3679dcc27bd.js",
+      "component---src-templates-post-js-0e5dea98e3679dcc27bd.js.map"
     ],
     "app": [
-      "app-4a0f689f0c795d5382c2.js",
-      "app-4a0f689f0c795d5382c2.js.map"
+      "app-0627bf870845698203a6.js",
+      "app-0627bf870845698203a6.js.map"
     ],
     "path---work-how-i-made-my-site": [
       "path---work-how-i-made-my-site-45f2dc282f866f43f64f.js",
