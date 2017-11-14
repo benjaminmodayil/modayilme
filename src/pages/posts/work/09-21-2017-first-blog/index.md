@@ -3,7 +3,7 @@ layout: work
 path: '/work/how-i-made-my-site'
 title: 'Handcrafted through trial and error'
 tldr: 'Learn how I built my site'
-description: 'Ben needed new online crib. So he created this site.'
+description: 'Ben needed a new online living space. So in turn, he created this site.'
 textDate: 'August 2017'
 type: work
 website: https://modayil.me/
