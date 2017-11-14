@@ -1,5 +1,5 @@
 .work__header {
-  background-color: color(bg-grey);
+  @include variable(background-color, --header, color(bg))
   display: flex;
   min-height: 80vh;
 

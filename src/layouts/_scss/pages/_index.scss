@@ -32,7 +32,15 @@
   img {
     display: block;
     margin: 0 auto;
-    max-width: 100%;
+    max-width: 800px;
+  }
+}
+
+.home__section__aside-emoji {
+  span {
+    @include fluid-type(600px, 1400px, 102px, 196px);
+    display: block;
+    text-align: center;
   }
 }
 
@@ -64,6 +72,17 @@
     right: -54%;
     top: 40px;
     z-index: -1;
+
+    img {
+      max-width: 100%;
+    }
+  }
+
+  .home__section__aside-emoji {
+    span {
+      position: absolute;
+      right: 10%;
+    }
   }
 }
 
@@ -83,7 +102,7 @@
     margin-right: auto;
   }
 
-  @include breakpoint(max-width 900px) {
+  @include breakpoint(max-width 1200px) {
     .home__section-three__row__col-left,
     .home__section-three__row__col-right {
       margin-left: auto;

@@ -14,22 +14,31 @@ class Template extends React.Component {
 
   componentDidMount() {
     this.forceUpdate()
+    this.svgRender()
   }
 
   render() {
     const { markdownRemark: post } = this.props.data
 
+    const cssColor = {
+      '--header': post.frontmatter.headerColor,
+      '--link': post.frontmatter.linkColor,
+      '--text': post.frontmatter.textColor,
+      '--bg': post.frontmatter.textBackground,
+      '--bg-light': post.frontmatter.metaBackground
+    };
+
     let note
     if (post.frontmatter.imageNote) {
       note = <p dangerouslySetInnerHTML={{ __html: post.frontmatter.imageNote }} />
     }
+    
 
     return (
-      <main className="work__preview-page">
-        <article className="work">
+      <main className="work__preview-page" style={cssColor}>
+        <article className="work-article">
           <header
             className="work__header"
-            style={{ backgroundColor: post.frontmatter.themeColor }}
           >
             <div className="work__header-inner wrapper wrapper--wide margin-center">
               <div className="work__header-inner--left container--medium-to-small ">
@@ -47,10 +56,30 @@ class Template extends React.Component {
           </header>
 
           <section className="work__preview__body">
+            <div className="work__preview__meta-container padding-top-and-bottom--32">
+              <div className="work-preview__body__meta color--white wrapper--responsive--medium margin-center">
+                <div className="work-preview__body__meta__synopsis container--small">
+                  <h2 className="h-2 margin-bottom--32">Synopsis</h2>
+                  <p>{post.frontmatter.description}</p>
+                </div>
+                <div className="work-preview__body__meta__data-and-link">
+                  <h2 className="h-2 margin-bottom--32">Created on</h2>
+                  <span className="font-weight--light margin-bottom--48">
+                    {post.frontmatter.textDate}
+                  </span>
+                  <a
+                    href={post.frontmatter.website}
+                    className="work-preview__body__meta__data-and-link__link font-weight--light font-family--heading"
+                  >
+                    Visit the site
+                  </a>
+                </div>
+              </div>
+            </div>
             <div className="wrapper wrapper--wide margin-center">
               <div className="work__preview__container wrapper wrapper--780 margin-center section-padding--bottom-heavy">
                 <div
-                  className="post-work__body color--white"
+                  className="post-work__body"
                   dangerouslySetInnerHTML={{ __html: post.html }}
                 />
               </div>
@@ -72,12 +101,17 @@ export const workQuery = graphql`
       frontmatter {
         path
         title
+        description
+        textDate
         tldr
         website
-        themeColor
+        headerColor
+        linkColor
+        textColor
+        textBackground
+        metaBackground
         imageNote
         svgName
-        script
       }
     }
   }

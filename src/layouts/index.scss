@@ -18,13 +18,12 @@
 @import '_scss/pages/post';
 @import '_scss/pages/work-preview';
 @import '_scss/pages/work';
-// @import '_scss/pages/archive';
 @import '_scss/pages/contact';
-@import '_scss/pages/404';
 
 tt,
 code {
-  background-color: fade-out(color(red), 0.1);
+  @include variable(background-color, --link, color(link));
+  @include variable(color, --text, color(white));
   border-radius: 3px;
   font-family: 'SFMono-Regular', Consolas, 'Roboto Mono', 'Droid Sans Mono',
     'Liberation Mono', Menlo, Courier, monospace;

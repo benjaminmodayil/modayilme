@@ -1,3 +1,7 @@
+@function color($key) {
+  @return map-get($colors, '#{ $key }');
+}
+
 $colors: (
   'black': #292929,
   'text': #292929,
@@ -9,8 +13,12 @@ $colors: (
   'bg-grey': #393d3f
 );
 
-@function color($key) {
-  @return map-get($colors, '#{ $key }');
+$bg-light: lighten(color(bg), 5%);
+
+:root {
+  --bg-light: $bg-light;
+  --header: color(bg);
+  --link-hover: color(link);
 }
 
 @mixin variable($property, $variable, $fallback) {
@@ -32,3 +40,5 @@ $colors: (
     color: var(--#{$color});
   }
 }
+
+

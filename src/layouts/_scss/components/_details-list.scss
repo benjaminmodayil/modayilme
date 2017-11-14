@@ -86,15 +86,6 @@
   }
 }
 
-a {
-  text-decoration: none;
-
-  &:hover {
-    color: var(--bg);
-    text-decoration: underline;
-  }
-}
-
 .details-container__inner {
   background-color: white;
   padding: 24px 16px 41px 16px;
@@ -118,20 +109,32 @@ a {
   padding: 1rem 0;
 }
 
-@include breakpoint(max-width 900px) {
+@include breakpoint(max-width 1200px) {
   .position-absolute {
     position: relative;
   }
 }
 
-@include breakpoint(min-width 901px) {
+@include breakpoint(min-width 1201px) {
   .html-details {
-    top: 20px;
+    top: 0px;
   }
 
   .html-list {
     top: 40px;
     margin-top: 3rem;
     transition: all 0.3s ease;
+  }
+}
+
+@include breakpoint(min-width 1201px) {
+  .position-right {
+    position: absolute;
+    right: 0;
+    z-index: 2;
+  }
+
+  .a-spacing--y {
+    transform: translateY(100px);
   }
 }

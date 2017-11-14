@@ -22,15 +22,6 @@ class HomeHeader extends Component {
               </span>{' '}
               from Philadelphia, Pennsylvannia.
             </p>
-            {/* <a
-              className="home__section-one__header__link link__read"
-              href="#about"
-              onClick={() => {
-                this.props.onClick()
-              }}
-            >
-              learn more
-            </a> */}
           </div>
         </div>
         <div className="home__section-one__header__updates">
@@ -42,15 +33,15 @@ class HomeHeader extends Component {
               {data.map(post => {
                 if (post.node.frontmatter.external) {
                   return (
-                    <li
-                      className="margin-bottom--32 padding-left-and-right--16 padding-top-and-bottom--16"
-                      key={post.node.frontmatter.path}
-                    >
-                      <a href={post.node.frontmatter.external}>
-                        <h3 className="h-3 font-size--18 color--red margin-bottom--14">
+                    <li className="margin-bottom--32" key={post.node.frontmatter.path}>
+                      <a
+                        href={post.node.frontmatter.external}
+                        className="padding-left-and-right--16 padding-top-and-bottom--16"
+                      >
+                        <h3 className="h-3 font-size--18 margin-bottom--14">
                           {post.node.frontmatter.title}
                         </h3>
-                        <p className="font-size--16 color--text">
+                        <p className="font-size--16">
                           {post.node.frontmatter.tldr}
                         </p>
                         <IconLink />
@@ -59,15 +50,15 @@ class HomeHeader extends Component {
                   )
                 } else {
                   return (
-                    <li
-                      className="margin-bottom--32 padding-left-and-right--16 padding-top-and-bottom--16"
-                      key={post.node.frontmatter.path}
-                    >
-                      <Link to={post.node.frontmatter.path}>
-                        <h3 className="h-3 font-size--18 color--red margin-bottom--14">
+                    <li className="margin-bottom--32" key={post.node.frontmatter.path}>
+                      <Link
+                        to={post.node.frontmatter.path}
+                        className="padding-left-and-right--16 padding-top-and-bottom--16"
+                      >
+                        <h3 className="h-3 font-size--18 margin-bottom--14">
                           {post.node.frontmatter.title}
                         </h3>
-                        <p className="font-size--16 color--text">
+                        <p className="font-size--16">
                           {post.node.frontmatter.tldr}
                         </p>
                       </Link>

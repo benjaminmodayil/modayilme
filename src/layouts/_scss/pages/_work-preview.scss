@@ -1,9 +1,16 @@
 .work__preview__body {
   @include clearfix();
+  color: var(--text);
 
   p {
     line-height: 1.7;
     width: 100%;
+  }
+
+  a {
+    &:hover {
+      color: var(--link-hover);
+    }
   }
 }
 
@@ -33,4 +40,8 @@
     margin: 2rem auto;
     width: 100%;
   }
+}
+
+.work-article {
+  background-color: var(--bg);
 }

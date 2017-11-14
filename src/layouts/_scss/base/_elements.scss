@@ -39,10 +39,14 @@ ol {
 }
 
 a {
-  color: color(link);
+  @include variable(color, --link, color(link));
+
+  &:hover, &:focus {
+    color: white;
+  }
 
   &::selection {
-    background-color: color(link);
+    @include variable(background-color, --link, color(link));
     color: white;
   }
 }
@@ -82,13 +86,6 @@ p {
 }
 
 .site__container {
-  --bg: color(link);
-  // border: 1.5vw solid var(--bg);
-
-  @include breakpoint(min-width 901px) {
-    // border: 1vw solid var(--bg);
-  }
-
   main {
     padding-bottom: 15vh;
   }

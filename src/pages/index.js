@@ -86,15 +86,15 @@ class IndexPage extends React.Component {
                 {caseStudies.map(post => {
                   if (post.node.frontmatter.external) {
                     return (
-                      <li
-                        className="margin-bottom--32 padding-left-and-right--16 padding-top-and-bottom--16"
-                        key={post.node.frontmatter.path}
-                      >
-                        <a href={post.node.frontmatter.external}>
-                          <h3 className="h-3 font-size--18 color--red margin-bottom--14">
+                      <li className="margin-bottom--32" key={post.node.frontmatter.path}>
+                        <a
+                          href={post.node.frontmatter.external}
+                          className="padding-left-and-right--16 padding-top-and-bottom--16"
+                        >
+                          <h3 className="h-3 font-size--18 margin-bottom--14">
                             {post.node.frontmatter.title}
                           </h3>
-                          <p className="font-size--16 color--text">
+                          <p className="font-size--16">
                             {post.node.frontmatter.tldr}
                           </p>
                           <IconLink className="margin-top--16" />
@@ -103,15 +103,15 @@ class IndexPage extends React.Component {
                     )
                   } else {
                     return (
-                      <li
-                        className="margin-bottom--32 padding-left-and-right--16 padding-top-and-bottom--16"
-                        key={post.node.frontmatter.path}
-                      >
-                        <Link to={post.node.frontmatter.path}>
-                          <h3 className="h-3 font-size--18 color--red margin-bottom--14">
+                      <li className="margin-bottom--32" key={post.node.frontmatter.path}>
+                        <Link
+                          to={post.node.frontmatter.path}
+                          className="padding-left-and-right--16 padding-top-and-bottom--16"
+                        >
+                          <h3 className="h-3 font-size--18 margin-bottom--14">
                             {post.node.frontmatter.title}
                           </h3>
-                          <p className="font-size--16 color--text">
+                          <p className="font-size--16">
                             {post.node.frontmatter.tldr}
                           </p>
                         </Link>
@@ -125,16 +125,23 @@ class IndexPage extends React.Component {
         </section>
 
         <section
-          className="home__section-two color--white wrapper wrapper--780 margin-center font-weight--normal margin-bottom--15vh"
+          className="home__section-two color--white font-weight--normal margin-bottom--15vh"
           ref="about"
         >
-          <div className="home__section-two__inner">
-            <p className="home__big-text">
-              I also like to write whenever I get a chance of reflection or have an
-              ongoing idea I want to entertain. If you’re interested in things I’m
-              interested check out the links below.
-            </p>
-            <div className="latest-updates margin-top--64">
+          <div className="home__section-two__inner home__section-two__text-and-image__text align-center-under--1200 home__section-three__row">
+            <div className="container--temp home__section-three__row__col-left container--medium">
+              <p className="home__big-text">
+                I also like to write whenever I get a chance of reflection or have an
+                ongoing idea I want to entertain. If you’re interested in things I’m
+                interested check out the links below.
+              </p>
+            </div>
+            <div className="home__section__aside-emoji margin-top--48 home__section-three__row__col-right position-right margin-top-and-bottom--32">
+              <span role="img" aria-label="writings">
+                ✍️
+              </span>
+            </div>
+            <div className="latest-updates margin-top--64 wrapper wrapper--780 align-center-under--1200">
               <h2 className="h-2 color--white font-style--italic font-size--24 margin-bottom--32">
                 My thoughts
               </h2>
@@ -142,15 +149,15 @@ class IndexPage extends React.Component {
                 {blogPosts.map(post => {
                   if (post.node.frontmatter.external) {
                     return (
-                      <li
-                        className="margin-bottom--32 padding-left-and-right--16 padding-top-and-bottom--16"
-                        key={post.node.frontmatter.path}
-                      >
-                        <a href={post.node.frontmatter.external}>
-                          <h3 className="h-3 font-size--18 color--red margin-bottom--14">
+                      <li className="margin-bottom--32" key={post.node.frontmatter.path}>
+                        <a
+                          href={post.node.frontmatter.external}
+                          className="padding-left-and-right--16 padding-top-and-bottom--16"
+                        >
+                          <h3 className="h-3 font-size--18 margin-bottom--14">
                             {post.node.frontmatter.title}
                           </h3>
-                          <p className="font-size--16 color--text">
+                          <p className="font-size--16">
                             {post.node.frontmatter.tldr}
                           </p>
                           <IconLink />
@@ -159,15 +166,15 @@ class IndexPage extends React.Component {
                     )
                   } else {
                     return (
-                      <li
-                        className="margin-bottom--32 padding-left-and-right--16 padding-top-and-bottom--16"
-                        key={post.node.frontmatter.path}
-                      >
-                        <Link to={post.node.frontmatter.path}>
-                          <h3 className="h-3 font-size--18 color--red margin-bottom--14">
+                      <li className="margin-bottom--32" key={post.node.frontmatter.path}>
+                        <Link
+                          to={post.node.frontmatter.path}
+                          className="padding-left-and-right--16 padding-top-and-bottom--16"
+                        >
+                          <h3 className="h-3 font-size--18 margin-bottom--14">
                             {post.node.frontmatter.title}
                           </h3>
-                          <p className="font-size--16 color--text">
+                          <p className="font-size--16">
                             {post.node.frontmatter.tldr}
                           </p>
                         </Link>
@@ -180,21 +187,21 @@ class IndexPage extends React.Component {
           </div>
         </section>
 
-        <section className="home__section-three section-margin wrapper wrapper--960 margin-center font-weight--normal align-center-under--1200">
+        <section className="home__section-three section-margin font-weight--normal home__section-two__inner home__section-two__text-and-image__text wrapper align-center-under--1200">
           <div className="home__section-three__row">
-            <div className="home__section-three__row__col-left container--medium-to-small">
+            <div className="home__section-three__row__col-left container--medium">
               <p className="home__medium-text color--white margin-bottom--32">
                 I really love learning new things related to development. I’m not lying.
                 Here’s a few things that I have been able to add to my skillset.
               </p>
             </div>
 
-            <div className="home__section-three__row__col-right html-details position-right margin-top-and-bottom--64">
+            <div className="home__section-three__row__col-right html-details position-right margin-top-and-bottom--32">
               <DetailsList />
             </div>
           </div>
           <div className="home__section-three__row">
-            <div className="home__section-three__row__col-left container--medium-to-small">
+            <div className="home__section-three__row__col-left container--medium">
               <p className="home__medium-text color--white margin-bottom--32">
                 If you need a <a href="./static/resumeModayil.pdf"> resume </a> then just
                 click on that keyword. Also feel free to check-out my{' '}
@@ -205,7 +212,7 @@ class IndexPage extends React.Component {
           </div>
 
           <div className="home__section-three__row">
-            <div className="home__section-three__row__col-left container--medium-to-small">
+            <div className="home__section-three__row__col-left container--medium">
               <p className="home__medium-text color--white margin-bottom--32">
                 If you’re wondering what I’m like outside of work, well, sorry to be a
                 bummer, but I like to work. Usually I’m learning something new code-wise,
