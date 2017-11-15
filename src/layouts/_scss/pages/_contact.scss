@@ -52,3 +52,8 @@
     }
   }
 }
+
+input[disabled],
+textarea[disabled] {
+  background-color: color(red);
+}

@@ -26,20 +26,26 @@ class Template extends React.Component {
       '--text': post.frontmatter.textColor,
       '--bg': post.frontmatter.textBackground,
       '--bg-light': post.frontmatter.metaBackground
-    };
+    }
 
     let note
     if (post.frontmatter.imageNote) {
       note = <p dangerouslySetInnerHTML={{ __html: post.frontmatter.imageNote }} />
     }
-    
 
     return (
       <main className="work__preview-page" style={cssColor}>
+        <Helmet
+          title="Work | 💼"
+          meta={[
+            {
+              name: 'description',
+              content: 'Work study of Benjamin Modayil.'
+            }
+          ]}
+        />
         <article className="work-article">
-          <header
-            className="work__header"
-          >
+          <header className="work__header">
             <div className="work__header-inner wrapper wrapper--wide margin-center">
               <div className="work__header-inner--left container--medium-to-small ">
                 <h1 className="h-1">{post.frontmatter.title}</h1>

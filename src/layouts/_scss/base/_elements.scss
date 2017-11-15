@@ -25,7 +25,8 @@ figcaption {
   margin: 0;
   padding: 0;
 
-  &::selection {
+  &::selection,
+  &::-moz-selection {
     background-color: lighten(color(link), 12%);
     color: white;
     text-shadow: none;
@@ -41,7 +42,8 @@ ol {
 a {
   @include variable(color, --link, color(link));
 
-  &:hover, &:focus {
+  &:hover,
+  &:focus {
     color: white;
   }
 
@@ -65,6 +67,11 @@ p {
   a {
     font-weight: 600;
     border: 1px solid transparent;
+  }
+
+  &:selection,
+  &:-moz-selection {
+    color: black;
   }
 }
 

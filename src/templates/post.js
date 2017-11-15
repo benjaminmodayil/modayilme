@@ -8,6 +8,15 @@ export default function Template({ data }, props) {
 
   return (
     <main className="post__page">
+      <Helmet
+        title="Blog | ✍️"
+        meta={[
+          {
+            name: 'description',
+            content: 'Thoughts of Benjamin Modayil.'
+          }
+        ]}
+      />
       <article className="post">
         <section className="post__body">
           <div className="wrapper wrapper--wide margin-center">

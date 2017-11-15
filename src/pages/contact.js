@@ -20,10 +20,10 @@ const Contact = () => (
       <form action="">
         <label for="email">email</label>
 
-        <input type="email" name="email" id="email" />
+        <input type="email" name="email" id="email" disabled />
         <label for="message">message</label>
 
-        <textarea name="message" id="message" />
+        <textarea name="message" id="message" disabled />
       </form>
       <button className="btn--bg">submit</button>
     </section>

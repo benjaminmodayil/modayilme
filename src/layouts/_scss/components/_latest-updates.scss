@@ -29,8 +29,6 @@
       #icon-link {
         fill: color(white);
       }
-
-      
     }
   }
 
@@ -39,13 +37,15 @@
     flex-direction: column;
     justify-content: center;
     height: 100%;
+    min-height: 120px;
     text-decoration: none;
 
     p {
       color: color(black);
     }
 
-    &:hover, &:focus {
+    &:hover,
+    &:focus {
       background-color: color(red);
 
       p {
