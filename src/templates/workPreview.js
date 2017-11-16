@@ -40,8 +40,40 @@ class Template extends React.Component {
           meta={[
             {
               name: 'description',
-              content: 'Work study of Benjamin Modayil.'
-            }
+              content: post.frontmatter.tldr
+            },
+            { itemprop: 'name', content: 'post.frontmatter.title' },
+            {
+              itemprop: 'description',
+              content: post.frontmatter.tldr
+            },
+            // <!-- Schema image tag must be at least 180x120px -->
+            { itemprop: 'image', content: 'static/google-plus-image.png' },
+
+            // <!-- Twitter Card data -->
+            { name: 'twitter:card', content: 'summary_large_image' },
+            { name: 'twitter:site', content: '@modayilme' },
+            { name: 'twitter:title', content: post.frontmatter.title },
+            {
+              name: 'twitter:description',
+              content: post.frontmatter.tldr
+            },
+            { name: 'twitter:creator', content: '@modayilme' },
+            // <!-- Twitter summary card with large image must be at least 280x150px -->
+            { name: 'twitter:image:src', content: 'static/twitter-image.png' },
+
+            // <!-- Open Graph data -->
+            { property: 'og:title', content: post.frontmatter.title },
+            { property: 'og:type', content: 'website' },
+            { property: 'og:url', content: 'www.modayil.me' },
+            // <!-- Open graph image should be 1200 x 1200 (more info here: http://www.h3xed.com/web-and-internet/how-to-use-og-image-meta-tag-facebook-reddit) -->
+            { property: 'og:image', content: 'static/op-image.jpg' },
+            {
+              property: 'og:description',
+              content: post.frontmatter.tldr
+            },
+            { property: 'og:site_name', content: post.frontmatter.tldr },
+            { name: 'theme-color', content: '#F7484E' }
           ]}
         />
         <article className="work-article">

@@ -108,7 +108,7 @@
     width: 50%;
 
     svg {
-      margin-bottom: multiBase(0.8);
+      margin-bottom: multibase(0.8);
 
       @include breakpoint(min-width 601px) {
         margin-bottom: 0;

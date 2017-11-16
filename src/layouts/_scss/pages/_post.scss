@@ -5,6 +5,7 @@
 
   .h-1 {
     @include fluid-type(601px, 1440px, 54px, 96px);
+
     font-weight: 600;
   }
 
@@ -20,12 +21,13 @@
 }
 
 .post-work__body {
-  @include fluid-type(601px, 900px, 14px, 16px);
-  @include clearfix();
   font-size: 1em;
   font-weight: 400;
   line-height: 1.6;
   padding-top: rem(80);
+
+  @include fluid-type(601px, 900px, 14px, 16px);
+  @include clearfix();
 
   p {
     font-weight: 300;
@@ -37,14 +39,15 @@
   h2,
   h3,
   h4 {
-    margin: 1.414em 0 0.5em;
     font-weight: inherit;
     line-height: 1.2;
+    margin: 1.414em 0 0.5em;
   }
 
   h1 {
-    @include fluid-type(600px, 1400px, 56px, 64px);
     margin-top: 0;
+
+    @include fluid-type(600px, 1400px, 56px, 64px);
   }
 
   h2 {
@@ -120,11 +123,12 @@
 
 blockquote {
   margin: 2rem 0;
-  padding: multiBase(2) 0;
+  padding: multibase(2) 0;
 
   p {
     @include fluid-type(601px, 900px, 18px, 24px);
     @include variable(color, --link, color(link));
+
     font-style: italic;
     font-weight: 300;
     line-height: 1.6;
@@ -134,12 +138,13 @@ blockquote {
 
 .post-note {
   @include variable(background-color, --bg-grey, color(bg-grey));
+
   left: 0;
   padding: 1rem 10%;
-  top: 0;
   right: 0;
-  width: 100%;
   text-align: left;
+  top: 0;
+  width: 100%;
 
   em {
     font-style: italic;
@@ -170,6 +175,7 @@ blockquote {
 .work__preview__body {
   q {
     @include variable(border-color, --link, color(link));
+
     border-left-style: solid;
     border-left-width: 5px;
     display: block;
@@ -185,6 +191,7 @@ blockquote {
 
   .h-2 {
     @include fluid-type(600px, 1400px, 24px, 28px);
+
     font-weight: 500;
   }
 
@@ -210,8 +217,9 @@ blockquote {
 .work-preview__body__meta__data-and-link__link {
   @include fluid-type(600px, 1400px, 18px, 20px);
   @include variable(background-color, --link, color(link));
-  border: 2px solid;
   @include variable(border-color, --link, color(link));
+
+  border: 2px solid;
   border-radius: 5px;
   color: white;
   display: block;
@@ -228,8 +236,7 @@ blockquote {
 
 @include breakpoint(max-width 900px) {
   .work-preview__body__meta {
-    flex-wrap: wrap;
-    flex-direction: column;
+    flex-flow: column wrap;
   }
 
   .work-preview__body__meta__data-and-link {
@@ -252,40 +259,39 @@ blockquote {
   background-color: var(--bg-light);
 }
 
-
-
 @include breakpoint(min-width 801px) {
   .md-float {
     @include clearfix();
+
     display: block;
-    margin-top: 1.5rem;
     margin-bottom: 1.5rem;
-  
+    margin-top: 1.5rem;
+
     .md-float--left__text {
       float: left;
       padding-right: 2%;
       width: 55%;
     }
-  
+
     .md-float--left__asset {
       float: right;
       width: 45%;
-  
+
       img {
         margin: 0 auto;
       }
     }
-  
+
     .md-float--right__text {
       float: right;
       padding-left: 2%;
       width: 55%;
     }
-  
+
     .md-float--right__asset {
       float: left;
       width: 45%;
-  
+
       img {
         margin: 0 auto;
       }
@@ -299,11 +305,11 @@ blockquote {
     h2,
     h3,
     h4 {
-      margin: 1.414em 0 0.5em;
       font-weight: inherit;
-      line-height: 1.2;
-      position: relative;
       left: -16px;
+      line-height: 1.2;
+      margin: 1.414em 0 0.5em;
+      position: relative;
     }
   }
 }

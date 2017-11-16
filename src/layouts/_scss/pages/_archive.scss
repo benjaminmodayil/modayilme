@@ -16,7 +16,7 @@
 .archive__featured__post {
   background-color: color(bg-grey);
   height: 90vh;
-  margin-bottom: multiBase(5);
+  margin-bottom: multibase(5);
   max-height: 900px;
   min-height: 300px;
   padding-top: 26vh;
@@ -49,11 +49,12 @@
 
 .archive__list {
   h2 {
+    @include fluid-type(601px, 1440px, 24px, 28px);
+
     font-weight: 600;
-    margin-bottom: multiBase(2);
+    margin-bottom: multibase(2);
     text-shadow: 2px 2px 2px lighten(color(black), 65%);
 
-    @include fluid-type(601px, 1440px, 24px, 28px);
     span {
       color: color(link);
     }
@@ -61,19 +62,16 @@
 
   ul {
     display: flex;
-    flex-direction: row;
-
-    flex-wrap: wrap;
+    flex-flow: row wrap;
     justify-content: space-between;
   }
 
   li {
-    margin-bottom: multiBase(3);
+    margin-bottom: multibase(3);
     width: 100%;
 
     @include breakpoint(min-width 901px) {
       max-width: 48%;
-
       flex: 1 1 50%;
     }
   }
@@ -83,7 +81,7 @@
     border: 1px solid color(black);
     display: flex;
     flex-direction: row;
-    padding: multiBase(1.5);
+    padding: multibase(1.5);
     text-decoration: none;
 
     flex-wrap: wrap;
@@ -117,7 +115,7 @@
 .archive__item-inner {
   h3 {
     font-weight: 500;
-    margin-bottom: multiBase(0.4);
+    margin-bottom: multibase(0.4);
 
     @include fluid-type(601px, 1440px, 16px, 18px);
   }

@@ -33,7 +33,9 @@
   },
   "devDependencies": {
     "gh-pages": "^1.0.0",
-    "prettier": "^1.6.1"
+    "prettier": "^1.6.1",
+    "stylelint": "^8.2.0",
+    "stylelint-order": "^0.7.0"
   },
   "browserslist": [
     "> 1%",

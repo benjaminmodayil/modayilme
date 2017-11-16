@@ -49,6 +49,7 @@ a {
 
   &::selection {
     @include variable(background-color, --link, color(link));
+
     color: white;
   }
 }
@@ -81,7 +82,7 @@ p {
   color: color(link);
   display: block;
   font-weight: 300;
-  margin-top: multiBase(1);
+  margin-top: multibase(1);
   padding: 1rem;
 
   transition: all 0.3s ease;
@@ -108,7 +109,7 @@ p {
   cursor: pointer;
   font-family: $font-body;
   padding: 0.5rem 8%;
-  margin-top: multiBase(1.5);
+  margin-top: multibase(1.5);
   text-align: center;
   transition: all 0.2s ease;
 

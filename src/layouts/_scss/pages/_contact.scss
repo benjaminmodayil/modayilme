@@ -12,11 +12,11 @@
     @include fluid-type(601px, 1440px, 15px, 16px);
 
     line-height: 1.6;
-    margin-bottom: multiBase(1);
+    margin-bottom: multibase(1);
     max-width: 500px;
 
     &:nth-of-type(2) {
-      margin-bottom: multiBase(3);
+      margin-bottom: multibase(3);
     }
   }
 
@@ -29,8 +29,8 @@
       color: color(link);
       font-family: $font-heading;
       font-weight: 600;
-      margin-bottom: multiBase(0.5);
-      margin-top: multiBase(2);
+      margin-bottom: multibase(0.5);
+      margin-top: multibase(2);
     }
 
     input,

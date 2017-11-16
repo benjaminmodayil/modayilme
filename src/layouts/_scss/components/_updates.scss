@@ -42,7 +42,7 @@
   background-color: white;
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
   margin: 0 auto;
-  padding: multiBase(2.8) 0 multiBase(2) 0;
+  padding: multibase(2.8) 0 multibase(2) 0;
   width: rd($smallWidth, 414);
 
   .component__updates {
@@ -67,7 +67,7 @@
     @include fluid-type(601px, 1400px, 24px, 28px);
     font-family: $font-heading;
     font-weight: 400;
-    margin-bottom: multiBase(1);
+    margin-bottom: multibase(1);
   }
 }
 
@@ -97,7 +97,7 @@
 }
 
 .contact__callout {
-  margin-top: multiBase(1.5);
+  margin-top: multibase(1.5);
 
   a {
     font-weight: 300;
