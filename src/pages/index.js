@@ -73,7 +73,7 @@ class IndexPage extends React.Component {
             <p className="home__big-text margin-top--48">
               If you’re looking for{' '}
               <span role="img" aria-label="work">
-                👷🏾‍♂️{' '}
+                👷{' '}
               </span>{' '}
               examples you can check out one of the studies linked below:
             </p>
