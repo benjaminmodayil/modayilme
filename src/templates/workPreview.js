@@ -42,7 +42,7 @@ class Template extends React.Component {
               name: 'description',
               content: post.frontmatter.tldr
             },
-            { itemprop: 'name', content: 'post.frontmatter.title' },
+            { itemprop: 'name', content: post.frontmatter.title },
             {
               itemprop: 'description',
               content: post.frontmatter.tldr
