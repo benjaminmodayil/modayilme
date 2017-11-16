@@ -5,11 +5,11 @@ import Helmet from 'react-helmet'
 const Contact = () => (
   <main className="contact__page">
     <Helmet
-      title="Blog | ✍️"
+      title="Contact | 📱"
       meta={[
         {
           name: 'description',
-          content: 'Contact | 📱'
+          content: 'H.M.U. (Contact) Me'
         }
       ]}
     />
