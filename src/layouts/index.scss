@@ -1,19 +1,14 @@
 @import '_scss/vendor/breakpoint.scss';
-
 @import '_scss/base/colors.scss';
-
 @import '_scss/build/reset';
 @import '_scss/build/functions';
 @import '_scss/build/mixins';
-
 @import '_scss/base/typography.scss';
-
 @import '_scss/base/utilities.scss';
 @import '_scss/base/elements.scss';
 
 // page or component pieces
 @import '_scss/components/components';
-
 @import '_scss/pages/index';
 @import '_scss/pages/post';
 @import '_scss/pages/work-preview';
@@ -24,6 +19,7 @@ tt,
 code {
   @include variable(background-color, --link, color(link));
   @include variable(color, --text, color(white));
+
   border-radius: 3px;
   font-family: 'SFMono-Regular', Consolas, 'Roboto Mono', 'Droid Sans Mono',
     'Liberation Mono', Menlo, Courier, monospace;

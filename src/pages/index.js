@@ -65,17 +65,12 @@ class IndexPage extends React.Component {
           <div className="wrapper wrapper--780 font-weight--normal margin-bottom--64 align-center-under--1200">
             <p className="home__big-text margin-top--48">
               If you're looking to hire a <abbr title="Front-End Developer">FED</abbr>,
-              don't feel shy and{' '}
-              <Link to="/contact">
-                <abbr title="Hit Me Up">HMU</abbr>
-              </Link>
+              don't feel shy and <Link to="/contact">Contact Me</Link>
             </p>
             <p className="home__big-text margin-top--48">
-              If you’re looking for{' '}
-              <span role="img" aria-label="work">
-                👷{' '}
-              </span>{' '}
-              examples you can check out one of the studies linked below:
+              If you’re looking for work
+              <span role="img">👷 </span> examples you can check out one of the studies
+              linked below:
             </p>
 
             <div className="latest-updates margin-top--64">
@@ -94,9 +89,7 @@ class IndexPage extends React.Component {
                           <h3 className="h-3 font-size--18 margin-bottom--14">
                             {post.node.frontmatter.title}
                           </h3>
-                          <p className="font-size--16">
-                            {post.node.frontmatter.tldr}
-                          </p>
+                          <p className="font-size--16">{post.node.frontmatter.tldr}</p>
                           <IconLink className="margin-top--16" />
                         </a>
                       </li>
@@ -111,9 +104,7 @@ class IndexPage extends React.Component {
                           <h3 className="h-3 font-size--18 margin-bottom--14">
                             {post.node.frontmatter.title}
                           </h3>
-                          <p className="font-size--16">
-                            {post.node.frontmatter.tldr}
-                          </p>
+                          <p className="font-size--16">{post.node.frontmatter.tldr}</p>
                         </Link>
                       </li>
                     )
@@ -157,9 +148,7 @@ class IndexPage extends React.Component {
                           <h3 className="h-3 font-size--18 margin-bottom--14">
                             {post.node.frontmatter.title}
                           </h3>
-                          <p className="font-size--16">
-                            {post.node.frontmatter.tldr}
-                          </p>
+                          <p className="font-size--16">{post.node.frontmatter.tldr}</p>
                           <IconLink />
                         </a>
                       </li>
@@ -174,9 +163,7 @@ class IndexPage extends React.Component {
                           <h3 className="h-3 font-size--18 margin-bottom--14">
                             {post.node.frontmatter.title}
                           </h3>
-                          <p className="font-size--16">
-                            {post.node.frontmatter.tldr}
-                          </p>
+                          <p className="font-size--16">{post.node.frontmatter.tldr}</p>
                         </Link>
                       </li>
                     )
@@ -187,7 +174,7 @@ class IndexPage extends React.Component {
           </div>
         </section>
 
-        <section className="home__section-three section-margin font-weight--normal home__section-two__inner home__section-two__text-and-image__text wrapper align-center-under--1200">
+        <section className="home__section-three font-weight--normal home__section-two__inner home__section-two__text-and-image__text wrapper align-center-under--1200">
           <div className="home__section-three__row">
             <div className="home__section-three__row__col-left container--medium">
               <p className="home__medium-text color--white margin-bottom--32">

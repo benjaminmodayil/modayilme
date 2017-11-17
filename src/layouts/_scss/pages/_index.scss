@@ -28,6 +28,8 @@
 
 .home__section-two__text-and-image__image {
   flex: 1 1 30%;
+  margin-bottom: 5rem;
+  margin-top: 5rem;
 
   img {
     display: block;
@@ -39,6 +41,7 @@
 .home__section__aside-emoji {
   span {
     @include fluid-type(600px, 1400px, 102px, 196px);
+
     display: block;
     text-align: center;
   }
@@ -68,6 +71,8 @@
 
   .home__section-two__text-and-image__image {
     display: block;
+    margin-bottom: 0;
+    margin-top: 0;
     position: absolute;
     right: -54%;
     top: 40px;
