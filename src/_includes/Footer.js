@@ -15,12 +15,9 @@ class Footer extends Component {
         <div className="footer__inner">
           <div className="footer__inner__callout margin-bottom--96">
             <h2 className="h-2 font-size--96 color--white margin-bottom--32">
-              <span className="display--block">Like what</span> you see?
+              Want to chat?
             </h2>
-            <Link
-              className="font-style--italic footer__inner__callout__hmu"
-              to="/contact"
-            >
+            <Link className="footer__inner__callout__hmu" to="/contact">
               Contact Me
             </Link>
             <span className="font-size--56">📱</span>

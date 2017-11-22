@@ -9,7 +9,7 @@ const Contact = () => (
       meta={[
         {
           name: 'description',
-          content: 'H.M.U. (Contact) Me'
+          content: 'H.M.U. (Contact Me)'
         }
       ]}
     />
@@ -22,20 +22,17 @@ const Contact = () => (
         I would love to get in touch with you, feel free to message me below and include
         your email if you wish for a response.
       </p>
-      <p className="">
-        This form isn't setup at the moment. It will be soon! Send emails and inquiries to{' '}
-        <a href="mailto:modayilme@gmail.com">modayilme@gmail.com</a>
-      </p>
 
-      <form action="">
+      <form action="https://formspree.io/modayilme@gmail.com" method="POST">
         <label for="email">email</label>
+        <input type="email" name="_replyto" id="email" />
 
-        <input type="email" name="email" id="email" disabled />
         <label for="message">message</label>
+        <textarea name="message" id="message" />
+        <input className="btn--bg" type="submit" defaultValue="Send" />
 
-        <textarea name="message" id="message" disabled />
+        <input type="hidden" name="_next" value="//site.io/thanks.html" />
       </form>
-      <button className="btn--bg">submit</button>
     </section>
   </main>
 )

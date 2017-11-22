@@ -33,6 +33,28 @@ class Template extends React.Component {
       note = <p dangerouslySetInnerHTML={{ __html: post.frontmatter.imageNote }} />
     }
 
+    let projectLinkButton
+
+    if (post.frontmatter.website) {
+      projectLinkButton = (
+        <a
+          href={post.frontmatter.website}
+          className="work-preview__body__meta__data-and-link__link font-weight--light font-family--heading"
+        >
+          Visit the site
+        </a>
+      )
+    } else if (post.frontmatter.pen) {
+      projectLinkButton = (
+        <a
+          href={post.frontmatter.pen}
+          className="work-preview__body__meta__data-and-link__link font-weight--light font-family--heading"
+        >
+          See the pen
+        </a>
+      )
+    }
+
     return (
       <main className="work__preview-page" style={cssColor}>
         <Helmet
@@ -105,12 +127,7 @@ class Template extends React.Component {
                   <span className="font-weight--light margin-bottom--48">
                     {post.frontmatter.textDate}
                   </span>
-                  <a
-                    href={post.frontmatter.website}
-                    className="work-preview__body__meta__data-and-link__link font-weight--light font-family--heading"
-                  >
-                    Visit the site
-                  </a>
+                  {projectLinkButton}
                 </div>
               </div>
             </div>
@@ -143,6 +160,7 @@ export const workQuery = graphql`
         textDate
         tldr
         website
+        pen
         headerColor
         linkColor
         textColor
