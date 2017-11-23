@@ -190,8 +190,12 @@ class IndexPage extends React.Component {
           <div className="home__section-three__row">
             <div className="home__section-three__row__col-left container--medium">
               <p className="home__medium-text color--white margin-bottom--32">
-                If you need a <a href="./static/resumeModayil.pdf"> resume </a> then just
-                click on that keyword. Also feel free to check-out my{' '}
+                If you need a{' '}
+                <a href="./static/resumeModayil.pdf">
+                  {' '}
+                  resume<span className="screenreader-only">(pdf)</span>
+                </a>{' '}
+                then just click on that keyword. Also feel free to check-out my{' '}
                 <a href="https://codepen.io/modayilme">Codepen</a> and below for more
                 examples of this things I like to learn.
               </p>

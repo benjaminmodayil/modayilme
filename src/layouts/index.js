@@ -7,7 +7,6 @@ import Footer from '../_includes/Footer.js'
 // import ColorTheme from '../components/ColorTheme.js'
 
 import './index.scss'
-// <ColorTheme />
 class TemplateWrapper extends React.Component {
   renderNav = () => {
     if (this.props.location.pathname != '/') {
@@ -64,9 +63,16 @@ class TemplateWrapper extends React.Component {
           ]}
           link={[
             { rel: 'shortcut icon', href: 'static/favicon.ico', type: 'image/x-icon' },
-            { rel: 'icon', href: 'static/favicon.ico', type: 'image/x-icon' }
+            { rel: 'icon', href: 'static/favicon.ico', type: 'image/x-icon' },
+            {
+              rel: 'stylesheet',
+              href:
+                'https://fonts.googleapis.com/css?family=Merriweather:300,300i,400,400i,700,700i|Raleway:200,300,400,400i,500,500i,600,600i,700,700i'
+            }
           ]}
-        />
+        >
+          <html lang="en" />
+        </Helmet>
 
         <div className="site__inner">
           {this.renderNav()}
