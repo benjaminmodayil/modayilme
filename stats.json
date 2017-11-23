@@ -1,8 +1,8 @@
 {
   "assetsByChunkName": {
     "component---src-pages-index-js": [
-      "component---src-pages-index-js-a4c1575f0c6f0fcda4d9.js",
-      "component---src-pages-index-js-a4c1575f0c6f0fcda4d9.js.map"
+      "component---src-pages-index-js-775ab66fbe97b1dab9b5.js",
+      "component---src-pages-index-js-775ab66fbe97b1dab9b5.js.map"
     ],
     "path---": [
       "path----557518bd178906f8d58a.js",
@@ -24,17 +24,21 @@
       "component---src-templates-work-preview-js-40454da398b7826cbfa8.js",
       "component---src-templates-work-preview-js-40454da398b7826cbfa8.js.map"
     ],
+    "component---node-modules-gatsby-plugin-offline-app-shell-js": [
+      "component---node-modules-gatsby-plugin-offline-app-shell-js-5c4c5a0f7af9dc69d6d7.js",
+      "component---node-modules-gatsby-plugin-offline-app-shell-js-5c4c5a0f7af9dc69d6d7.js.map"
+    ],
     "path---blog-a-new-way-todo": [
       "path---blog-a-new-way-todo-8ffb66908a7f2de72fe1.js",
       "path---blog-a-new-way-todo-8ffb66908a7f2de72fe1.js.map"
     ],
     "component---src-layouts-index-js": [
-      "component---src-layouts-index-js-776d8e013351c47a3e1a.js",
-      "component---src-layouts-index-js-776d8e013351c47a3e1a.js.map"
+      "component---src-layouts-index-js-550502975cd2538f3ff3.js",
+      "component---src-layouts-index-js-550502975cd2538f3ff3.js.map"
     ],
     "path---index": [
-      "path---index-1d68117b82f709994c73.js",
-      "path---index-1d68117b82f709994c73.js.map"
+      "path---index-0492f5621f645af0dfe6.js",
+      "path---index-0492f5621f645af0dfe6.js.map"
     ],
     "path---work-lighthouse-hill-preview": [
       "path---work-lighthouse-hill-preview-c012c7c8c1248e02969a.js",
@@ -64,9 +68,13 @@
       "component---src-templates-post-js-1d0a5dbf0bd8b62f1542.js",
       "component---src-templates-post-js-1d0a5dbf0bd8b62f1542.js.map"
     ],
+    "path---offline-plugin-app-shell-fallback": [
+      "path---offline-plugin-app-shell-fallback-1db04e5021b40904aca6.js",
+      "path---offline-plugin-app-shell-fallback-1db04e5021b40904aca6.js.map"
+    ],
     "app": [
-      "app-dbda4a2e845cc36cdb2b.js",
-      "app-dbda4a2e845cc36cdb2b.js.map"
+      "app-1a182bac976995187bd2.js",
+      "app-1a182bac976995187bd2.js.map"
     ],
     "path---work-how-i-made-my-site": [
       "path---work-how-i-made-my-site-336c43ebeccd13800a20.js",
