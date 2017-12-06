@@ -1,8 +1,8 @@
 {
   "assetsByChunkName": {
     "component---src-pages-index-js": [
-      "component---src-pages-index-js-775ab66fbe97b1dab9b5.js",
-      "component---src-pages-index-js-775ab66fbe97b1dab9b5.js.map"
+      "component---src-pages-index-js-2b51e7f1d1dfe5cc58c4.js",
+      "component---src-pages-index-js-2b51e7f1d1dfe5cc58c4.js.map"
     ],
     "path---": [
       "path----557518bd178906f8d58a.js",
@@ -37,8 +37,8 @@
       "component---src-layouts-index-js-550502975cd2538f3ff3.js.map"
     ],
     "path---index": [
-      "path---index-0492f5621f645af0dfe6.js",
-      "path---index-0492f5621f645af0dfe6.js.map"
+      "path---index-3f49e71893cc72ba6a22.js",
+      "path---index-3f49e71893cc72ba6a22.js.map"
     ],
     "path---work-lighthouse-hill-preview": [
       "path---work-lighthouse-hill-preview-c012c7c8c1248e02969a.js",
@@ -73,8 +73,8 @@
       "path---offline-plugin-app-shell-fallback-1db04e5021b40904aca6.js.map"
     ],
     "app": [
-      "app-1a182bac976995187bd2.js",
-      "app-1a182bac976995187bd2.js.map"
+      "app-96569f32a41b1066b4cb.js",
+      "app-96569f32a41b1066b4cb.js.map"
     ],
     "path---work-how-i-made-my-site": [
       "path---work-how-i-made-my-site-336c43ebeccd13800a20.js",
