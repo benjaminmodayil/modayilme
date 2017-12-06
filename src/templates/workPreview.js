@@ -2,16 +2,10 @@ import React from 'react'
 import Helmet from 'react-helmet'
 import Link from 'gatsby-link'
 import Updates from '../_includes/Updates'
-import IconKeurig from '../assets/work-images/IconKeurig'
+import WorkPostHeader from '../components/work/WorkPostHeader'
 import * as invert from '../utils/invertColor'
 
 class Template extends React.Component {
-  svgRender() {
-    if (this.props.data.markdownRemark.frontmatter.svgName == IconKeurig.name) {
-      return true
-    }
-  }
-
   componentDidMount() {
     this.forceUpdate()
     this.svgRender()
@@ -99,21 +93,7 @@ class Template extends React.Component {
           ]}
         />
         <article className="work-article">
-          <header className="work__header">
-            <div className="work__header-inner wrapper wrapper--wide margin-center">
-              <div className="work__header-inner--left container--medium-to-small ">
-                <h1 className="h-1">{post.frontmatter.title}</h1>
-                <p className="font-size--16 font-style--italic">
-                  {post.frontmatter.tldr}
-                </p>
-              </div>
-              {post.frontmatter.svgName == IconKeurig.name ? (
-                <div className="work__header-inner--right">
-                  <IconKeurig />
-                </div>
-              ) : null}
-            </div>
-          </header>
+          <WorkPostHeader posts={post} />
 
           <section className="work__preview__body">
             <div className="work__preview__meta-container padding-top-and-bottom--32">
