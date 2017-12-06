@@ -64,13 +64,25 @@ class DetailsList extends Component {
               <article>
                 <ul className="details-container__inner__list">
                   <li>
-                    <Link to="/work/ground-rules">Ground Rules</Link>
+                    <Link className="link color--link" to="/work/ground-rules">
+                      Ground Rules
+                    </Link>
                   </li>
                   <li>
-                    <a href="http://www.jennifermoorespeech.com/">Jennifer Moore</a>
+                    <a
+                      className="link color--link"
+                      href="http://www.jennifermoorespeech.com/"
+                    >
+                      Jennifer Moore
+                    </a>
                   </li>
                   <li>
-                    <a href="https://ctl2.cedarville.edu/cove/">The Cove</a>
+                    <a
+                      className="link color--link"
+                      href="https://ctl2.cedarville.edu/cove/"
+                    >
+                      The Cove
+                    </a>
                   </li>
                 </ul>
               </article>
@@ -85,37 +97,32 @@ class DetailsList extends Component {
               <article>
                 <ul className="details-container__inner__list">
                   <li>
-                    <a href="https://codepen.io/modayilme/pen/ybXErO">
+                    <a
+                      className="link color--link"
+                      href="https://codepen.io/modayilme/pen/ybXErO"
+                    >
                       Lighthouse Hill preview
                     </a>
                   </li>
                   <li>
-                    <a href="https://codepen.io/modayilme/pen/dNozqe">Logo Animation</a>
+                    <a
+                      className="link color--link"
+                      href="https://codepen.io/modayilme/pen/qqRRgd"
+                    >
+                      Cat in a Box
+                    </a>
                   </li>
                   <li>
-                    <a href="https://codepen.io/modayilme/pen/ryOpmG">Icon Animation</a>
+                    <a
+                      className="link color--link"
+                      href="https://codepen.io/modayilme/pen/dNozqe"
+                    >
+                      Logo Animation
+                    </a>
                   </li>
                 </ul>
               </article>
             </details>
-          </li>
-          <li>
-            {/* <details aria-expanded="false">
-              <summary onClick={e => this.triggerDetails(e)}>
-                <span>ReactJS</span>
-                <IconMore />
-              </summary>
-              <article>
-                <ul className="details-container__inner__list">
-                  <li>
-                    <a href="#todo">Blog Thingy</a>
-                  </li>
-                  <li>
-                    <a href="#todo">Todo app</a>
-                  </li>
-                </ul>
-              </article>
-            </details> */}
           </li>
           <li>
             <details aria-expanded="false">

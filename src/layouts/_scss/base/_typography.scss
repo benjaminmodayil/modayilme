@@ -12,7 +12,7 @@ body {
 .h-5,
 .h-6 {
   font-family: $font-heading;
-  font-weight: bold;
+  font-weight: 600;
 }
 
 $font-sizes: '14', '16', '18', '20', '24', '28', '36', '48', '56', '96';
@@ -45,6 +45,10 @@ $font-sizes: '14', '16', '18', '20', '24', '28', '36', '48', '56', '96';
 
 .font-style--italic {
   font-style: italic;
+}
+
+.font-style--normal {
+  font-style: normal;
 }
 
 @mixin text-sizing($size) {

@@ -26,8 +26,8 @@ class HomeHeader extends Component {
         </div>
         <div className="home__section-one__header__updates">
           <div className="latest-updates">
-            <h2 className="h-2 color--white font-style--italic font-size--24 margin-bottom--32">
-              The Latest
+            <h2 className="h-2 color--white font-size--24 margin-bottom--32">
+              The Latest ⏱️
             </h2>
             <ul>
               {data.map(post => {
@@ -41,9 +41,7 @@ class HomeHeader extends Component {
                         <h3 className="h-3 font-size--18 margin-bottom--14">
                           {post.node.frontmatter.title}
                         </h3>
-                        <p className="font-size--16">
-                          {post.node.frontmatter.tldr}
-                        </p>
+                        <p className="font-size--16">{post.node.frontmatter.tldr}</p>
                         <IconLink />
                       </a>
                     </li>
@@ -58,9 +56,7 @@ class HomeHeader extends Component {
                         <h3 className="h-3 font-size--18 margin-bottom--14">
                           {post.node.frontmatter.title}
                         </h3>
-                        <p className="font-size--16">
-                          {post.node.frontmatter.tldr}
-                        </p>
+                        <p className="font-size--16">{post.node.frontmatter.tldr}</p>
                       </Link>
                     </li>
                   )

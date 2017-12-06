@@ -73,6 +73,10 @@
     position: relative;
   }
 
+  a {
+    @include variable(text-decoration-color, --black, color(black));
+  }
+
   img {
     position: absolute;
     right: 5px;

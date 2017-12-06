@@ -3,6 +3,7 @@ import ReactDOM from 'react-dom'
 import Link from 'gatsby-link'
 
 import HomeHeader from '../_includes/homepage/HomeHeader'
+import CodepenFeed from '../components/CodepenFeed'
 import IconContactWithColor from '../assets/icons/IconContactWithColor.js'
 import IconWebSkills from '../assets/icons/IconWebSkills.js'
 import IconGithub from '../assets/icons/details-list/icon-github.svg'
@@ -16,6 +17,7 @@ import CodeImage from '../assets/home-code.png'
 
 class IndexPage extends React.Component {
   componentDidMount() {
+    //polyfill
     require('smoothscroll-polyfill').polyfill()
   }
 
@@ -74,8 +76,8 @@ class IndexPage extends React.Component {
             </p>
 
             <div className="latest-updates margin-top--64">
-              <h2 className="h-2 color--white font-style--italic font-size--24 margin-bottom--32">
-                Work Examples
+              <h2 className="h-2 color--white font-size--24 margin-bottom--32">
+                Work Examples <span className="font-style--normal">💼</span>
               </h2>
               <ul>
                 {caseStudies.map(post => {
@@ -113,6 +115,7 @@ class IndexPage extends React.Component {
               </ul>
             </div>
           </div>
+          <CodepenFeed />
         </section>
 
         <section
@@ -133,8 +136,8 @@ class IndexPage extends React.Component {
               </span>
             </div>
             <div className="latest-updates margin-top--64 wrapper wrapper--780 align-center-under--1200">
-              <h2 className="h-2 color--white font-style--italic font-size--24 margin-bottom--32">
-                My thoughts
+              <h2 className="h-2 color--white font-size--24 margin-bottom--32">
+                My thoughts <span>💭</span>
               </h2>
               <ul>
                 {blogPosts.map(post => {
@@ -178,8 +181,9 @@ class IndexPage extends React.Component {
           <div className="home__section-three__row">
             <div className="home__section-three__row__col-left container--medium">
               <p className="home__medium-text color--white margin-bottom--32">
-                I really love learning new things related to development. I’m not lying.
-                Here’s a few things that I have been able to add to my skillset.
+                I really love learning new things related to development. Sounds, boring,
+                but it's not as bad as it sounds... I think. Here’s a few things that I
+                have been able to add to my skillset.
               </p>
             </div>
 
@@ -229,26 +233,38 @@ class IndexPage extends React.Component {
                 </h2>
                 <ul className="details-container__inner">
                   <li>
-                    <a href={data.site.siteMetadata.twitter}>
-                      <span className="font-style--italic color--black">Twitter</span>
+                    <a
+                      className="link --h-text-decoration-underline"
+                      href={data.site.siteMetadata.twitter}
+                    >
+                      <span className="color--black">Twitter</span>
                       <img src={IconTwitter} alt="" />
                     </a>
                   </li>
                   <li>
-                    <a href={data.site.siteMetadata.instagram}>
-                      <span className="font-style--italic color--black">Instagram</span>
+                    <a
+                      className="link --h-text-decoration-underline"
+                      href={data.site.siteMetadata.instagram}
+                    >
+                      <span className="color--black">Instagram</span>
                       <img src={IconInstagram} alt="" />
                     </a>
                   </li>
                   <li>
-                    <a href={data.site.siteMetadata.linkedIn}>
-                      <span className="font-style--italic color--black">LinkedIn</span>
+                    <a
+                      className="link --h-text-decoration-underline"
+                      href={data.site.siteMetadata.linkedIn}
+                    >
+                      <span className="color--black">LinkedIn</span>
                       <img src={IconLinkedin} alt="" />
                     </a>
                   </li>
                   <li>
-                    <a href={data.site.siteMetadata.github}>
-                      <span className="font-style--italic color--black">Github</span>
+                    <a
+                      className="link --h-text-decoration-underline"
+                      href={data.site.siteMetadata.github}
+                    >
+                      <span className="color--black">Github</span>
                       <img src={IconGithub} alt="" />
                     </a>
                   </li>

@@ -1,0 +1,37 @@
+.cp-feed {
+  @include clearfix();
+}
+
+.cp-feed__cards__pen__thumb {
+  max-width: 100%;
+}
+
+.cp-feed__cards__pen {
+  background-color: white;
+  border-radius: 4px;
+  position: relative;
+}
+
+.cp-feed__cards__pen__text {
+  @include clearfix();
+}
+
+.cp-feed__cards__pen__text__link {
+  bottom: 16px;
+  position: absolute;
+  right: 16px;
+}
+
+@include breakpoint (min-width 601px) {
+  .cp-feed__cards {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .cp-feed__cards__pen {
+    flex: 0 0 auto;
+    flex-wrap: wrap;
+    width: 33.3333%;
+    width: calc(33.33333% - 20px);
+  }
+}

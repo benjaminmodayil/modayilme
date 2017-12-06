@@ -101,7 +101,7 @@ p {
 
 .btn--bg {
   @include fluid-type(601px, 1400px, 14px, 16px);
-  align-self: flex-end;
+
   background-color: color(link);
   border: 2px solid transparent;
   border-radius: 4px;
@@ -109,20 +109,17 @@ p {
   cursor: pointer;
   font-family: $font-body;
   padding: 0.5rem 8%;
-  margin-top: multibase(1.5);
   text-align: center;
   transition: all 0.2s ease;
 
   &:hover,
   &:focus {
-    box-shadow: 3px 3px 18px 0px rgba(0, 0, 0, 0.2);
     border: 2px solid color(link);
+    box-shadow: 3px 3px 18px 0px rgba(0, 0, 0, 0.2);
   }
 
   @include breakpoint(max-width 400px) {
     align-self: center;
-    width: 100%;
-    margin-bottom: 5vh;
   }
 }
 
