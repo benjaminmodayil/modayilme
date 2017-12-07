@@ -11,7 +11,6 @@ headerColor: '#ff545a'
 linkColor: '#ff545a'
 textColor: '#000000'
 textBackground: '#F2F2F2'
-svgName: 'IllustrationAvatar'
 ---
 
 ## New Beginnings

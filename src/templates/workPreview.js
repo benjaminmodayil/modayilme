@@ -6,11 +6,6 @@ import WorkPostHeader from '../components/work/WorkPostHeader'
 import * as invert from '../utils/invertColor'
 
 class Template extends React.Component {
-  componentDidMount() {
-    this.forceUpdate()
-    this.svgRender()
-  }
-
   render() {
     const { markdownRemark: post } = this.props.data
 

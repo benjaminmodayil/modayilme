@@ -35,7 +35,6 @@ class CodepenFeed extends Component {
       .catch(err => console.log(err))
   }
   render() {
-    console.log(this.state.codepenData)
     return (
       <div className="cp-feed">
         <h2 className="h-2 color--white font-size--24 margin-bottom--32">
@@ -66,9 +65,6 @@ class CodepenFeed extends Component {
                       <p className="color--text font-size--16 margin-bottom--16">
                         {item.childNodes[9].childNodes[9].innerHTML}
                       </p>
-
-                      {console.log(item.childNodes[9].childNodes[9].innerHTML)}
-
                       <a
                         className="font-size--14 u-flex-align--right btn--bg cp-feed__cards__pen__text__link"
                         href={item.childNodes[9].childNodes[7].childNodes[1].getAttribute(

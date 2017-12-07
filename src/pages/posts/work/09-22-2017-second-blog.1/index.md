@@ -14,7 +14,7 @@ textColor: '#000000'
 textBackground: '#FFFFFF'
 metaBackground: '#1D278B'
 imageNote: Design/Illustration by <a href="http://www.vivianzwang.com/ground-rules">Vivian Wang</a>
-svgName: 'IconKeurig'
+svgName: 'icon-keurig'
 ---
 
 ## Let's set some Ground Rules
@@ -57,7 +57,7 @@ An aspect of this collaboration issue was that there were two front-end develope
 
 Initially, my worry was that there would be problems of workload and someone else would be getting to code the part of the website that the other wanted to. This didn’t end up being the case. The other Front-End developer, Cyron, was great to work with. We had great back and forths that made the project smooth to work on.
 
-Time did end up becoming an issue, as our designer had a family reunion to China that couldn’t be avoided in the middle of her design phase, but despite this, she still worked hard in providing us the comps that we needed.
+Time did end up becoming an issue, as our designer had a family reunion in a another timezone that couldn’t be avoided in the middle of her design phase, but despite this, she still worked hard in providing us the comps that we needed.
 
 #### Git Gud
 

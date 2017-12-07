@@ -19,6 +19,7 @@
     "gatsby-remark-smartypants": "^1.4.8",
     "gatsby-source-filesystem": "^1.4.12",
     "gatsby-transformer-remark": "^1.7.9",
+    "react-inlinesvg": "^0.7.4",
     "rss-to-json": "^1.0.3",
     "smoothscroll-polyfill": "^0.4.0"
   },

@@ -1,16 +1,10 @@
 import React, { Component } from 'react'
-import IconKeurig from '../../assets/work-images/IconKeurig'
+import SVG from 'react-inlinesvg'
 
 class WorkPostHeader extends Component {
   constructor(props) {
     super(props)
     this.state = {}
-  }
-
-  svgRender() {
-    if (this.props.data.markdownRemark.frontmatter.svgName == IconKeurig.name) {
-      return true
-    }
   }
 
   componentDidMount() {
@@ -28,11 +22,18 @@ class WorkPostHeader extends Component {
             <h1 className="h-1">{posts.frontmatter.title}</h1>
             <p className="font-size--16 font-style--italic">{posts.frontmatter.tldr}</p>
           </div>
-          {this.state.svgHeader == IconKeurig.name ? (
+          {!posts.frontmatter.svgName ? null : (
             <div className="work__header-inner--right">
-              <IconKeurig />
-            </div>
-          ) : null}
+            <SVG
+              src={`../../static/work-images/${posts.frontmatter.svgName}.svg`}
+              uniquifyIDs={false}
+              onLoad={src => {
+                myOnLoadHandler(src)
+              }}
+            >
+            </SVG>
+          </div>
+          )}
         </div>
       </header>
     )
