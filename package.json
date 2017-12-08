@@ -23,15 +23,14 @@
     "rss-to-json": "^1.0.3",
     "smoothscroll-polyfill": "^0.4.0"
   },
-  "keywords": [
-    "gatsby"
-  ],
+  "keywords": ["gatsby"],
   "license": "MIT",
   "main": "n/a",
   "scripts": {
     "build": "gatsby build",
     "develop": "gatsby develop",
-    "format": "prettier --trailing-comma es5 --no-semi --single-quote --write 'src/**/*.js'",
+    "format":
+      "prettier --trailing-comma es5 --no-semi --single-quote --write 'src/**/*.js'",
     "test": "echo \"Error: no test specified\" && exit 1",
     "deploy": "gatsby build --prefix-paths && gh-pages -d public"
   },
@@ -41,9 +40,5 @@
     "stylelint": "^8.2.0",
     "stylelint-order": "^0.7.0"
   },
-  "browserslist": [
-    "> 1%",
-    "IE >= 10",
-    "last 2 versions"
-  ]
+  "browserslist": ["> 1%", "IE >= 10", "last 2 versions"]
 }

@@ -2,6 +2,7 @@
 layout: blog
 type: blog
 title: Finding your voice
+date: "2016-09-01T21:34:10Z"
 path: "/blog/finding-your-voice"
 tldr: "Ben starts a diary"
 ---

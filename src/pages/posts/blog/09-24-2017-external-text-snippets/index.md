@@ -1,7 +1,8 @@
 ---
 layout: blog
 type: blog
-title:  'Text-Snippets for Work and Play'
+title: 'Text-Snippets for Work and Play'
+date: "2017-08-10T21:34:10Z"
 path: '/external/alssdfasdf'
 tldr: 'Text-snippets can save you valuable time whether for Work or Play.'
 external: 'https://www.viget.com/articles/text-snippets-for-work-and-play'

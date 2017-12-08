@@ -16,10 +16,7 @@ exports.createPages = ({ boundActionCreators, graphql }) => {
             frontmatter {
               layout
               path
-              title
-              tldr
               type
-              category
             }
           }
         }

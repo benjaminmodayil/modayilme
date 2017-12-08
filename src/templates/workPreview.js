@@ -131,8 +131,8 @@ export const workQuery = graphql`
       frontmatter {
         path
         title
+        date(formatString: "MMMM DD, YYYY")
         description
-        textDate
         tldr
         website
         pen

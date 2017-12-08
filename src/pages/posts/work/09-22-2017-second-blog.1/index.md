@@ -5,7 +5,7 @@ title: 'GroundRulesCo'
 description: 'Ground Rules is a site built by the Viget Interns of 2017.
 Our goal was show others how to make better coffee using the tools they already had at our disposal.'
 tldr: 'Interns make a site showing others how to make their own coffee'
-textDate: 'August 2017'
+date: "2017-08-11T21:34:10Z"
 type: work
 website: https://groundrules.co/
 headerColor: '#2D4DAF'

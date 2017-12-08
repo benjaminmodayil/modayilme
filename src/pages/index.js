@@ -282,7 +282,7 @@ export default IndexPage
 
 export const indexBlogListingQuery = graphql`
   query IndexingQuery {
-    allMarkdownRemark(limit: 100) {
+    allMarkdownRemark(sort: { order: DESC, fields: [frontmatter___date] }, limit: 100) {
       edges {
         node {
           frontmatter {

@@ -5,7 +5,7 @@ title: 'Lighthouse Hill Preview'
 tldr: 'Ben learns Javascript by making a game.'
 type: 'work'
 description: 'This was the result of my senior capstone project (with a little rebranding). Lighthouse Hill is a text-based game with light visuals.'
-textDate: 'May 2017'
+date: "2017-05-01T21:34:10Z"
 pen: 'https://codepen.io/modayilme/pen/ybXErO/'
 headerColor: '#262232'
 linkColor: '#7E131C'

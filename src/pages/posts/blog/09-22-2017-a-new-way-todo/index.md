@@ -2,6 +2,7 @@
 layout: blog
 type: blog
 title: A New Way ToDo
+date: "2016-10-13T21:34:10Z"
 path: "/blog/a-new-way-todo"
 tldr: "Ben tries todo things"
 ---

@@ -2,9 +2,9 @@
 layout: blog
 path: '/blog/first-post'
 title: 'Welcome'
+date: "2017-10-11T21:34:10Z"
 tldr: 'Welcome to the new site'
 type: blog
-category: ['health', 'fitness', 'code']
 ---
 
 ## Hey there!
