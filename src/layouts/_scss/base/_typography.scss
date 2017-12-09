@@ -60,3 +60,11 @@ $font-sizes: '14', '16', '18', '20', '24', '28', '36', '48', '56', '96';
     @include fluid-type(601px, 1400px, 14px, 16px);
   }
 }
+
+.u-text-align--right {
+  text-align: right;
+}
+
+.u-text-align--center {
+  text-align: center;
+}

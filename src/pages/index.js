@@ -64,7 +64,7 @@ class IndexPage extends React.Component {
               <img src={CodeImage} alt="" />
             </div>
           </div>
-          <div className="wrapper wrapper--780 font-weight--normal margin-bottom--64 align-center-under--1200">
+          <div className="wrapper wrapper--780 font-weight--normal margin-bottom--96 align-center-under--1200">
             <p className="home__big-text margin-top--48">
               If you're looking to hire a <abbr title="Front-End Developer">FED</abbr>,
               don't feel shy and <Link to="/contact">Contact Me</Link>
@@ -75,7 +75,7 @@ class IndexPage extends React.Component {
               linked below:
             </p>
 
-            <div className="latest-updates margin-top--64">
+            <div className="latest-updates margin-top--96">
               <h2 className="h-2 color--white font-size--24 margin-bottom--32">
                 Work Examples <span className="font-style--normal">💼</span>
               </h2>

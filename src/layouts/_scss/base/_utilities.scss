@@ -122,6 +122,11 @@ $wideWidth: 1000;
   padding-top: 10vh;
 }
 
+.section-padding--extra-heavy {
+  padding-bottom: 25vh;
+  padding-top: 25vh;
+}
+
 .section-padding--bottom-heavy {
   padding-bottom: 15vh;
   padding-top: 10vh;
@@ -234,10 +239,6 @@ $spacings: '8', '14', '16', '32', '48', '64', '80', '96';
 
 .u-flex-align--right {
   align-self: flex-end;
-}
-
-.u-text-align--right {
-  text-align: right;
 }
 
 .u-float--right {

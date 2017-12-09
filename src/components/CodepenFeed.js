@@ -36,7 +36,7 @@ class CodepenFeed extends Component {
   }
   render() {
     return (
-      <div className="cp-feed">
+      <div className="cp-feed margin-bottom--96">
         <h2 className="h-2 color--white font-size--24 margin-bottom--32">
           Codepens{' '}
           <span className="font-weight--light font-size--16">
@@ -50,7 +50,12 @@ class CodepenFeed extends Component {
             this.state.codepenData
               .map(item => {
                 return (
-                  <div className="cp-feed__cards__pen padding-top-and-bottom--14 padding-bottom--64 padding-left-and-right--16 margin-bottom--32">
+                  <div
+                    className="cp-feed__cards__pen padding-top-and-bottom--14 padding-bottom--64 padding-left-and-right--16 margin-bottom--32"
+                    key={item.childNodes[9].childNodes[7].childNodes[1].getAttribute(
+                      'href'
+                    )}
+                  >
                     <img
                       className="cp-feed__cards__pen__thumb margin-bottom--16"
                       src={item.childNodes[9].childNodes[3].childNodes[0].getAttribute(
@@ -81,10 +86,10 @@ class CodepenFeed extends Component {
           )}
         </div>
         <a
-          className="cp-feed__cards__pen__external-link u-float--right"
+          className="cp-feed__cards__pen__external-link u-float--right btn--bg"
           href="https://codepen.io/modayilme/"
         >
-          See more Codepens
+          view more
         </a>
       </div>
     )

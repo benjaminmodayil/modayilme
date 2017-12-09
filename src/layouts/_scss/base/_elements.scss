@@ -66,8 +66,8 @@ p {
   line-height: 1.5;
 
   a {
-    font-weight: 600;
     border: 1px solid transparent;
+    font-weight: 600;
   }
 
   &:selection,
@@ -78,13 +78,13 @@ p {
 
 .link__read {
   @include fluid-type(601px, 1440px, 14px, 16px);
+
   border: 1px dotted transparent;
   color: color(link);
   display: block;
   font-weight: 300;
   margin-top: multibase(1);
   padding: 1rem;
-
   transition: all 0.3s ease;
 
   &:hover,
@@ -94,7 +94,7 @@ p {
 }
 
 .site__container {
-  main {
+  main:not(.post__page .work__page) {
     padding-bottom: 15vh;
   }
 }
@@ -108,15 +108,18 @@ p {
   color: white;
   cursor: pointer;
   font-family: $font-body;
-  padding: 0.5rem 8%;
+  padding: 0.5rem 2rem;
   text-align: center;
   transition: all 0.2s ease;
 
   &:hover,
   &:focus {
     border: 2px solid color(link);
-    box-shadow: 3px 3px 18px 0px rgba(0, 0, 0, 0.2);
+    box-shadow: 3px 3px 18px 0 rgba(0, 0, 0, 0.2);
   }
+
+  // TODO: add transparent button, hover for colored bg
+  // TODO: add different sized button classes (different based on left/right padding
 
   @include breakpoint(max-width 400px) {
     align-self: center;
@@ -125,7 +128,7 @@ p {
 
 .site-alert {
   background-color: color(bg-grey);
-  padding: 1rem 0 0.5rem 0;
+  padding: 1rem 0 0.5rem;
 
   strong {
     font-weight: 700;

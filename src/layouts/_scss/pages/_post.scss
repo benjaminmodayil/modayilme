@@ -7,6 +7,7 @@
     @include fluid-type(601px, 1440px, 54px, 96px);
 
     font-weight: 600;
+    line-height: 1.2;
   }
 
   p {
@@ -15,19 +16,18 @@
 
   span {
     display: block;
-    font-style: italic;
     margin-bottom: 0.5rem;
   }
 }
 
 .post-work__body {
+  @include fluid-type(601px, 900px, 14px, 16px);
+  @include clearfix();
+
   font-size: 1em;
   font-weight: 400;
   line-height: 1.6;
   padding-top: rem(80);
-
-  @include fluid-type(601px, 900px, 14px, 16px);
-  @include clearfix();
 
   p {
     font-weight: 300;

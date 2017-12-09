@@ -51,15 +51,22 @@ export default function Template({ data }, props) {
       />
       <article className="post">
         <section className="post__body">
-          <div className="wrapper wrapper--wide margin-center">
-            <div className="wrapper content-align wrapper--780 margin-center section-padding--bottom-heavy color--white">
-              <header className="post__header">
-                <h1 className="h-1">{post.frontmatter.title}</h1>
-                <p className="tldr margin-top--32 ">
-                  <span>tl;dr</span>
-                  {post.frontmatter.tldr}
-                </p>
-              </header>
+          <header className="post__header">
+            <div className="wrapper content-align wrapper--780 margin-center section-padding color--white">
+              <h1 className="h-1">{post.frontmatter.title}</h1>
+              <p className="tldr margin-top--32">
+                <span className="font-style--italic font-size--18 font-weight--light">
+                  tl;dr:
+                </span>
+                {post.frontmatter.tldr}
+              </p>
+              <span className="post__date margin-top--32 font-style--italic">
+                {post.frontmatter.date}
+              </span>
+            </div>
+          </header>
+          <div className="bg-color--grey">
+            <div className="work__preview__container wrapper wrapper--780 margin-center section-padding--bottom-heavy">
               <div
                 className="post-work__body"
                 dangerouslySetInnerHTML={{ __html: post.html }}

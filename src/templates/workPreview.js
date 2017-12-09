@@ -100,7 +100,7 @@ class Template extends React.Component {
                 <div className="work-preview__body__meta__data-and-link">
                   <h2 className="h-2 margin-bottom--32">Created on</h2>
                   <span className="font-weight--light margin-bottom--48">
-                    {post.frontmatter.textDate}
+                    {post.frontmatter.date}
                   </span>
                   {projectLinkButton}
                 </div>

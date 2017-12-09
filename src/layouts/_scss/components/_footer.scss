@@ -70,6 +70,13 @@
   }
 }
 
+.footer__links__container {
+  position: relative;
+  // top: 96px;
+  // float: none;
+  // display: block;
+}
+
 .footer__inner__callout__hmu {
   @include fluid-type(600px, 1400px, 36px, 56px);
 
@@ -77,12 +84,6 @@
 }
 
 @include breakpoint(min-width 641px) {
-  .footer__links__container {
-    float: right;
-    position: relative;
-    top: -150px;
-  }
-
   .link-how-i-made,
   .link-social-accounts {
     ul {
@@ -98,9 +99,18 @@
       flex: 1 1 100%;
     }
   }
+
   .link-social-accounts {
     li {
       flex: 0 0 33.333%;
     }
+  }
+}
+
+@include breakpoint(min-width 901px) {
+  .footer__links__container {
+    float: right;
+    position: relative;
+    top: -150px;
   }
 }

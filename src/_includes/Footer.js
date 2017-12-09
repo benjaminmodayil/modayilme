@@ -11,9 +11,9 @@ import IconCodepen from '../assets/icons/IconCodepen.js'
 class Footer extends Component {
   render() {
     return (
-      <footer className="home__footer wrapper wrapper--wide margin-center">
+      <footer className="home__footer wrapper wrapper--wide margin-center margin-top--64">
         <div className="footer__inner">
-          <div className="footer__inner__callout margin-bottom--96">
+          <div className="footer__inner__callout">
             <h2 className="h-2 font-size--96 color--white margin-bottom--32">
               Want to chat?
             </h2>
@@ -22,7 +22,7 @@ class Footer extends Component {
             </Link>
             <span className="font-size--56">📱</span>
           </div>
-          <ul className="footer__links__container">
+          <ul className="footer__links__container margin-top--64">
             <li className="footer__links link-how-i-made margin-bottom--32">
               <Link
                 to="/work/how-i-made-my-site"

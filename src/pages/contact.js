@@ -29,7 +29,11 @@ const Contact = () => (
 
         <label for="message">message</label>
         <textarea name="message" id="message" />
-        <input className="btn--bg" type="submit" defaultValue="Send" />
+        <input
+          className="btn--bg margin-top--32 wrapper wrapper--small"
+          type="submit"
+          defaultValue="Send"
+        />
 
         <input type="hidden" name="_next" value="//site.io/thanks.html" />
       </form>

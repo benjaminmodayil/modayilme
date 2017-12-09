@@ -39,4 +39,9 @@ $bg-light: lighten(color(bg), 5%);
     color: #{$textColor};
     color: var(--#{$color});
   }
+
+  .bg-color--#{$color} {
+    background-color: #{$textColor};
+    background-color: var(--#{$color});
+  }
 }
