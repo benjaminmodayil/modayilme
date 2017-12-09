@@ -7,6 +7,7 @@ import IconContact from '../assets/icons/IconContact.js'
 import IconLinkedIn from '../assets/icons/IconLinkedIn.js'
 import IconLink from '../assets/icons/IconLink.js'
 import IconCodepen from '../assets/icons/IconCodepen.js'
+import IconMobile from '../assets/icons/home-icons/IconMobile.js'
 
 class Footer extends Component {
   render() {
@@ -20,7 +21,7 @@ class Footer extends Component {
             <Link className="footer__inner__callout__hmu" to="/contact">
               Contact Me
             </Link>
-            <span className="font-size--56">📱</span>
+            <IconMobile className="icon-mobile" />
           </div>
           <ul className="footer__links__container margin-top--64">
             <li className="footer__links link-how-i-made margin-bottom--32">

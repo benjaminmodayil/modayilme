@@ -1,7 +1,9 @@
 ---
 layout: blog
 path: '/blog/first-post'
-title: 'Welcome'
+title: 'Welcome 
+<span role="img" aria-label="">👋</span>
+'
 date: "2017-10-11T21:34:10Z"
 tldr: 'Welcome to the new site'
 type: blog

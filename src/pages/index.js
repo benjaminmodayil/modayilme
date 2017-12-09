@@ -4,6 +4,12 @@ import Link from 'gatsby-link'
 
 import HomeHeader from '../_includes/homepage/HomeHeader'
 import CodepenFeed from '../components/CodepenFeed'
+
+import Updates from '../_includes/Updates.js'
+import DetailsList from '../_includes/DetailsList.js'
+import CodeImage from '../assets/home-code.png'
+
+// Icons
 import IconContactWithColor from '../assets/icons/IconContactWithColor.js'
 import IconWebSkills from '../assets/icons/IconWebSkills.js'
 import IconGithub from '../assets/icons/details-list/icon-github.svg'
@@ -11,9 +17,15 @@ import IconTwitter from '../assets/icons/details-list/icon-twitter.svg'
 import IconInstagram from '../assets/icons/details-list/icon-instagram.svg'
 import IconLinkedin from '../assets/icons/details-list/icon-linkedin.svg'
 import IconLink from '../assets/icons/IconLink.js'
-import Updates from '../_includes/Updates.js'
-import DetailsList from '../_includes/DetailsList.js'
-import CodeImage from '../assets/home-code.png'
+
+import IconCheck from '../assets/icons/home-icons/IconCheck.js'
+import IconMic from '../assets/icons/home-icons/IconMic.js'
+import IconMobile from '../assets/icons/home-icons/IconMobile.js'
+import IconSkills from '../assets/icons/home-icons/IconSkills.js'
+import IconThought from '../assets/icons/home-icons/IconThought.js'
+import IconWeb from '../assets/icons/home-icons/IconWeb.js'
+import IconWork from '../assets/icons/home-icons/IconWork.js'
+import IconWrite from '../assets/icons/home-icons/IconWrite.js'
 
 class IndexPage extends React.Component {
   componentDidMount() {
@@ -71,13 +83,16 @@ class IndexPage extends React.Component {
             </p>
             <p className="home__big-text margin-top--48">
               If you’re looking for work
-              <span role="img">👷 </span> examples you can check out one of the studies
-              linked below:
+              <span role="img" /> examples you can check out one of the studies linked
+              below:
             </p>
 
             <div className="latest-updates margin-top--96">
               <h2 className="h-2 color--white font-size--24 margin-bottom--32">
-                Work Examples <span className="font-style--normal">💼</span>
+                Work Examples{' '}
+                <span className="font-style--normal">
+                  <IconWork className="s-svg-adjust--down" />
+                </span>
               </h2>
               <ul>
                 {caseStudies.map(post => {
@@ -88,9 +103,12 @@ class IndexPage extends React.Component {
                           href={post.node.frontmatter.external}
                           className="padding-left-and-right--16 padding-top-and-bottom--16"
                         >
-                          <h3 className="h-3 font-size--18 margin-bottom--14">
-                            {post.node.frontmatter.title}
-                          </h3>
+                          <h3
+                            className="h-3 font-size--18 margin-bottom--14"
+                            dangerouslySetInnerHTML={{
+                              __html: post.node.frontmatter.title
+                            }}
+                          />
                           <p className="font-size--16">{post.node.frontmatter.tldr}</p>
                           <IconLink className="margin-top--16" />
                         </a>
@@ -103,9 +121,12 @@ class IndexPage extends React.Component {
                           to={post.node.frontmatter.path}
                           className="padding-left-and-right--16 padding-top-and-bottom--16"
                         >
-                          <h3 className="h-3 font-size--18 margin-bottom--14">
-                            {post.node.frontmatter.title}
-                          </h3>
+                          <h3
+                            className="h-3 font-size--18 margin-bottom--14"
+                            dangerouslySetInnerHTML={{
+                              __html: post.node.frontmatter.title
+                            }}
+                          />
                           <p className="font-size--16">{post.node.frontmatter.tldr}</p>
                         </Link>
                       </li>
@@ -131,13 +152,11 @@ class IndexPage extends React.Component {
               </p>
             </div>
             <div className="home__section__aside-emoji margin-top--48 home__section-three__row__col-right position-right margin-top-and-bottom--32">
-              <span role="img" aria-label="writings">
-                ✍️
-              </span>
+              <IconWrite className="icon-write" />
             </div>
             <div className="latest-updates margin-top--64 wrapper wrapper--780 align-center-under--1200">
               <h2 className="h-2 color--white font-size--24 margin-bottom--32">
-                My thoughts <span>💭</span>
+                My thoughts <IconThought className="s-svg-adjust--down" />
               </h2>
               <ul>
                 {blogPosts.map(post => {
@@ -148,9 +167,13 @@ class IndexPage extends React.Component {
                           href={post.node.frontmatter.external}
                           className="padding-left-and-right--16 padding-top-and-bottom--16"
                         >
-                          <h3 className="h-3 font-size--18 margin-bottom--14">
-                            {post.node.frontmatter.title}
-                          </h3>
+                          <h3
+                            className="h-3 font-size--18 margin-bottom--14"
+                            dangerouslySetInnerHTML={{
+                              __html: post.node.frontmatter.title
+                            }}
+                          />
+
                           <p className="font-size--16">{post.node.frontmatter.tldr}</p>
                           <IconLink />
                         </a>
@@ -163,9 +186,12 @@ class IndexPage extends React.Component {
                           to={post.node.frontmatter.path}
                           className="padding-left-and-right--16 padding-top-and-bottom--16"
                         >
-                          <h3 className="h-3 font-size--18 margin-bottom--14">
-                            {post.node.frontmatter.title}
-                          </h3>
+                          <h3
+                            className="h-3 font-size--18 margin-bottom--14"
+                            dangerouslySetInnerHTML={{
+                              __html: post.node.frontmatter.title
+                            }}
+                          />
                           <p className="font-size--16">{post.node.frontmatter.tldr}</p>
                         </Link>
                       </li>
@@ -228,8 +254,11 @@ class IndexPage extends React.Component {
             <div className="home__section-three__row__col-right position-right html-list html-list--social margin-top-and-bottom--64">
               <div className="details-container" ref="detailsContainer">
                 <h2 className="h-2">
-                  Social <span className="details-container__sub-title">(HMU)</span>
-                  <span className="details-container__emoji">📱</span>
+                  Social{' '}
+                  <span className="details-container__sub-title color--black">(HMU)</span>
+                  <span className="details-container__emoji">
+                    <IconMobile />
+                  </span>
                 </h2>
                 <ul className="details-container__inner">
                   <li>

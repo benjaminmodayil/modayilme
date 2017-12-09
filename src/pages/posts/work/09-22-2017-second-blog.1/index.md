@@ -1,7 +1,9 @@
 ---
 layout: work
 path: '/work/ground-rules'
-title: 'GroundRulesCo'
+title: 'Ground Rules 
+<span role="img" aria-label="">☕</span>
+'
 description: 'Ground Rules is a site built by the Viget Interns of 2017.
 Our goal was show others how to make better coffee using the tools they already had at our disposal.'
 tldr: 'Interns make a site showing others how to make their own coffee'

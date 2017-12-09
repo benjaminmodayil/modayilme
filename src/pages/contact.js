@@ -30,7 +30,7 @@ const Contact = () => (
         <label for="message">message</label>
         <textarea name="message" id="message" />
         <input
-          className="btn--bg margin-top--32 wrapper wrapper--small"
+          className="link --btn --bg-red --wide margin-top--32 wrapper wrapper--small"
           type="submit"
           defaultValue="Send"
         />

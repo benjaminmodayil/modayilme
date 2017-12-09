@@ -1,7 +1,9 @@
 ---
 layout: work
 path: '/work/lighthouse-hill-preview'
-title: 'Lighthouse Hill Preview'
+title: 'Lighthouse Hill Preview 
+<span role="img" aria-label="">🎮</span>
+'
 tldr: 'Ben learns Javascript by making a game.'
 type: 'work'
 description: 'This was the result of my senior capstone project (with a little rebranding). Lighthouse Hill is a text-based game with light visuals.'

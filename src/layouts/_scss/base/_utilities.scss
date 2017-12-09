@@ -48,6 +48,7 @@ $wideWidth: 1000;
 
 .wrapper {
   @include clearfix;
+
   padding-left: 20px;
   padding-right: 20px;
 
@@ -262,4 +263,10 @@ $spacings: '8', '14', '16', '32', '48', '64', '80', '96';
       @include variable(color, --link, color(link));
     }
   }
+}
+
+.s-svg-adjust--down {
+  bottom: -5px;
+  max-height: 25px;
+  position: relative;
 }

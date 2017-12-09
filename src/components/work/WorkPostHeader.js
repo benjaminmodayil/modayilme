@@ -19,20 +19,22 @@ class WorkPostHeader extends Component {
       <header className="work__header">
         <div className="work__header-inner wrapper wrapper--wide margin-center">
           <div className="work__header-inner--left container--medium-to-small ">
-            <h1 className="h-1">{posts.frontmatter.title}</h1>
+            <h1
+              className="h-1"
+              dangerouslySetInnerHTML={{ __html: posts.frontmatter.title }}
+            />
             <p className="font-size--16 font-style--italic">{posts.frontmatter.tldr}</p>
           </div>
           {!posts.frontmatter.svgName ? null : (
             <div className="work__header-inner--right">
-            <SVG
-              src={`../../static/work-images/${posts.frontmatter.svgName}.svg`}
-              uniquifyIDs={false}
-              onLoad={src => {
-                myOnLoadHandler(src)
-              }}
-            >
-            </SVG>
-          </div>
+              <SVG
+                src={`../../static/work-images/${posts.frontmatter.svgName}.svg`}
+                uniquifyIDs={false}
+                onLoad={src => {
+                  myOnLoadHandler(src)
+                }}
+              />
+            </div>
           )}
         </div>
       </header>

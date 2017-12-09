@@ -45,6 +45,13 @@
     display: block;
     text-align: center;
   }
+
+  .icon-write {
+    display: block;
+    height: 200px;
+    margin: 0 auto;
+    width: 150px;
+  }
 }
 
 @include breakpoint(min-width 601px) {

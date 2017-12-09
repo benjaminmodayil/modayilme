@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import Link from 'gatsby-link'
 import IconMore from '../assets/icons/IconMore.js'
+import IconCode from '../assets/icons/home-icons/IconCode.js'
 
 class DetailsList extends Component {
   constructor() {
@@ -51,8 +52,13 @@ class DetailsList extends Component {
     return (
       <div className="details-container" ref="detailsContainer">
         <h2 className="h-2">
-          Skills <span className="details-container__sub-title">(to pay the bills)</span>
-          <span className="details-container__emoji">👨‍💻</span>
+          Skills{' '}
+          <span className="details-container__sub-title color--black">
+            (to pay the bills)
+          </span>
+          <span className="details-container__emoji">
+            <IconCode className="icon-skills" />
+          </span>
         </h2>
         <ul className="details-container__inner">
           <li>
@@ -101,7 +107,7 @@ class DetailsList extends Component {
                       className="link color--link"
                       href="https://codepen.io/modayilme/pen/ybXErO"
                     >
-                      Lighthouse Hill preview
+                      Lighthouse Hill
                     </a>
                   </li>
                   <li>

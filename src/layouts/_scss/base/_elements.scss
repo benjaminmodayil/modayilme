@@ -99,23 +99,57 @@ p {
   }
 }
 
-.btn--bg {
+.link {
   @include fluid-type(601px, 1400px, 14px, 16px);
 
-  background-color: color(link);
-  border: 2px solid transparent;
-  border-radius: 4px;
-  color: white;
   cursor: pointer;
   font-family: $font-body;
-  padding: 0.5rem 2rem;
   text-align: center;
-  transition: all 0.2s ease;
 
-  &:hover,
-  &:focus {
-    border: 2px solid color(link);
-    box-shadow: 3px 3px 18px 0 rgba(0, 0, 0, 0.2);
+  &.--btn {
+    border: 2px solid transparent;
+    border-radius: 4px;
+    text-decoration: none;
+    transition: all 0.25s ease-out;
+
+    &:hover {
+      backface-visibility: hidden;
+      box-shadow: 3px 3px 18px 0 rgba(0, 0, 0, 0.2);
+      -moz-osx-font-smoothing: grayscale;
+      transform: translateZ(0);
+    }
+  }
+
+  &.--bg-red {
+    @include variable(background-color, --link, color(link));
+    @include variable(border-color, --link, color(link));
+    @include variable(color, --text-main, color(text-main));
+
+    &:hover {
+      background-color: darken(color(link), 3%);
+      border-color: darken(color(link), 3%);
+    }
+  }
+
+  &.--bg-transparent {
+    @include variable(background-color, --link, color(link));
+    @include variable(color, --link, color(link));
+    @include variable(border-color, --link, color(link));
+
+    background-color: transparent;
+
+    &:hover {
+      @include variable(background-color, --link, color(link));
+      @include variable(color, --text-main, color(text-main));
+    }
+  }
+
+  &.--small {
+    padding: 0.5rem 2rem;
+  }
+
+  &.--wide {
+    padding: 0.8rem 3rem;
   }
 
   // TODO: add transparent button, hover for colored bg

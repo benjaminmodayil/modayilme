@@ -1,6 +1,9 @@
 import React, { Component } from 'react'
 import Link from 'gatsby-link'
+
 import IconLink from '../../assets/icons/IconLink.js'
+import IconLaptop from '../../assets/icons/home-icons/IconLaptop.js'
+import IconStopwatch from '../../assets/icons/home-icons/IconStopwatch.js'
 
 class HomeHeader extends Component {
   render() {
@@ -17,8 +20,8 @@ class HomeHeader extends Component {
               <span className="display--block margin-bottom--14">Benjamin</span> Modayil
             </h1>
             <p className="color--white font-weight--normal">
-              <span className="color--red font-weight--bold">
-                Front-End Developer 👨‍💻
+              <span className="color--red display--block font-weight--bold">
+                Front-End Developer <IconLaptop />
               </span>{' '}
               from Philadelphia, Pennsylvannia.
             </p>
@@ -27,7 +30,7 @@ class HomeHeader extends Component {
         <div className="home__section-one__header__updates">
           <div className="latest-updates">
             <h2 className="h-2 color--white font-size--24 margin-bottom--32">
-              The Latest ⏱️
+              The Latest <IconStopwatch className="s-svg-adjust--down" />
             </h2>
             <ul>
               {data.map(post => {
@@ -38,9 +41,12 @@ class HomeHeader extends Component {
                         href={post.node.frontmatter.external}
                         className="padding-left-and-right--16 padding-top-and-bottom--16"
                       >
-                        <h3 className="h-3 font-size--18 margin-bottom--14">
-                          {post.node.frontmatter.title}
-                        </h3>
+                        <h3
+                          className="h-3 font-size--18 margin-bottom--14"
+                          dangerouslySetInnerHTML={{
+                            __html: post.node.frontmatter.title
+                          }}
+                        />
                         <p className="font-size--16">{post.node.frontmatter.tldr}</p>
                         <IconLink />
                       </a>
@@ -53,9 +59,12 @@ class HomeHeader extends Component {
                         to={post.node.frontmatter.path}
                         className="padding-left-and-right--16 padding-top-and-bottom--16"
                       >
-                        <h3 className="h-3 font-size--18 margin-bottom--14">
-                          {post.node.frontmatter.title}
-                        </h3>
+                        <h3
+                          className="h-3 font-size--18 margin-bottom--14"
+                          dangerouslySetInnerHTML={{
+                            __html: post.node.frontmatter.title
+                          }}
+                        />
                         <p className="font-size--16">{post.node.frontmatter.tldr}</p>
                       </Link>
                     </li>

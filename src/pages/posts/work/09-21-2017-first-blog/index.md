@@ -1,7 +1,9 @@
 ---
 layout: work
 path: '/work/how-i-made-my-site'
-title: 'Handcrafted through trial and error'
+title: 'modayil.me 
+<span role="img" aria-label="">🛠️</span>
+'
 tldr: 'Learn how I built my site'
 description: 'Ben needed a new online living space. So in turn, he created this site.'
 date: "2017-10-16T21:34:10Z"

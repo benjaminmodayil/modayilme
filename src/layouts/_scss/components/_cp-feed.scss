@@ -1,5 +1,13 @@
 .cp-feed {
   @include clearfix();
+
+  .icon-skills {
+    max-width: 30px;
+
+    g {
+      fill: white;
+    }
+  }
 }
 
 .cp-feed__cards__pen__thumb {

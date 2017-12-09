@@ -53,7 +53,10 @@ export default function Template({ data }, props) {
         <section className="post__body">
           <header className="post__header">
             <div className="wrapper content-align wrapper--780 margin-center section-padding color--white">
-              <h1 className="h-1">{post.frontmatter.title}</h1>
+              <h1
+                className="h-1"
+                dangerouslySetInnerHTML={{ __html: post.frontmatter.title }}
+              />
               <p className="tldr margin-top--32">
                 <span className="font-style--italic font-size--18 font-weight--light">
                   tl;dr:

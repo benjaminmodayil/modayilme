@@ -72,15 +72,22 @@
 
 .footer__links__container {
   position: relative;
-  // top: 96px;
-  // float: none;
-  // display: block;
 }
 
 .footer__inner__callout__hmu {
   @include fluid-type(600px, 1400px, 36px, 56px);
 
   text-decoration: underline;
+}
+
+.footer__inner__callout {
+  .icon-mobile {
+    bottom: -10px;
+    height: 60px;
+    position: relative;
+    right: -40px;
+    width: auto;
+  }
 }
 
 @include breakpoint(min-width 641px) {

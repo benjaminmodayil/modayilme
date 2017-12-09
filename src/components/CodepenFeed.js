@@ -1,5 +1,7 @@
 import React, { Component } from 'react'
 
+import IconSkills from '../assets/icons/home-icons/IconCodepenBlackBg.js'
+
 class CodepenFeed extends Component {
   constructor(props) {
     super(props)
@@ -40,7 +42,8 @@ class CodepenFeed extends Component {
         <h2 className="h-2 color--white font-size--24 margin-bottom--32">
           Codepens{' '}
           <span className="font-weight--light font-size--16">
-            (links open on Codepen.io) 💻
+            (links open on Codepen.io){' '}
+            <IconSkills className="icon-skills s-svg-adjust--down" />
           </span>
         </h2>
         <div className="cp-feed__cards">
@@ -71,7 +74,7 @@ class CodepenFeed extends Component {
                         {item.childNodes[9].childNodes[9].innerHTML}
                       </p>
                       <a
-                        className="font-size--14 u-flex-align--right btn--bg cp-feed__cards__pen__text__link"
+                        className="font-size--14 link --btn --bg-red --small cp-feed__cards__pen__text__link"
                         href={item.childNodes[9].childNodes[7].childNodes[1].getAttribute(
                           'href'
                         )}
@@ -86,7 +89,7 @@ class CodepenFeed extends Component {
           )}
         </div>
         <a
-          className="cp-feed__cards__pen__external-link u-float--right btn--bg"
+          className="cp-feed__cards__pen__external-link u-float--right link --btn --bg-transparent --wide"
           href="https://codepen.io/modayilme/"
         >
           view more
@@ -97,3 +100,4 @@ class CodepenFeed extends Component {
 }
 
 export default CodepenFeed
+// cp-feed__cards__pen__text__link
