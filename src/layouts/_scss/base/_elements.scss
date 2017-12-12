@@ -116,7 +116,7 @@ p {
       backface-visibility: hidden;
       box-shadow: 3px 3px 18px 0 rgba(0, 0, 0, 0.2);
       -moz-osx-font-smoothing: grayscale;
-      transform: translateZ(0);
+      transform: scale(1.025) translateZ(0);
     }
   }
 
@@ -183,7 +183,7 @@ p {
 @include breakpoint(min-width 1101px) {
   .content-align {
     .h-1 {
-      max-width: 500px;
+      max-width: 600px;
     }
   }
 }

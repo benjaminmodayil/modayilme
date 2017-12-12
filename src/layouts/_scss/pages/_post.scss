@@ -8,6 +8,10 @@
 
     font-weight: 600;
     line-height: 1.2;
+
+    span {
+      display: initial;
+    }
   }
 
   p {
@@ -153,10 +157,6 @@ blockquote {
   }
 }
 
-.post__body {
-  padding: 1rem 0;
-}
-
 .post__body,
 .work__preview__body {
   position: relative;
@@ -257,6 +257,83 @@ blockquote {
 .work__preview__meta-container {
   background-color: lighten(color(bg), 3%);
   background-color: var(--bg-light);
+}
+
+.post__related-articles {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.post__related-articles__item {
+  align-items: center;
+  border: 1px solid transparent;
+  display: flex;
+  justify-content: space-between;
+  transition: all 0.25s ease-out;
+
+  //order is important for 👇 @include
+  @include variable(border-color, --link, color(link));
+
+  &:hover,
+  &:focus {
+    @include variable(background-color, --link, color(link));
+
+    backface-visibility: hidden;
+    box-shadow: 3px 3px 18px 0 rgba(0, 0, 0, 0.2);
+    -moz-osx-font-smoothing: grayscale;
+    transform: scale(1.025) translateZ(0);
+
+    .post__related-articles__item__text {
+      .h-3,
+      p {
+        @include variable(color, --white, color(white));
+      }
+    }
+  }
+}
+
+.post__related-articles__item__text {
+  flex: 0 0 auto;
+  position: relative;
+  top: 15px;
+  width: 85%;
+  width: calc(85% - 20px);
+
+  .h-3 {
+    @include variable(color, --link, color(link));
+  }
+
+  p {
+    @include variable(color, --text, color(text));
+  }
+}
+
+.icon-prev-next {
+  @include variable(fill, --black, color(black));
+}
+
+.arrow {
+  width: 15%;
+  width: calc(15% - 20px);
+}
+
+@include breakpoint(min-width 691px) {
+  .post__related-articles {
+    flex-direction: row;
+  }
+
+  .post__related-articles__item {
+    display: flex;
+
+    flex: 0 0 auto;
+
+    width: 50%;
+    width: calc(50% - 20px);
+
+    //order is important for 👇 @include
+    @include variable(border-color, --link, color(link));
+  }
 }
 
 @include breakpoint(min-width 801px) {

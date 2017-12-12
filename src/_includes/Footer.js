@@ -12,8 +12,8 @@ import IconMobile from '../assets/icons/home-icons/IconMobile.js'
 class Footer extends Component {
   render() {
     return (
-      <footer className="home__footer wrapper wrapper--wide margin-center margin-top--64">
-        <div className="footer__inner">
+      <footer className="home__footer margin-top--64">
+        <div className="footer__inner wrapper wrapper--wide margin-center">
           <div className="footer__inner__callout">
             <h2 className="h-2 font-size--96 color--white margin-bottom--32">
               Want to chat?

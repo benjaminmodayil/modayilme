@@ -117,7 +117,8 @@
 @include breakpoint(min-width 901px) {
   .footer__links__container {
     float: right;
+    margin-top: -150px;
+    padding-bottom: 8rem;
     position: relative;
-    top: -150px;
   }
 }

@@ -48,7 +48,7 @@ class IndexPage extends React.Component {
       .slice(0, 4)
 
     return (
-      <main className="home-page wrapper wrapper--wide margin-center">
+      <main className="home-page wrapper wrapper--wide margin-center padding-bottom--64">
         <section className="home__section-one">
           <HomeHeader onClick={this.handleClick.bind(this)} info={allPosts} />
         </section>

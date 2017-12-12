@@ -3,6 +3,9 @@ import Helmet from 'react-helmet'
 import Link from 'gatsby-link'
 import Updates from '../_includes/Updates.js'
 
+import IconArrowLeft from '../assets/post-assets/IconArrowLeft'
+import IconArrowRight from '../assets/post-assets/IconArrowRight'
+
 export default function Template({ data }, props) {
   const { markdownRemark: post } = data
 
@@ -49,35 +52,73 @@ export default function Template({ data }, props) {
           { name: 'theme-color', content: '#F7484E' }
         ]}
       />
-      <article className="post">
-        <section className="post__body">
-          <header className="post__header">
-            <div className="wrapper content-align wrapper--780 margin-center section-padding color--white">
-              <h1
-                className="h-1"
-                dangerouslySetInnerHTML={{ __html: post.frontmatter.title }}
-              />
-              <p className="tldr margin-top--32">
-                <span className="font-style--italic font-size--18 font-weight--light">
-                  tl;dr:
+      <div className="bg-color--grey">
+        <article className="post">
+          <section className="post__body">
+            <header className="post__header bg-color--bg">
+              <div className="wrapper content-align wrapper--780 margin-center section-padding color--white">
+                <h1
+                  className="h-1"
+                  dangerouslySetInnerHTML={{ __html: post.frontmatter.title }}
+                />
+                <p className="tldr margin-top--32">
+                  <span className="font-style--italic font-size--18 font-weight--light">
+                    tl;dr:
+                  </span>
+                  {post.frontmatter.tldr}
+                </p>
+                <span className="post__date margin-top--32 font-style--italic">
+                  {post.frontmatter.date}
                 </span>
-                {post.frontmatter.tldr}
-              </p>
-              <span className="post__date margin-top--32 font-style--italic">
-                {post.frontmatter.date}
-              </span>
-            </div>
-          </header>
-          <div className="bg-color--grey">
+              </div>
+            </header>
+
             <div className="work__preview__container wrapper wrapper--780 margin-center section-padding--bottom-heavy">
               <div
-                className="post-work__body"
+                className="post-work__body margin-bottom--96"
                 dangerouslySetInnerHTML={{ __html: post.html }}
               />
+              <div className="post__related">
+                <h2 className="screenreader-only">
+                  Other articles you might like to read:
+                </h2>
+                <nav className="post__related-articles">
+                  <a
+                    href=""
+                    className="post__related-articles__item margin-top-and-bottom--16 padding-top-and-bottom--16 padding-left-and-right--16 u-text-decoration--none"
+                  >
+                    <span className="arrow --left">
+                      <IconArrowLeft />
+                    </span>
+                    <span className="post__related-articles__item__text">
+                      <h3
+                        className="h-3 font-size--18"
+                        dangerouslySetInnerHTML={{ __html: post.frontmatter.title }}
+                      />
+                      <p className="font-size--16">{post.frontmatter.tldr}</p>
+                    </span>
+                  </a>
+                  <a
+                    href=""
+                    className="post__related-articles__item margin-top-and-bottom--16 padding-top-and-bottom--16 padding-left-and-right--16 u-text-decoration--none"
+                  >
+                    <span className="post__related-articles__item__text">
+                      <h3
+                        className="h-3 font-size--18"
+                        dangerouslySetInnerHTML={{ __html: post.frontmatter.title }}
+                      />
+                      <p className="font-size--16">{post.frontmatter.tldr}</p>
+                    </span>
+                    <span className="arrow --right">
+                      <IconArrowRight />
+                    </span>
+                  </a>
+                </nav>
+              </div>
             </div>
-          </div>
-        </section>
-      </article>
+          </section>
+        </article>
+      </div>
     </main>
   )
 }
