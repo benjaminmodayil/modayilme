@@ -4,8 +4,8 @@ import Link from 'gatsby-link'
 
 import HomeHeader from '../_includes/homepage/HomeHeader'
 import CodepenFeed from '../components/CodepenFeed'
+import ArticleLoop from '../components/ArticleLoop'
 
-import Updates from '../_includes/Updates.js'
 import DetailsList from '../_includes/DetailsList.js'
 import CodeImage from '../assets/home-code.png'
 
@@ -16,7 +16,6 @@ import IconGithub from '../assets/icons/details-list/icon-github.svg'
 import IconTwitter from '../assets/icons/details-list/icon-twitter.svg'
 import IconInstagram from '../assets/icons/details-list/icon-instagram.svg'
 import IconLinkedin from '../assets/icons/details-list/icon-linkedin.svg'
-import IconLink from '../assets/icons/IconLink.js'
 
 import IconCheck from '../assets/icons/home-icons/IconCheck.js'
 import IconMic from '../assets/icons/home-icons/IconMic.js'
@@ -29,7 +28,6 @@ import IconWrite from '../assets/icons/home-icons/IconWrite.js'
 
 class IndexPage extends React.Component {
   componentDidMount() {
-    //polyfill
     require('smoothscroll-polyfill').polyfill()
   }
 
@@ -94,46 +92,7 @@ class IndexPage extends React.Component {
                   <IconWork className="s-svg-adjust--down" />
                 </span>
               </h2>
-              <ul>
-                {caseStudies.map(post => {
-                  if (post.node.frontmatter.external) {
-                    return (
-                      <li className="margin-bottom--32" key={post.node.frontmatter.path}>
-                        <a
-                          href={post.node.frontmatter.external}
-                          className="padding-left-and-right--16 padding-top-and-bottom--16"
-                        >
-                          <h3
-                            className="h-3 font-size--18 margin-bottom--14"
-                            dangerouslySetInnerHTML={{
-                              __html: post.node.frontmatter.title
-                            }}
-                          />
-                          <p className="font-size--16">{post.node.frontmatter.tldr}</p>
-                          <IconLink className="margin-top--16" />
-                        </a>
-                      </li>
-                    )
-                  } else {
-                    return (
-                      <li className="margin-bottom--32" key={post.node.frontmatter.path}>
-                        <Link
-                          to={post.node.frontmatter.path}
-                          className="padding-left-and-right--16 padding-top-and-bottom--16"
-                        >
-                          <h3
-                            className="h-3 font-size--18 margin-bottom--14"
-                            dangerouslySetInnerHTML={{
-                              __html: post.node.frontmatter.title
-                            }}
-                          />
-                          <p className="font-size--16">{post.node.frontmatter.tldr}</p>
-                        </Link>
-                      </li>
-                    )
-                  }
-                })}
-              </ul>
+              <ArticleLoop data={data} articleArray={caseStudies} />
             </div>
           </div>
           <CodepenFeed />
@@ -158,47 +117,7 @@ class IndexPage extends React.Component {
               <h2 className="h-2 color--black font-size--24 margin-bottom--32">
                 My thoughts <IconThought className="s-svg-adjust--down" />
               </h2>
-              <ul>
-                {blogPosts.map(post => {
-                  if (post.node.frontmatter.external) {
-                    return (
-                      <li className="margin-bottom--32" key={post.node.frontmatter.path}>
-                        <a
-                          href={post.node.frontmatter.external}
-                          className="padding-left-and-right--16 padding-top-and-bottom--16"
-                        >
-                          <h3
-                            className="h-3 font-size--18 margin-bottom--14"
-                            dangerouslySetInnerHTML={{
-                              __html: post.node.frontmatter.title
-                            }}
-                          />
-
-                          <p className="font-size--16">{post.node.frontmatter.tldr}</p>
-                          <IconLink />
-                        </a>
-                      </li>
-                    )
-                  } else {
-                    return (
-                      <li className="margin-bottom--32" key={post.node.frontmatter.path}>
-                        <Link
-                          to={post.node.frontmatter.path}
-                          className="padding-left-and-right--16 padding-top-and-bottom--16"
-                        >
-                          <h3
-                            className="h-3 font-size--18 margin-bottom--14"
-                            dangerouslySetInnerHTML={{
-                              __html: post.node.frontmatter.title
-                            }}
-                          />
-                          <p className="font-size--16">{post.node.frontmatter.tldr}</p>
-                        </Link>
-                      </li>
-                    )
-                  }
-                })}
-              </ul>
+              <ArticleLoop data={data} articleArray={blogPosts} />
             </div>
           </div>
         </section>

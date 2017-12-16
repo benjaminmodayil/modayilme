@@ -8,6 +8,7 @@ module.exports = {
     github: 'https://github.com/benjaminmodayil'
   },
   plugins: [
+    `gatsby-plugin-react-next`,
     `gatsby-plugin-react-helmet`,
     `gatsby-plugin-sass`,
     {
