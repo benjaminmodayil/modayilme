@@ -1,13 +1,18 @@
 import React from 'react'
 import Helmet from 'react-helmet'
 import Link from 'gatsby-link'
-import Updates from '../_includes/Updates.js'
+
+import RelatedArticles from '../components/RelatedArticles.js'
 
 import IconArrowLeft from '../assets/post-assets/IconArrowLeft'
 import IconArrowRight from '../assets/post-assets/IconArrowRight'
 
-export default function Template({ data }, props) {
+import IconLink from '../assets/icons/IconLink.js'
+
+export default function Template({ data, pathContext }, props) {
   const { markdownRemark: post } = data
+
+  const { prev, next } = pathContext
 
   return (
     <main className="post__page">
@@ -82,38 +87,7 @@ export default function Template({ data }, props) {
                 <h2 className="screenreader-only">
                   Other articles you might like to read:
                 </h2>
-                <nav className="post__related-articles">
-                  <a
-                    href=""
-                    className="post__related-articles__item margin-top-and-bottom--16 padding-top-and-bottom--16 padding-left-and-right--16 u-text-decoration--none"
-                  >
-                    <span className="arrow --left">
-                      <IconArrowLeft />
-                    </span>
-                    <span className="post__related-articles__item__text">
-                      <h3
-                        className="h-3 font-size--18"
-                        dangerouslySetInnerHTML={{ __html: post.frontmatter.title }}
-                      />
-                      <p className="font-size--16">{post.frontmatter.tldr}</p>
-                    </span>
-                  </a>
-                  <a
-                    href=""
-                    className="post__related-articles__item margin-top-and-bottom--16 padding-top-and-bottom--16 padding-left-and-right--16 u-text-decoration--none"
-                  >
-                    <span className="post__related-articles__item__text">
-                      <h3
-                        className="h-3 font-size--18"
-                        dangerouslySetInnerHTML={{ __html: post.frontmatter.title }}
-                      />
-                      <p className="font-size--16">{post.frontmatter.tldr}</p>
-                    </span>
-                    <span className="arrow --right">
-                      <IconArrowRight />
-                    </span>
-                  </a>
-                </nav>
+                <RelatedArticles related={pathContext} />
               </div>
             </div>
           </section>

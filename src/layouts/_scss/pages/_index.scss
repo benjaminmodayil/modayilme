@@ -1,4 +1,6 @@
 .home-page {
+  @include variable(background, --bg-secondary, color(bg-secondary));
+
   p {
     line-height: 1.6;
   }
@@ -8,10 +10,11 @@
 .home__medium-text {
   a {
     text-decoration: underline;
+    border: 1px dotted transparent;
 
     &:hover,
     &:focus {
-      color: color(white);
+      @include variable(border-color, --link, color(link));
     }
   }
 }
@@ -83,7 +86,7 @@
     position: absolute;
     right: -54%;
     top: 40px;
-    z-index: -1;
+    z-index: 1;
 
     img {
       max-width: 100%;

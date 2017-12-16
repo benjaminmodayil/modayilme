@@ -15,8 +15,11 @@ exports.createPages = ({ boundActionCreators, graphql }) => {
             id
             frontmatter {
               layout
+              title
+              tldr
               path
               type
+              external
             }
           }
         }
@@ -27,13 +30,17 @@ exports.createPages = ({ boundActionCreators, graphql }) => {
       return Promise.reject(res.errors)
     }
 
-    res.data.allMarkdownRemark.edges.forEach(({ node }) => {
+    const posts = res.data.allMarkdownRemark.edges
+
+    posts.forEach(({ node }, index) => {
       const checkType = () => {
         if (node.frontmatter.layout.includes('post')) {
           return postTemplate
         } else if (node.frontmatter.layout.includes('work')) {
+          console.log('workTemplate')
           return workPreviewTemplate
         } else {
+          console.log('postTemplate')
           return postTemplate
         }
       }
@@ -42,7 +49,9 @@ exports.createPages = ({ boundActionCreators, graphql }) => {
         path: node.frontmatter.path,
         component: checkType(),
         context: {
-          path: node.frontmatter.path
+          path: node.frontmatter.path,
+          prev: index === 0 ? null : posts[index - 1].node,
+          next: index === posts.length - 1 ? null : posts[index + 1].node
         }
       })
     })

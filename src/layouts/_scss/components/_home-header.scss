@@ -1,3 +1,7 @@
+.home__section-one {
+  @include variable(background, --bg, color(bg));
+}
+
 .home__section-one__header {
   display: flex;
   flex-direction: column;

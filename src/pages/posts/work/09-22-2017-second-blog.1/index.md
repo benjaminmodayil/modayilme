@@ -125,4 +125,4 @@ Some other things I’ll just touch on shortly were two things:
 1. [Codepen](https://codepen.io/) as a tool to quickly prototype ideas and animations.
 2. [BEM — Block Element Modifier](http://getbem.com/naming/) as a method of making our classes more understandable to anyone else working with the project.
 
-If you're looking for other writings about the execution of this project check out the [introduction of GroundRules]((https://www.viget.com/articles/world-meet-ground-rules)) by Elyse or a [design case study](http://vivianzwang.com/ground-rules) by Vivian.
+If you're looking for other writings about the execution of this project check out the [introduction of GroundRules](https://www.viget.com/articles/world-meet-ground-rules) by Elyse or a [design case study](http://vivianzwang.com/ground-rules) by Vivian.

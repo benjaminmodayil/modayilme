@@ -1,9 +1,14 @@
 import React from 'react'
 import Helmet from 'react-helmet'
 import Link from 'gatsby-link'
-import Updates from '../_includes/Updates'
+
 import WorkPostHeader from '../components/work/WorkPostHeader'
+import RelatedArticles from '../components/RelatedArticles.js'
+
 import * as invert from '../utils/invertColor'
+
+import IconArrowLeft from '../assets/post-assets/IconArrowLeft'
+import IconArrowRight from '../assets/post-assets/IconArrowRight'
 
 class Template extends React.Component {
   render() {
@@ -112,6 +117,12 @@ class Template extends React.Component {
                   className="post-work__body"
                   dangerouslySetInnerHTML={{ __html: post.html }}
                 />
+                <div className="post__related">
+                  <h2 className="screenreader-only">
+                    Other articles you might like to read:
+                  </h2>
+                  <RelatedArticles related={this.props.pathContext} />
+                </div>
               </div>
             </div>
           </section>
@@ -135,7 +146,6 @@ export const workQuery = graphql`
         description
         tldr
         website
-        pen
         headerColor
         linkColor
         textColor

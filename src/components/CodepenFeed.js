@@ -38,8 +38,8 @@ class CodepenFeed extends Component {
   }
   render() {
     return (
-      <div className="cp-feed margin-bottom--96">
-        <h2 className="h-2 color--white font-size--24 margin-bottom--32">
+      <div className="cp-feed">
+        <h2 className="h-2 color--black font-size--24 margin-bottom--32">
           Codepens{' '}
           <span className="font-weight--light font-size--16">
             (links open on Codepen.io){' '}

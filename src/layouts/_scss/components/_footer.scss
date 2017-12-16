@@ -77,7 +77,14 @@
 .footer__inner__callout__hmu {
   @include fluid-type(600px, 1400px, 36px, 56px);
 
+  border: 1px dotted transparent;
+  padding: 0.5rem;
   text-decoration: underline;
+
+  &:hover, &:focus {
+    @include variable(color, --white, color(white));
+    @include variable(border-color, --link, color(link));
+  }
 }
 
 .footer__inner__callout {

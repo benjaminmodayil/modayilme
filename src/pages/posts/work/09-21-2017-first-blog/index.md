@@ -8,7 +8,7 @@ tldr: 'Learn how I built my site'
 description: 'Ben needed a new online living space. So in turn, he created this site.'
 date: "2017-10-16T21:34:10Z"
 type: work
-website: https://modayil.me/
+website: http://modayil.me/
 headerColor: '#ff545a'
 linkColor: '#ff545a'
 textColor: '#000000'

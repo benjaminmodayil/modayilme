@@ -44,13 +44,11 @@ a {
 
   &:hover,
   &:focus {
-    color: white;
+    text-decoration: underline;
   }
 
   &::selection {
     @include variable(background-color, --link, color(link));
-
-    color: white;
   }
 }
 

@@ -10,10 +10,11 @@ class HomeHeader extends Component {
     const data = this.props.info.slice(0, 3)
 
     return (
-      <header className="home__section-one__header row margin-center margin-top-and-bottom--96">
+      <header className="home__section-one__header padding-top-and-bottom--80 wrapper wrapper--wide margin-center">
         <div className="home__section-one__header__intro margin-bottom--64">
           <div className="container--medium-to-small">
             <span className="home__header__lead color--white font-weight--normal font-style--italic font-family--heading margin-bottom--16 display--block">
+              <span role="img" aria-label="" className="font-style--normal padding-left-and-right--14">👋</span>
               Hi there! I'm
             </span>
             <h1 className="h-1 color--white font-weight--bold margin-bottom--16">
@@ -23,7 +24,7 @@ class HomeHeader extends Component {
               <span className="color--red display--block font-weight--bold">
                 Front-End Developer <IconLaptop />
               </span>{' '}
-              from Philadelphia, Pennsylvannia.
+              from Philadelphia, Pennsylvania.
             </p>
           </div>
         </div>

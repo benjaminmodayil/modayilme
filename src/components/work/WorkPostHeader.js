@@ -30,9 +30,6 @@ class WorkPostHeader extends Component {
               <SVG
                 src={`../../static/work-images/${posts.frontmatter.svgName}.svg`}
                 uniquifyIDs={false}
-                onLoad={src => {
-                  myOnLoadHandler(src)
-                }}
               />
             </div>
           )}

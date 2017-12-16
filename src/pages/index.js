@@ -48,13 +48,13 @@ class IndexPage extends React.Component {
       .slice(0, 4)
 
     return (
-      <main className="home-page wrapper wrapper--wide margin-center padding-bottom--64">
+      <main className="home-page padding-bottom--64">
         <section className="home__section-one">
           <HomeHeader onClick={this.handleClick.bind(this)} info={allPosts} />
         </section>
 
         <section
-          className="home__section-two color--white font-weight--normal margin-bottom--15vh"
+          className="home__section-two color--black font-weight--normal wrapper wrapper--wide margin-center padding-top-and-bottom--96"
           ref="about"
         >
           <div className="home__section-two__text-and-image" id="bio">
@@ -88,7 +88,7 @@ class IndexPage extends React.Component {
             </p>
 
             <div className="latest-updates margin-top--96">
-              <h2 className="h-2 color--white font-size--24 margin-bottom--32">
+              <h2 className="h-2 color--black font-size--24 margin-bottom--32">
                 Work Examples{' '}
                 <span className="font-style--normal">
                   <IconWork className="s-svg-adjust--down" />
@@ -140,7 +140,7 @@ class IndexPage extends React.Component {
         </section>
 
         <section
-          className="home__section-two color--white font-weight--normal margin-bottom--15vh"
+          className="home__section-two color--black font-weight--normal wrapper wrapper--wide margin-center margin-bottom--15vh"
           ref="about"
         >
           <div className="home__section-two__inner home__section-two__text-and-image__text align-center-under--1200 home__section-three__row">
@@ -155,7 +155,7 @@ class IndexPage extends React.Component {
               <IconWrite className="icon-write" />
             </div>
             <div className="latest-updates margin-top--64 wrapper wrapper--780 align-center-under--1200">
-              <h2 className="h-2 color--white font-size--24 margin-bottom--32">
+              <h2 className="h-2 color--black font-size--24 margin-bottom--32">
                 My thoughts <IconThought className="s-svg-adjust--down" />
               </h2>
               <ul>
@@ -203,10 +203,10 @@ class IndexPage extends React.Component {
           </div>
         </section>
 
-        <section className="home__section-three font-weight--normal home__section-two__inner home__section-two__text-and-image__text wrapper align-center-under--1200">
+        <section className="home__section-three font-weight--normal home__section-two__inner home__section-two__text-and-image__text wrapper wrapper--wide margin-center align-center-under--1200 padding-bottom--96">
           <div className="home__section-three__row">
             <div className="home__section-three__row__col-left container--medium">
-              <p className="home__medium-text color--white margin-bottom--32">
+              <p className="home__medium-text color--black margin-bottom--32">
                 I really love learning new things related to development. Sounds, boring,
                 but it's not as bad as it sounds... I think. Here’s a few things that I
                 have been able to add to my skillset.
@@ -219,7 +219,7 @@ class IndexPage extends React.Component {
           </div>
           <div className="home__section-three__row">
             <div className="home__section-three__row__col-left container--medium">
-              <p className="home__medium-text color--white margin-bottom--32">
+              <p className="home__medium-text color--black margin-bottom--32">
                 If you need a{' '}
                 <a href="./static/resumeModayil.pdf">
                   {' '}
@@ -234,7 +234,7 @@ class IndexPage extends React.Component {
 
           <div className="home__section-three__row">
             <div className="home__section-three__row__col-left container--medium">
-              <p className="home__medium-text color--white margin-bottom--32">
+              <p className="home__medium-text color--black margin-bottom--32">
                 If you’re wondering what I’m like outside of work, well, sorry to be a
                 bummer, but I like to work. Usually I’m learning something new code-wise,
                 reading a{' '}
@@ -243,7 +243,7 @@ class IndexPage extends React.Component {
                 </a>/comics, listening to a podcast, or perhaps, on the rare occasion,
                 relaxing.
               </p>
-              <p className="home__medium-text color--white margin-bottom--32">
+              <p className="home__medium-text color--black margin-bottom--32">
                 Interested in following me or keeping updated on things I write or do?
                 Follow me on my <a href={data.site.siteMetadata.twitter}>Twitter</a>,{' '}
                 <a href={data.site.siteMetadata.instagram}>Instagram</a>, or connect with
