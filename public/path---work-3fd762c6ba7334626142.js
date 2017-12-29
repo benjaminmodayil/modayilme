@@ -1,2 +1,0 @@
-webpackJsonp([32551418774257],{344:function(t,e){t.exports={data:{site:{siteMetadata:{title:"modayil.me",skillset:["HTML","CSS","JAVASCRIPT","REACT","SKETCH","MEMES"]}}},pathContext:{_PARENT:"SOURCE"}}}});
-//# sourceMappingURL=path---work-3fd762c6ba7334626142.js.map

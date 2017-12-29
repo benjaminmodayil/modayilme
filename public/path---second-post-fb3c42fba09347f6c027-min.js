@@ -1,1 +1,0 @@
-webpackJsonp([26807536709107],{"./node_modules/json-loader/index.js!./.cache/json/second-post.json":function(o,t){o.exports={data:{markdownRemark:{html:"<h1>BYE!</h1>\n<p>Dab Dab</p>",frontmatter:{path:"/second-post",title:"Second blog post"}}},pathContext:{}}}});
