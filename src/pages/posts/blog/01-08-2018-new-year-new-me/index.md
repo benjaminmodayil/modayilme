@@ -1,0 +1,59 @@
+---
+layout: blog
+type: blog
+title: 'New Year, New Me'
+date: "2018-01-08T20:16:04Z"
+path: "/blog/new-year-new-me"
+tldr: "Obligatory New Year's Resolution post."
+---
+
+Here are my obligatory New Year’s Resolutions. I’ve been going through a few personal challenges and I’ll be making the effort to not let circumstance define actuality for this new year.
+
+## Resolutions
+1. **Better physical health.** 
+
+I’ve realized my triggers for eating are based around television and I’m hoping to avoid an extreme of both. Ideally, replacing lounging and watching television with exercise and podcasts.
+
+2. **Focus on my mental health.**
+
+Something that has been a thorn in my side for the longest time is my mental health. I've always been paranoid about others' opinions and, not related to the former, I've tend to have long periods of sadness. It got to a crippling point this past summer where I found myself in tears most nights.
+
+Part of me thinks it was because I was missing out on some key communities due to me being in another state for 4 to 5 months. My friend Don explained the idea of key communities to me best. He talked how people tend to have three communities: 1. Family, 2. Work, and 3. Just another outlet (paraphrasing really hard right now). During the summer, I had only a work community and found myself struggling to fill in the gaps. I tried by attending meet ups and different churches, but it was impossible to build a sense of community when you knew you were only there short-term.
+
+3. **Get back in the Word.**
+
+ I’ve had a hard time in my relationship with God and listening to Him in any capacity.  As I’ve gotten more “sad”, I’ve noticed it’s when I’ve moved farther away from God.
+
+4. **Find honest friends.**
+
+One of my most hated pet peeves is small talk. I’ll do it, but I just hate people being so indirect, and full of false appearances.
+
+Something that I want to learn how to communicate is an honest “how are you doing?” with the effect of getting genuine answers. But then again, I have the terrible tendency of saying “It’s going” to that question myself.
+
+5. **Become a full-stack developer.**
+
+ Coming back to Philadelphia after my apprenticeship was nerve-racking. Looking for jobs is not fun. And while I was only looking for jobs for a month and a half, I’ve noticed something during my search. While I do love CMS work and hope to work in a digital agency with CMS work, there’s a stronger need for job applicants within the Philly area of the “full-stack” mindset.
+ 
+ Whenever I’d be looking for jobs as a Front-end Developer, I would tend to find jobs in Philly for FEDs with full-stack qualifications. Yes, that does sound backwards, but tend to be the noticeable job market here. If I really wanted to find a job with my current qualifications, it seemed I would have to move out of state. But with #2 of this resolution list, I intend to stay within Philly as it's where I know people. 
+
+ Currently, I’m working on this through a personal lesson plan, plus part-time enrollment in a full-stack Javascript bootcamp program. The great thing is that I only pay for the months it takes me to graduate and I’m on course with graduation in 3-4 months versus the full six as I'm already well-versed in the fundamentals.
+
+6. **Get my freaking license.**
+
+ It’s been almost six years since I originally could have gotten it. Fear has gotten in my way before, but I’m finally ready to get behind the driver’s seat.
+
+7. **Find a “no-screen” hobby.**
+
+I need to do something to unwind. Code tends to be too much of my life at the moment. I started reading books again, but I don’t think that should count. I want to unwind my mind and process less information. Part of me thinks I might try learning how to crochet again. 
+<span role="img" aria-label="I dunno">¯\_(ツ)_/¯</span>
+ 
+8. **Give a tech-talk**
+
+I’m hoping to give more presentations on random technologies that I’ve been interested in. I started to present more since my internship and apprenticeship this past summer. Hopefully this goal can be met with a local Meetup group.
+
+9. **Bonus goal**
+
+I really want to get into “smart home hacking” with arduinos and raspberry pis. Seems like a great side hobby, but the only problem is that it breaks the “no-screen” rule of number 7. 
+
+Feel free to slide into my DMs on Twitter or on my site's [contact form](/contact). Thanks for reading 
+<span role="img" aria-label="">👋</span>.
