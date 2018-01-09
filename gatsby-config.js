@@ -42,6 +42,33 @@ module.exports = {
       }
     },
     `gatsby-plugin-catch-links`,
+    {
+      resolve: `gatsby-plugin-manifest`,
+      options: {
+        name: 'modayilme',
+        short_name: 'modayilme',
+        start_url: '/',
+        background_color: '#40353F',
+        theme_color: '#40353F',
+        display: 'minimal-ui',
+        icons: [
+          {
+            // Everything in /static will be copied to an equivalent
+            // directory in /public during development and build, so
+            // assuming your favicons are in /static/favicons,
+            // you can reference them here
+            src: `/favicons/android-chrome-192x192.png`,
+            sizes: `192x192`,
+            type: `image/png`
+          },
+          {
+            src: `/favicons/android-chrome-512x512.png`,
+            sizes: `512x512`,
+            type: `image/png`
+          }
+        ]
+      }
+    },
     `gatsby-plugin-offline`,
     {
       resolve: `gatsby-plugin-google-analytics`,
