@@ -10,14 +10,22 @@
   }
 }
 
+.cp-feed__cards {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+}
+
 .cp-feed__cards__pen__thumb {
   max-width: 100%;
+  width: 100%;
 }
 
 .cp-feed__cards__pen {
   background-color: white;
   border-radius: 4px;
   box-shadow: 3px 3px 10px 0px rgba(0, 0, 0, 0.15);
+  max-width: 425px;
   position: relative;
 }
 
@@ -31,9 +39,10 @@
   right: 16px;
 }
 
-@include breakpoint (min-width 601px) {
+@include breakpoint (min-width 861px) {
   .cp-feed__cards {
-    display: flex;
+    align-items: initial;
+    flex-direction: row;
     justify-content: space-between;
   }
 

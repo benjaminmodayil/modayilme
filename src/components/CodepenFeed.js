@@ -54,13 +54,31 @@ class CodepenFeed extends Component {
                       'href'
                     )}
                   >
-                    <img
-                      className="cp-feed__cards__pen__thumb margin-bottom--16"
-                      src={item.childNodes[9].childNodes[3].childNodes[0].getAttribute(
-                        'src'
-                      )}
-                      alt=""
-                    />
+                    <picture>
+                      <source
+                        srcSet={item.childNodes[9].childNodes[3].childNodes[0]
+                          .getAttribute('src')
+                          .replace('large', 'small')
+                          .replace('png', 'webp')}
+                        type="image/webp"
+                      />
+
+                      <source
+                        srcSet={item.childNodes[9].childNodes[3].childNodes[0]
+                          .getAttribute('src')
+                          .replace('large', 'small')}
+                        type="image/png"
+                      />
+
+                      <img
+                        className="cp-feed__cards__pen__thumb margin-bottom--16"
+                        src={item.childNodes[9].childNodes[3].childNodes[0]
+                          .getAttribute('src')
+                          .replace('large', 'small')}
+                        alt=""
+                      />
+                    </picture>
+
                     <div className="cp-feed__cards__pen__text">
                       <h3 className="h-3 font-size--18 color--link margin-bottom--16">
                         {item.childNodes[1].text}
@@ -95,3 +113,7 @@ class CodepenFeed extends Component {
 }
 
 export default CodepenFeed
+
+// # Specify the image processing steps right in the query
+// # Makes it trivial to update as your page's design changes.
+// ...GatsbyImageSharpResolutions
