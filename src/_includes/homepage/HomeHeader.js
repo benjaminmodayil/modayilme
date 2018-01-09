@@ -17,6 +17,7 @@ class HomeHeader extends Component {
             <span className="home__header__lead color--white font-weight--normal font-style--italic font-family--heading margin-bottom--16 display--block">
               <span
                 role="img"
+                alt=""
                 aria-label=""
                 className="font-style--normal padding-left-and-right--14"
               >

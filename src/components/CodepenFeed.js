@@ -13,13 +13,8 @@ class CodepenFeed extends Component {
     const entryPromise = fetch(codepenFeed)
       .then(data => data.text())
       .then(data => {
-        return JSON.parse(JSON.stringify({ data }))
-      })
-      .then(data => {
-        return data.data
-      })
-      .then(data => {
-        var s = data
+        let stringifiedData = JSON.parse(JSON.stringify({ data }))
+        var s = stringifiedData.data
         var temp = document.createElement('div')
         temp.innerHTML = s
         var htmlObject = temp.firstChild
@@ -100,4 +95,3 @@ class CodepenFeed extends Component {
 }
 
 export default CodepenFeed
-// cp-feed__cards__pen__text__link

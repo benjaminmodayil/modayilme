@@ -2,7 +2,7 @@
 layout: work
 path: '/work/lighthouse-hill-preview'
 title: 'Lighthouse Hill Preview 
-<span role="img" aria-label="">🎮</span>
+<span role="img" aria-label="" role="">🎮</span>
 '
 tldr: 'Ben learns Javascript by making a game.'
 type: 'work'

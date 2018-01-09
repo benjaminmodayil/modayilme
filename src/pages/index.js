@@ -80,9 +80,8 @@ class IndexPage extends React.Component {
               don't feel shy and <Link to="/contact">Contact Me</Link>
             </p>
             <p className="home__big-text margin-top--48">
-              If you’re looking for work
-              <span role="img" /> examples you can check out one of the studies linked
-              below:
+              If you’re looking for work examples you can check out one of the studies
+              linked below:
             </p>
 
             <div className="latest-updates margin-top--96">

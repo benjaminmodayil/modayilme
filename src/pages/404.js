@@ -6,7 +6,7 @@ const NotFoundPage = () => (
   <div className="four-oh-four wrapper wrapper--medium margin-center section-padding--extra-heavy color--white u-text-align--center">
     <h1 className="font-size--56 margin-top-and-bottom--32">
       Whoopsy
-      <span role="img" aria-label="shrugging emoji">
+      <span role="img" aria-label="shrugging emoji" alt="shrugging emoji">
         🤷
       </span>
     </h1>

@@ -1,7 +1,9 @@
 ---
 layout: blog
 type: blog
-title: 'New Year, New Me'
+title: 'New Year, New Me 
+<span role="img" aria-label="" alt="">💁</span>
+'
 date: "2018-01-08T20:16:04Z"
 path: "/blog/new-year-new-me"
 tldr: "Obligatory New Year's Resolution post."

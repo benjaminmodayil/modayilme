@@ -2,7 +2,7 @@
 layout: blog
 path: '/blog/first-post'
 title: 'Welcome 
-<span role="img" aria-label="">👋</span>
+<span role="img" aria-label="" alt="">👋</span>
 '
 date: "2017-10-11T21:34:10Z"
 tldr: 'Welcome to the new site'

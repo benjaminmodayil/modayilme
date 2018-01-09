@@ -2,7 +2,7 @@
 layout: blog
 type: blog
 title: 'A New Way ToDo 
-<span role="img" aria-label="">✅</span>
+<span role="img" aria-label="" alt="">✅</span>
 '
 date: "2016-10-13T21:34:10Z"
 path: "/blog/a-new-way-todo"

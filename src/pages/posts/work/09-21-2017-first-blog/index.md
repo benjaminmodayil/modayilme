@@ -2,7 +2,7 @@
 layout: work
 path: '/work/how-i-made-my-site'
 title: 'modayil.me 
-<span role="img" aria-label="">🛠️</span>
+<span role="img" aria-label="" alt="">🛠️</span>
 '
 tldr: 'Learn how I built my site'
 description: 'Ben needed a new online living space. So in turn, he created this site.'

@@ -2,7 +2,7 @@
 layout: work
 path: '/work/ground-rules'
 title: 'Ground Rules 
-<span role="img" aria-label="">☕</span>
+<span role="img" aria-label="" alt="">☕</span>
 '
 description: 'Ground Rules is a site built by the Viget Interns of 2017.
 Our goal was show others how to make better coffee using the tools they already had at our disposal.'

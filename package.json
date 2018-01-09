@@ -23,7 +23,9 @@
     "gatsby-transformer-remark": "^1.7.9",
     "react-inlinesvg": "^0.7.4",
     "rss-to-json": "^1.0.3",
-    "smoothscroll-polyfill": "^0.4.0"
+    "smoothscroll-polyfill": "^0.4.0",
+    "typeface-merriweather": "0.0.45",
+    "typeface-raleway": "0.0.45"
   },
   "keywords": [
     "gatsby"
