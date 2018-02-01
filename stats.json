@@ -37,16 +37,16 @@
       "component---src-layouts-index-js-ff6f213d63bbe8afe27a.js.map"
     ],
     "path---index": [
-      "path---index-48395af0fae46da83842.js",
-      "path---index-48395af0fae46da83842.js.map"
+      "path---index-9b69094b94ee369233a5.js",
+      "path---index-9b69094b94ee369233a5.js.map"
     ],
     "path---work-lighthouse-hill-preview": [
       "path---work-lighthouse-hill-preview-09ec77cb7ccd253e0134.js",
       "path---work-lighthouse-hill-preview-09ec77cb7ccd253e0134.js.map"
     ],
     "path---blog-new-year-new-me": [
-      "path---blog-new-year-new-me-eaae1147f70bdd41606d.js",
-      "path---blog-new-year-new-me-eaae1147f70bdd41606d.js.map"
+      "path---blog-new-year-new-me-b38327c655e59a686386.js",
+      "path---blog-new-year-new-me-b38327c655e59a686386.js.map"
     ],
     "component---src-pages-404-js": [
       "component---src-pages-404-js-a888330a06880a29ca80.js",
@@ -72,14 +72,18 @@
       "component---src-templates-post-js-4404fec064b243af3178.js",
       "component---src-templates-post-js-4404fec064b243af3178.js.map"
     ],
+    "path---blog-updatelog-001": [
+      "path---blog-updatelog-001-662e19967b0c3c8a5ce5.js",
+      "path---blog-updatelog-001-662e19967b0c3c8a5ce5.js.map"
+    ],
     "path---offline-plugin-app-shell-fallback": [
       "path---offline-plugin-app-shell-fallback-a0e39f21c11f6a62c5ab.js",
       "path---offline-plugin-app-shell-fallback-a0e39f21c11f6a62c5ab.js.map"
     ],
     "app": [
-      "app-924a7235bfc0196866c7.js",
+      "app-22054a1b3aec5a307837.js",
       "build-js-styles.css",
-      "app-924a7235bfc0196866c7.js.map",
+      "app-22054a1b3aec5a307837.js.map",
       "build-js-styles.css.map"
     ],
     "path---work-how-i-made-my-site": [
