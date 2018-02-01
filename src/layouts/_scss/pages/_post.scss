@@ -4,7 +4,7 @@
   position: relative;
 
   .h-1 {
-    @include fluid-type(601px, 1440px, 54px, 96px);
+    @include fluid-type(601px, 1440px, 48px, 56px);
 
     font-weight: 600;
     line-height: 1.2;
@@ -49,9 +49,9 @@
   }
 
   h1 {
-    margin-top: 0;
-
     @include fluid-type(600px, 1400px, 56px, 64px);
+
+    margin-top: 0;
   }
 
   h2 {
@@ -64,6 +64,8 @@
 
   h4 {
     @include fluid-type(600px, 1400px, 24px, 28px);
+
+    padding-left: 10px;
   }
 
   small,

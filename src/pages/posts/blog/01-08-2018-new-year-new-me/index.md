@@ -20,7 +20,7 @@ I’ve realized my triggers for eating are based around television and I’m hop
 
 Something that has been a thorn in my side for the longest time is my mental health. I've always been paranoid about others' opinions and, not related to the former, I've tend to have long periods of sadness. It got to a crippling point this past summer where I found myself in tears most nights.
 
-Part of me thinks it was because I was missing out on some key communities due to me being in another state for 4 to 5 months. My friend Don explained the idea of key communities to me best. He talked how people tend to have three communities: 1. Family, 2. Work, and 3. Just another outlet (paraphrasing really hard right now). During the summer, I had only a work community and found myself struggling to fill in the gaps. I tried by attending meet ups and different churches, but it was impossible to build a sense of community when you knew you were only there short-term.
+I think it got to a high point because I had a lack of some "key communities" due to my temporary location in another state for 4 to 5 months. My friend Don explained the idea of key communities to me best. He talked how people tend to have three communities: 1. Family, 2. Work, and 3. Just another outlet (paraphrasing really hard right now). During the summer, I had only a work community and found myself struggling to fill in the gaps. I tried by attending meet ups and different churches, but it was impossible to build a sense of community when you knew you were only there short-term.
 
 3. **Get back in the Word.**
 
