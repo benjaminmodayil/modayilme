@@ -1,7 +1,7 @@
 ---
 layout: blog
 type: blog
-title: 'Update Log 001'
+title: 'Update Log 001 📂'
 date: "2018-01-31T20:49:25Z"
 path: '/blog/updatelog/001'
 tldr: 'Ben does a stand up.'
