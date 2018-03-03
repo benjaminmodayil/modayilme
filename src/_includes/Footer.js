@@ -4,7 +4,7 @@ import Link from 'gatsby-link'
 import IconArchive from '../assets/icons/IconArchive.js'
 import IconWork from '../assets/icons/IconWork.js'
 import IconContact from '../assets/icons/IconContact.js'
-// import IconLinkedIn from '../assets/icons/IconLinkedIn.js'
+import IconLinkedIn from '../assets/icons/IconLinkedin.js'
 import IconLink from '../assets/icons/IconLink.js'
 import IconCodepen from '../assets/icons/IconCodepen.js'
 import IconMobile from '../assets/icons/home-icons/IconMobile.js'
@@ -52,6 +52,7 @@ class Footer extends Component {
                   </li>
                   <li className="margin-bottom--16">
                     <a href="https://www.linkedin.com/in/benjamin-modayil">
+                      <IconLinkedIn />
                       <span>LinkedIn</span>
                     </a>
                   </li>
@@ -66,4 +67,3 @@ class Footer extends Component {
 }
 
 export default Footer
-// <IconLinkedIn />
