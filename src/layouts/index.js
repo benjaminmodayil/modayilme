@@ -4,7 +4,6 @@ import Link from 'gatsby-link'
 import Helmet from 'react-helmet'
 import Nav from '../_includes/Nav.js'
 import Footer from '../_includes/Footer.js'
-// import ColorTheme from '../components/ColorTheme.js'
 
 import 'typeface-merriweather'
 import 'typeface-raleway'
