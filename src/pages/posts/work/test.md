@@ -4,7 +4,6 @@ type: work
 title: Test
 tldr: Test
 imageNote: Test
-svgName: Test
 description: Test
 website: Test
 headerColor: Test
@@ -55,7 +54,9 @@ The examples are not exact correlations, but I think it’s agreeable that the s
 
 To begin, Megan, my mentor had me plot out the different types of pages to their corresponding Section types in Craft’s backend. And then figure out all corresponding fields on a page to a field type in Craft.
 
-![](/static/assets/img_0392.jpg)
+![fuck](/assets/img0392.jpg "TEST TEST")
+
+![Listing of the MANY coded sites I've made](./handcrafted-folders.png "Directory of many portfolio attempts")
 
 \[image:1BAC0819-3C47-409B-B2FB-A73CD9C4239B-86438-000091BAA2C9AE15/IMG_0392.jpg]
 (The Homepage was plotted as a Craft Single)

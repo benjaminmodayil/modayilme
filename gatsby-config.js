@@ -18,6 +18,13 @@ module.exports = {
         name: `pages`
       }
     },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        path: `${__dirname}/static/assets`,
+        name: `img`
+      }
+    },
     `gatsby-plugin-twitter`,
     `gatsby-transformer-remark`,
     {

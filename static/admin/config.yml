@@ -3,6 +3,7 @@ backend:
   repo: benjaminmodayil/modayilme
 
 media_folder: static/assets
+media_folder: /assets
 
 publish_mode: editorial_workflow
 

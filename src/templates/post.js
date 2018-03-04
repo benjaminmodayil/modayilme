@@ -12,6 +12,7 @@ import IconLink from '../assets/icons/IconLink.js'
 export default function Template({ data, pathContext }, props) {
   const { markdownRemark: post } = data
 
+  if (!post.data) return null
   const { prev, next } = pathContext
 
   return (
