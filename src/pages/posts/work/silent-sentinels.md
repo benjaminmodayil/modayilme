@@ -1,0 +1,150 @@
+---
+layout: work
+type: work
+title: Silent Sentinels
+tldr: A Craft CMS project.
+description: >-
+  To learn Craft and modularizing Javascript practices as a part of Viget’s
+  apprenticeship program.
+headerColor: '#0b5166'
+metaBackground: '#F5F5F5'
+linkColor: '#372e4a'
+textColor: '#000000'
+textBackground: '#F2F2F2'
+date: 2018-03-04T20:21:29.623Z
+path: /work/silent-sentinels
+---
+I’ve had a very light experience with CMSs in the past. For one of my classes we worked with creating Wordpress themes. There wasn't any intense logic. We just made blog posts editable, with an index page of posts, and all within a custom theme. The extent of each Wordpress setup varied to each person’s interest, but this primarily was it. Albeit being a small project, what annoyed me about the templating structure within WordPress was the syntax involved:
+
+_Random post loop syntax from Wordpress Codex_
+
+```php
+  <?php while (have_posts()) : the_post(); ?>
+     <div class="post">
+      <h2 id="post-<?php the_ID(); ?>">
+<a href="<?php the_permalink() ?>" rel="bookmark" title="Permanent Link to <?php the_title_attribute(); ?>">
+<?php the_title(); ?></a></h2>
+   <small>
+     <?php the_time('F jS, Y') ?> 
+        <!-- by <?php the_author() ?> -->
+   </small>
+ </div>
+<?php endwhile; ?>
+```
+
+Learning the above hard to read Wordpress template code can prepare you for anything. But if you’re looking for the best developer experience, it’s definitely Craft. Just check this basic loop below.
+
+_Entry loop (Craft uses ‘entries’ instead of usual ‘posts’ syntax from Craft documentation_
+
+```html
+{% for entry in craft.entries.section('blog').find() %}
+    <article>
+        <h2><a href="{{ entry.url }}">{{ entry.title }}</a></h2>
+        {{ entry.body }}
+        <p>Written by {{ entry.author }} on {{ entry.postDate|date('M d, Y') }}</p>
+    </article>
+{% endfor %}
+```
+
+The examples are not exact correlations, but I think it’s agreeable that the second TWIG syntax that Craft uses is easier to digest.
+
+One of the highlights of working with Craft is using Twig. According to its website, Twig is _“like an alternate syntax for PHP”_. Personally, Twig definitely reads better than straight-up PHP like the above examples demonstrate.
+
+## The Setup
+
+This Craft project was part of Viget’s apprenticeship program in which I was their front-end development apprentice for 10 weeks. The project was done with the goal of learning [Craft CMS](craftcms.com) and making sure I was coding with web standards in mind.
+
+### Before the code
+
+To begin my mentor had me plot out the different types of pages to their corresponding Section types in Craft’s backend. And then figure out all corresponding fields on a page to a field type in Craft. Here are some pictures regarding that process:
+
+![Craft Single](/assets/c-single.jpg)
+
+(The Homepage was plotted as a Craft Single)
+
+![Craft Channel](/assets/c-channel.jpg)
+
+(The Sentinel Bios page was plotted as a Craft Channel)
+
+![Craft Structure](/assets/c-structure.jpg)
+
+(The Sentinel Timeline pages were plotted as a Craft Structure)
+
+After figuring out the different Craft section types, I proceeded to spend some time understanding Craft.
+
+## Making sense of Craft
+
+Every CMS describes page and content types in different ways, Craft is not different, but personally, I found understanding Craft’s terminology easier than other systems. Especially since it abstracts the complicatedness of pure PHP with Twig.
+
+In Craft, **sections** define containers for your content. Editable content is defined in Craft as **entries**.
+
+Craft’s section types are: 
+
+* Singles: “one-off” types of content (about page or a homepage)
+* Channels: similar content like a blog 
+* Structures: more complex content 
+
+Using Craft toggles to dictate alternate versions of things
+
+* show option in craft,
+* then  show correlation in code
+
+
+
+#### K.I.S.S. and D.R.Y.
+
+Being used to Jekyll templating and the storing of partials, it took me awhile to get used to doing these kind of things with Craft/Twig. Eventually, separating different blocks of content with their specific CMS logic made sense. Here's short example of a matrix block in Craft that was separated to a partial:
+
+```twig
+{% switch block.backgroundPosition %}
+  {% case 'left' %}
+    {% set backgroundPosition = 'background__img--left' %}
+  {% case 'right' %}
+    {% set backgroundPosition = 'background__img--right' %}
+  {% case 'center' %}
+    {% set backgroundPosition = 'background__img--center' %}
+{% endswitch %}
+
+<section class="timeline__block quote-image">
+  <div class="timeline__block__inner wrapper section-padding">
+    <blockquote>
+      <span class="blockquote-leads">
+        {{ block.leadIn }}
+```
+Above you can see the logic that's hooked up with the CMS. If the user clicks one of the below buttons... 
+
+
+
+... then the `switch` logic takes affect and applies a class to a line of code below (unseen in example).
+
+Also a late addition to the project was the use of macros to clean image handling better. I was creating different image sizes for different viewports that it got to a point where I needed to separate the logic to a macro in Craft, which is like a reusable function. Below is a macro for creating a picture source in a `<picture>` element.
+
+```twig
+  {% macro pictureSource(image, sizeObj, minOrMax, media) %}
+    <source srcset="{{ image.first().getUrl(sizeObj) }}"
+      media="({{ minOrMax }}-width: {{ media }}px)"
+    >
+  {% endmacro %}
+```
+
+- - -
+
+## Accessibility
+
+Nav, escape when locked
+Making the site 
+
+## Javascript
+
+The use of Intersection Observer API + Smoothscroll Polyfill
+
+As this was a learning project, I took a leap to learn two rad new things that I’ll be incorporating into projects in the future.
+
+### Intersection Observer API
+
+Or as I like to call it, the IO-API. I’m trying very terribly hard to coin it that way. So far only I am the only sayer. 
+<span role="img" aria-label="dunno" alt="dunno">¯\_(ツ)\_/¯ </span>
+
+The IO-API serves as a new way for the  browser to detect when DOM elements are currently within the viewport and even to a certain threshold/percentage it is in.  It’s pretty nifty using the IO-API. And it’s being used online for a ton of things, namely lazy-loading assets when they’re actually needed plus scroll-library interactions that you might have used an complex library for something like adding a class to something when on screen. Then maybe taking a crack at the Intersection Observer API might be for you. It’s not perfect, not great for all use cases, and at the moment requires a polyfill, but it fulfills a performance & simplicity need of viewport detection that wasn’t as natively* there before. I’ll list some 
+
+/Sidenote: Want to hear how complex the viewport is? Take a listen to this short video by the Chrome Developers (todo: link)/
