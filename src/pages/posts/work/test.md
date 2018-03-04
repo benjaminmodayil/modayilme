@@ -15,4 +15,4 @@ textBackground: '#f5f5f5'
 date: 2018-03-04T18:44:41.899Z
 path: /work/test
 ---
-![](/assets/bcbkm6i.jpg)
+![null](/assets/bcbkm6i.jpg)
