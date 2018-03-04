@@ -29,16 +29,15 @@ collections:
       - { name: type, label: Type, default: "work"}
       - { name: title, label: Title}
       - { name: tldr, label: TL;DR}
-      - { name: imageNote, label: Image Note}
-      - { name: svgName, label: SVG File Name}
+      - { name: imageNote, label: Image Note, required: false}
+      - { name: svgName, label: SVG File Name, required: false}
       - { name: description, label: Description}
-      - { name: website, label: Website}
-      - { name: headerColor, label: Header BG Color}
-      - { name: metaBackground, label: Meta BG Color}
-      - { name: linkColor, label: Link Color}
-      - { name: textColor, label: Text Color}
-      - { name: textBackground, label: Post BG Color}
-      - { name: website, label: Website}
+      - { name: headerColor, label: Header BG Color, required: false}
+      - { name: metaBackground, label: Meta BG Color, required: false}
+      - { name: linkColor, label: Link Color, required: false}
+      - { name: textColor, label: Text Color, required: false}
+      - { name: textBackground, label: Post BG Color, required: false}
+      - { name: website, label: Website, required: false}
       - { name: date, label: Created At, widget: date }
       - { name: path, label: path, widget: string, default: "/work" }
       - { name: body, label: Post, widget: markdown}
