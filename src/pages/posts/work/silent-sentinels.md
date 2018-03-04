@@ -130,8 +130,8 @@ Also a late addition to the project was the use of macros to clean image handlin
 
 ## Accessibility
 
-Accessibility was something new that I never intentionally thought of when going through a project. The only accessibility practice that I knew before doing this project pertained to writing text in \`alt\` attributes. This project I focused on the interactions a user would have with navigating the site and made it keyboard accessible with JS and some HTML \`tab-index\` attributes. \
-\
+Accessibility was something new that I never intentionally thought of when going through a project. The only accessibility practice that I knew before doing this project pertained to writing text in \`alt\` attributes. This project I focused on the interactions a user would have with navigating the site and made it keyboard accessible with JS and some HTML \`tab-index\` attributes. 
+
 The navigation became an issue for me for tablet to mobile sizes as it was triggered through a hamburger menu. The specific issue pertained to keeping the tab focus on the items of the nav menu despite the whole site being present on the DOM. **ex: **_User tabs and opens the fullscreen navigation but as they keep tabbing, the focused element is not visible as it's on an element not visible and behind the navigation._
 
 The solve was to trap focus within the navigation, but provide easy exits with the keyboard.
@@ -140,17 +140,20 @@ The solve was to trap focus within the navigation, but provide easy exits with t
 
 ## Learning new things
 
-The use of Intersection Observer API + Smoothscroll Polyfill
-
-As this was a learning project, I took a leap and learned two rad new things that I’ll be incorporating into projects in the future.
+As this was a learning project, I took a leap and learned two rad new things that I’ll be incorporating into projects in the future. The use of Intersection Observer API + Smoothscroll.
 
 ### Intersection Observer API
 
 Or as I like to call it, the IO-API. I’m trying very terribly hard to coin it that way. So far only I am the only sayer. 
 <span role="img" aria-label="dunno" alt="dunno">¯\_(ツ)\_/¯ </span>
 
-The IO-API serves as a new way for the  browser to detect when DOM elements are currently within the viewport and even to a certain threshold/percentage it is in.  It’s pretty nifty using the IO-API. And it’s being used online for a ton of things, namely lazy-loading assets when they’re actually needed plus scroll-library interactions that you might have used an complex library for something like adding a class to something when on screen. Then maybe taking a crack at the Intersection Observer API might be for you. It’s not perfect, not great for all use cases, and at the moment requires a polyfill, but it fulfills a performance & simplicity need of viewport detection that wasn’t as natively* there before. I’ll list some 
+The IO-API serves as a new way for the  browser to detect when DOM elements are currently within the viewport and even to a certain threshold/percentage it is in.  It’s pretty nifty using the IO-API. And it’s being used online for a variety of things, namely lazy-loading assets when they’re actually needed plus scroll-library interactions. It’s not perfect, not great for all use cases, and at the moment requires a [polyfill](https://github.com/w3c/IntersectionObserver/tree/master/polyfill), but it fulfills a performance & simplicity need of viewport detection that wasn’t as natively* there before.
 
-/Sidenote: Want to hear how complex the viewport is? Take a listen to this short video by the Chrome Developers (todo: link)/
+Here's a small presentation that I gave on the [IO-API](https://drive.google.com/file/d/1fN6Q-MRecDrYLFtDYMt9bCQZhV507RmO/view?usp=sharing) for some of the Front-End Developers at Viget.
 
-### Smoothscroll
+I used the IO-API in this project to add highlight classes on the landing page's nav items as one of the corresponding sections appeared on the screen. I also used the following smoothscroll polyfill to get smooth scrolls when clicking on one of those nav items.
+
+// GIF HERE
+
+
+
