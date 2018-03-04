@@ -76,6 +76,7 @@ module.exports = {
         trackingId: 'UA-90258518-1',
         anonymize: true
       }
-    }
+    },
+    `gatsby-plugin-netlify-cms`
   ]
 }
