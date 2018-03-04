@@ -4,6 +4,8 @@ backend:
 
 media_folder: static/assets
 
+publish_mode: editorial_workflow
+
 collections:
   - name: blog
     label: Posts
