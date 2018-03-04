@@ -89,8 +89,6 @@ Using Craft toggles to dictate alternate versions of things
 * show option in craft,
 * then  show correlation in code
 
-
-
 #### K.I.S.S. and D.R.Y.
 
 Being used to Jekyll templating and the storing of partials, it took me awhile to get used to doing these kind of things with Craft/Twig. Eventually, separating different blocks of content with their specific CMS logic made sense. Here's short example of a matrix block in Craft that was separated to a partial:
@@ -111,13 +109,14 @@ Being used to Jekyll templating and the storing of partials, it took me awhile t
       <span class="blockquote-leads">
         {{ block.leadIn }}
 ```
+
 Above you can see the logic that's hooked up with the CMS. If the user clicks one of the below buttons... 
 
-
+![CMS toggle to select background image](/assets/ss-bg-pos.png)
 
 ... then the `switch` logic takes affect and applies a class to a line of code below (unseen in example).
 
-Also a late addition to the project was the use of macros to clean image handling better. I was creating different image sizes for different viewports that it got to a point where I needed to separate the logic to a macro in Craft, which is like a reusable function. Below is a macro for creating a picture source in a `<picture>` element.
+Also a late addition to the project was the use of macros to clean image handling better. I was creating so many image sizes for different viewports that it got to a point where I needed to separate the logic to a macro in Craft, which is like a reusable function. Below is a macro for creating a source in a `<picture>` element.
 
 ```twig
   {% macro pictureSource(image, sizeObj, minOrMax, media) %}
@@ -127,18 +126,23 @@ Also a late addition to the project was the use of macros to clean image handlin
   {% endmacro %}
 ```
 
-- - -
+
 
 ## Accessibility
 
-Nav, escape when locked
-Making the site 
+Accessibility was something new that I never intentionally thought of when going through a project. The only accessibility practice that I knew before doing this project pertained to writing text in \`alt\` attributes. This project I focused on the interactions a user would have with navigating the site and made it keyboard accessible with JS and some HTML \`tab-index\` attributes. \
+\
+The navigation became an issue for me for tablet to mobile sizes as it was triggered through a hamburger menu. The specific issue pertained to keeping the tab focus on the items of the nav menu despite the whole site being present on the DOM. **ex: **_User tabs and opens the fullscreen navigation but as they keep tabbing, the focused element is not visible as it's on an element not visible and behind the navigation._
 
-## Javascript
+The solve was to trap focus within the navigation, but provide easy exits with the keyboard.
+
+![Demonstration of keeping the focus locked in the menu.](/assets/ss-a11y-nav.gif)
+
+## Learning new things
 
 The use of Intersection Observer API + Smoothscroll Polyfill
 
-As this was a learning project, I took a leap to learn two rad new things that I’ll be incorporating into projects in the future.
+As this was a learning project, I took a leap and learned two rad new things that I’ll be incorporating into projects in the future.
 
 ### Intersection Observer API
 
@@ -148,3 +152,5 @@ Or as I like to call it, the IO-API. I’m trying very terribly hard to coin it 
 The IO-API serves as a new way for the  browser to detect when DOM elements are currently within the viewport and even to a certain threshold/percentage it is in.  It’s pretty nifty using the IO-API. And it’s being used online for a ton of things, namely lazy-loading assets when they’re actually needed plus scroll-library interactions that you might have used an complex library for something like adding a class to something when on screen. Then maybe taking a crack at the Intersection Observer API might be for you. It’s not perfect, not great for all use cases, and at the moment requires a polyfill, but it fulfills a performance & simplicity need of viewport detection that wasn’t as natively* there before. I’ll list some 
 
 /Sidenote: Want to hear how complex the viewport is? Take a listen to this short video by the Chrome Developers (todo: link)/
+
+### Smoothscroll
