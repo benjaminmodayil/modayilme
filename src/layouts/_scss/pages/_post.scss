@@ -320,6 +320,11 @@ blockquote {
   width: calc(15% - 20px);
 }
 
+.twitter-tweet {
+  margin-left: auto;
+  margin-right: auto;
+}
+
 @include breakpoint(min-width 691px) {
   .post__related-articles {
     flex-direction: row;
