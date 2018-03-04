@@ -9,6 +9,7 @@ import 'typeface-merriweather'
 import 'typeface-raleway'
 
 import './index.scss'
+
 class TemplateWrapper extends React.Component {
   renderNav = () => {
     if (this.props.location.pathname != '/') {
@@ -17,6 +18,8 @@ class TemplateWrapper extends React.Component {
   }
 
   render() {
+    console.log(this.props.location)
+
     return (
       <div className="site__container">
         <Helmet

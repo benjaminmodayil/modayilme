@@ -18,6 +18,7 @@ module.exports = {
         name: `pages`
       }
     },
+    `gatsby-plugin-twitter`,
     `gatsby-transformer-remark`,
     {
       resolve: `gatsby-transformer-remark`,
