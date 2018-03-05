@@ -15,7 +15,7 @@ website: 'https://github.com/benjaminmodayil/silent-sentinels-craft'
 date: 2018-03-04T20:21:29.623Z
 path: /work/silent-sentinels
 ---
-_Sorry to say, but there is no live version of this project. If you wish to check this project out, feel free to _[_email me_](https://www.modayil.me/contact)_ and I'll spin something up behind a password lock._
+*Sorry to say, but there is no live version of this project. If you wish to check this project out, feel free to [email me](https://www.modayil.me/contact) and I'll spin something up behind a password lock.*
 
 I’ve had a very light experience with CMSs in the past. For one of my classes we worked with creating Wordpress themes. There wasn't any intense logic. We just made blog posts editable, with an index page of posts, and all within a custom theme. The extent of each Wordpress setup varied to each person’s interest, but this primarily was it. Albeit being a small project, what annoyed me about the templating structure within WordPress was the syntax involved:
 
@@ -156,11 +156,7 @@ I used the IO-API in this project to add highlight classes on the landing page's
 
 ![Navigation items are highlighted as a user scrolls the page.](/assets/ss-scroll.gif)
 
-
-
 I also used a smoothscroll polyfill to get smooth scrolls when clicking on one of those nav items. Here's a link to the implementation that I used: [SmoothScroll](http://iamdustan.com/smoothscroll/).
-
-
 
 ## Small Reflection
 
