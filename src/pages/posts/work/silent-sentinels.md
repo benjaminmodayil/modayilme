@@ -1,7 +1,7 @@
 ---
 layout: work
 type: work
-title: Silent Sentinels
+title: "Silent Sentinels  <span role=\"img\" aria-label=\"\" alt=\"\">\U0001F4AA</span>"
 tldr: A Craft CMS learning project.
 description: >-
   To learn Craft and modularizing Javascript practices as a part of Viget’s
