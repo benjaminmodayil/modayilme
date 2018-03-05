@@ -2,7 +2,7 @@
 layout: work
 type: work
 title: Silent Sentinels
-tldr: A Craft CMS project.
+tldr: A Craft CMS learning project.
 description: >-
   To learn Craft and modularizing Javascript practices as a part of Viget’s
   apprenticeship program.
@@ -126,8 +126,6 @@ Also a late addition to the project was the use of macros to clean image handlin
   {% endmacro %}
 ```
 
-
-
 ## Accessibility
 
 Accessibility was something new that I never intentionally thought of when going through a project. The only accessibility practice that I knew before doing this project pertained to writing text in \`alt\` attributes. This project I focused on the interactions a user would have with navigating the site and made it keyboard accessible with JS and some HTML \`tab-index\` attributes. 
@@ -138,7 +136,7 @@ The solve was to trap focus within the navigation, but provide easy exits with t
 
 ![Demonstration of keeping the focus locked in the menu.](/assets/ss-a11y-nav.gif)
 
-## Learning new things
+## Learning something new
 
 As this was a learning project, I took a leap and learned two rad new things that I’ll be incorporating into projects in the future. The use of Intersection Observer API + Smoothscroll.
 
@@ -151,9 +149,20 @@ The IO-API serves as a new way for the  browser to detect when DOM elements are 
 
 Here's a small presentation that I gave on the [IO-API](https://drive.google.com/file/d/1fN6Q-MRecDrYLFtDYMt9bCQZhV507RmO/view?usp=sharing) for some of the Front-End Developers at Viget.
 
-I used the IO-API in this project to add highlight classes on the landing page's nav items as one of the corresponding sections appeared on the screen. I also used the following smoothscroll polyfill to get smooth scrolls when clicking on one of those nav items.
+I used the IO-API in this project to add highlight classes on the landing page's nav items as one of the corresponding sections appeared on the screen.
 
-// GIF HERE
+![Navigation items are highlighted as a user scrolls the page.](/assets/ss-scroll.gif)
 
 
 
+I also used a smoothscroll polyfill to get smooth scrolls when clicking on one of those nav items. Here's a link to the implementation that I used: [SmoothScroll](http://iamdustan.com/smoothscroll/).
+
+
+
+## Small Reflection
+
+I noticed a few things doing this particular project. Most notably was the ease of Craft. Craft gives you the ability to write things from an approachable Twig focus. So you don't need to know much, if any, PHP. Because of this, Craft is more approachable to front-end developers that might be scared about messing with Wordpress. Other than a few Google queries whenever issues come up (as they do on any new project), building a site with Craft is easier than ever, and holds true with the latest Craft 3 release.
+
+One thing that can become an issue to using Craft is licensing. Unlike Wordpress, Craft requires you purchase a Client or Pro license for $199 or $299 respectively. Unless you're a developer and coding a site for someone other than yourself, there's no way around this. This might make it difficult for small time clients to justify paying for and actually leads into another issue: justifying to your client why Craft is a better option than Wordpress for a CMS. But I rather not reinvent the wheel and things that have already been said. If you're interested in learning about some differences and reasons to check out Craft, check out this article from [Viget](https://www.viget.com/articles/craft-vs.-wordpress-the-good-the-bad-and-the-ugly-data/).
+
+All in all, this project was fun and tricky to build as there were a TON of background images and different problems to solve with Craft. Hopefully, the future of CMS development looks more like Craft and with new and upcoming things like [Wordpress Gutenberg](https://wordpress.org/gutenberg/), it might.
