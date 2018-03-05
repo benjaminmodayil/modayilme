@@ -21,7 +21,7 @@ I’ve had a very light experience with CMSs in the past. For one of my classes 
 
 _Random post loop syntax from Wordpress Codex_
 
-```php
+```twig
   <?php while (have_posts()) : the_post(); ?>
      <div class="post">
       <h2 id="post-<?php the_ID(); ?>">
@@ -39,7 +39,7 @@ Learning the above hard to read Wordpress template code can prepare you for anyt
 
 _Entry loop (Craft uses ‘entries’ instead of usual ‘posts’ syntax from Craft documentation_
 
-```html
+```twig
 {% for entry in craft.entries.section('blog').find() %}
     <article>
         <h2><a href="{{ entry.url }}">{{ entry.title }}</a></h2>
