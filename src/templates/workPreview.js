@@ -10,6 +10,8 @@ import * as invert from '../utils/invertColor'
 import IconArrowLeft from '../assets/post-assets/IconArrowLeft'
 import IconArrowRight from '../assets/post-assets/IconArrowRight'
 
+import '../layouts/_scss/vendor/prism.css'
+
 class Template extends React.Component {
   render() {
     const { markdownRemark: post } = this.props.data

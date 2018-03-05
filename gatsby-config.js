@@ -25,7 +25,6 @@ module.exports = {
         name: `img`
       }
     },
-    `gatsby-plugin-twitter`,
     `gatsby-transformer-remark`,
     {
       resolve: `gatsby-transformer-remark`,
@@ -49,7 +48,21 @@ module.exports = {
         ]
       }
     },
+    {
+      resolve: `gatsby-transformer-remark`,
+      options: {
+        plugins: [
+          {
+            resolve: `gatsby-remark-prismjs`,
+            options: {
+              classPrefix: 'language-'
+            }
+          }
+        ]
+      }
+    },
     `gatsby-plugin-catch-links`,
+    `gatsby-plugin-twitter`,
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
