@@ -138,7 +138,11 @@ class DetailsList extends Component {
               </summary>
               <article>
                 <ul className="details-container__inner__list">
-                  <li>Silent Sentinels (ask to see)</li>
+                  <li>
+                    <Link className="link color--link" to="/work/silent-sentinels">
+                      Silent Sentinels
+                    </Link>
+                  </li>
                 </ul>
               </article>
             </details>
