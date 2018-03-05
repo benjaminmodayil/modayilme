@@ -7,8 +7,8 @@ description: >-
   To learn Craft and modularizing Javascript practices as a part of Viget’s
   apprenticeship program.
 headerColor: '#0b5166'
-metaBackground: '#F5F5F5'
-linkColor: '#372e4a'
+metaBackground: '#372e4a'
+linkColor: '#F85303'
 textColor: '#000000'
 textBackground: '#F2F2F2'
 website: 'https://github.com/benjaminmodayil/silent-sentinels-craft'
