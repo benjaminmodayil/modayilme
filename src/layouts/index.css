@@ -1,0 +1,17 @@
+@import 'tailwindcss/preflight';
+
+@import 'tailwindcss/components';
+
+@import 'tailwindcss/utilities';
+
+@import 'css/setup/_global.css';
+@import 'css/setup/_normalize.css';
+@import 'css/setup/_typography.css';
+
+@import 'css/components/_Navigation.css';
+
+body {
+  h1 {
+    @apply .text-red;
+  }
+}

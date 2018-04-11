@@ -10,7 +10,6 @@ module.exports = {
   plugins: [
     `gatsby-plugin-react-next`,
     `gatsby-plugin-react-helmet`,
-    `gatsby-plugin-sass`,
     {
       resolve: `gatsby-source-filesystem`,
       options: {

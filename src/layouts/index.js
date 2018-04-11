@@ -2,24 +2,21 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import Link from 'gatsby-link'
 import Helmet from 'react-helmet'
-import Nav from '../_includes/Nav.js'
-import Footer from '../_includes/Footer.js'
+import Navigation from '../components/Navigation.js'
 
 import 'typeface-merriweather'
 import 'typeface-raleway'
 
-import './index.scss'
+import './generated.css'
 
 class TemplateWrapper extends React.Component {
   renderNav = () => {
-    if (this.props.location.pathname != '/') {
-      return <Nav />
-    }
+    // if (this.props.location.pathname != '/') {
+    //   return <Nav />
+    // }
   }
 
   render() {
-    console.log(this.props.location)
-
     return (
       <div className="site__container">
         <Helmet
@@ -73,12 +70,8 @@ class TemplateWrapper extends React.Component {
         >
           <html lang="en" />
         </Helmet>
-
-        <div className="site__inner">
-          {this.renderNav()}
-          {this.props.children()}
-          <Footer />
-        </div>
+        <Navigation />
+        <div className="site__inner">{this.props.children()}</div>
       </div>
     )
   }

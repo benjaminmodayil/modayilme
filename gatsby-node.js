@@ -34,14 +34,13 @@ exports.createPages = ({ boundActionCreators, graphql }) => {
 
     posts.forEach(({ node }, index) => {
       const checkType = () => {
-        if (node.frontmatter.layout === 'post') {
-          return postTemplate
-        } else if (node.frontmatter.layout === 'work') {
-          console.log('workTemplate')
-          return workPreviewTemplate
-        } else {
-          console.log('postTemplate')
-          return postTemplate
+        switch (node.frontmatter.layout) {
+          case 'post':
+            return postTemplate
+          case 'work':
+            return workPreviewTemplate
+          default:
+            return postTemplate
         }
       }
 

@@ -8,7 +8,7 @@ import IconArrowLeft from '../assets/post-assets/IconArrowLeft'
 import IconArrowRight from '../assets/post-assets/IconArrowRight'
 
 import IconLink from '../assets/icons/IconLink.js'
-import '../layouts/_scss/vendor/prism.css'
+// import '../layouts/_scss/vendor/prism.css'
 
 export default function Template({ data, pathContext }, props) {
   const { markdownRemark: post } = data

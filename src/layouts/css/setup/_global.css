@@ -1,0 +1,13 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  @apply .text-black;
+  font-family: 'Open Sans', sans-serif;
+  max-width: 100%;
+}
+
+ul {
+  padding-left: 0;
+}
