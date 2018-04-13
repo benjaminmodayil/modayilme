@@ -1,13 +1,44 @@
+/* sm: 576px; */
+/* md: 768px; */
+/* lg: 992px; */
+/* xl: 1200px; */
+
 * {
   box-sizing: border-box;
 }
 
 body {
   @apply .text-black;
-  font-family: 'Open Sans', sans-serif;
+  font-family: 'Raleway', sans-serif;
   max-width: 100%;
 }
 
 ul {
   padding-left: 0;
+}
+
+.screenreader-only {
+  position: absolute;
+  left: -10000px;
+  top: auto;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+}
+
+.link--special {
+  @apply .p-1 .font-semibold .text-white;
+  @apply .italic .rounded .no-underline;
+}
+
+.bg-thinkful {
+  background-color: rgba(30, 39, 54, 1);
+}
+
+.bg-cedarville {
+  background-color: rgba(255, 170, 97, 1);
+}
+
+.bg-viget {
+  background-color: rgba(0, 150, 189, 1);
 }

@@ -5,13 +5,12 @@ import Link from 'gatsby-link'
 import CodepenFeed from '../components/CodepenFeed'
 import ArticleLoop from '../components/ArticleLoop'
 
-// Icons
-import IconContactWithColor from '../assets/icons/IconContactWithColor.js'
-import IconWebSkills from '../assets/icons/IconWebSkills.js'
-import IconGithub from '../assets/icons/details-list/icon-github.svg'
-import IconTwitter from '../assets/icons/details-list/icon-twitter.svg'
-import IconInstagram from '../assets/icons/details-list/icon-instagram.svg'
-import IconLinkedin from '../assets/icons/details-list/icon-linkedin.svg'
+import Header from '../components/homepage/Header'
+import IntroSection from '../components/homepage/IntroSection'
+import WorkGrid from '../components/homepage/WorkGrid'
+import ArticleGrid from '../components/homepage/ArticleGrid'
+import CloserSection from '../components/homepage/CloserSection'
+import SkillsSection from '../components/homepage/SkillsSection'
 
 class IndexPage extends React.Component {
   // componentDidMount() {
@@ -24,20 +23,47 @@ class IndexPage extends React.Component {
 
   render() {
     const { data } = this.props
-    const allPosts = data.allMarkdownRemark.edges
-    const blogPosts = allPosts
+    const meta = data.site.siteMetadata.skillset.map((el, index) => (
+      <li
+        key={index}
+        className="text-red text-sm font-semibold uppercase w-1-4 flex justify-center px-2 md-px-4 my-4"
+      >
+        <span className="bg-white shadow-md p-2 rounded w-full text-center">{el}</span>
+      </li>
+    ))
+    const { edges } = data.allMarkdownRemark
+    const articles = edges
       .filter((i, index) => i.node.frontmatter.type == 'blog')
       .slice(0, 4)
-    const caseStudies = allPosts
-      .filter(i => i.node.frontmatter.type == 'work')
-      .slice(0, 4)
+    const workExamples = edges.filter(i => i.node.frontmatter.type == 'work').slice(0, 6)
 
     return (
-      <h1>Hi</h1>
+      <main className="relative min-h-screen pb-16 md-pb-64" role="main">
+        <div className="announcement announcement--animate bg-blue py-2 absolute z-0 w-full">
+          <p className="text-white text-center font-serif text-md">
+            <span className="italic mr-4 sans text-sm">Latest:</span>{' '}
+            <Link to="/writings/post" className="no-underline hover-underline text-white">
+              New Year Resolutions
+            </Link>
+          </p>
+        </div>
+
+        <Header />
+
+        <div className="home-info__container container xl-bg-white mx-auto py-16 px-4 lg-px-0">
+          <IntroSection />
+          <SkillsSection meta={meta} />
+          <WorkGrid items={workExamples} />
+          <ArticleGrid items={articles} />
+          <CloserSection />
+        </div>
+      </main>
+
       // <ArticleLoop data={data} articleArray={caseStudies} />
     )
   }
 }
+
 export default IndexPage
 
 export const indexBlogListingQuery = graphql`
@@ -57,10 +83,12 @@ export const indexBlogListingQuery = graphql`
     }
     site {
       siteMetadata {
-        twitter
-        instagram
-        linkedIn
-        github
+        skillset
+        social {
+          URL
+          title
+          svgURL
+        }
       }
     }
   }

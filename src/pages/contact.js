@@ -25,10 +25,10 @@ const Contact = () => (
 
       <form action="https://formspree.io/modayilme@gmail.com" method="POST">
         <label htmlFor="email">email</label>
-        <input type="email" name="_replyto" id="email" />
+        <input type="email" name="_replyto" id="email" required />
 
         <label htmlFor="message">message</label>
-        <textarea name="message" id="message" />
+        <textarea name="message" id="message" required />
         <input
           className="link --btn --bg-red --wide margin-top--32 wrapper wrapper--small"
           type="submit"

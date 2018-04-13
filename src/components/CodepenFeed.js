@@ -1,16 +1,20 @@
 import React, { Component } from 'react'
 
-import IconSkills from '../assets/icons/home-icons/IconCodepenBlackBg.js'
-
 class CodepenFeed extends Component {
   constructor(props) {
     super(props)
-    this.state = {}
+    this.state = {
+      isLoading: false
+    }
   }
 
   componentDidMount() {
     var codepenFeed = 'https://codepen.io/modayilme/public/feed'
     const entryPromise = fetch(codepenFeed)
+      .then(data => {
+        this.setState({ isLoading: true })
+        return data
+      })
       .then(data => data.text())
       .then(data => {
         let stringifiedData = JSON.parse(JSON.stringify({ data }))
@@ -38,7 +42,6 @@ class CodepenFeed extends Component {
           Codepens{' '}
           <span className="font-weight--light font-size--16">
             (links open on Codepen.io){' '}
-            <IconSkills className="icon-skills s-svg-adjust--down" />
           </span>
         </h2>
         <div className="cp-feed__cards">
@@ -113,7 +116,3 @@ class CodepenFeed extends Component {
 }
 
 export default CodepenFeed
-
-// # Specify the image processing steps right in the query
-// # Makes it trivial to update as your page's design changes.
-// ...GatsbyImageSharpResolutions
