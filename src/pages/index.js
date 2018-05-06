@@ -139,7 +139,7 @@ class IndexPage extends React.Component {
             <div className="home__section-three__row__col-left container--medium">
               <p className="home__medium-text color--black margin-bottom--32">
                 If you need a{' '}
-                <a href="./assets/resumemodayil.pdf">
+                <a href="./assets/resume.pdf">
                   {' '}
                   resume<span className="screenreader-only">(pdf)</span>
                 </a>{' '}
