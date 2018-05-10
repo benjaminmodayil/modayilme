@@ -140,11 +140,10 @@ class IndexPage extends React.Component {
               <p className="home__medium-text color--black margin-bottom--32">
                 If you need a{' '}
                 <a href="./assets/resume.pdf">
-                  {' '}
                   resume<span className="screenreader-only">(pdf)</span>
-                </a>{' '}
-                then just click on that keyword. Also feel free to check-out my{' '}
-                <a href="https://codepen.io/modayilme">Codepen</a> and below for more
+                </a>
+                then just click on that keyword. Also feel free to check-out my
+                <a href="https://codepen.io/modayilme"> Codepen</a> and below for more
                 examples of this things I like to learn.
               </p>
             </div>
