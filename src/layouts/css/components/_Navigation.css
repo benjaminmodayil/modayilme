@@ -1,0 +1,9 @@
+.global-nav {
+  a {
+    @apply .font-sans .text-lg .text-black;
+  }
+
+  .text {
+    @apply .ml-2;
+  }
+}

@@ -2,7 +2,7 @@ import React from 'react'
 import Helmet from 'react-helmet'
 import Link from 'gatsby-link'
 
-import WorkPostHeader from '../components/work/WorkPostHeader'
+// import WorkPostHeader from '../components/work/WorkPostHeader'
 import RelatedArticles from '../components/RelatedArticles.js'
 
 import * as invert from '../utils/invertColor'
@@ -10,7 +10,7 @@ import * as invert from '../utils/invertColor'
 import IconArrowLeft from '../assets/post-assets/IconArrowLeft'
 import IconArrowRight from '../assets/post-assets/IconArrowRight'
 
-import '../layouts/_scss/vendor/prism.css'
+// import '../layouts/_scss/vendor/prism.css'
 
 class Template extends React.Component {
   render() {
@@ -95,8 +95,7 @@ class Template extends React.Component {
           ]}
         />
         <article className="work-article">
-          <WorkPostHeader posts={post} />
-
+          // <WorkPostHeader posts={post} />
           <section className="work__preview__body">
             <div className="work__preview__meta-container padding-top-and-bottom--32">
               <div className="work-preview__body__meta color--white wrapper--responsive--medium margin-center">

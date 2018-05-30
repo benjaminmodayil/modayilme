@@ -1,8 +1,8 @@
 {
   "name": "gatsby-starter-default",
-  "description": "Welcome to modayil.me",
+  "description": "modayil.me",
   "version": "1.0.0",
-  "author": "Kyle Mathews <mathews.kyle@gmail.com>",
+  "author": "Benjamin Modayil <modayilme@gmail.com>",
   "dependencies": {
     "gatsby": "^1.9.17",
     "gatsby-image": "^1.0.51",
@@ -36,18 +36,27 @@
   "license": "MIT",
   "main": "n/a",
   "scripts": {
-    "build": "gatsby build",
-    "develop": "gatsby develop",
+    "build:css": "postcss src/layouts/index.css -o src/layouts/generated.css",
+    "watch:css": "postcss src/layouts/index.css -o src/layouts/generated.css -w",
+    "build": "npm run build:css && gatsby build",
+    "develop": "npm run watch:css & gatsby develop",
     "format":
       "prettier --trailing-comma es5 --no-semi --single-quote --write 'src/**/*.js'",
     "test": "echo \"Error: no test specified\" && exit 1",
     "deploy": "gatsby build --prefix-paths && gh-pages -d public"
   },
   "devDependencies": {
+    "autoprefixer": "^8.2.0",
+    "cssnano": "^3.10.0",
     "gh-pages": "^1.0.0",
+    "postcss-cli": "^5.0.0",
+    "postcss-cssnext": "^3.1.0",
+    "postcss-import": "^11.1.0",
+    "postcss-nested": "^3.0.0",
     "prettier": "^1.6.1",
     "stylelint": "^8.2.0",
-    "stylelint-order": "^0.7.0"
+    "stylelint-order": "^0.7.0",
+    "tailwindcss": "^0.5.2"
   },
   "browserslist": ["> 1%", "IE >= 10", "last 2 versions"]
 }
