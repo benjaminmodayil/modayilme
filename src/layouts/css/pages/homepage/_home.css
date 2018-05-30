@@ -1,0 +1,8 @@
+.home-header {
+  @apply .flex .justify-center .items-center;
+  min-height: 60vh;
+}
+
+.home-info__container {
+  box-shadow: 0 -5px 10px 0 rgba(0, 0, 0, 0.11), 0 5px 15px 0 rgba(0, 0, 0, 0.08);
+}

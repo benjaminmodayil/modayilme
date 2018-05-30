@@ -1,11 +1,45 @@
+const fs = require('fs')
+const icon = name => fs.readFileSync(`./src/assets/icons/Icon${name}.js`)
+
 module.exports = {
   siteMetadata: {
     title: 'modayil.me',
-    skillset: ['HTML', 'CSS', 'JAVASCRIPT', 'REACT', 'SKETCH', 'MEMES'],
-    twitter: 'https://twitter.com/modayilme',
-    instagram: 'https://www.instagram.com/modayilme/',
-    linkedIn: 'https://www.linkedin.com/in/benjamin-modayil/',
-    github: 'https://github.com/benjaminmodayil'
+    skillset: [
+      'HTML',
+      'CSS',
+      'SCSS',
+      'JS',
+      'REACT',
+      'SKETCH',
+      'SVG',
+      'REDUX',
+      'REST',
+      'Mongo',
+      'Express',
+      'MEMES'
+    ],
+    social: [
+      {
+        URL: 'https://twitter.com/modayilme',
+        title: 'Twitter',
+        svgURL: `/assets/icons/footer/icon-twitter.svg`
+      },
+      {
+        URL: 'https://www.instagram.com/modayilme',
+        title: 'Github',
+        svgURL: `/assets/icons/footer/icon-github.svg`
+      },
+      {
+        URL: 'https://www.linkedin.com/in/benjamin-modayil',
+        title: 'LinkedIn',
+        svgURL: `/assets/icons/footer/icon-linkedIn.svg`
+      },
+      {
+        URL: 'modayilme@gmail.com',
+        title: 'Email',
+        svgURL: `/assets/icons/footer/icon-contact.svg`
+      }
+    ]
   },
   plugins: [
     `gatsby-plugin-react-next`,

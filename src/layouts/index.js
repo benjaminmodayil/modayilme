@@ -3,6 +3,7 @@ import PropTypes from 'prop-types'
 import Link from 'gatsby-link'
 import Helmet from 'react-helmet'
 import Navigation from '../components/Navigation.js'
+import Footer from '../components/_Footer.js'
 
 import 'typeface-merriweather'
 import 'typeface-raleway'
@@ -17,6 +18,7 @@ class TemplateWrapper extends React.Component {
   }
 
   render() {
+    let { social } = this.props.data.site.siteMetadata
     return (
       <div className="site__container">
         <Helmet
@@ -72,9 +74,24 @@ class TemplateWrapper extends React.Component {
         </Helmet>
         <Navigation />
         <div className="site__inner">{this.props.children()}</div>
+        <Footer data={social} />
       </div>
     )
   }
 }
 
 export default TemplateWrapper
+
+export const layoutQuery = graphql`
+  query layoutQuery {
+    site {
+      siteMetadata {
+        social {
+          URL
+          title
+          svgURL
+        }
+      }
+    }
+  }
+`
