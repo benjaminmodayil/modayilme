@@ -27,12 +27,15 @@
     "gatsby-source-filesystem": "^1.4.12",
     "gatsby-transformer-remark": "^1.7.34",
     "gatsby-transformer-sharp": "^1.6.24",
+    "netlify-cms": "^1.7.0",
     "react-inlinesvg": "^0.7.4",
     "rss-to-json": "^1.0.3",
     "typeface-merriweather": "0.0.45",
     "typeface-raleway": "0.0.45"
   },
-  "keywords": ["gatsby"],
+  "keywords": [
+    "gatsby"
+  ],
   "license": "MIT",
   "main": "n/a",
   "scripts": {
@@ -40,8 +43,7 @@
     "watch:css": "postcss src/layouts/index.css -o src/layouts/generated.css -w",
     "build": "npm run build:css && gatsby build",
     "develop": "npm run watch:css & gatsby develop",
-    "format":
-      "prettier --trailing-comma es5 --no-semi --single-quote --write 'src/**/*.js'",
+    "format": "prettier --trailing-comma es5 --no-semi --single-quote --write 'src/**/*.js'",
     "test": "echo \"Error: no test specified\" && exit 1",
     "deploy": "gatsby build --prefix-paths && gh-pages -d public"
   },
@@ -58,5 +60,9 @@
     "stylelint-order": "^0.7.0",
     "tailwindcss": "^0.5.2"
   },
-  "browserslist": ["> 1%", "IE >= 10", "last 2 versions"]
+  "browserslist": [
+    "> 1%",
+    "IE >= 10",
+    "last 2 versions"
+  ]
 }

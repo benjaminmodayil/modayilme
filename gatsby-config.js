@@ -39,6 +39,20 @@ module.exports = {
         title: 'Email',
         svgURL: `/assets/icons/footer/icon-contact.svg`
       }
+    ],
+    navigation: [
+      {
+        URL: '/home',
+        title: 'Home'
+      },
+      {
+        URL: '/writings',
+        title: 'Writings'
+      },
+      {
+        URL: '/projects',
+        title: 'Projects'
+      }
     ]
   },
   plugins: [
