@@ -1,7 +1,7 @@
-import React from 'react'
-import RecentWritings from '../components/RecentWritings'
-import Updates from '../components/Updates'
-import Header from '../components/homepage/Header'
+import React from 'react';
+import RecentWritings from '../components/RecentWritings';
+import Updates from '../components/Updates';
+import Header from '../components/homepage/Header';
 
 class IndexPage extends React.Component {
   render() {
@@ -30,6 +30,8 @@ class IndexPage extends React.Component {
           </div>
         </div>
       </main>
+
+      // <ArticleLoop data={data} articleArray={caseStudies} />
     )
     // <ArticleLoop data={data} articleArray={caseStudies} />
   }

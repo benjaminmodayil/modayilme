@@ -1,6 +1,6 @@
-import Link from 'gatsby-link'
-import React, { Component } from 'react'
-import Caret from '../../assets/icons/home-icons/caret-right.svg'
+import Link from 'gatsby-link';
+import React, { Component } from 'react';
+import Caret from '../../assets/icons/home-icons/caret-right.svg';
 export default class Header extends Component {
   render() {
     return (
