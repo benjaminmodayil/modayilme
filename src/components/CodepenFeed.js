@@ -1,6 +1,5 @@
-import React, { Component } from 'react'
-
-import IconSkills from '../assets/icons/home-icons/IconCodepenBlackBg.js'
+import React, { Component } from 'react';
+import IconSkills from '../assets/icons/home-icons/IconCodepenBlackBg.js';
 
 class CodepenFeed extends Component {
   constructor(props) {
@@ -45,61 +44,61 @@ class CodepenFeed extends Component {
           {!this.state.codepenData ? (
             <p>Loading</p>
           ) : (
-            this.state.codepenData
-              .map(item => {
-                return (
-                  <div
-                    className="cp-feed__cards__pen padding-top-and-bottom--14 padding-bottom--64 padding-left-and-right--16 margin-bottom--32"
-                    key={item.childNodes[9].childNodes[7].childNodes[1].getAttribute(
-                      'href'
-                    )}
-                  >
-                    <picture>
-                      <source
-                        srcSet={item.childNodes[9].childNodes[3].childNodes[0]
-                          .getAttribute('src')
-                          .replace('large', 'small')
-                          .replace('png', 'webp')}
-                        type="image/webp"
-                      />
+              this.state.codepenData
+                .map(item => {
+                  return (
+                    <div
+                      className="cp-feed__cards__pen padding-top-and-bottom--14 padding-bottom--64 padding-left-and-right--16 margin-bottom--32"
+                      key={item.childNodes[9].childNodes[7].childNodes[1].getAttribute(
+                        'href'
+                      )}
+                    >
+                      <picture>
+                        <source
+                          srcSet={item.childNodes[9].childNodes[3].childNodes[0]
+                            .getAttribute('src')
+                            .replace('large', 'small')
+                            .replace('png', 'webp')}
+                          type="image/webp"
+                        />
 
-                      <source
-                        srcSet={item.childNodes[9].childNodes[3].childNodes[0]
-                          .getAttribute('src')
-                          .replace('large', 'small')}
-                        type="image/png"
-                      />
+                        <source
+                          srcSet={item.childNodes[9].childNodes[3].childNodes[0]
+                            .getAttribute('src')
+                            .replace('large', 'small')}
+                          type="image/png"
+                        />
 
-                      <img
-                        className="cp-feed__cards__pen__thumb margin-bottom--16"
-                        src={item.childNodes[9].childNodes[3].childNodes[0]
-                          .getAttribute('src')
-                          .replace('large', 'small')}
-                        alt=""
-                      />
-                    </picture>
+                        <img
+                          className="cp-feed__cards__pen__thumb margin-bottom--16"
+                          src={item.childNodes[9].childNodes[3].childNodes[0]
+                            .getAttribute('src')
+                            .replace('large', 'small')}
+                          alt=""
+                        />
+                      </picture>
 
-                    <div className="cp-feed__cards__pen__text">
-                      <h3 className="h-3 font-size--18 color--link margin-bottom--16">
-                        {item.childNodes[1].text}
-                      </h3>
-                      <p className="color--text font-size--16 margin-bottom--16">
-                        {item.childNodes[9].childNodes[9].innerHTML}
-                      </p>
-                      <a
-                        className="font-size--14 link --btn --bg-red --small cp-feed__cards__pen__text__link"
-                        href={item.childNodes[9].childNodes[7].childNodes[1].getAttribute(
-                          'href'
-                        )}
-                      >
-                        View
+                      <div className="cp-feed__cards__pen__text">
+                        <h3 className="h-3 font-size--18 color--link margin-bottom--16">
+                          {item.childNodes[1].text}
+                        </h3>
+                        <p className="color--text font-size--16 margin-bottom--16">
+                          {item.childNodes[9].childNodes[9].innerHTML}
+                        </p>
+                        <a
+                          className="font-size--14 link --btn --bg-red --small cp-feed__cards__pen__text__link"
+                          href={item.childNodes[9].childNodes[7].childNodes[1].getAttribute(
+                            'href'
+                          )}
+                        >
+                          View
                       </a>
+                      </div>
                     </div>
-                  </div>
-                )
-              })
-              .slice(0, 3)
-          )}
+                  )
+                })
+                .slice(0, 3)
+            )}
         </div>
         <a
           className="cp-feed__cards__pen__external-link u-float--right link --btn --bg-transparent --wide"

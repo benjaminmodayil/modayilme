@@ -1,14 +1,12 @@
-import React from 'react'
-import PropTypes from 'prop-types'
-import Link from 'gatsby-link'
-import Helmet from 'react-helmet'
-import Nav from '../_includes/Nav.js'
-import Footer from '../_includes/Footer.js'
+import React from 'react';
+import Helmet from 'react-helmet';
+import 'typeface-merriweather';
+import 'typeface-raleway';
+import Footer from '../_includes/Footer.js';
+import Nav from '../_includes/Nav.js';
+import './index.scss';
 
-import 'typeface-merriweather'
-import 'typeface-raleway'
 
-import './index.scss'
 
 class TemplateWrapper extends React.Component {
   renderNav = () => {
@@ -18,8 +16,6 @@ class TemplateWrapper extends React.Component {
   }
 
   render() {
-    console.log(this.props.location)
-
     return (
       <div className="site__container">
         <Helmet

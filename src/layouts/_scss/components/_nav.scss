@@ -157,6 +157,7 @@
 
   .nav__inner {
     ul {
+      @include variable(background, --bg, color(bg));
       padding: 0.5rem 0;
     }
   }

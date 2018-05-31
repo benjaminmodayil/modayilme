@@ -1,30 +1,18 @@
-import React from 'react'
-import ReactDOM from 'react-dom'
-import Link from 'gatsby-link'
-
-import HomeHeader from '../_includes/homepage/HomeHeader'
-import CodepenFeed from '../components/CodepenFeed'
-import ArticleLoop from '../components/ArticleLoop'
-
-import DetailsList from '../_includes/DetailsList.js'
-import CodeImage from '../assets/home-code.png'
-
-// Icons
-import IconContactWithColor from '../assets/icons/IconContactWithColor.js'
-import IconWebSkills from '../assets/icons/IconWebSkills.js'
-import IconGithub from '../assets/icons/details-list/icon-github.svg'
-import IconTwitter from '../assets/icons/details-list/icon-twitter.svg'
-import IconInstagram from '../assets/icons/details-list/icon-instagram.svg'
-import IconLinkedin from '../assets/icons/details-list/icon-linkedin.svg'
-
-import IconCheck from '../assets/icons/home-icons/IconCheck.js'
-import IconMic from '../assets/icons/home-icons/IconMic.js'
-import IconMobile from '../assets/icons/home-icons/IconMobile.js'
-import IconSkills from '../assets/icons/home-icons/IconSkills.js'
-import IconThought from '../assets/icons/home-icons/IconThought.js'
-import IconWeb from '../assets/icons/home-icons/IconWeb.js'
-import IconWork from '../assets/icons/home-icons/IconWork.js'
-import IconWrite from '../assets/icons/home-icons/IconWrite.js'
+import Link from 'gatsby-link';
+import React from 'react';
+import DetailsList from '../_includes/DetailsList.js';
+import HomeHeader from '../_includes/homepage/HomeHeader';
+import CodeImage from '../assets/home-code.png';
+import IconGithub from '../assets/icons/details-list/icon-github.svg';
+import IconInstagram from '../assets/icons/details-list/icon-instagram.svg';
+import IconLinkedin from '../assets/icons/details-list/icon-linkedin.svg';
+import IconTwitter from '../assets/icons/details-list/icon-twitter.svg';
+import IconMobile from '../assets/icons/home-icons/IconMobile.js';
+import IconThought from '../assets/icons/home-icons/IconThought.js';
+import IconWork from '../assets/icons/home-icons/IconWork.js';
+import IconWrite from '../assets/icons/home-icons/IconWrite.js';
+import ArticleLoop from '../components/ArticleLoop';
+import CodepenFeed from '../components/CodepenFeed';
 
 class IndexPage extends React.Component {
   componentDidMount() {
@@ -93,6 +81,12 @@ class IndexPage extends React.Component {
               </h2>
               <ArticleLoop data={data} articleArray={caseStudies} />
             </div>
+            <Link
+              className="cp-feed__cards__pen__external-link u-float--right link --btn --bg-transparent --wide"
+              to="/archive#work"
+            >
+              view more
+            </Link>
           </div>
           <CodepenFeed />
         </section>
@@ -117,6 +111,14 @@ class IndexPage extends React.Component {
                 My thoughts <IconThought className="s-svg-adjust--down" />
               </h2>
               <ArticleLoop data={data} articleArray={blogPosts} />
+            </div>
+            <div className="wrapper wrapper--780 align-center-under--1200">
+              <Link
+                className="cp-feed__cards__pen__external-link u-float--right link --btn --bg-transparent --wide"
+                to="/archive#articles"
+              >
+                view more
+            </Link>
             </div>
           </div>
         </section>

@@ -1,16 +1,8 @@
-import React from 'react'
-import Helmet from 'react-helmet'
-import Link from 'gatsby-link'
-
-import WorkPostHeader from '../components/work/WorkPostHeader'
-import RelatedArticles from '../components/RelatedArticles.js'
-
-import * as invert from '../utils/invertColor'
-
-import IconArrowLeft from '../assets/post-assets/IconArrowLeft'
-import IconArrowRight from '../assets/post-assets/IconArrowRight'
-
-import '../layouts/_scss/vendor/prism.css'
+import React from 'react';
+import Helmet from 'react-helmet';
+import RelatedArticles from '../components/RelatedArticles.js';
+import WorkPostHeader from '../components/work/WorkPostHeader';
+import '../layouts/_scss/vendor/prism.css';
 
 class Template extends React.Component {
   render() {
