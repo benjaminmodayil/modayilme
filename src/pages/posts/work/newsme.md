@@ -1,7 +1,7 @@
 ---
 layout: work
 type: work
-title: Newsme
+title: "Newsme \U0001F4F0"
 tldr: Search for news on any topic.
 description: >-
   Newsme is a feed of relevant news for the day or surrounding a specific topic
