@@ -12,7 +12,7 @@ linkColor: '#344052'
 textBackground: '#F4F4F4'
 website: 'https://benjaminmodayil.github.io/API-Capstone/'
 date: '2018-02-13'
-path: /work
+path: /work/newsme
 ---
 ## The Idea
 
