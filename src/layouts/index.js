@@ -1,36 +1,16 @@
-import React from 'react'
-import Helmet from 'react-helmet'
-<<<<<<< HEAD
-import 'typeface-merriweather'
-import 'typeface-raleway'
-import Border from '../components/Border'
-import Navigation from '../components/Navigation.js'
-import Footer from '../components/_Footer.js'
-import './generated.css'
+import React from 'react';
+import Helmet from 'react-helmet';
+import 'typeface-merriweather';
+import 'typeface-raleway';
+import Border from '../components/Border';
+import Navigation from '../components/Navigation.js';
+import Footer from '../components/_Footer.js';
+import './generated.css';
 
 class TemplateWrapper extends React.Component {
   render() {
     let { social } = this.props.data.site.siteMetadata
     let { navigation } = this.props.data.site.siteMetadata
-=======
-import Navigation from '../components/Navigation.js'
-import Footer from '../components/_Footer.js'
-
-import 'typeface-merriweather'
-import 'typeface-raleway'
-
-import './generated.css'
-
-class TemplateWrapper extends React.Component {
-  renderNav = () => {
-    // if (this.props.location.pathname != '/') {
-    //   return <Nav />
-    // }
-  }
-
-  render() {
-    let { social } = this.props.data.site.siteMetadata
->>>>>>> 4d1798138bea3e67c17aa9d0e69bd58a2a509357
     return (
       <div className="site__container">
         <Helmet
@@ -77,12 +57,8 @@ class TemplateWrapper extends React.Component {
         >
           <html lang="en" />
         </Helmet>
-<<<<<<< HEAD
         <Border color={'red'} />
         <Navigation navigation={navigation} />
-=======
-        <Navigation />
->>>>>>> 4d1798138bea3e67c17aa9d0e69bd58a2a509357
         <div className="site__inner">{this.props.children()}</div>
         <Footer data={social} />
       </div>
