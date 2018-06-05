@@ -7,8 +7,9 @@ description: >-
   NoFuss application where you can track your meals, exercises, and weight
   progress. 
 headerColor: '#9000FF'
-metaBackground: '#00D679'
+metaBackground: '#43333F'
 linkColor: '#00D679'
+textBackground: '#FFFFFF'
 website: 'https://pacific-beyond-35778.herokuapp.com/'
 date: '2018-04-02'
 path: /work/nofussfitness
