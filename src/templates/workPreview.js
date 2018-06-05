@@ -1,8 +1,8 @@
-import React from 'react';
-import Helmet from 'react-helmet';
-import RelatedArticles from '../components/RelatedArticles.js';
-import WorkPostHeader from '../components/work/WorkPostHeader';
-import '../layouts/_scss/vendor/prism.css';
+import React from 'react'
+import Helmet from 'react-helmet'
+import RelatedArticles from '../components/RelatedArticles.js'
+import WorkPostHeader from '../components/work/WorkPostHeader'
+import '../layouts/_scss/vendor/prism.css'
 
 class Template extends React.Component {
   render() {
@@ -94,7 +94,7 @@ class Template extends React.Component {
               <div className="work-preview__body__meta color--white wrapper--responsive--medium margin-center">
                 <div className="work-preview__body__meta__synopsis container--small">
                   <h2 className="h-2 margin-bottom--32">Synopsis</h2>
-                  <p>{post.frontmatter.description}</p>
+                  <p dangerouslySetInnerHTML={{ __html: post.frontmatter.description }} />
                 </div>
                 <div className="work-preview__body__meta__data-and-link">
                   <h2 className="h-2 margin-bottom--32">Created on</h2>

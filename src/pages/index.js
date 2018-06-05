@@ -1,18 +1,18 @@
-import Link from 'gatsby-link';
-import React from 'react';
-import DetailsList from '../_includes/DetailsList.js';
-import HomeHeader from '../_includes/homepage/HomeHeader';
-import CodeImage from '../assets/home-code.png';
-import IconGithub from '../assets/icons/details-list/icon-github.svg';
-import IconInstagram from '../assets/icons/details-list/icon-instagram.svg';
-import IconLinkedin from '../assets/icons/details-list/icon-linkedin.svg';
-import IconTwitter from '../assets/icons/details-list/icon-twitter.svg';
-import IconMobile from '../assets/icons/home-icons/IconMobile.js';
-import IconThought from '../assets/icons/home-icons/IconThought.js';
-import IconWork from '../assets/icons/home-icons/IconWork.js';
-import IconWrite from '../assets/icons/home-icons/IconWrite.js';
-import ArticleLoop from '../components/ArticleLoop';
-import CodepenFeed from '../components/CodepenFeed';
+import Link from 'gatsby-link'
+import React from 'react'
+import DetailsList from '../_includes/DetailsList.js'
+import HomeHeader from '../_includes/homepage/HomeHeader'
+import CodeImage from '../assets/home-code.png'
+import IconGithub from '../assets/icons/details-list/icon-github.svg'
+import IconInstagram from '../assets/icons/details-list/icon-instagram.svg'
+import IconLinkedin from '../assets/icons/details-list/icon-linkedin.svg'
+import IconTwitter from '../assets/icons/details-list/icon-twitter.svg'
+import IconMobile from '../assets/icons/home-icons/IconMobile.js'
+import IconThought from '../assets/icons/home-icons/IconThought.js'
+import IconWork from '../assets/icons/home-icons/IconWork.js'
+import IconWrite from '../assets/icons/home-icons/IconWrite.js'
+import ArticleLoop from '../components/ArticleLoop'
+import CodepenFeed from '../components/CodepenFeed'
 
 class IndexPage extends React.Component {
   componentDidMount() {
@@ -54,8 +54,9 @@ class IndexPage extends React.Component {
                 <a href="https://www.google.com/maps/place/Falls+Church,+VA/@38.8860194,-77.1898726,14z/data=!3m1!4b1!4m5!3m4!1s0x89b64b6e7a4663ad:0x6e536688973d9759!8m2!3d38.882334!4d-77.1710914">
                   Philadelphia, PA
                 </a>. I recently finished an apprenticeship with{' '}
-                <a href="https://www.viget.com">Viget</a> in the same position, but as an
-                apprentice learning about working within an agency.
+                <a href="https://www.viget.com">Viget</a> and I am almost finished a
+                full-stack JS program with{' '}
+                <a href="https://www.thinkful.com/">Thinkful</a>
               </p>
             </div>
             <div className="home__section-two__text-and-image__image margin-top--48">
@@ -118,7 +119,7 @@ class IndexPage extends React.Component {
                 to="/archive#articles"
               >
                 view more
-            </Link>
+              </Link>
             </div>
           </div>
         </section>
@@ -142,7 +143,7 @@ class IndexPage extends React.Component {
               <p className="home__medium-text color--black margin-bottom--32">
                 If you need a{' '}
                 <a href="./assets/resume.pdf">
-                  resume<span className="screenreader-only">(pdf)</span>
+                  resume <span className="screenreader-only">(pdf)</span>
                 </a>
                 then just click on that keyword. Also feel free to check-out my
                 <a href="https://codepen.io/modayilme"> Codepen</a> and below for more
@@ -157,10 +158,8 @@ class IndexPage extends React.Component {
                 If you’re wondering what I’m like outside of work, well, sorry to be a
                 bummer, but I like to work. Usually I’m learning something new code-wise,
                 reading a{' '}
-                <a href="https://www.goodreads.com/user/show/50421880-benjamin">
-                  book
-                </a>/comics, listening to a podcast, or perhaps, on the rare occasion,
-                relaxing.
+                <a href="https://www.goodreads.com/user/show/50421880-benjamin">book</a>/comics,
+                listening to a podcast, or perhaps, on the rare occasion, relaxing.
               </p>
               <p className="home__medium-text color--black margin-bottom--32">
                 Interested in following me or keeping updated on things I write or do?
