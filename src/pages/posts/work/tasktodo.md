@@ -7,8 +7,9 @@ description: >-
   TaskToDo is an application that combines the features of a todo list with a
   pomodoro timer.
 headerColor: '#FF0000'
-metaBackground: '#7F7F56'
+metaBackground: '#FF0000'
 linkColor: '#00D535'
+textBackground: '#FFFFFF'
 website: 'https://fervent-gates-c5bf0f.netlify.com/'
 date: '2018-05-27'
 path: /work/tasktodo
