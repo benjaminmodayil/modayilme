@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React, { Component } from 'react'
 
 export default class Footer extends Component {
   render() {
@@ -17,7 +17,7 @@ export default class Footer extends Component {
     })
 
     return (
-      <footer className="bg-black text-white">
+      <footer className="text-black">
         <nav className="py-8 max-w-xs md-max-w-sm mx-auto" role="Social Navigation">
           <div className="social-nav__links flex justify-center">{links}</div>
         </nav>

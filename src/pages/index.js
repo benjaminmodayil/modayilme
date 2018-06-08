@@ -1,7 +1,7 @@
-import React from 'react';
-import RecentWritings from '../components/RecentWritings';
-import Updates from '../components/Updates';
-import Header from '../components/homepage/Header';
+import React from 'react'
+import Header from '../components/homepage/Header'
+import RecentWritings from '../components/RecentWritings'
+import Updates from '../components/Updates'
 
 class IndexPage extends React.Component {
   render() {
@@ -21,18 +21,18 @@ class IndexPage extends React.Component {
     const workExamples = edges.filter(i => i.node.frontmatter.type == 'work').slice(0, 6)
 
     return (
-      <main className="relative min-h-screen pb-16 md-pb-64" role="main">
+      <main className="relative pb-8" role="main">
         <Header />
-        <div className="-mx-6">
-          <div className="flex flex-col md-flex-row max-w-lg mx-auto">
+        <div>
+          <div className="flex flex-col md-flex-row max-w-lgxl mx-auto items-center md-items-start md-justify-between">
             <Updates />
             <RecentWritings />
           </div>
         </div>
       </main>
-
-      // <ArticleLoop data={data} articleArray={caseStudies} />
     )
+
+    // <ArticleLoop data={data} articleArray={caseStudies} />
     // <ArticleLoop data={data} articleArray={caseStudies} />
   }
 }

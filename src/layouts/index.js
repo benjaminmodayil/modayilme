@@ -1,18 +1,18 @@
-import React from 'react';
-import Helmet from 'react-helmet';
-import 'typeface-merriweather';
-import 'typeface-raleway';
-import Border from '../components/Border';
-import Navigation from '../components/Navigation.js';
-import Footer from '../components/_Footer.js';
-import './generated.css';
+import React from 'react'
+import Helmet from 'react-helmet'
+import 'typeface-merriweather'
+import 'typeface-raleway'
+import Border from '../components/Border'
+import Navigation from '../components/Navigation.js'
+import Footer from '../components/_Footer.js'
+import './generated.css'
 
 class TemplateWrapper extends React.Component {
   render() {
     let { social } = this.props.data.site.siteMetadata
     let { navigation } = this.props.data.site.siteMetadata
     return (
-      <div className="site__container">
+      <div className="site__container min-h-screen">
         <Helmet
           title="Home | Benjamin Modayil"
           meta={[
@@ -77,13 +77,10 @@ export const layoutQuery = graphql`
           title
           svgURL
         }
-<<<<<<< HEAD
         navigation {
           URL
           title
         }
-=======
->>>>>>> 4d1798138bea3e67c17aa9d0e69bd58a2a509357
       }
     }
   }

@@ -4,6 +4,6 @@ module.exports = {
     require('postcss-import'),
     require('cssnano'),
     require('postcss-nested'),
-    require('tailwindcss')('./tailwind.js')
+    require('tailwindcss')('./tailwind.config.js')
   ]
 }
