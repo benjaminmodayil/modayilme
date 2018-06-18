@@ -10,7 +10,7 @@
 
 /* components */
 @import 'css/components/_Navigation.css';
-@import 'css/components/_Footer.css';
+/* @import 'css/components/_Footer.css'; */
 
 /* pages */
 @import 'css/pages/homepage/_home.css';
@@ -128,7 +128,7 @@
     grid-row: span 1;
   }
 
-  // ✍️ Article Previews
+  /* // ✍️ Article Previews */
   .article-preview__text {
     .h3 {
       @apply .text-lg;

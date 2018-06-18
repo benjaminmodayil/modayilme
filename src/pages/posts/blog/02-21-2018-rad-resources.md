@@ -1,7 +1,7 @@
 ---
 layout: blog
 type: blog
-title: 🔥 Rad Resources 💯
+title: Rad Resources 💯 🔥
 date: "2018-02-21T19:06:03Z"
 path: '/blog/rad-resources'
 tldr: 'Random neato resources for your next project.'

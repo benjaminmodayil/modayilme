@@ -16,7 +16,7 @@ export default function Template({ data, pathContext }, props) {
   const { prev, next } = pathContext
 
   return (
-    <main className="post__page">
+    <React.Fragment>
       <Helmet
         title="Blog | ✍️"
         meta={[
@@ -58,53 +58,140 @@ export default function Template({ data, pathContext }, props) {
           { name: 'theme-color', content: '#F7484E' }
         ]}
       />
-      <div className="bg-color--grey">
-        <article className="post">
-          <section className="post__body">
-            <header className="post__header bg-color--bg">
-              <div className="wrapper content-align wrapper--780 margin-center section-padding color--white">
-                <h1
-                  className="h-1"
-                  dangerouslySetInnerHTML={{ __html: post.frontmatter.title }}
-                />
-                <p className="tldr margin-top--32">
-                  <span className="font-style--italic font-size--18 font-weight--light">
-                    tl;dr:
-                  </span>
-                  {post.frontmatter.tldr}
-                </p>
-                <span className="post__date margin-top--32 font-style--italic">
-                  {post.frontmatter.date}
-                </span>
-              </div>
-            </header>
 
-            <div className="work__preview__container wrapper wrapper--780 margin-center section-padding--bottom-heavy">
-              <div
-                className="post-work__body margin-bottom--96"
-                dangerouslySetInnerHTML={{ __html: post.html }}
-              />
-              <div className="post__related">
-                <h2 className="screenreader-only">
-                  Other articles you might like to read:
-                </h2>
-                <RelatedArticles related={pathContext} />
-              </div>
+      <main className="post__page leading-normal mt-32">
+        <span className="block font-semibold text-center italic font-sans">
+          {post.frontmatter.date}
+        </span>
+        <h1
+          className="text-center text-5xl max-w-md mx-auto font-sans"
+          dangerouslySetInnerHTML={{ __html: post.frontmatter.title }}
+        />
+        <p className="text-center max-w-sm font-sans mx-auto mb-24 px-2 md-px-0 opacity-90">
+          {post.frontmatter.tldr}
+        </p>
+
+        <p className="max-w-mdlg mx-auto font-serif text-base mb-8 px-2 md-px-0 opacity-90">
+          Lorem ipsum dolor sit amet, natum mollis mediocritatem eam cu. Utamur tacimates
+          cu mei, at posse luptatum usu, cu ludus ancillae postulant qui. Duo accumsan
+          atomorum comprehensam in? Id qui illum malis appareat, pro nulla mentitum
+          molestiae an.
+        </p>
+
+        <p className="max-w-mdlg mx-auto font-serif text-base mb-8 px-2 md-px-0 opacity-90">
+          Lorem ipsum dolor sit amet, natum mollis mediocritatem eam cu. Utamur tacimates
+          cu mei, at posse luptatum usu, cu ludus ancillae postulant qui. Duo accumsan
+          atomorum comprehensam in? Id qui illum malis appareat, pro nulla mentitum
+          molestiae an.
+        </p>
+
+        <div className="max-w-mdlg mx-auto font-serif px-2 md-px-0">
+          <div className="md--mx-4 flex flex-col md-flex-row">
+            <p className="md-w-1-2 md-px-4 mb-8 opacity-90">
+              Lorem ipsum dolor sit amet, natum mollis mediocritatem eam cu. Utamur
+              tacimates cu mei, at posse luptatum usu, cu ludus ancillae postulant qui.
+              Duo accumsan atomorum comprehensam in? Id qui illum malis appareat, pro
+              nulla mentitum molestiae an.
+            </p>
+            <p className="md-w-1-2 md-px-4 mb-8 opacity-90">
+              Lorem ipsum dolor sit amet, natum mollis mediocritatem eam cu. Utamur
+              tacimates cu mei, at posse luptatum usu, cu ludus ancillae postulant qui.
+              Duo accumsan atomorum comprehensam in? Id qui illum malis appareat, pro
+              nulla mentitum molestiae an.
+            </p>
+          </div>
+        </div>
+
+        <p className="max-w-mdlg mx-auto font-serif text-base mb-8 px-2 md-px-0 opacity-90">
+          Lorem ipsum dolor sit amet, natum mollis mediocritatem eam cu. Utamur tacimates
+          cu mei, at posse luptatum usu, cu ludus ancillae postulant qui. Duo accumsan
+          atomorum comprehensam in? Id qui illum malis appareat, pro nulla mentitum
+          molestiae an. Lorem ipsum dolor sit amet, natum mollis mediocritatem eam cu.
+          Utamur tacimates cu mei, at posse luptatum usu, cu ludus ancillae postulant qui.
+          Duo accumsan atomorum comprehensam in? Id qui illum malis appareat, pro nulla
+          mentitum molestiae an.
+        </p>
+
+        <p className="max-w-mdlg mx-auto font-serif text-base mb-8 px-2 md-px-0 opacity-90">
+          Lorem ipsum dolor sit amet, natum mollis mediocritatem eam cu. Utamur tacimates
+          cu mei, at posse luptatum usu, cu ludus ancillae postulant qui. Duo accumsan
+          atomorum comprehensam in? Id qui illum malis appareat, pro nulla mentitum
+          molestiae an.
+        </p>
+
+        <div className="max-w-mdlg mx-auto font-serif px-2 md-px-0">
+          <div className="md--mx-4 flex flex-col md-flex-row">
+            <p className="md-w-1-2 md-px-4 mb-8 opacity-90">
+              Lorem ipsum dolor sit amet, natum mollis mediocritatem eam cu. Utamur
+              tacimates cu mei, at posse luptatum usu, cu ludus ancillae postulant qui.
+              Duo accumsan atomorum comprehensam in? Id qui illum malis appareat, pro
+              nulla mentitum molestiae an.
+            </p>
+            <div className="flex justify-center md-w-1-2 md-px-4 mb-8 opacity-90">
+              <img src="http://via.placeholder.com/350x150" />
             </div>
-          </section>
-        </article>
-      </div>
-    </main>
+          </div>
+        </div>
+
+        <div className="max-w-mdlg mx-auto font-serif px-2 md-px-0">
+          <div className="md--mx-4 flex flex-col md-flex-row">
+            <div className="md-w-1-2 md-px-4 mb-8">
+              <p className="mb-8 opacity-90">
+                Lorem ipsum dolor sit amet, natum mollis mediocritatem eam cu. Utamur
+                tacimates cu mei, at posse luptatum usu, cu ludus ancillae postulant qui.
+                Duo accumsan atomorum comprehensam in? Id qui illum malis appareat, pro
+                nulla mentitum molestiae an.
+              </p>
+              <p className="mb-8 opacity-90">
+                Lorem ipsum dolor sit amet, natum mollis mediocritatem eam cu. Utamur
+                tacimates cu mei, at posse luptatum usu, cu ludus ancillae postulant qui.
+                Duo accumsan atomorum comprehensam in? Id qui illum malis appareat, pro
+                nulla mentitum molestiae an.
+              </p>
+            </div>
+            <div className="md-block flex justify-center md-w-1-2 md-px-4 mb-8 opacity-90">
+              <img
+                className="h-auto md-w-full"
+                src="http://via.placeholder.com/350x350"
+              />
+            </div>
+          </div>
+        </div>
+        <ul className="mx-auto font-serif w-64 my-16">
+          <li>This is list item #1</li>
+          <li>This is list item #2 hahaha</li>
+          <li>This is list item #3</li>
+        </ul>
+
+        <figure className="bg-red w-full m-0 pb-8 md-pb-16 md-pt-24">
+          <img
+            className="mx-auto max-w-lg max-w-full block h-auto"
+            src="http://via.placeholder.com/650x350"
+            alt="An awesome picture"
+          />
+          <figcaption className="text-center text-white mt-8 italic">MDN Logo</figcaption>
+        </figure>
+      </main>
+    </React.Fragment>
   )
 }
 
+// default paragraph stylings: text-base mb-8 opacity-90
+// image to figures
+// {post.frontmatter.date}
+
+// <RelatedArticles related={pathContext} />
+// <div
+// className="font-serif text-base"
+// dangerouslySetInnerHTML={{ __html: post.html }}
+// />
 export const pageQuery = graphql`
   query BlogPostByPath($path: String!) {
     markdownRemark(frontmatter: { path: { eq: $path } }) {
       id
       html
       frontmatter {
-        date(formatString: "DD MMMM, YYYY")
+        date(formatString: "MMMM Do YYYY")
         title
         tldr
         path

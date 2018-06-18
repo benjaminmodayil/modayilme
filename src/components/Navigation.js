@@ -7,7 +7,7 @@ export default class Navigation extends Component {
       <Link
         key={index}
         to={i.URL}
-        className="hover-underline text-black no-underline text-lg font-semibold hover-border-b-2"
+        className="no-underline no-border-bottom text-base font-medium border-transparent border-b-4 hover-border-red rounded-sm hover-border-b-4 opacity-90 hover-opacity-100"
       >
         {i.title}
       </Link>
@@ -15,7 +15,7 @@ export default class Navigation extends Component {
 
     return (
       <nav
-        className="relative z-20 flex max-w-xs w-64 mx-auto text-center justify-between mt-4"
+        className="relative z-20 flex max-w-xs w-64 mx-auto text-center justify-between pt-4"
         role="navigation"
       >
         {navigation}

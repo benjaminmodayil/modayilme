@@ -1,21 +1,21 @@
+import Link from 'gatsby-link'
 import React from 'react'
-// import Link from 'gatsby-link'
 // Gatsby Link is invalid on 404 pages at the moment. Track here: https://github.com/gatsbyjs/gatsby/issues/1838
 
 const NotFoundPage = () => (
-  <div className="four-oh-four wrapper wrapper--medium margin-center section-padding--extra-heavy color--white u-text-align--center">
-    <h1 className="font-size--56 margin-top-and-bottom--32">
+  <div className="max-w-sm">
+    <h1 className="">
       Whoopsy
       <span role="img" aria-label="shrugging emoji" alt="shrugging emoji">
         🤷
       </span>
     </h1>
-    <p className="margin-bottom--14">You just hit a route that doesn&#39;t exist...</p>
-    <p className="margin-bottom--14">
-      Go back to the <a href="/">homepage?</a>
+    <p className="">You just hit a route that doesn&#39;t exist...</p>
+    <p className="">
+      Go back to the <Link to="/">homepage?</Link>
     </p>
-    <p className="margin-bottom--14">
-      Possibly help me out and <a href="/contact">let me know</a>?
+    <p className="">
+      Possibly help me out and <Link to="/contact">let me know</Link>?
     </p>
   </div>
 )

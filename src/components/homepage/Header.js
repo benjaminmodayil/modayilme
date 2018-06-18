@@ -1,30 +1,41 @@
 import Link from 'gatsby-link'
 import React, { Component } from 'react'
 import Caret from '../../assets/icons/home-icons/caret-right.svg'
+import SocialMedia from '../SocialMedia'
+
 export default class Header extends Component {
   render() {
+    console.log(this.props)
     return (
-      <header className="pt-24 text-center mb-24 clearfix max-w-mdsm mx-auto px-4 md-px-0">
+      <header className="pt-48 text-center mb-24 clearfix max-w-mdsm mx-auto px-4 md-px-0 text-shadow">
         <h1 className="screenreader-only">Welcome to my (Benjamin Modayil's) site!</h1>
-        <p className="font-sans leading-normal mb-4">
+        <p className="font-sans font-thin leading-normal mb-4">
           <span role="img" aria-label="" alt="" className="text-3xl">
             👋{' '}
           </span>
           <span className="text-3xl">Hi I’m</span>{' '}
-          <span className="text-4xl font-semibold block md-inline-block">
+          <span className="text-4xl font-medium block md-inline-block">
             Benjamin Modayil.
           </span>
         </p>
-        <p className="text-lg leading-normal mb-2">
-          I’m a <span className="font-semibold">Front-End Developer </span>
-          from Philadelphia, Pennsylvannia.
+        <p className="text-2xl leading-normal mb-2 opacity-90 mb-8 font-thin">
+          I’m currently an intern{' '}
+          <span className="font-medium">Front-End Developer </span>
+          <br />
+          at{' '}
+          <a className="no-underline font-medium" href="http://hothouseinc.com">
+            Hothouse Inc.
+          </a>{' '}
+          in Atlanta, Georgia.
         </p>
         <Link
           to="/projects"
-          className="text-red text-sm hover-underline no-underline float-right font-semibold text-md flex  w-24 justify-between"
+          className="text-white tracking-wide text-sm no-underline mx-auto md-mx-0 font-semibold text-md text-center mb-32"
         >
-          <span className="mr-2">Learn more</span> <img src={Caret} alt="" />
+          learn more
+          {/*<img src={Caret} alt="" />*/}
         </Link>
+        <SocialMedia className="mb-48" data={this.props.data.site.siteMetadata.social} />
       </header>
     )
   }

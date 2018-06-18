@@ -5,18 +5,28 @@ module.exports = {
   siteMetadata: {
     title: 'modayil.me',
     skillset: [
-      'HTML',
-      'CSS',
-      'SCSS',
-      'JS',
-      'REACT',
-      'SKETCH',
-      'SVG',
-      'REDUX',
-      'REST',
-      'Mongo',
-      'Express',
-      'MEMES'
+      {
+        title: 'Front-end',
+        skills: ['HTML', 'CSS', 'SCSS', 'JS', 'REACT']
+      },
+      {
+        title: 'Back-end',
+        skills: [
+          'NODEJS',
+          'EXPRESS',
+          'APIs',
+          'MONGO',
+          'REST',
+          'MOCHA',
+          'CHAI',
+          'WORDPRESS',
+          'CRAFTCMS'
+        ]
+      },
+      {
+        title: 'Other',
+        skills: ['SKETCH', 'SVG', 'MEMES', 'PHOTOSHOP', 'PREMIERE']
+      }
     ],
     social: [
       {
@@ -25,7 +35,7 @@ module.exports = {
         svgURL: `/assets/icons/footer/icon-twitter.svg`
       },
       {
-        URL: 'https://www.instagram.com/modayilme',
+        URL: 'https://www.github.com/benjaminmodayil',
         title: 'Github',
         svgURL: `/assets/icons/footer/icon-github.svg`
       },
@@ -42,16 +52,62 @@ module.exports = {
     ],
     navigation: [
       {
-        URL: '/home',
-        title: 'Home'
+        URL: '/',
+        title: 'Home',
+        bgColor: 'bg-purple text-white'
       },
       {
         URL: '/writings',
-        title: 'Writings'
+        title: 'Writings',
+        bgColor: 'bg-blueblack text-white'
       },
       {
         URL: '/projects',
-        title: 'Projects'
+        title: 'Projects',
+        bgColor: 'bg-purple text-white'
+      }
+    ],
+    jobs: [
+      {
+        title: 'Front-end Developer Apprentice',
+        company: 'Viget',
+        companyLink: 'https://www.viget.com',
+        bottomline: 'in Falls Church, VA'
+      },
+      {
+        title: 'Front-end Developer Intern',
+        company: 'Viget',
+        companyLink: 'https://www.viget.com',
+        bottomline: 'in Falls Church, VA'
+      },
+      {
+        title: 'Media Intern',
+        company: 'Cedarville University',
+        companyLink: 'https://www.cedarville.edu',
+        bottomline: 'in Cedarville, OH'
+      }
+    ],
+    projects: [
+      {
+        title: 'Fifa World Cup Hub',
+        company: 'Hothouse Inc.',
+        siteLink: 'http://hothouseinc.com/project/2018-fifa-world-cup/',
+        companyLink: 'https://www.hothouseinc.com',
+        bottomline: 'Assisted the lead developer with deadlines.'
+      },
+      {
+        title: 'Groundrules Co.',
+        siteLink: 'https://groundrules.co/',
+        company: 'Viget',
+        companyLink: 'https://www.viget.com',
+        bottomline: 'A group of interns tackle an informational piece.'
+      },
+      {
+        title: 'Jennifer Moore Speech',
+        siteLink: 'http://www.jennifermoorespeech.com/',
+        company: null,
+        companyLink: null,
+        bottomline: 'A site for Jennifer Moore, a speech therapist.'
       }
     ]
   },

@@ -2,17 +2,24 @@ import React from 'react'
 import Helmet from 'react-helmet'
 import 'typeface-merriweather'
 import 'typeface-raleway'
-import Border from '../components/Border'
-import Navigation from '../components/Navigation.js'
-import Footer from '../components/_Footer.js'
+import Navigation from '../components/Navigation'
+import Footer from '../components/_Footer'
+import Waves from '../assets/Waves'
 import './generated.css'
 
 class TemplateWrapper extends React.Component {
+  setColors = () => {
+    let item = this.props.data.site.siteMetadata.navigation.filter(
+      i => this.props.location.pathname === i.URL
+    )
+    return item[0] ? item[0].bgColor : 'bg-white text-black'
+  }
   render() {
     let { social } = this.props.data.site.siteMetadata
     let { navigation } = this.props.data.site.siteMetadata
+
     return (
-      <div className="site__container min-h-screen">
+      <div className={`site__container min-h-screen ${this.setColors()}`}>
         <Helmet
           title="Home | Benjamin Modayil"
           meta={[
@@ -57,10 +64,13 @@ class TemplateWrapper extends React.Component {
         >
           <html lang="en" />
         </Helmet>
-        <Border color={'red'} />
+        {/*<Border color={'purple-dark'} />*/}
         <Navigation navigation={navigation} />
-        <div className="site__inner">{this.props.children()}</div>
-        <Footer data={social} />
+        <div className="site__inner" data={social}>
+          {this.props.children()}
+        </div>
+        <Waves/>
+        {/*<Footer data={social} />*/}
       </div>
     )
   }
@@ -80,6 +90,7 @@ export const layoutQuery = graphql`
         navigation {
           URL
           title
+          bgColor
         }
       }
     }

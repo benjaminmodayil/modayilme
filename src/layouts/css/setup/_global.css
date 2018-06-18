@@ -31,14 +31,88 @@ ul {
   @apply .italic .rounded .no-underline;
 }
 
-.bg-thinkful {
-  background-color: rgba(30, 39, 54, 1);
+body {
+  background-image: url('../../static/assets/bg-pattern.svg');
 }
 
-.bg-cedarville {
-  background-color: rgba(255, 170, 97, 1);
+nav,
+li,
+a {
+  transition: all 0.2s ease-in;
 }
 
-.bg-viget {
-  background-color: rgba(0, 150, 189, 1);
+a {
+  color: inherit;
+  display: inline-block;
+  position: relative;
+  transition: all 0.2s ease;
+}
+
+a::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  display: inline-block;
+  height: 1em;
+  width: 100%;
+  border-bottom: 2px solid;
+  margin-top: 5px;
+  @apply border-red;
+}
+
+a:hover::after {
+  border-bottom: 4px solid;
+  @apply border-red;
+}
+
+a.no-border-bottom::after {
+  border-bottom: 0px solid;
+}
+
+.text-shadow {
+  text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.26);
+}
+
+.waves {
+  position: fixed;
+  bottom: 0;
+  left: -206px;
+  z-index: 1;
+}
+
+main {
+  position: relative;
+  z-index: 2;
+}
+
+@media screen and (min-width: 992px) {
+  .max-h-650 {
+    max-height: 650px;
+  }
+}
+
+.home {
+  li.list-special {
+    list-style: none;
+    position: relative;
+  }
+
+  li.list-special::before {
+    color: #ef6f6c;
+    /* color of bullet or square */
+
+    content: '\2022';
+    /* Unicode of character to precede the list item */
+
+    font-size: 3em;
+    /* em or %*/
+
+    padding-right: 1.1225em;
+    /* use em*/
+
+    position: absolute;
+    left: -32px;
+    top: 0em;
+    line-height: 0.34;
+  }
 }
