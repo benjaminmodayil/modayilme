@@ -143,7 +143,10 @@ export const projectTitledQuery = graphql`
     }
     site {
       siteMetadata {
-        skillset
+        skillset {
+          title,
+          skills
+        }
         social {
           URL
           title

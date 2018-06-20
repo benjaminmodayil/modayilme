@@ -19,19 +19,21 @@ class ArticleLoop extends React.Component {
           const addIcon = post.node.frontmatter.external ? true : false
 
           return (
-            <li className="margin-bottom--32" key={path}>
+            <li className="mb-8 list-reset max-w-xs mx-auto" key={path}>
               <a
                 href={path}
-                className="padding-left-and-right--16 padding-top-and-bottom--16"
+                className="p-4 bg-white no-underline no-border-bottom rounded w-full min-h-24"
               >
                 <h3
-                  className="h-3 font-size--18 margin-bottom--14"
+                  className="text-lg mb-2 text-red"
                   dangerouslySetInnerHTML={{
                     __html: post.node.frontmatter.title
                   }}
                 />
-                <p className="font-size--16">{post.node.frontmatter.tldr}</p>
-                {addIcon ? <IconLink className="margin-top--16" /> : null}
+                <p className="text-sm text-black opacity-90 font-serif leading-normal">
+                  {post.node.frontmatter.tldr}
+                </p>
+                {addIcon ? <IconLink className="mt-4" /> : null}
               </a>
             </li>
           )

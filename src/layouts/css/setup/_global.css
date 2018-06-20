@@ -116,3 +116,32 @@ main {
     line-height: 0.34;
   }
 }
+
+.waves {
+}
+
+.wave-1 {
+  animation: wavesOnTheMove 15s ease 0s infinite both;
+}
+
+.wave-2 {
+  animation: wavesOnTheMove 15s ease 4s infinite both;
+}
+
+.wave-3 {
+  animation: wavesOnTheMove 15s ease 2s infinite both;
+}
+
+@keyframes wavesOnTheMove {
+  0% {
+    transform: translate(0px, 0px);
+  }
+
+  50% {
+    transform: translate(100px, 20px);
+  }
+
+  100% {
+    transform: translate(0px, 0px);
+  }
+}

@@ -508,6 +508,7 @@ module.exports = {
 
   minHeight: {
     '0': '0',
+    '24': '6rem',
     full: '100%',
     screen: '100vh'
   },
@@ -587,6 +588,7 @@ module.exports = {
     '4': '1rem',
     '6': '1.5rem',
     '8': '2rem',
+    '12': '3rem',
     '16': '4rem',
     '24': '6rem',
     '32': '8rem',
@@ -619,6 +621,7 @@ module.exports = {
     '4': '1rem',
     '6': '1.5rem',
     '8': '2rem',
+    '12': '3rem',
     '16': '4rem',
     '24': '6rem',
     '32': '8rem',
@@ -649,7 +652,8 @@ module.exports = {
     '3': '0.75rem',
     '4': '1rem',
     '6': '1.5rem',
-    '8': '2rem'
+    '8': '2rem',
+    '12': '3rem'
   },
 
   /*
