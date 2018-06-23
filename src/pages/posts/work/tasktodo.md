@@ -6,10 +6,10 @@ tldr: 'The love-child of a pomodoro, todo list, and timesheet.'
 description: >-
   TaskToDo is an application that combines the features of a todo list with a
   pomodoro timer.
-headerColor: '#FF0000'
-metaBackground: '#FF0000'
-linkColor: '#00D535'
-textBackground: '#FFFFFF'
+headerColor: '#767373'
+metaBackground: '#D0CECC'
+linkColor: '#344052'
+textBackground: '#F4F4F4'
 website: 'https://fervent-gates-c5bf0f.netlify.com/'
 date: '2018-05-27'
 path: /work/tasktodo
@@ -23,15 +23,16 @@ After you signup you'll be able to track your tasks and time.
 Essentially, the application is the child of a todo list and a pomodoro timer with a timelog sheet.
 
 ## Specifications
-- Node
-- Express
-- Mongo
-- PostCSS
-- TailwindCSS
-- Webpack
-- JWTs
-- React + Redux
-- and more!
+
+* Node
+* Express
+* Mongo
+* PostCSS
+* TailwindCSS
+* Webpack
+* JWTs
+* React + Redux
+* and more!
 
 It also features user-protected endpoints to ensure your data is protected and only viewable to you.
 
