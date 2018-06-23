@@ -24,24 +24,25 @@ Once you've logged weight over the course of a month, you'll start to see graphs
 
 NoFuss uses a combination many tools including:
 
-- Node
-- Express
-- Mongo
-- PostCSS
-- TailwindCSS
-- Webpack
-- JWTs
-- PUG templating
-- and more!
+* Node
+* Express
+* Mongo
+* PostCSS
+* TailwindCSS
+* Webpack
+* JWTs
+* PUG templating
+* and more!
 
 It also features user-protected endpoints if you need your data for some reason.
 
 ## Design
+
 NoFuss was designed by me using Sketch on Mac. 
 
 Here are some screenshots of the different views in the application:
 
-![Landing Page](https://camo.githubusercontent.com/3d5d1999b9ef6a52ebf6284b6664b8640ac2fa3c/68747470733a2f2f692e696d6775722e636f6d2f306471754a47542e706e67
+![Landing Page](https://camo.githubusercontent.com/3d5d1999b9ef6a52ebf6284b6664b8640ac2fa3c/68747470733a2f2f692e696d6775722e636f6d2f306471754a47542e706e67)
 
 ![Overview Page](https://camo.githubusercontent.com/46cec6b3537154e048cc4322853e96de7d5b2b5a/68747470733a2f2f692e696d6775722e636f6d2f397a52655270702e706e67)
 
