@@ -4583,6 +4583,8 @@ button,
 
 body {
   color: #222;
+  background-color: #5e548e;
+  color: #fff;
   font-family: Raleway, sans-serif;
   max-width: 100%;
 }
@@ -4631,14 +4633,15 @@ a:after {
 }
 
 a:after {
+  border-bottom: 2px solid;
+  border-color: #ef6f6c;
+  bottom: 0;
   content: "";
-  position: absolute;
   left: 0;
   height: 1em;
-  width: 100%;
-  border-bottom: 2px solid;
+  position: absolute;
   margin-top: 5px;
-  border-color: #ef6f6c;
+  width: 100%;
 }
 
 a:hover:after {
@@ -4672,12 +4675,16 @@ main {
   }
 }
 
-.home li.list-special {
+.home li.list-special,
+.projects-page li.list-special,
+.writings-page li.list-special {
   list-style: none;
   position: relative;
 }
 
-.home li.list-special:before {
+.home li.list-special:before,
+.projects-page li.list-special:before,
+.writings-page li.list-special:before {
   color: #ef6f6c;
   content: "\2022";
   font-size: 3em;
@@ -4711,6 +4718,214 @@ main {
 
   to {
     transform: translate(0);
+  }
+}
+
+.post__page h1 {
+  font-size: 1.875rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+.post__page__inner div,
+.post__page__inner h1,
+.post__page__inner h2,
+.post__page__inner h3,
+.post__page__inner h4,
+.post__page__inner h5,
+.post__page__inner h6,
+.post__page__inner p,
+.post__page__inner ul {
+  max-width: 45rem;
+  line-height: 2;
+  margin-left: auto;
+  margin-right: auto;
+  font-family: Merriweather, Constantia, Lucida Bright, Lucidabright, Lucida Serif, Lucida, DejaVu Serif, Bitstream Vera Serif, Liberation Serif, Georgia, serif;
+  margin-bottom: 2rem;
+  padding-left: .5rem;
+  padding-right: .5rem;
+  opacity: .9;
+}
+
+.post__page__inner ul {
+  max-width: 35rem;
+  list-style-position: inside;
+}
+
+.post__page__inner p {
+  font-size: 1rem;
+}
+
+.post__page__inner a {
+  text-decoration: none;
+}
+
+.post__page__inner blockquote {
+  font-style: italic;
+  max-width: 45rem;
+  line-height: 2;
+  margin-left: auto;
+  margin-right: auto;
+  font-family: Merriweather, Constantia, Lucida Bright, Lucidabright, Lucida Serif, Lucida, DejaVu Serif, Bitstream Vera Serif, Liberation Serif, Georgia, serif;
+  margin-bottom: 2rem;
+  opacity: .9;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  border-bottom: 2px solid #f49a98;
+  border-top: 2px solid #f49a98;
+}
+
+.post__page__inner blockquote cite,
+.post__page__inner blockquote p {
+  padding-left: 1rem;
+}
+
+.wp-block-button {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.wp-block-embed {
+  margin-top: 4rem;
+  margin-bottom: 4rem;
+  margin-left: 0;
+  margin-right: 0;
+  display: block;
+}
+
+.wp-block-embed iframe {
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+  max-width: 100%;
+}
+
+.wp-block-text-columns {
+  display: flex;
+  flex-direction: column;
+  max-width: 45rem;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.wp-block-text-columns .wp-block-column {
+  opacity: .9;
+}
+
+.wp-block-gallery.columns-2 {
+  display: flex;
+  flex-direction: column;
+  max-width: 80rem;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.wp-block-gallery.columns-2 .blocks-gallery-item {
+  list-style: none;
+  padding: 0;
+  width: 100%;
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+.wp-block-image {
+  max-width: 50rem;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 4rem;
+  margin-bottom: 4rem;
+}
+
+.wp-block-image img {
+  height: auto;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.wp-block-code {
+  display: flex;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+  margin-left: auto;
+  margin-right: auto;
+  background-color: #222;
+  color: #fff;
+}
+
+.wp-block-code code {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.wp-block-image figcaption {
+  text-align: center;
+  font-style: italic;
+  font-size: .875rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+@media screen and (min-width:768px) {
+  .wp-block-gallery.columns-2 {
+    flex-direction: row;
+  }
+
+  .wp-block-gallery.columns-2 .blocks-gallery-item {
+    width: 50%;
+  }
+
+  .post__page h1 {
+    font-size: 64px;
+  }
+
+  .post__page blockquote {
+    font-style: italic;
+    max-width: 45rem;
+    line-height: 2;
+    margin-left: auto;
+    margin-right: auto;
+    font-family: Merriweather, Constantia, Lucida Bright, Lucidabright, Lucida Serif, Lucida, DejaVu Serif, Bitstream Vera Serif, Liberation Serif, Georgia, serif;
+    margin-bottom: 2rem;
+    opacity: .9;
+    border-left: 2px solid #f49a98;
+    border-bottom: 0;
+    border-top: 0;
+  }
+
+  .post__page blockquote cite,
+  .post__page blockquote p {
+    padding-left: 2rem;
+  }
+
+  .wp-block-text-columns {
+    flex-direction: row;
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  .wp-block-text-columns .wp-block-column {
+    width: 50%;
+  }
+
+  .wp-block-text-columns .wp-block-column:first-of-type {
+    padding-right: 1rem;
+  }
+
+  .wp-block-text-columns .wp-block-column:last-of-type {
+    padding-left: 1rem;
+  }
+
+  .md-order-1 {
+    order: 1;
+  }
+
+  .md-order-2 {
+    order: 2;
   }
 }
 

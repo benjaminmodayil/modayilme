@@ -11,7 +11,7 @@ export default class List extends Component {
               <div>
                 <p className="text-base mb-2">
                   <span className="font-semibold">{i.title}</span> at{' '}
-                  <a className="no-underline" href={i.companyLink}>
+                  <a className="no-underline" href={i.companyLink} target="_blank">
                     {i.company}
                   </a>
                 </p>
@@ -23,7 +23,7 @@ export default class List extends Component {
           let company = i.company && (
             <React.Fragment>
               with{' '}
-              <a className="no-underline" href={i.companyLink}>
+              <a className="no-underline" href={i.companyLink} target="_blank">
                 {i.company}
               </a>
             </React.Fragment>
@@ -33,7 +33,11 @@ export default class List extends Component {
             <li className="list-special mb-8 leading-normal" key={index}>
               <div>
                 <p className="text-base mb-2">
-                  <a href={i.siteLink} className="font-semibold no-underline">
+                  <a
+                    href={i.siteLink}
+                    className="font-semibold no-underline"
+                    target="_blank"
+                  >
                     {i.title}
                   </a>{' '}
                   {company}
@@ -72,7 +76,12 @@ export default class List extends Component {
             <p className="text-base mb-2">
               <span className="font-semibold">{i.title}</span>
             </p>
-            <p className="italic text-sm">{i.skills.join(', ')}</p>
+            <p
+              className="italic text-sm"
+              dangerouslySetInnerHTML={{
+                __html: i.bottomline ? i.bottomline : i.skills.join(', ')
+              }}
+            />
           </div>
         </li>
       ))

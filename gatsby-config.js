@@ -59,7 +59,7 @@ module.exports = {
       {
         URL: '/writings',
         title: 'Writings',
-        bgColor: 'bg-blueblack text-white'
+        bgColor: 'bg-purple text-white'
       },
       {
         URL: '/projects',
@@ -108,6 +108,21 @@ module.exports = {
         company: null,
         companyLink: null,
         bottomline: 'A site for Jennifer Moore, a speech therapist.'
+      }
+    ],
+    writings: [
+      {
+        title: 'Technology',
+        bottomline: 'Front-end, back-end, AWS, emails, and etc...'
+      },
+      {
+        title: 'Productivity',
+        bottomline: 'How to do things a little bit more smoothly.'
+      },
+      {
+        title: 'Other Stuff',
+        bottomline:
+          '<a class="no-underline" href="https://www.youtube.com/watch?v=4nIUcRJX9-o" target="_blank">idkmybffjill</a>'
       }
     ]
   },
@@ -203,6 +218,15 @@ module.exports = {
         anonymize: true
       }
     },
-    `gatsby-plugin-netlify-cms`
+    // `gatsby-plugin-netlify-cms`
+    {
+      resolve: 'gatsby-source-wordpress',
+      options: {
+        baseUrl: 'modayil.club',
+        protocol: 'http',
+        hostingWPCOM: false,
+        useACF: true
+      }
+    }
   ]
 }

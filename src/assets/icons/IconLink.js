@@ -11,7 +11,7 @@ export default function IconLink(props) {
       {...props}
     >
       <title>icon-link</title>
-      <g id="Page-4" fill="none" fillRule="evenodd">
+      <g id="Page-4" fill="#EF6F6C" fillRule="evenodd">
         <g id="icon-link" fillRule="nonzero">
           <g id="link-72">
             <path

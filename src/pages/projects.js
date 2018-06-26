@@ -19,13 +19,16 @@ export default class Projects extends Component {
     const workExamples = edges.filter(i => i.node.frontmatter.type == 'work').slice(0, 6)
 
     return (
-      <main className="relative px-2 lg-px-4 pb-8 max-w-3xl mx-auto" role="main">
-        <div className="flex lg--mx-4">
+      <main className="projects-page relative pb-8 max-w-3xl mx-auto" role="main">
+        <div className="flex w-full items-center lg-items-start lg-justify-between flex-col lg-flex-row">
           <div className="mx-auto flex  w-full items-center lg-items-start lg-justify-between flex-col lg-flex-row">
-            <div className="w-full lg-w-1-2 flex flex-col pt-32 px-4 lg-px-4 max-w-mdsm items-center lg-items-start lg-justify-between mb-32 relative lg-sticky lg-pin-t">
+            <div className="w-full lg-w-1-2 flex flex-col pt-32 px-4 lg-px-8 max-w-mdsm items-center lg-items-start lg-justify-between mb-32 relative lg-sticky lg-pin-t">
               <div className="h-auto">
-                <h1 className="screenreader-only">Project Page</h1>
-                <p className="font-sans leading-normal mb-4 mx-auto lg-mx-0 text-center lg-text-left text-shadow">
+                <h1 className="font-sans leading-normal mb-4 mx-auto lg-mx-0 text-center lg-text-left text-shadow">
+                  Projects
+                </h1>
+                {/*
+               <p className="font-sans leading-normal mb-4 mx-auto lg-mx-0 text-center lg-text-left text-shadow">
                   <span role="img" aria-label="" alt="" className="text-3xl">
                     👋{' '}
                   </span>
@@ -34,20 +37,28 @@ export default class Projects extends Component {
                     Benjamin Modayil.
                   </span>
                 </p>
-                <p className="max-w-lgsm mx-auto text-center lg-text-left leading-normal text-lg mb-4 opacity-90 text-shadow font-normal">
+              */}
+                <p className="max-w-lgsm mx-auto text-center lg-text-left leading-loose text-lg mb-8 opacity-90 text-shadow font-normal">
+                  <span role="img" aria-label="" alt="">
+                    👋
+                  </span>{' '}
+                  Hi there!{' '}
+                </p>
+                <p className="max-w-lgsm mx-auto text-center lg-text-left leading-loose text-lg mb-8 opacity-90 text-shadow font-normal">
                   I’m a Front-End Developer from Philadelphia, Pennsylvannia.{' '}
                   <br className="lg-hidden" /> While from Philadelphia, I’ve spent time in
                   Ohio for college studying under a broadcasting major while also learning
                   front-end web development.
                 </p>
-                <p className="max-w-lgsm mx-auto text-center lg-text-left leading-normal text-lg opacity-90 mb-6 text-shadow font-normal">
+                <p className="max-w-lgsm mx-auto text-center lg-text-left leading-loose text-lg opacity-90 mb-6 text-shadow font-normal">
                   I’ve since completed a bootcamp program and have done two internships
-                  and an apprenticeship in the field. But feel free to look below for a
-                  better judgment of my skillset.
+                  and an apprenticeship in the field. But feel free to look at some of my
+                  projects for a better judgment of my skillset.
                 </p>
                 <a
                   href="../assets/resume.pdf"
-                  className="block w-32 font-normal text-center no-underline mx-auto border-red bg-red border-2 border-solid rounded px-3 py-1 hover-text-purple hover-bg-white hover-border-white hover-shadow-lg text-white lg-float-right"
+                  className=" font-normal text-center no-underline mx-auto py-2 text-white lg-float-right"
+                  target="_blank"
                 >
                   {/* <img src={IconResume} alt="" className="mr-2" /> */}
                   <span>view resume</span>
@@ -144,7 +155,7 @@ export const projectTitledQuery = graphql`
     site {
       siteMetadata {
         skillset {
-          title,
+          title
           skills
         }
         social {

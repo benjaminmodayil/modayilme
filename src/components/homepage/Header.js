@@ -1,6 +1,6 @@
 import Link from 'gatsby-link'
 import React, { Component } from 'react'
-import Caret from '../../assets/icons/home-icons/caret-right.svg'
+import ScrollIndicator from '../../assets/icons/ScrollIndicator.js'
 import SocialMedia from '../SocialMedia'
 
 export default class Header extends Component {
@@ -23,18 +23,25 @@ export default class Header extends Component {
           <span className="font-medium">Front-End Developer </span>
           <br />
           at{' '}
-          <a className="no-underline font-medium" href="http://hothouseinc.com">
+          <a
+            className="no-underline font-medium"
+            href="http://hothouseinc.com"
+            target="_blank"
+          >
             Hothouse Inc.
           </a>{' '}
           in Atlanta, Georgia.
         </p>
         <Link
           to="/projects"
-          className="text-white tracking-wide text-sm no-underline mx-auto md-mx-0 font-semibold text-md text-center mb-32"
+          className="text-white tracking-wide text-sm no-underline mx-auto md-mx-0 font-semibold text-md text-center mb-32 pb-1"
         >
           learn more
           {/*<img src={Caret} alt="" />*/}
         </Link>
+        <div className="mx-auto mb-8">
+          <ScrollIndicator />
+        </div>
         <SocialMedia className="mb-48" data={this.props.data.site.siteMetadata.social} />
       </header>
     )

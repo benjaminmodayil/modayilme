@@ -3,7 +3,6 @@ import Helmet from 'react-helmet'
 import 'typeface-merriweather'
 import 'typeface-raleway'
 import Navigation from '../components/Navigation'
-import Footer from '../components/_Footer'
 import Waves from '../assets/Waves'
 import './generated.css'
 
@@ -64,13 +63,16 @@ class TemplateWrapper extends React.Component {
         >
           <html lang="en" />
         </Helmet>
-        {/*<Border color={'purple-dark'} />*/}
         <Navigation navigation={navigation} />
         <div className="site__inner" data={social}>
           {this.props.children()}
         </div>
-        <Waves/>
-        {/*<Footer data={social} />*/}
+        {this.props.location.pathname.split('/')[1] !== 'writings' &&
+        this.props.location.pathname.split('/')[1] !== 'projects' ? (
+          <Waves />
+        ) : (
+          ''
+        )}
       </div>
     )
   }
