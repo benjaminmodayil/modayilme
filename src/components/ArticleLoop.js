@@ -21,7 +21,7 @@ export default class ArticleLoop extends Component {
                 __html: post.node.title
               }}
             />
-            <p
+            <div
               className="text-sm text-black opacity-90 font-serif leading-normal"
               dangerouslySetInnerHTML={{
                 __html: post.node.excerpt

@@ -1,8 +1,6 @@
 import React from 'react'
 import Header from '../components/homepage/Header'
-import RecentWritings from '../components/RecentWritings'
 import Updates from '../components/Updates'
-import Link from 'gatsby-link'
 import List from '../components/List'
 import ArticleLoop from '../components/ArticleLoop'
 
@@ -80,6 +78,7 @@ class IndexPage extends React.Component {
               </h3>
               <div className="max-w-xs mx-auto">
                 <ArticleLoop data={data} articleArray={posts} type={'writings'} />
+                {console.log('rendered')}
               </div>
             </div>
           </section>
@@ -128,11 +127,6 @@ export const indexBlogListingQuery = graphql`
         skillset {
           title
           skills
-        }
-        social {
-          URL
-          title
-          svgURL
         }
         jobs {
           title
