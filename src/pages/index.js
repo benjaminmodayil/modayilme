@@ -9,12 +9,8 @@ import ArticleLoop from '../components/ArticleLoop'
 class IndexPage extends React.Component {
   render() {
     const { data } = this.props
-    const { edges } = data.allMarkdownRemark
-
-    const articles = edges
-      .filter((i, index) => i.node.frontmatter.type == 'blog')
-      .slice(0, 3)
-    const workExamples = edges.filter(i => i.node.frontmatter.type == 'work').slice(0, 3)
+    const posts = data.allWordpressPost.edges
+    const projects = data.allWordpressWpProjects.edges
 
     return (
       <main className="relative pb-48 home" role="main">
@@ -56,7 +52,7 @@ class IndexPage extends React.Component {
                 Projects
               </h3>
               <div className="max-w-xs mx-auto">
-                <ArticleLoop data={data} articleArray={workExamples} type={'work'} />
+                <ArticleLoop data={data} articleArray={projects} type={'projects'} />
               </div>
             </div>
           </section>
@@ -83,7 +79,7 @@ class IndexPage extends React.Component {
                 Writings
               </h3>
               <div className="max-w-xs mx-auto">
-                <ArticleLoop data={data} articleArray={articles} type={'writings'} />
+                <ArticleLoop data={data} articleArray={posts} type={'writings'} />
               </div>
             </div>
           </section>
@@ -105,19 +101,30 @@ export default IndexPage
 
 export const indexBlogListingQuery = graphql`
   query IndexingQuery {
-    allMarkdownRemark(sort: { order: DESC, fields: [frontmatter___date] }, limit: 50) {
+    allWordpressPost(sort: { order: DESC, fields: [date] }, limit: 4) {
       edges {
         node {
-          frontmatter {
-            title
-            tldr
-            path
-            type
-            external
-          }
+          slug
+          title
+          excerpt
+          content
+          date
         }
       }
     }
+
+    allWordpressWpProjects(sort: { order: DESC, fields: [date] }, limit: 4) {
+      edges {
+        node {
+          slug
+          title
+          excerpt
+          content
+          date
+        }
+      }
+    }
+
     site {
       siteMetadata {
         skillset {
@@ -150,3 +157,16 @@ export const indexBlogListingQuery = graphql`
     }
   }
 `
+// allMarkdownRemark(sort: { order: DESC, fields: [frontmatter___date] }, limit: 50) {
+//   edges {
+//     node {
+//       frontmatter {
+//         title
+//         tldr
+//         path
+//         type
+//         external
+//       }
+//     }
+//   }
+// }

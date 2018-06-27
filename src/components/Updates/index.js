@@ -10,7 +10,7 @@ export default class Updates extends Component {
         <ul className="list-reset">
           <li className="flex mb-4 bg-white rounded shadow">
             <span className="font-semibold text-base mr-4 text-white bg-purple-light p-4 rounded">
-              06/23{' '}
+              06/29{' '}
             </span>
             <p className="text-base text-black p-4">Graduated from Thinkful</p>
           </li>

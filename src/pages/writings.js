@@ -13,11 +13,7 @@ export default class Writings extends Component {
     //     <span className="bg-white shadow-lg p-2 rounded w-full text-center">{el}</span>
     //   </li>
     // ))
-    const { edges } = data.allMarkdownRemark
-    const articles = edges.filter((i, index) => i.node.frontmatter.type == 'blog')
-    // .slice(0, 4)
-    const workExamples = edges.filter(i => i.node.frontmatter.type == 'work').slice(0, 6)
-
+    const { edges } = data.allWordpressPost
     return (
       <main className="writings-page relative pb-8 max-w-3xl mx-auto" role="main">
         <div className="flex w-full items-center lg-items-start lg-justify-between flex-col lg-flex-row">
@@ -26,17 +22,7 @@ export default class Writings extends Component {
               <h1 className="font-sans leading-normal mb-4 mx-auto lg-mx-0 text-center lg-text-left text-shadow">
                 Writings
               </h1>
-              {/*
-         <p className="font-sans leading-normal mb-4 mx-auto lg-mx-0 text-center lg-text-left text-shadow">
-            <span role="img" aria-label="" alt="" className="text-3xl">
-              👋{' '}
-            </span>
-            <span className="text-3xl">Hi I’m</span>{' '}
-            <span className="text-4xl font-semibold block inline-block">
-              Benjamin Modayil.
-            </span>
-          </p>
-        */}
+
               <p className="max-w-lgsm mx-auto text-center lg-text-left leading-loose text-lg mb-8 opacity-90 text-shadow font-normal">
                 <span role="img" aria-label="" alt="">
                   👋
@@ -92,7 +78,7 @@ export default class Writings extends Component {
           <div className="w-full lg-w-1-2 lg-pt-32 px-4">
             <h3 className="text-center mb-8 font-normal">Writings</h3>
             <div className="max-w-xs mx-auto">
-              <ArticleLoop articleArray={articles} type={'work'} />
+              <ArticleLoop articleArray={edges} type={'writings'} />
             </div>
           </div>
         </div>
@@ -103,16 +89,14 @@ export default class Writings extends Component {
 
 export const writingsTitledQuery = graphql`
   query writingsQuery {
-    allMarkdownRemark(sort: { order: DESC, fields: [frontmatter___date] }, limit: 50) {
+    allWordpressPost(sort: { order: DESC, fields: [date] }) {
       edges {
         node {
-          frontmatter {
-            title
-            tldr
-            path
-            type
-            external
-          }
+          slug
+          title
+          excerpt
+          content
+          date
         }
       }
     }

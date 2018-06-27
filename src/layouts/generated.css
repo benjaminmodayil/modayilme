@@ -4734,6 +4734,7 @@ main {
 .post__page__inner h4,
 .post__page__inner h5,
 .post__page__inner h6,
+.post__page__inner ol,
 .post__page__inner p,
 .post__page__inner ul {
   max-width: 45rem;
