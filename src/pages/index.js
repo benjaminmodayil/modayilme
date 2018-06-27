@@ -128,6 +128,11 @@ export const indexBlogListingQuery = graphql`
           title
           skills
         }
+        social {
+          URL
+          title
+          svgURL
+        }
         jobs {
           title
           company
@@ -149,16 +154,3 @@ export const indexBlogListingQuery = graphql`
     }
   }
 `
-// allMarkdownRemark(sort: { order: DESC, fields: [frontmatter___date] }, limit: 50) {
-//   edges {
-//     node {
-//       frontmatter {
-//         title
-//         tldr
-//         path
-//         type
-//         external
-//       }
-//     }
-//   }
-// }
