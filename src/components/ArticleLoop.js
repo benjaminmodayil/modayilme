@@ -10,7 +10,7 @@ export default class ArticleLoop extends Component {
       const path = `${this.props.type}/${post.node.slug}`
 
       return (
-        <li className="mb-8 list-reset mx-auto" key={path}>
+        <li className="mb-8 list-reset mx-auto" key={post.node.slug}>
           <Link
             to={path}
             className="p-4 bg-white no-underline no-border-bottom rounded w-full min-h-24"
