@@ -101,25 +101,23 @@ export default IndexPage
 
 export const indexBlogListingQuery = graphql`
   query IndexingQuery {
-    allWordpressPost(sort: { order: DESC, fields: [date] }, limit: 4) {
+    allWordpressPost(sort: { order: DESC, fields: [date] }, limit: 3) {
       edges {
         node {
           slug
           title
           excerpt
-          content
           date
         }
       }
     }
 
-    allWordpressWpProjects(sort: { order: DESC, fields: [date] }, limit: 4) {
+    allWordpressWpProjects(sort: { order: DESC, fields: [date] }, limit: 3) {
       edges {
         node {
           slug
           title
           excerpt
-          content
           date
         }
       }
