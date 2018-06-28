@@ -45,7 +45,7 @@ module.exports = {
         svgURL: `/assets/icons/footer/icon-linkedIn.svg`
       },
       {
-        URL: 'modayilme@gmail.com',
+        URL: 'mailTo:modayilme@gmail.com',
         title: 'Email',
         svgURL: `/assets/icons/footer/icon-contact.svg`
       }

@@ -4,41 +4,64 @@ import React, { Component } from 'react'
 export default class Projects extends Component {
   render() {
     const { data } = this.props
-    const meta = data.site.siteMetadata.skillset.map((el, index) => (
-      <li
-        key={index}
-        className="text-purple text-sm font-semibold uppercase w-1-4 flex justify-center px-2 lg-px-4 my-4"
-      >
-        <span className="bg-white shadow-lg p-2 rounded w-full text-center">{el}</span>
-      </li>
-    ))
     const { edges } = data.allWordpressWpProjects
     const projects = edges.map(i => (
-      <li className="mb-16" key={i.node.slug}>
-        <Link
-          to={'projects/' + i.node.slug}
-          className="flex shadow-lg no-underline rounded bg-white"
-        >
-          <article className="p-4">
-            <h3 className="text-purple font-sans text-base mb-2">{i.node.title}</h3>
-            <p
-              className="text-black font-serif text-sm leading-normal mb-4"
-              dangerouslySetInnerHTML={{ __html: i.node.excerpt }}
-            />
-            {i.node.tags && (
-              <ul className="list-reset flex">
-                {i.node.tags.map(x => (
-                  <li
-                    className="mr-2 bg-purple text-white rounded-full py-1 px-2 text-sm"
-                    key={x.id}
-                  >
-                    {x.name.toUpperCase()}
-                  </li>
-                ))}
-              </ul>
-            )}
-          </article>
-        </Link>
+      <li
+        className="mb-16 flex flex-col shadow-lg no-underline rounded bg-white"
+        key={i.node.slug}
+      >
+        <article className="p-4">
+          <h3 className="text-purple font-sans text-base mb-2">{i.node.title}</h3>
+          <p
+            className="text-black font-serif text-sm leading-normal mb-4"
+            dangerouslySetInnerHTML={{ __html: i.node.excerpt }}
+          />
+          {i.node.tags && (
+            <ul className="list-reset flex flex-wrap">
+              {i.node.tags.map(x => (
+                <li
+                  className="mr-2 bg-purple text-white rounded-full py-1 my-2 px-2 text-sm"
+                  key={x.id}
+                >
+                  {x.name.toUpperCase()}
+                </li>
+              ))}
+            </ul>
+          )}
+          <Link
+            to={'projects/' + i.node.slug}
+            className="text-black float-right no-underline mt-4"
+          >
+            Read More
+          </Link>
+        </article>
+        <div className="flex">
+          {i.node.acf &&
+            (i.node.acf.site_link ? (
+              <a
+                href={i.node.acf.site_link}
+                className="no-underline hover-underline bg-red w-1-2 py-2 no-border-bottom text-center"
+                target="_blank"
+              >
+                view project
+              </a>
+            ) : (
+              ''
+            ))}
+
+          {i.node.acf &&
+            (i.node.acf.repo ? (
+              <a
+                href={i.node.acf.repo}
+                className="bg-black w-1-2 no-underline hover-underline text-center no-border-bottom py-2"
+                target="_blank"
+              >
+                view code
+              </a>
+            ) : (
+              ''
+            ))}
+        </div>
       </li>
     ))
 
@@ -65,7 +88,7 @@ export default class Projects extends Component {
                 </p>
                 <p className="max-w-lgsm mx-auto text-center lg-text-left leading-loose text-lg opacity-90 mb-6 text-shadow font-normal">
                   I’ve since completed a bootcamp program and have done two internships
-                  and an apprenticeship in the field. But feel free to look at some of my
+                  and an apprenticeship in the field. Feel free to look at some of my
                   projects for a better judgment of my skillset.
                 </p>
                 <a
@@ -80,7 +103,7 @@ export default class Projects extends Component {
 
             <div className="w-full lg-w-1-2 lg-pt-32 px-4 lg-px-6 max-w-mdsm ">
               <h3 className="text-center mb-8 font-normal">Projects</h3>
-              <ul className="mx-auto list-reset">{projects}</ul>
+              <ul className="mx-auto list-reset max-w-sm md-w-5-6">{projects}</ul>
             </div>
           </div>
         </div>
@@ -102,6 +125,10 @@ export const projectTitledQuery = graphql`
           tags {
             id
             name
+          }
+          acf {
+            repo
+            site_link
           }
         }
       }
