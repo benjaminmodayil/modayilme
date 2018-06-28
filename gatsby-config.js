@@ -45,6 +45,16 @@ module.exports = {
         svgURL: `/assets/icons/footer/icon-linkedIn.svg`
       },
       {
+        URL: 'https://angel.co/benjaminmodayil',
+        title: 'AngelList',
+        svgURL: `/assets/icons/footer/icon-angellist.svg`
+      },
+      {
+        URL: '/assets/resume.pdf',
+        title: 'Resume',
+        svgURL: `/assets/icons/footer/icon-resume.svg`
+      },
+      {
         URL: 'mailTo:modayilme@gmail.com',
         title: 'Email',
         svgURL: `/assets/icons/footer/icon-contact.svg`

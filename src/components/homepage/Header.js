@@ -5,7 +5,6 @@ import SocialMedia from '../SocialMedia'
 
 export default class Header extends Component {
   render() {
-    console.log(this.props)
     return (
       <header className="pt-48 text-center mb-24 clearfix max-w-mdsm mx-auto px-4 md-px-0 text-shadow">
         <h1 className="screenreader-only">Welcome to my (Benjamin Modayil's) site!</h1>

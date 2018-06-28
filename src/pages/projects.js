@@ -1,3 +1,4 @@
+import SocialMedia from '../components/SocialMedia'
 import Link from 'gatsby-link'
 import React, { Component } from 'react'
 
@@ -80,13 +81,13 @@ export default class Projects extends Component {
                   </span>{' '}
                   Hi there!{' '}
                 </p>
-                <p className="max-w-lgsm mx-auto text-center lg-text-left leading-loose text-lg mb-8 opacity-90 text-shadow font-normal">
+                <p className="max-w-lgsm mx-auto text-center lg-text-left leading-loose text-base mb-8 opacity-90 text-shadow font-normal">
                   I’m a Front-End Developer from Philadelphia, Pennsylvannia.{' '}
                   <br className="lg-hidden" /> While from Philadelphia, I’ve spent time in
                   Ohio for college studying under a broadcasting major while also learning
                   front-end web development.
                 </p>
-                <p className="max-w-lgsm mx-auto text-center lg-text-left leading-loose text-lg opacity-90 mb-6 text-shadow font-normal">
+                <p className="max-w-lgsm mx-auto text-center lg-text-left leading-loose text-base opacity-90 mb-6 text-shadow font-normal">
                   I’ve since completed a bootcamp program and have done two internships
                   and an apprenticeship in the field. Feel free to look at some of my
                   projects for a better judgment of my skillset.
@@ -98,6 +99,9 @@ export default class Projects extends Component {
                 >
                   <span>view resume</span>
                 </a>
+              </div>
+              <div className="mt-8 w-full">
+                <SocialMedia data={this.props.data.site.siteMetadata.social} />
               </div>
             </div>
 
