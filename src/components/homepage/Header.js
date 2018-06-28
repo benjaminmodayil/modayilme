@@ -33,15 +33,15 @@ export default class Header extends Component {
         </p>
         <Link
           to="/projects"
-          className="text-white tracking-wide text-sm no-underline mx-auto md-mx-0 font-semibold text-md text-center mb-32 pb-1"
+          className="text-white tracking-wide text-sm no-underline mx-auto md-mx-0 font-semibold text-md text-center mb-24 pb-1"
         >
           learn more
-          {/*<img src={Caret} alt="" />*/}
         </Link>
-        <div className="mx-auto mb-8">
+
+        <SocialMedia data={this.props.data.site.siteMetadata.social} />
+        <div className="mx-auto mb-48">
           <ScrollIndicator />
         </div>
-        <SocialMedia className="mb-48" data={this.props.data.site.siteMetadata.social} />
       </header>
     )
   }

@@ -3,6 +3,7 @@ import Header from '../components/homepage/Header'
 import Updates from '../components/Updates'
 import List from '../components/List'
 import ArticleLoop from '../components/ArticleLoop'
+import SocialMedia from '../components/SocialMedia'
 
 class IndexPage extends React.Component {
   render() {
@@ -83,14 +84,24 @@ class IndexPage extends React.Component {
             </div>
           </section>
         </div>
-        <p className="text-xl leading-loose md-text-3xl max-w-lg mx-auto px-4 lg-px-0 md-leading-normal font-thin text-shadow">
+        <p className="text-xl leading-loose md-text-3xl max-w-lg mx-auto px-4 lg-px-0 md-leading-normal font-thin text-shadow mb-24">
           At the moment, I’m working part-time, but also looking for my next role. If
-          you’re interested in bringing me on your team or need help with a project, feel
-          free to send me a message below or{' '}
+          you’re interested in bringing me on your team or need help with a project, take
+          a look at my{' '}
+          <a
+            className="no-underline"
+            href="https://www.modayil.me/assets/resume.pdf"
+            target="_blank"
+          >
+            resume
+          </a>{' '}
+          and feel free to{' '}
           <a className="no-underline" href="mailto:modayilme@gmail.com">
             email me
           </a>.
         </p>
+
+        <SocialMedia data={this.props.data.site.siteMetadata.social} />
       </main>
     )
   }

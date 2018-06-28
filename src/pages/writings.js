@@ -5,14 +5,6 @@ import ArticleLoop from '../components/ArticleLoop'
 export default class Writings extends Component {
   render() {
     const { data } = this.props
-    // const meta = data.site.siteMetadata.skillset.map((el, index) => (
-    //   <li
-    //     key={index}
-    //     className="text-blue text-sm font-semibold uppercase w-1-4 flex justify-center px-2 lg-px-4 my-4"
-    //   >
-    //     <span className="bg-white shadow-lg p-2 rounded w-full text-center">{el}</span>
-    //   </li>
-    // ))
     const { edges } = data.allWordpressPost
     return (
       <main className="writings-page relative pb-8 max-w-3xl mx-auto" role="main">
@@ -29,7 +21,7 @@ export default class Writings extends Component {
                 </span>{' '}
                 Hi there!{' '}
               </p>
-              <p className="max-w-lgsm mx-auto text-center lg-text-left leading-loose text-base md-text-lg mb-16 opacity-90 text-shadow font-normal">
+              <p className="max-w-lgsm mx-auto text-center lg-text-left leading-loose text-base text-base mb-16 opacity-90 text-shadow font-normal">
                 I see you have found my writings page. Here you'll find me writing on a
                 variety of topics like:
               </p>

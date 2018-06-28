@@ -18,7 +18,7 @@ export default class SocialMedia extends Component {
     })
     return (
       <nav
-        className="pt-8 mb-48 max-w-xs md-max-w-sm mx-auto w-full"
+        className="pt-8 mb-12 max-w-xs md-max-w-sm mx-auto w-full"
         role="Social Navigation"
       >
         <div className="social-nav__links flex justify-center items-center">{links}</div>
