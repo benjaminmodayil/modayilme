@@ -1,6 +1,7 @@
 import React from 'react'
 import Helmet from 'react-helmet'
 import Link from 'gatsby-link'
+import Transition from '../layouts/transition'
 
 import RelatedArticles from '../components/RelatedArticles.js'
 
@@ -12,9 +13,9 @@ import IconLink from '../assets/icons/IconLink.js'
 
 export default function Template({ data, pathContext }, props) {
   const { wordpressPost } = data
-
   const { prev, next } = pathContext
 
+  // console.log(data)
   return (
     <React.Fragment>
       <Helmet
@@ -30,7 +31,7 @@ export default function Template({ data, pathContext }, props) {
             content: wordpressPost.excerpt
           },
           // <!-- Schema image tag must be at least 180x120px -->
-          { itemprop: 'image', content: 'static/google-plus-image.png' },
+          { itemprop: 'image', content: 'assets/google-plus-image.png' },
 
           // <!-- Twitter Card data -->
           { name: 'twitter:card', content: 'summary_large_image' },
@@ -42,14 +43,14 @@ export default function Template({ data, pathContext }, props) {
           },
           { name: 'twitter:creator', content: '@modayilme' },
           // <!-- Twitter summary card with large image must be at least 280x150px -->
-          { name: 'twitter:image:src', content: 'static/twitter-image.png' },
+          { name: 'twitter:image:src', content: 'assets/twitter-image.png' },
 
           // <!-- Open Graph data -->
           { property: 'og:title', content: wordpressPost.title },
           { property: 'og:type', content: 'website' },
           { property: 'og:url', content: 'www.modayil.me' },
           // <!-- Open graph image should be 1200 x 1200 (more info here: http://www.h3xed.com/web-and-internet/how-to-use-og-image-meta-tag-facebook-reddit) -->
-          { property: 'og:image', content: 'static/op-image.jpg' },
+          { property: 'og:image', content: 'assets/op-image.jpg' },
           {
             property: 'og:description',
             content: wordpressPost.excerpt
@@ -58,24 +59,28 @@ export default function Template({ data, pathContext }, props) {
           { name: 'theme-color', content: '#F7484E' }
         ]}
       />
-
-      <main className="post__page leading-normal mt-32 pb-16">
-        <span className="block font-semibold text-center italic font-sans">
-          {wordpressPost.date}
-        </span>
-        <h1
-          className="text-center text-5xl max-w-md mx-auto font-sans"
-          dangerouslySetInnerHTML={{ __html: wordpressPost.title }}
-        />
-        <div
-          className="text-center max-w-sm font-sans mx-auto mb-24 px-4 md-px-0 opacity-90"
-          dangerouslySetInnerHTML={{ __html: wordpressPost.excerpt }}
-        />
-        <div
-          className="post__page__inner font-thin"
-          dangerouslySetInnerHTML={{ __html: wordpressPost.content }}
-        />
-      </main>
+      <Transition location={pathContext.slug}>
+        <main
+          className="post__page leading-normal mt-32 pb-16 bg-white text-black"
+          style={props.transition && props.transition.style}
+        >
+          <span className="block font-semibold text-center italic font-sans">
+            {wordpressPost.date}
+          </span>
+          <h1
+            className="text-center text-5xl max-w-md mx-auto font-sans"
+            dangerouslySetInnerHTML={{ __html: wordpressPost.title }}
+          />
+          <div
+            className="text-center max-w-sm font-sans mx-auto mb-24 px-4 md-px-0 opacity-90"
+            dangerouslySetInnerHTML={{ __html: wordpressPost.excerpt }}
+          />
+          <div
+            className="post__page__inner font-thin"
+            dangerouslySetInnerHTML={{ __html: wordpressPost.content }}
+          />
+        </main>
+      </Transition>
     </React.Fragment>
   )
 }
@@ -208,6 +213,10 @@ export default function Template({ data, pathContext }, props) {
 
 export const query = graphql`
   query PostQuery($slug: String!) {
+    sitePage {
+      path
+    }
+
     wordpressPost(slug: { eq: $slug }) {
       title
       excerpt

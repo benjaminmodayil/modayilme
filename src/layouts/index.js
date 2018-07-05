@@ -4,6 +4,8 @@ import 'typeface-merriweather'
 import 'typeface-raleway'
 import Navigation from '../components/Navigation'
 import Waves from '../assets/Waves'
+import Transition from './transition'
+
 import './generated.css'
 
 class TemplateWrapper extends React.Component {
@@ -11,7 +13,10 @@ class TemplateWrapper extends React.Component {
     let item = this.props.data.site.siteMetadata.navigation.filter(
       i => this.props.location.pathname === i.URL
     )
-    return item[0] ? item[0].bgColor : 'bg-white text-black'
+    return this.props.location.pathname.split('/').length === 3
+      ? 'bg-white text-black'
+      : 'bg-purple text-white'
+    // return item[0] ? item[0].bgColor : 'bg-white text-black'
   }
   render() {
     let { social } = this.props.data.site.siteMetadata
@@ -64,15 +69,12 @@ class TemplateWrapper extends React.Component {
           <html lang="en" />
         </Helmet>
         <Navigation navigation={navigation} />
+
         <div className="site__inner" data={social}>
           {this.props.children()}
         </div>
-        {this.props.location.pathname.split('/')[1] !== 'writings' &&
-        this.props.location.pathname.split('/')[1] !== 'projects' ? (
-          <Waves />
-        ) : (
-          ''
-        )}
+
+        {this.props.location.pathname.split('/').length !== 3 ? <Waves /> : ''}
       </div>
     )
   }
