@@ -46,7 +46,7 @@ class Transition extends React.Component {
             className="z-10 relative"
             style={{
               // get Transition Style should output based on page
-              ...getTransitionStyle({ status, timeout }, location)
+              ...getTransitionStyle({ status, timeout }, (location = null))
             }}
           >
             {this.props.children}

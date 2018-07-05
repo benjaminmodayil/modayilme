@@ -1,6 +1,6 @@
 const getTransitionStyles = (timeout, location) => {
   // forcing a rebuild... delete this comment later...
-  
+
   // for the normal pages
   // -- side to side
 
@@ -12,10 +12,13 @@ const getTransitionStyles = (timeout, location) => {
   // check for /blog or /work and what it is going to
 
   let transitionType
-
-  location.pathname.split('/').length === 3
-    ? (transitionType = 'upAndDown')
-    : (transitionType = 'leftToRight')
+  if (location === null) {
+    transitionType = 'leftToRight'
+  } else {
+    location.pathname.split('/').length === 3
+      ? (transitionType = 'upAndDown')
+      : (transitionType = 'leftToRight')
+  }
 
   if (transitionType === 'leftToRight') {
     return {
