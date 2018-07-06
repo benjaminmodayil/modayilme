@@ -8,6 +8,7 @@ class Transition extends React.Component {
     super(props)
     this.state = { exiting: false }
     this.listenerHandler = this.listenerHandler.bind(this)
+    this.location = this.props.location || ''
   }
 
   listenerHandler(event) {
@@ -29,8 +30,6 @@ class Transition extends React.Component {
     return null
   }
 
-  location = this.props.location || ''
-
   render() {
     const transitionProps = {
       timeout: {
@@ -40,7 +39,7 @@ class Transition extends React.Component {
       appear: true,
       in: !this.state.exiting
     }
-
+    console.log(location)
     return (
       <ReactTransition {...transitionProps}>
         {status => (
@@ -48,7 +47,7 @@ class Transition extends React.Component {
             className="z-10 relative"
             style={{
               // get Transition Style should output based on page
-              ...getTransitionStyle({ status, timeout }, location)
+              ...getTransitionStyle({ status, timeout }, location || '')
             }}
           >
             {this.props.children}
