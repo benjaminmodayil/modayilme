@@ -12,7 +12,7 @@ const getTransitionStyles = (timeout, location) => {
   // check for /blog or /work and what it is going to
 
   let transitionType
-  if (location === null) {
+  if (location === null || location === '') {
     transitionType = 'leftToRight'
   } else {
     location.pathname.split('/').length === 3

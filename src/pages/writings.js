@@ -6,6 +6,7 @@ export default class Writings extends Component {
   render() {
     const { data } = this.props
     const { edges } = data.allWordpressPost
+    console.log(this.props.location)
     return (
       <Transition location={this.props.location}>
         <main
@@ -13,7 +14,6 @@ export default class Writings extends Component {
           role="main"
           style={this.props.transition && this.props.transition.style}
         >
-          {console.log(this.props)}
           <div className="flex w-full items-center lg-items-start lg-justify-between flex-col lg-flex-row">
             <div className="w-full lg-w-1-2 flex flex-col pt-32 px-4 lg-px-8 max-w-mdsm items-center lg-items-start lg-justify-between mb-32 relative lg-sticky lg-pin-t">
               <div className="h-auto">

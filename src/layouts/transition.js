@@ -29,7 +29,10 @@ class Transition extends React.Component {
     return null
   }
 
+  location = this.props.location
+
   render() {
+    // console.log(this.props.)
     const transitionProps = {
       timeout: {
         enter: 0,
@@ -46,7 +49,7 @@ class Transition extends React.Component {
             className="z-10 relative"
             style={{
               // get Transition Style should output based on page
-              ...getTransitionStyle({ status, timeout }, (location = null))
+              ...getTransitionStyle({ status, timeout }, location)
             }}
           >
             {this.props.children}

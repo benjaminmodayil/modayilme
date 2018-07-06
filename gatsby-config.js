@@ -1,6 +1,3 @@
-const fs = require('fs')
-const icon = name => fs.readFileSync(`./src/assets/icons/Icon${name}.js`)
-
 module.exports = {
   siteMetadata: {
     title: 'modayil.me',
