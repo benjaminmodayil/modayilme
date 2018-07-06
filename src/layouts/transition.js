@@ -32,7 +32,6 @@ class Transition extends React.Component {
   location = this.props.location
 
   render() {
-    // console.log(this.props.)
     const transitionProps = {
       timeout: {
         enter: 0,
