@@ -29,7 +29,7 @@ class Transition extends React.Component {
     return null
   }
 
-  location = this.props.location
+  location = this.props.location || ''
 
   render() {
     const transitionProps = {
@@ -48,7 +48,7 @@ class Transition extends React.Component {
             className="z-10 relative"
             style={{
               // get Transition Style should output based on page
-              ...getTransitionStyle({ status, timeout }, this.location)
+              ...getTransitionStyle({ status, timeout }, location)
             }}
           >
             {this.props.children}
