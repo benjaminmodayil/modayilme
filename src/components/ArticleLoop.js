@@ -16,7 +16,7 @@ export default class ArticleLoop extends Component {
             className="p-4 bg-white no-underline no-border-bottom rounded w-full min-h-24"
           >
             <h3
-              className="text-lg mb-2 text-red"
+              className="text-base mb-2 text-red"
               dangerouslySetInnerHTML={{
                 __html: post.node.title
               }}

@@ -96,11 +96,19 @@ module.exports = {
     ],
     projects: [
       {
+        title: 'Dish Summer of Soccer',
+        company: 'Hothouse Inc.',
+        siteLink: 'http://hothouseinc.com/project/2018-fifa-world-cup/',
+        companyLink: 'https://www.hothouseinc.com',
+        bottomline:
+          'Lead the effort, created an interactive quiz, and a sweepstakes form using AWS Lambda functions and DynamoDB. '
+      },
+      {
         title: 'Fifa World Cup Hub',
         company: 'Hothouse Inc.',
         siteLink: 'http://hothouseinc.com/project/2018-fifa-world-cup/',
         companyLink: 'https://www.hothouseinc.com',
-        bottomline: 'Assisted the lead developer with deadlines.'
+        bottomline: 'Assisted the lead developer with features.'
       },
       {
         title: 'Groundrules Co.',
@@ -108,14 +116,14 @@ module.exports = {
         company: 'Viget',
         companyLink: 'https://www.viget.com',
         bottomline: 'A group of interns tackle an informational piece.'
-      },
-      {
-        title: 'Jennifer Moore Speech',
-        siteLink: 'http://www.jennifermoorespeech.com/',
-        company: null,
-        companyLink: null,
-        bottomline: 'A site for Jennifer Moore, a speech therapist.'
       }
+      // {
+      //   title: 'Jennifer Moore Speech',
+      //   siteLink: 'http://www.jennifermoorespeech.com/',
+      //   company: null,
+      //   companyLink: null,
+      //   bottomline: 'A site for Jennifer Moore, a speech therapist.'
+      // }
     ],
     writings: [
       {

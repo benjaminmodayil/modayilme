@@ -9,10 +9,10 @@ export default class Projects extends Component {
     const { edges } = data.allWordpressWpProjects
     const projects = edges.map(i => (
       <li
-        className="mb-16 flex flex-col shadow-lg no-underline rounded bg-white"
+        className="mb-16 flex flex-col md-flex-row shadow-lg no-underline rounded bg-white"
         key={i.node.slug}
       >
-        <article className="p-4">
+        <article className="p-4 md-w-2-3">
           <h3 className="text-purple font-sans text-base mb-2">{i.node.title}</h3>
           <p
             className="text-black font-serif text-sm leading-normal mb-4"
@@ -22,7 +22,7 @@ export default class Projects extends Component {
             <ul className="list-reset flex flex-wrap">
               {i.node.tags.map(x => (
                 <li
-                  className="mr-2 bg-purple text-white rounded-full py-1 my-2 px-2 text-sm"
+                  className="mr-2 bg-white border-purple border font-semibold text-purple rounded-full py-1 mt-2 px-2 text-sm"
                   key={x.id}
                 >
                   {x.name.toUpperCase()}
@@ -30,22 +30,16 @@ export default class Projects extends Component {
               ))}
             </ul>
           )}
-          <Link
-            to={'projects/' + i.node.slug}
-            className="text-black float-right no-underline mt-4"
-          >
-            Read More
-          </Link>
         </article>
-        <div className="flex">
+        <div className="flex md-flex-col md-w-1-3 p-4 bg-purple-lightest">
           {i.node.acf &&
             (i.node.acf.site_link ? (
               <a
                 href={i.node.acf.site_link}
-                className="no-underline hover-underline bg-red w-1-2 py-2 no-border-bottom text-center"
+                className="no-underline hover-underline bg-purple-lighter text-purple font-semibold rounded py-2 no-border-bottom text-center px-4 w-full text-sm"
                 target="_blank"
               >
-                view project
+                view live
               </a>
             ) : (
               ''
@@ -55,7 +49,7 @@ export default class Projects extends Component {
             (i.node.acf.repo ? (
               <a
                 href={i.node.acf.repo}
-                className="bg-black w-1-2 no-underline hover-underline text-center no-border-bottom py-2"
+                className="text-purple font-semibold no-underline hover-underline text-center no-border-bottom py-2 px-4 w-full text-sm"
                 target="_blank"
               >
                 view code
@@ -63,6 +57,12 @@ export default class Projects extends Component {
             ) : (
               ''
             ))}
+          <Link
+            to={'projects/' + i.node.slug}
+            className="hover-underline bg-purple text-white font-semibold rounded no-underline text-center md-mt-8 px-2 py-2 w-full no-border-bottom md-self-end text-sm"
+          >
+            Read More
+          </Link>
         </div>
       </li>
     ))

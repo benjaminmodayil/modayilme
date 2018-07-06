@@ -68,7 +68,7 @@ class TemplateWrapper extends React.Component {
         >
           <html lang="en" />
         </Helmet>
-        <Navigation navigation={navigation} />
+        <Navigation navigation={navigation} location={this.props.location} />
 
         <div className="site__inner" data={social}>
           {this.props.children()}

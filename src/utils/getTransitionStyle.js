@@ -41,12 +41,12 @@ const getTransitionStyles = (timeout, location) => {
     return {
       entering: {
         opacity: 0,
-        transform: `translate(0, 100%)`
+        transform: `translate(0, 100%) scale(3)`
       },
       entered: {
         opacity: 1,
         transform: `translate(0px, 0)`,
-        transition: `all 1s ease-in-out`
+        transition: `all 0.8s ease-in-out`
       },
       exiting: {
         opacity: 0,
