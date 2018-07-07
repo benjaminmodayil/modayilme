@@ -15,7 +15,6 @@ export default function Template({ data, pathContext }, props) {
   const { wordpressPost } = data
   const { prev, next } = pathContext
 
-  // console.log(data)
   return (
     <React.Fragment>
       <Helmet
@@ -215,6 +214,10 @@ export const query = graphql`
   query PostQuery($slug: String!) {
     sitePage {
       path
+    }
+
+    site {
+      pathPrefix
     }
 
     wordpressPost(slug: { eq: $slug }) {

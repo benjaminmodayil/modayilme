@@ -1,6 +1,4 @@
 const getTransitionStyles = (timeout, location) => {
-  // forcing a rebuild... delete this comment later...
-
   // for the normal pages
   // -- side to side
 
@@ -10,14 +8,18 @@ const getTransitionStyles = (timeout, location) => {
   // Also need to think about what page it's going to
 
   // check for /blog or /work and what it is going to
-
   let transitionType
-  if (location === null || location === '') {
+  console.log({ location: location })
+  if (
+    location.pathname === '/' ||
+    location.pathname === '/blog' ||
+    location.pathname === '/writings' ||
+    location.pathname === '/work' ||
+    location.pathname === '/projects'
+  ) {
     transitionType = 'leftToRight'
   } else {
-    location.pathname.split('/').length === 3
-      ? (transitionType = 'upAndDown')
-      : (transitionType = 'leftToRight')
+    transitionType = 'upAndDown'
   }
 
   if (transitionType === 'leftToRight') {
@@ -57,7 +59,8 @@ const getTransitionStyles = (timeout, location) => {
   }
 }
 
-const getTransitionStyle = ({ timeout, status }, location) =>
-  getTransitionStyles(timeout, location)[status]
+const getTransitionStyle = ({ timeout, status }, location) => {
+  return getTransitionStyles(timeout, location)[status]
+}
 
 export default getTransitionStyle

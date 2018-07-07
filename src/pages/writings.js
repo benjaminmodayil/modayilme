@@ -6,6 +6,7 @@ export default class Writings extends Component {
   render() {
     const { data } = this.props
     const { edges } = data.allWordpressPost
+    console.log(this.props.location)
     return (
       <Transition location={this.props.location}>
         <main
