@@ -179,10 +179,6 @@ main {
     @apply max-w-mdlg leading-loose mx-auto font-serif mb-8 px-4 opacity-90;
   }
 
-  .test {
-    color: blue;
-  }
-
   ul {
     @apply max-w-mdsm;
     list-style-position: inside;

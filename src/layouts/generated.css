@@ -4746,10 +4746,6 @@ main {
   opacity: .9;
 }
 
-.post__page__inner .test {
-  color: blue;
-}
-
 .post__page__inner ul {
   max-width: 35rem;
   list-style-position: inside;

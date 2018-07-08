@@ -1,36 +1,12 @@
 import React from 'react'
 import Helmet from 'react-helmet'
-// import WorkPostHeader from '../components/work/WorkPostHeader'
-import RelatedArticles from '../components/RelatedArticles.js'
-
+import Transition from '../layouts/transition'
 // import '../layouts/_scss/vendor/prism.css'
 
 class Template extends React.Component {
   render() {
     const { markdownRemark: post } = this.props.data
     const { wordpressWpProjects } = this.props.data
-    console.log(this.props.data)
-    // let projectLinkButton
-
-    // if (wordpressWpProjects.website) {
-    //   projectLinkButton = (
-    //     <a
-    //       href={wordpressWpProjects.website}
-    //       className="work-preview__body__meta__data-and-link__link font-weight--light font-family--heading"
-    //     >
-    //       Visit the site
-    //     </a>
-    //   )
-    // } else if (wordpressWpProjects.pen) {
-    //   projectLinkButton = (
-    //     <a
-    //       href={wordpressWpProjects.pen}
-    //       className="work-preview__body__meta__data-and-link__link font-weight--light font-family--heading"
-    //     >
-    //       See the pen
-    //     </a>
-    //   )
-    // }
 
     return (
       <React.Fragment>
@@ -75,29 +51,29 @@ class Template extends React.Component {
             { name: 'theme-color', content: '#F7484E' }
           ]}
         />
-
-        <main className="post__page leading-normal mt-32 pb-16">
-          <span className="block font-semibold text-center italic font-sans">
-            {wordpressWpProjects.date}
-          </span>
-          <h1
-            className="text-center text-5xl max-w-md mx-auto font-sans"
-            dangerouslySetInnerHTML={{ __html: wordpressWpProjects.title }}
-          />
-          <div
-            className="text-center max-w-sm font-sans mx-auto mb-24 px-4 md-px-0 opacity-90"
-            dangerouslySetInnerHTML={{ __html: wordpressWpProjects.excerpt }}
-          />
-          <div
-            className="post__page__inner font-thin"
-            dangerouslySetInnerHTML={{ __html: wordpressWpProjects.content }}
-          />
-        </main>
+        <Transition location={this.props.pathContext.slug}>
+          <main className="post__page leading-normal mt-32 pb-16">
+            <span className="block font-semibold text-center italic font-sans">
+              {wordpressWpProjects.date}
+            </span>
+            <h1
+              className="text-center text-5xl max-w-md mx-auto font-sans"
+              dangerouslySetInnerHTML={{ __html: wordpressWpProjects.title }}
+            />
+            <div
+              className="text-center max-w-sm font-sans mx-auto mb-24 px-4 md-px-0 opacity-90"
+              dangerouslySetInnerHTML={{ __html: wordpressWpProjects.excerpt }}
+            />
+            <div
+              className="post__page__inner font-thin"
+              dangerouslySetInnerHTML={{ __html: wordpressWpProjects.content }}
+            />
+          </main>
+        </Transition>
       </React.Fragment>
     )
   }
 }
-// <WorkPostHeader posts={post} />
 
 export default Template
 
