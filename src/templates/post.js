@@ -23,7 +23,7 @@ export default function Template({ data, pathContext }, props) {
             content: wordpressPost.excerpt
           },
           // <!-- Schema image tag must be at least 180x120px -->
-          { itemprop: 'image', content: 'assets/google-plus-image.png' },
+          { itemprop: 'image', content: 'assets/google-plus-meta.png' },
 
           // <!-- Twitter Card data -->
           { name: 'twitter:card', content: 'summary_large_image' },
@@ -35,20 +35,20 @@ export default function Template({ data, pathContext }, props) {
           },
           { name: 'twitter:creator', content: '@modayilme' },
           // <!-- Twitter summary card with large image must be at least 280x150px -->
-          { name: 'twitter:image:src', content: 'assets/twitter-image.png' },
+          { name: 'twitter:image:src', content: 'assets/twitter-meta.png' },
 
           // <!-- Open Graph data -->
           { property: 'og:title', content: wordpressPost.title },
           { property: 'og:type', content: 'website' },
           { property: 'og:url', content: 'www.modayil.me' },
           // <!-- Open graph image should be 1200 x 1200 (more info here: http://www.h3xed.com/web-and-internet/how-to-use-og-image-meta-tag-facebook-reddit) -->
-          { property: 'og:image', content: 'assets/op-image.jpg' },
+          { property: 'og:image', content: 'assets/oggraph-meta.png' },
           {
             property: 'og:description',
             content: wordpressPost.excerpt
           },
           { property: 'og:site_name', content: wordpressPost.excerpt },
-          { name: 'theme-color', content: '#F7484E' }
+          { name: 'theme-color', content: '#5E548E' }
         ]}
       />
       <Transition location={pathContext.slug}>
