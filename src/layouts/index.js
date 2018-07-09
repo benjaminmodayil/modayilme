@@ -41,7 +41,7 @@ class TemplateWrapper extends React.Component {
             { itemprop: 'image', content: 'assets/google-plus-image.png' }, // <!-- Twitter Card data -->
             { name: 'twitter:card', content: 'summary_large_image' },
             { name: 'twitter:site', content: '@modayilme' },
-            { name: 'twitter:title', content: "Benjamin Modayil's site" },
+            { name: 'twitter:title', content: "Benjamin Modayil's site" }, 
             {
               name: 'twitter:description',
               content:
