@@ -21,12 +21,6 @@ export default class Writings extends Component {
                   Writings
                 </h1>
 
-                <p className="max-w-lgsm mx-auto text-center lg-text-left leading-loose text-lg mb-8 opacity-90 text-shadow font-normal">
-                  <span role="img" aria-label="" alt="">
-                    👋
-                  </span>{' '}
-                  Hi there!{' '}
-                </p>
                 <p className="max-w-lgsm mx-auto text-center lg-text-left leading-loose text-base text-base mb-16 opacity-90 text-shadow font-normal">
                   I see you have found my writings page. Here you'll find me writing on a
                   variety of topics like:
