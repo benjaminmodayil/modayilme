@@ -1,15 +1,15 @@
 import React from 'react'
 import Helmet from 'react-helmet'
 import Transition from '../layouts/transition'
-
-// import '../layouts/_scss/vendor/prism.css'
+import Navigation from '../components/Navigation'
+import '../layouts/css/vendor/prism.css'
 
 export default function Template({ data, pathContext }, props) {
   const { wordpressPost } = data
   const { prev, next } = pathContext
 
   return (
-    <React.Fragment>
+    <div className="bg-white text-black">
       <Helmet
         title="Blog | ✍️"
         meta={[
@@ -52,8 +52,12 @@ export default function Template({ data, pathContext }, props) {
         ]}
       />
       <Transition location={pathContext.slug}>
+        <Navigation
+          navigation={data.site.siteMetadata.navigation}
+          location={pathContext}
+        />
         <main
-          className="post__page leading-normal mt-32 pb-16 bg-white text-black"
+          className="post__page leading-normal mt-32 pb-16"
           style={props.transition && props.transition.style}
         >
           <span className="block font-semibold text-center italic font-sans">
@@ -73,7 +77,7 @@ export default function Template({ data, pathContext }, props) {
           />
         </main>
       </Transition>
-    </React.Fragment>
+    </div>
   )
 }
 
@@ -211,6 +215,17 @@ export const query = graphql`
 
     site {
       pathPrefix
+      siteMetadata {
+        social {
+          URL
+          title
+          svgURL
+        }
+        navigation {
+          URL
+          title
+        }
+      }
     }
 
     wordpressPost(slug: { eq: $slug }) {

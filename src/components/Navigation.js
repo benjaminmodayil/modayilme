@@ -3,6 +3,7 @@ import React, { Component } from 'react'
 
 export default class Navigation extends Component {
   render() {
+    console.log(this.props)
     let navigation = this.props.navigation.map((i, index) => {
       let activeBorder =
         i.URL === this.props.location.pathname ? 'border-red' : 'border-transparent'

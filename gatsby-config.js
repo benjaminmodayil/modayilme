@@ -61,17 +61,17 @@ module.exports = {
       {
         URL: '/',
         title: 'Home',
-        bgColor: 'bg-purple text-white'
+        bgColor: null
       },
       {
         URL: '/writings',
         title: 'Writings',
-        bgColor: 'bg-purple text-white'
+        bgColor: null
       },
       {
         URL: '/projects',
         title: 'Projects',
-        bgColor: 'bg-purple text-white'
+        bgColor: null
       }
     ],
     jobs: [

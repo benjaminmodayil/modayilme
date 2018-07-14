@@ -1,15 +1,15 @@
 import React from 'react'
 import Helmet from 'react-helmet'
 import Transition from '../layouts/transition'
-// import '../layouts/_scss/vendor/prism.css'
+import '../layouts/css/vendor/prism.css'
+import Navigation from '../components/Navigation'
 
 class Template extends React.Component {
   render() {
-    const { markdownRemark: post } = this.props.data
     const { wordpressWpProjects } = this.props.data
 
     return (
-      <React.Fragment>
+      <div className="bg-white text-black">
         <Helmet
           title="Projects | 💻"
           meta={[
@@ -52,7 +52,11 @@ class Template extends React.Component {
           ]}
         />
         <Transition location={this.props.pathContext.slug}>
-          <main className="post__page leading-normal mt-32 pb-16">
+          <Navigation
+            navigation={this.props.data.site.siteMetadata.navigation}
+            location={this.props.pathContext.slug}
+          />
+          <main className="post__page leading-normal mt-32 pb-16 bg-white text-black">
             <span className="block font-semibold text-center italic font-sans">
               {wordpressWpProjects.date}
             </span>
@@ -70,7 +74,7 @@ class Template extends React.Component {
             />
           </main>
         </Transition>
-      </React.Fragment>
+      </div>
     )
   }
 }
@@ -79,6 +83,21 @@ export default Template
 
 export const query = graphql`
   query WorkQuery($slug: String!) {
+    site {
+      pathPrefix
+      siteMetadata {
+        social {
+          URL
+          title
+          svgURL
+        }
+        navigation {
+          URL
+          title
+        }
+      }
+    }
+
     wordpressWpProjects(slug: { eq: $slug }) {
       title
       excerpt

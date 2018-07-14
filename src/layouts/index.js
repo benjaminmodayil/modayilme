@@ -2,28 +2,15 @@ import React from 'react'
 import Helmet from 'react-helmet'
 import 'typeface-merriweather'
 import 'typeface-raleway'
-import Navigation from '../components/Navigation'
 import Waves from '../assets/Waves'
 import Transition from './transition'
 
 import './generated.css'
 
 class TemplateWrapper extends React.Component {
-  setColors = () => {
-    let item = this.props.data.site.siteMetadata.navigation.filter(
-      i => this.props.location.pathname === i.URL
-    )
-    return this.props.location.pathname.split('/').length === 3
-      ? 'bg-white text-black'
-      : 'bg-purple text-white'
-    // return item[0] ? item[0].bgColor : 'bg-white text-black'
-  }
   render() {
-    let { social } = this.props.data.site.siteMetadata
-    let { navigation } = this.props.data.site.siteMetadata
-
     return (
-      <div className={`site__container min-h-screen ${this.setColors()}`}>
+      <div className="site__container min-h-screen">
         <Helmet
           title="Home | Benjamin Modayil"
           meta={[
@@ -68,11 +55,8 @@ class TemplateWrapper extends React.Component {
         >
           <html lang="en" />
         </Helmet>
-        <Navigation navigation={navigation} location={this.props.location} />
 
-        <div className="site__inner" data={social}>
-          {this.props.children()}
-        </div>
+        <div className="site__inner">{this.props.children()}</div>
 
         {this.props.location.pathname.split('/').length !== 3 ? <Waves /> : ''}
       </div>
@@ -90,11 +74,6 @@ export const layoutQuery = graphql`
           URL
           title
           svgURL
-        }
-        navigation {
-          URL
-          title
-          bgColor
         }
       }
     }

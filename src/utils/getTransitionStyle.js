@@ -9,7 +9,7 @@ const getTransitionStyles = (timeout, location) => {
 
   // check for /blog or /work and what it is going to
   let transitionType
-  console.log({ location: location })
+
   if (
     location.pathname === '/' ||
     location.pathname === '/blog' ||
