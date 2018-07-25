@@ -56,7 +56,7 @@ class Template extends React.Component {
             navigation={this.props.data.site.siteMetadata.navigation}
             location={this.props.pathContext.slug}
           />
-          <main className="post__page leading-normal mt-32 pb-16 bg-white text-black">
+          <main className="post__page leading-normal mt-32 pb-16">
             <span className="block font-semibold text-center italic font-sans">
               {wordpressWpProjects.date}
             </span>
