@@ -4,7 +4,7 @@
   "version": "1.0.0",
   "author": "Benjamin Modayil <modayilme@gmail.com>",
   "dependencies": {
-    "gatsby": "^1.9.17",
+    "gatsby": "^1.9.277",
     "gatsby-image": "^1.0.51",
     "gatsby-link": "^1.6.15",
     "gatsby-plugin-catch-links": "^1.0.9",
@@ -21,8 +21,8 @@
     "gatsby-remark-images": "^1.5.24",
     "gatsby-remark-prismjs": "^1.2.17",
     "gatsby-remark-smartypants": "^1.4.8",
-    "gatsby-source-wordpress": "^2.0.81",
     "gatsby-source-filesystem": "^1.4.12",
+    "gatsby-source-wordpress": "^2.0.81",
     "gatsby-transformer-remark": "^1.7.34",
     "gatsby-transformer-sharp": "^1.6.24",
     "netlify-cms": "^1.7.0",

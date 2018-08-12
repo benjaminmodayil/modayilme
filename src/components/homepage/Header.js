@@ -19,9 +19,11 @@ export default class Header extends Component {
             </span>
           </p>
           <p className="text-2xl leading-normal md-leading-loose mb-2 opacity-90 mb-8 font-thin">
-            I’m currently an intern{' '}
-            <span className="font-medium block md-inline">Front-End Developer </span>
-            at{' '}
+            <span className="block">
+              I’m a{' '}
+              <span className="font-medium block md-inline">Front-End Developer, </span>
+            </span>
+            with{' '}
             <a
               className="no-underline font-medium"
               href="http://hothouseinc.com"
@@ -29,7 +31,8 @@ export default class Header extends Component {
             >
               Hothouse Inc.
             </a>{' '}
-            in Atlanta, Georgia.
+            in Atlanta, Georgia,{' '}
+            <span className="block">but working remotely in Philadelphia, PA.</span>
           </p>
           <Link
             to="/projects"
