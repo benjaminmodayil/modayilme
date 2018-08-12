@@ -32,7 +32,9 @@ export default class Header extends Component {
               Hothouse Inc.
             </a>{' '}
             in Atlanta, Georgia,{' '}
-            <span className="block">but working remotely in Philadelphia, PA.</span>
+            <span className="inline md-block">
+              but working remotely in Philadelphia, PA.
+            </span>
           </p>
           <Link
             to="/projects"
