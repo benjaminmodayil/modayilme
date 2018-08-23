@@ -33,7 +33,7 @@ export default class Header extends Component {
             </a>{' '}
             in Atlanta, Georgia,{' '}
             <span className="inline md-block">
-              but working remotely in Philadelphia, PA.
+              but working remotely from Philadelphia, PA.
             </span>
           </p>
           <Link
