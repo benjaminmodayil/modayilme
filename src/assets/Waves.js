@@ -5,7 +5,6 @@ export default function Waves(props) {
     <svg
       className="waves"
       xmlns="http://www.w3.org/2000/svg"
-      height={200}
       viewBox="0 0 1746 200"
       {...props}
     >
