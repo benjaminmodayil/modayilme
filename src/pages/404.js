@@ -1,23 +1,14 @@
-import Link from 'gatsby-link'
-import React from 'react'
-// Gatsby Link is invalid on 404 pages at the moment. Track here: https://github.com/gatsbyjs/gatsby/issues/1838
+import React from "react"
+
+import Layout from "../components/layout"
+import SEO from "../components/seo"
 
 const NotFoundPage = () => (
-  <div className="max-w-sm">
-    <h1 className="">
-      Whoopsy
-      <span role="img" aria-label="shrugging emoji" alt="shrugging emoji">
-        🤷
-      </span>
-    </h1>
-    <p className="">You just hit a route that doesn&#39;t exist...</p>
-    <p className="">
-      Go back to the <Link to="/">homepage?</Link>
-    </p>
-    <p className="">
-      Possibly help me out and <Link to="/contact">let me know</Link>?
-    </p>
-  </div>
+  <Layout>
+    <SEO title="404: Not found" />
+    <h1>NOT FOUND</h1>
+    <p>You just hit a route that doesn&#39;t exist... the sadness.</p>
+  </Layout>
 )
 
 export default NotFoundPage
