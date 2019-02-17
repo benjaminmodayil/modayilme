@@ -1,4 +1,7 @@
-# Benjamin Modayil's personal site 👨‍💻
+[![Netlify Status](https://api.netlify.com/api/v1/badges/474de5b3-8d8d-4496-b829-02299ed66b09/deploy-status)](https://app.netlify.com/sites/fervent-wozniak-85e598/deploys)
+
+# Ben Modayil's personal site 👨‍💻
+
 Hey there, this is my personal site for blogging/possible employers to look up.
 
 It's a static site generated using [GatsbyJS](https://www.gatsbyjs.org/) and React.
