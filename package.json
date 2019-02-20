@@ -24,15 +24,21 @@
     "gatsby": "^2.1.4",
     "gatsby-image": "^2.0.29",
     "gatsby-plugin-manifest": "^2.0.17",
+    "gatsby-plugin-netlify-cms": "^3.0.12",
     "gatsby-plugin-offline": "^2.0.23",
+    "gatsby-plugin-postcss": "^2.0.5",
     "gatsby-plugin-react-helmet": "^3.0.6",
     "gatsby-plugin-sharp": "^2.0.20",
     "gatsby-source-filesystem": "^2.0.20",
     "gatsby-transformer-sharp": "^2.1.13",
+    "netlify-cms": "^2.4.2",
+    "normalize.css": "^8.0.1",
     "prop-types": "^15.7.2",
     "react": "^16.8.2",
     "react-dom": "^16.8.2",
-    "react-helmet": "^5.2.0"
+    "react-helmet": "^5.2.0",
+    "typeface-lato": "0.0.54",
+    "typeface-permanent-marker": "0.0.54"
   },
   "devDependencies": {
     "autoprefixer": "^8.2.0",
