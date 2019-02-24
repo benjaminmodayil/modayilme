@@ -1,13 +1,8 @@
 import React, { useState } from 'react'
 import { StaticQuery, graphql } from 'gatsby'
 import Link from 'gatsby-link'
-// import Header from "./header"
-
 import 'normalize.css'
 import './layout.css'
-
-require('typeface-permanent-marker')
-require('typeface-lato')
 
 const Layout = props => (
   <StaticQuery
@@ -22,25 +17,30 @@ const Layout = props => (
     `}
     render={data => (
       <>
-        {/*// <Header siteTitle={data.site.siteMetadata.title} /> */}
-        <nav>
-          <Link to="/">
-            <acronym title="Benjamin Modayil" class="font-special text-red text-3xl">
+        <nav className="flex justify-between container mx-auto py-4">
+          <Link to="/" className="no-underline hover-underline">
+            <acronym title="Benjamin Modayil" class="font-special text-red text-2xl">
               B.M.
             </acronym>
           </Link>
 
           <div>
-            <Link to="/">blog</Link>
-            <Link to="/">work log</Link>
-            <Link to="/">ui challenge</Link>
-            <Link to="/">contact</Link>
+            <Link className="text-sm no-underline hover-underline ml-6" to="/">
+              blog
+            </Link>
+            <Link className="text-sm no-underline hover-underline ml-6" to="/">
+              work log
+            </Link>
+            <Link className="text-sm no-underline hover-underline ml-6" to="/">
+              ui challenge
+            </Link>
+            <Link className="text-sm no-underline hover-underline ml-6" to="/">
+              contact
+            </Link>
           </div>
         </nav>
-        <div>
-          <main>{props.children}</main>
-          <footer>© {new Date().getFullYear()}</footer>
-        </div>
+        <main className="container mx-auto">{props.children}</main>
+        <footer className="container mx-auto">© {new Date().getFullYear()}</footer>
       </>
     )}
   />

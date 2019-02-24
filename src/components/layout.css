@@ -1,8 +1,47 @@
 @tailwind preflight;
 @tailwind components;
-@import url('https://fonts.googleapis.com/css?family=Permanent+Marker');
+
 html {
+  @apply text-black;
   font-family: 'Lato', sans-serif;
+  text-decoration-color: #e06d70;
+}
+
+.link {
+  @apply text-black no-underline self-start;
+
+  &:hover {
+    @apply border-b-2 border-red;
+  }
+
+  &.obvious {
+    @apply border-b-2 border-red;
+  }
+}
+
+.work-preview {
+  @apply max-w-xs w-full mb-8 bg-white rounded;
+  transition: all 0.2s ease;
+
+  a {
+    @apply no-underline p-4 shadow block  w-full;
+  }
+
+  h4 {
+    @apply text-lg font-normal mb-4;
+  }
+
+  ul {
+    @apply list-reset flex;
+
+    li {
+      @apply text-sm font-bold bg-purple-lighter rounded-full px-3 py-1 mr-2;
+    }
+  }
+
+  &.slide-anim {
+    transform: translateX(100px);
+  }
 }
 
 @tailwind utilities;

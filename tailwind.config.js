@@ -44,13 +44,13 @@ View the full documentation at https://tailwindcss.com.
 
 let colors = {
   transparent: 'transparent',
-  'black-lightest': '#E9E9E9',
-  'black-lighter': '#A7A7A7',
-  'black-light': '#646464',
-  black: '#222222',
-  'black-dark': '#1F1F1F',
-  'black-darker': '#141414',
-  'black-darkest': '#0A0A0A',
+  'black-darkest': '#1C1C1C',
+  'black-darker': '#373738',
+  'black-dark': '#535354',
+  black: '#5C5C5D',
+  'black-light': '#8D8D8E',
+  'black-lighter': '#BEBEBE',
+  'black-lightest': '#EFEFEF',
   'white-lightest': '#FFFFFF',
   'white-lighter': '#FFFFFF',
   'white-light': '#FFFFFF',
@@ -195,7 +195,7 @@ module.exports = {
     '2xl': '1.5rem', // 24px
     '3xl': '1.875rem', // 30px
     '4xl': '2.25rem', // 36px
-    '5xl': '3rem' // 48px
+    '7xl': '4.5rem' // 72px
   },
 
   /*
@@ -328,7 +328,8 @@ module.exports = {
     '0': '0',
     '2': '2px',
     '4': '4px',
-    '8': '8px'
+    '8': '8px',
+    '20': '20px'
   },
 
   /*
@@ -497,6 +498,7 @@ module.exports = {
     '0': '0',
     '24': '6rem',
     full: '100%',
+    'partial-screen': '80vh',
     screen: '100vh'
   },
 
@@ -830,6 +832,7 @@ module.exports = {
   */
 
   plugins: [
+    require('tailwindcss-accessibility'),
     require('tailwindcss/plugins/container')({
       // center: true,
       // padding: '1rem',

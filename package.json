@@ -29,6 +29,7 @@
     "gatsby-plugin-postcss": "^2.0.5",
     "gatsby-plugin-react-helmet": "^3.0.6",
     "gatsby-plugin-sharp": "^2.0.20",
+    "gatsby-plugin-web-font-loader": "^1.0.4",
     "gatsby-source-filesystem": "^2.0.20",
     "gatsby-transformer-sharp": "^2.1.13",
     "netlify-cms": "^2.4.2",
@@ -37,8 +38,7 @@
     "react": "^16.8.2",
     "react-dom": "^16.8.2",
     "react-helmet": "^5.2.0",
-    "typeface-lato": "0.0.54",
-    "typeface-permanent-marker": "0.0.54"
+    "tailwindcss-accessibility": "^1.0.0"
   },
   "devDependencies": {
     "autoprefixer": "^8.2.0",
