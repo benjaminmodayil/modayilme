@@ -1,9 +1,17 @@
+const tailwindcss = require(`tailwindcss`);
+const postcssCssNext = require('postcss-cssnext');
 module.exports = {
   plugins: [
-    require('postcss-cssnext'),
+    postcssCssNext({
+      features: {
+        customProperties: {
+          warnings: false
+        }
+      }
+    }),
+    tailwindcss('./tailwind.config.js'),
     require('postcss-import'),
-    require('cssnano'),
     require('postcss-nested'),
-    require('tailwindcss')('./tailwind.config.js')
+    require('cssnano')
   ]
-}
+};

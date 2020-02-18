@@ -1,34 +1,30 @@
-import React, { useState } from 'react'
-import { Link } from 'gatsby'
+import React, { useState } from 'react';
+import { Link } from 'gatsby';
 
 const WorkPreviewCard = props => {
   return (
-    <li
-      className={
-        'work-preview' +
-        (props.activeHover === null
-          ? ''
-          : props.activeHover === props.id
-          ? ''
-          : ' slide-anim')
-      }
-      onMouseEnter={() => props.setActiveHover(props.id)}
-      onMouseLeave={() => props.setReset()}
-    >
-      <Link to="">
-        <h4>Apprenticeships.me</h4>
-        <ul>
-          <li>HTML</li>
-          <li>CSS</li>
-          <li>Netlify</li>
+    <li className={'max-w-xs bg-white m-4 transition'}>
+      <Link
+        to=""
+        className="no-underline p-4 shadow-md hover-shadow-xl block w-full rounded-lg"
+      >
+        <h4 className="text-lg font-normal mb-4 text-purple-500 font-medium font-sans">
+          Apprenticeships.me
+        </h4>
+        <ul className="flex">
+          <li className="text-sm font-semibold bg-purple-200 rounded-full px-3 py-1 mr-2 text-purple-500">
+            HTML
+          </li>
+          <li className="text-sm font-semibold bg-purple-200 rounded-full px-3 py-1 mr-2 text-purple-500">
+            CSS
+          </li>
+          <li className="text-sm font-semibold bg-purple-200 rounded-full px-3 py-1 mr-2 text-purple-500">
+            Netlify
+          </li>
         </ul>
       </Link>
     </li>
-  )
-}
+  );
+};
 
-export default WorkPreviewCard
-
-// There is a resting state where all items are left aligned.Link
-
-// On hover,
+export default WorkPreviewCard;

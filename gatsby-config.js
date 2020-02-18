@@ -1,7 +1,7 @@
 module.exports = {
   siteMetadata: {
-    title: `Gatsby Default Starter`,
-    description: `Kick off your next, great Gatsby project with this default starter. This barebones starter ships with the main Gatsby configuration files you might need.`,
+    title: `Ben Modayil`,
+    description: `Ben Modayil is a front-end engineer who streams games and code on Mixer while helping clients build their brands through websites and applications.`,
     author: `@modayilme`
   },
   plugins: [
@@ -19,11 +19,38 @@ module.exports = {
       resolve: 'gatsby-plugin-web-font-loader',
       options: {
         google: {
-          families: ['Permanent Marker', 'Lato:300,400,500,600, 700']
+          families: [
+            'Permanent Marker',
+            'Raleway:300,400,500,600,700',
+            'Open Sans:300,400,500,600,700',
+            'Merriweather:300,400,500,600,700'
+          ]
         }
       }
     },
-
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        path: `${__dirname}/content/blog`,
+        name: `blog`
+      }
+    },
+    // {
+    //   resolve: 'gatsby-plugin-page-creator',
+    //   options: {
+    //     path: `${__dirname}/src/posts`
+    //   }
+    // },
+    {
+      resolve: `gatsby-plugin-mdx`,
+      gatsbyRemarkPlugins: [`gatsby-remark-prismjs`]
+    },
+    {
+      resolve: `gatsby-transformer-remark`,
+      options: {
+        plugins: [`gatsby-remark-prismjs`]
+      }
+    },
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
@@ -42,4 +69,4 @@ module.exports = {
     // To learn more, visit: https://gatsby.app/offline
     // 'gatsby-plugin-offline',
   ]
-}
+};
