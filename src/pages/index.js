@@ -88,7 +88,7 @@ const IndexPage = () => {
             </h3>
             <ul className="relative z-10 bg-white">
               <li>
-                <Link className="text-gray-800 block leading-none p-6 hover-shadow group hover-bg-purple-200 hover-text-purple-800">
+                <Link className="text-gray-800 block leading-none p-6 hover-shadow group hover-bg-purple-200 hover-text-purple-800 transition duration-100 ease-in">
                   <h4 className="text-base font-semibold mb-2">
                     Storybook 5.3+ Documentation-First Approach
                   </h4>
@@ -99,7 +99,7 @@ const IndexPage = () => {
                 </Link>
               </li>
               <li>
-                <Link className="text-gray-800 block leading-none p-6 hover-shadow group hover-bg-purple-200 hover-text-purple-800">
+                <Link className="text-gray-800 block leading-none p-6 hover-shadow group hover-bg-purple-200 hover-text-purple-800 transition duration-100 ease-in">
                   <h4 className="text-base font-semibold mb-2">
                     Storybook 5.3+ Documentation-First Approach
                   </h4>
@@ -110,7 +110,7 @@ const IndexPage = () => {
                 </Link>
               </li>
               <li>
-                <Link className="text-gray-800 block leading-none p-6 hover-shadow group hover-bg-purple-200 hover-text-purple-800">
+                <Link className="text-gray-800 block leading-none p-6 hover-shadow group hover-bg-purple-200 hover-text-purple-800 transition duration-100 ease-in">
                   <h4 className="text-base font-semibold mb-2">
                     Storybook 5.3+ Documentation-First Approach
                   </h4>
@@ -121,7 +121,7 @@ const IndexPage = () => {
                 </Link>
               </li>
               <li>
-                <Link className="text-gray-800 block leading-none p-6 hover-shadow group hover-bg-purple-200 hover-text-purple-800">
+                <Link className="text-gray-800 block leading-none p-6 hover-shadow group hover-bg-purple-200 hover-text-purple-800 transition duration-100 ease-in">
                   <h4 className="text-base font-semibold mb-2">
                     Storybook 5.3+ Documentation-First Approach
                   </h4>

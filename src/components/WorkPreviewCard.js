@@ -3,7 +3,7 @@ import { Link } from 'gatsby';
 
 const WorkPreviewCard = props => {
   return (
-    <li className={'max-w-xs bg-white m-4 transition'}>
+    <li className={'max-w-xs bg-white m-4 transition duration-150 ease-in'}>
       <Link
         to=""
         className="no-underline p-4 shadow-md hover-shadow-xl block w-full rounded-lg"

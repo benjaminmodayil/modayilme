@@ -6,7 +6,7 @@ import SEO from '../components/seo';
 const listItems = [];
 for (let i = 0; i < 11; i++) {
   listItems.push(
-    <li className="bg-white shadow-md hover-shadow-xl rounded transition">
+    <li className="bg-white shadow-md hover-shadow-xl rounded transition duration-150 ease-in">
       <Link className="no-underline p-4 block">
         <div className="flex flex-col">
           <h3 className="text-xl">This is a title</h3>

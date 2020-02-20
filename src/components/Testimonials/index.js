@@ -43,13 +43,13 @@ const Testimonials = () => {
     <div className="bg-white max-w-3xl mx-auto py-8">
       <h2 className="sr-only">Testimonials</h2>
       <p className="text-3xl font-medium font-sans leading-normal text-center mb-12">
-        Hear what others have to say about me.
+        Hear what others have to say about me
       </p>
       <div
         className="list-reset flex max-w-4xl mx-auto h-72 items-center justify-center"
         aria-live="polite"
       >
-        <article className="max-w-2xl px-4 mb-8 bg-white rounded shadow flex-0">
+        <article className="max-w-2xl px-4 mb-8 bg-white rounded shadow-md flex-0">
           <Quote testimonial={data[active]} />
         </article>
       </div>
@@ -64,7 +64,10 @@ const Testimonials = () => {
             );
           }
           return (
-            <button onClick={() => cycle(index)} className="opacity-50">
+            <button
+              onClick={() => cycle(index)}
+              className="opacity-50 hover-opacity-90 transition duration-150 ease-in"
+            >
               <img src={HappyFace} alt="" />{' '}
               <span className="sr-only">Other Testimonial</span>
             </button>

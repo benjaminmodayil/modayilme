@@ -25,7 +25,7 @@ export default function Services() {
             <Arrow
               width="16"
               height="16"
-              className={`text-purple absolute -ml-8 mt-3 transition ${
+              className={`text-purple absolute -ml-8 mt-3 transition duration-150 ease-in ${
                 isDetailOpen ? '' : 'rotate-180'
               }`}
             />
@@ -42,7 +42,7 @@ export default function Services() {
         <div className="flex flex-col rounded">
           <div className="flex space-between">
             <button
-              className={`transition group text-left w-1-2 p-4 flex justify-center hover-bg-purple-500 ${
+              className={`transition duration-150 ease-in group text-left w-1-2 p-4 flex justify-center hover-bg-purple-500 ${
                 activeTab === 'design' ? 'active-shadow' : 'inactive-shadow'
               }`}
               onClick={() => setActiveTab('design')}
@@ -64,7 +64,7 @@ export default function Services() {
               </div>
             </button>
             <button
-              className={`transition group text-left w-1-2 p-4 flex justify-center hover-bg-purple-500 ${
+              className={`transition duration-150 ease-in group text-left w-1-2 p-4 flex justify-center hover-bg-purple-500 ${
                 activeTab === 'development' ? 'active-shadow' : 'inactive-shadow'
               }`}
               onClick={() => setActiveTab('development')}
