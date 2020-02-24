@@ -11,6 +11,7 @@ exports.createPages = ({ graphql, actions }) => {
         allMdx(sort: { fields: [frontmatter___date], order: DESC }, limit: 1000) {
           edges {
             node {
+              fileAbsolutePath
               fields {
                 slug
               }
@@ -28,17 +29,39 @@ exports.createPages = ({ graphql, actions }) => {
     }
 
     // Create blog posts pages.
-    const posts = result.data.allMdx.edges;
+    const blog = result.data.allMdx.edges.filter(({ node }) =>
+      node.fileAbsolutePath.includes('blog')
+    );
+    // Create project-log pages.
+    const projectLog = result.data.allMdx.edges.filter(({ node }) =>
+      node.fileAbsolutePath.includes('project-log')
+    );
 
-    posts.forEach((post, index) => {
-      const previous = index === posts.length - 1 ? null : posts[index + 1].node;
-      const next = index === 0 ? null : posts[index - 1].node;
+    blog.forEach((item, index) => {
+      const previous = index === blog.length - 1 ? null : blog[index + 1].node;
+      const next = index === 0 ? null : blog[index - 1].node;
 
       createPage({
-        path: `blog${post.node.fields.slug}`,
+        path: `blog${item.node.fields.slug}`,
         component: blogPost,
         context: {
-          slug: post.node.fields.slug,
+          slug: item.node.fields.slug,
+          previous,
+          next
+        }
+      });
+    });
+
+    projectLog.forEach((log, index) => {
+      const previous =
+        index === projectLog.length - 1 ? null : projectLog[index + 1].node;
+      const next = index === 0 ? null : projectLog[index - 1].node;
+
+      createPage({
+        path: `project-log${log.node.fields.slug}`,
+        component: blogPost,
+        context: {
+          slug: log.node.fields.slug,
           previous,
           next
         }

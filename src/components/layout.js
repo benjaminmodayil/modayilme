@@ -17,8 +17,11 @@ const Layout = props => (
     `}
     render={data => (
       <>
-        <nav className="flex flex-col lg-flex-row justify-between max-w-5xl xl-max-w-6xl mx-auto p-4 lg-px-0 lg-py-8">
-          <Link to="/" className="no-underline hover-underline">
+        <nav className="flex flex-row justify-center lg-justify-between max-w-5xl xl-max-w-6xl mx-auto p-4 lg-px-0 lg-py-8">
+          <Link
+            to="/"
+            className="no-underline hover-underline absolute lg-block pt-2 pr-24 lg-pt-0 lg-pr-0"
+          >
             <acronym
               title="Benjamin Modayil | Go to Home Page"
               className="font-special text-red-500 text-2xl -mt-1 inline-block"
@@ -27,7 +30,7 @@ const Layout = props => (
             </acronym>
           </Link>
 
-          <div className="flex flex-col lg-mt-0 lg-block bg-purple-100 lg-bg-transparent w-full rounded p-4 lg-py-0 text-right mt-4 lg-mt-0">
+          <div className="flex flex-col lg-block bg-purple-100 lg-bg-transparent rounded p-4 lg-py-0 text-right w-48 lg-w-full">
             <Link
               className="text-base no-underline hover-underline ml-6 text-purple-500 mb-4 lg-mb-0"
               to="/blog"
@@ -36,7 +39,7 @@ const Layout = props => (
             </Link>
             <Link
               className="text-base no-underline hover-underline ml-6 text-purple-500 mb-4 lg-mb-0"
-              to="/work-log"
+              to="/project-log"
             >
               project log
             </Link>

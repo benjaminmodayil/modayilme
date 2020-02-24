@@ -2,6 +2,7 @@ import React from 'react';
 import { Link, graphql } from 'gatsby';
 import { MDXRenderer } from 'gatsby-plugin-mdx';
 import Layout from '../components/layout';
+import Header from '../components/header';
 import SEO from '../components/seo';
 
 class BlogPostTemplate extends React.Component {
@@ -9,28 +10,14 @@ class BlogPostTemplate extends React.Component {
     const post = this.props.data.mdx;
     const siteTitle = this.props.data.site.siteMetadata.title;
     const { previous, next } = this.props.pageContext;
-
     return (
       <Layout>
         <SEO title="Blog | Benjamin Modayil" />
-        <header className="mt-64 mb-32 mx-auto px-4 flex justify-center flex-col max-w-xl xl-max-w-6xl">
-          <div>
-            <div className="mb-32 lg-mb-0 text-center">
-              <h1 className="block font-special text-red-500 text-6xl text-center">
-                {post.frontmatter.title}
-              </h1>
-              <p className="text-xl lg-text-2xl font-light leading-normal mt-8 max-w-md mx-auto">
-                {post.frontmatter.date}
-              </p>
-            </div>
-          </div>
-        </header>
-
+        <Header primary={post.frontmatter.title} secondary={post.frontmatter.date} />
         <main className="post__page leading-normal mt-32 pb-16">
           <MDXRenderer>{post.body}</MDXRenderer>
         </main>
         <hr />
-
         <ul
           style={{
             display: `flex`,

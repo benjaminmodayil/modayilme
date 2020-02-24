@@ -4,19 +4,15 @@ import Layout from '../components/layout';
 import Header from '../components/header';
 import SEO from '../components/seo';
 
-// const listItems = [];
-
-const Blog = ({ data }) => {
+const ProjectLog = ({ data }) => {
   const posts = data.allMdx.edges;
-  console.log(posts);
   const listItems = posts.map(({ node }) => {
-    console.log(node);
-    const { excerpt, fields, frontmatter } = node;
+    const { fields, frontmatter } = node;
     return (
       <li className="bg-white shadow-md hover-shadow-xl rounded transition duration-150 ease-in">
         <Link
           // isExternal={frontmatter.isExternal}
-          to={`blog${fields.slug}`}
+          to={`project-log${fields.slug}`}
           className="no-underline p-4 block h-full"
         >
           <div className="flex flex-col justify-center">
@@ -38,10 +34,10 @@ const Blog = ({ data }) => {
   });
   return (
     <Layout>
-      <SEO title="Blog | Benjamin Modayil" />
+      <SEO title="Project Log | Benjamin Modayil" />
       <Header
-        primary={'Blog'}
-        secondary={'Just some thoughts or random code stuff I thought was worth sharing.'}
+        primary={'Project Log'}
+        secondary={'A side-hustle/project for better Project Management.'}
       />
       <main>
         <ul className="list-reset text-left grid-container">{listItems}</ul>
@@ -54,7 +50,7 @@ export const pageQuery = graphql`
   query {
     allMdx(
       sort: { fields: [frontmatter___date], order: DESC }
-      filter: { fileAbsolutePath: { regex: "/blog/" } }
+      filter: { fileAbsolutePath: { regex: "/project-log/" } }
     ) {
       edges {
         node {
@@ -73,4 +69,4 @@ export const pageQuery = graphql`
     }
   }
 `;
-export default Blog;
+export default ProjectLog;

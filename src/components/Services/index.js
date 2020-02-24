@@ -1,7 +1,13 @@
 import React, { useState } from 'react';
 import WorkPreviewCard from '../WorkPreviewCard';
+import Link from '../Link';
 import IconDesign from '../../images/IconDesign';
 import IconDevelopment from '../../images/IconDevelopment';
+import IconSketch from '../../images/IconSketch';
+import IconInvisionStudio from '../../images/IconInvisionStudio';
+import IconWhimsical from '../../images/IconWhimsical';
+import HacktopiaThumbnail from '../../images/hacktopia-thumbnail.jpg';
+import MarvinKnorrThumbnail from '../../images/thumbnail-marvinknorrlaw.jpg';
 
 export default function Services() {
   const [activeTab, setActiveTab] = useState('design');
@@ -20,7 +26,7 @@ export default function Services() {
         <p className="text-3xl font-medium font-sans leading-normal text-center mb-8">
           I provide services in Design and Development
         </p>
-        <details className="max-w-md mx-auto mb-12" onClick={onDetailClick}>
+        <details className="max-w-md mx-auto" onClick={onDetailClick}>
           <summary className="text-xl font-light leading-normal mt-2 cursor-pointer">
             <Arrow
               width="16"
@@ -39,60 +45,54 @@ export default function Services() {
             Sometimes you need someone that can touch design and development.
           </p>
         </details>
-        <div className="flex flex-col rounded">
-          <div className="flex space-between">
-            <button
-              className={`transition duration-150 ease-in group text-left w-1-2 p-4 flex justify-center hover-bg-purple-500 ${
-                activeTab === 'design' ? 'active-shadow' : 'inactive-shadow'
-              }`}
-              onClick={() => setActiveTab('design')}
+        <div className="mt-16 flex flex-col lg-flex-row justify-center">
+          <div className="bg-white shadow-md rounded p-8 max-w-2xl w-full">
+            <h3 className="flex justify-center items-center text-2xl leading-none text-lg font-semibold font-sans text-purple-600 -ml-12">
+              <IconDesign
+                width="52"
+                height="52"
+                className="mr-2 stroke-current group-hover-text-white"
+              />
+              Design
+            </h3>
+            <div className="mt-6 flex justify-between w-48 mx-auto">
+              <IconSketch width="60" height="60" />
+              <IconInvisionStudio width="60" height="60" />
+              <IconWhimsical width="60" height="60" />
+            </div>
+            <p className="mt-4 leading-normal max-w-lg mx-auto text-lg">
+              My typical process can include me researching your market competitors,
+              looking at current design trends in your industry, providing mood boards,
+              designing wireframes, and designing full artboards in sketch. All while you
+              approve and provide feedback throughout the process.
+            </p>
+            <Link
+              isExternal="true"
+              to={`https://www.marvinknorrlaw.com`}
+              className="bg-white rounded flex block shadow-md max-w-lg mx-auto mt-12"
             >
-              <div className="flex space-around">
-                <IconDesign
-                  width="60"
-                  height="60"
-                  className="mr-1 stroke-current group-hover-text-white"
-                />
-                <div className="group-hover-text-white">
-                  <h3 className="text-lg font-semibold font-sans">
-                    <span>Design</span>
-                  </h3>
-                  <p className="mt-1 font-medium">
-                    Market Research, Wireframing, UI Design
-                  </p>
-                </div>
-              </div>
-            </button>
-            <button
-              className={`transition duration-150 ease-in group text-left w-1-2 p-4 flex justify-center hover-bg-purple-500 ${
-                activeTab === 'development' ? 'active-shadow' : 'inactive-shadow'
-              }`}
-              onClick={() => setActiveTab('development')}
-            >
-              <div className="flex space-around">
-                <IconDevelopment
-                  width="60"
-                  height="60"
-                  className="mr-1 group-hover-text-white"
-                />
-                <div className="group-hover-text-white">
-                  <h3 className="text-lg font-semibold font-sans">
-                    <span>Development</span>
-                  </h3>
-                  <p className="mt-1 font-medium">
-                    Market Research, Wireframing, UI Design
-                  </p>
-                </div>
-              </div>
-            </button>
-          </div>
+              <span
+                style={{
+                  backgroundPosition: 'center',
+                  backgroundSize: 'cover',
+                  backgroundRepeat: 'no-repeat',
+                  backgroundImage: `url(${MarvinKnorrThumbnail})`,
+                  width: '240px',
+                  height: 'auto'
+                }}
+              />
+              <div className="p-4">
+                <h4 className="font-semibold mb-2">Marvin Knorr Law</h4>
+                <p className="mb-2 text-sm italic leading-normal">
+                  Designed with Invision Studio and developed using GatsbyJS and
+                  NetlifyCMS.
+                </p>
 
-          <div className="w-full p-4 skill-container py-16 bg-white">
-            <ul className="list-reset flex flex-wrap justify-center lg-justify-around items-center">
-              {workPreviews.map(i => {
-                return <WorkPreviewCard />;
-              })}
-            </ul>
+                <span className="text-sm text-purple-600 font-semibold self-end hover-underline">
+                  Visit
+                </span>
+              </div>
+            </Link>
           </div>
         </div>
       </div>

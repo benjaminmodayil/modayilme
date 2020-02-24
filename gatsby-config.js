@@ -35,6 +35,14 @@ module.exports = {
         name: `blog`
       }
     },
+
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        path: `${__dirname}/content/project-log`,
+        name: `project-log`
+      }
+    },
     // {
     //   resolve: 'gatsby-plugin-page-creator',
     //   options: {
