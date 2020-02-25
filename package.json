@@ -21,6 +21,7 @@
   "dependencies": {
     "@mdx-js/mdx": "^1.5.5",
     "@mdx-js/react": "^1.5.5",
+    "framer-motion": "^1.8.4",
     "gatsby": "^2.19.18",
     "gatsby-image": "^2.0.29",
     "gatsby-plugin-manifest": "^2.0.17",
