@@ -337,13 +337,14 @@ module.exports = {
       '6xl': '72rem',
       full: '100%'
     },
-    minHeight: {
+    minHeight: theme => ({
       '0': '0',
+      ...theme('spacing'),
       full: '100%',
       half: '50vh',
       almost: '85vh',
       screen: '100vh'
-    },
+    }),
     minWidth: {
       '0': '0',
       full: '100%'
@@ -501,5 +502,5 @@ module.exports = {
     zIndex: ['responsive']
   },
   corePlugins: {},
-  plugins: []
+  plugins: [require('@tailwindcss/custom-forms')]
 };

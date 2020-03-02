@@ -1,7 +1,7 @@
 import React from 'react';
 
 const Header = ({ primary, secondary }) => (
-  <header className="mt-16 lg-mt-64 mb-8 lg-mb-48 mx-auto px-4 flex justify-center flex-col max-w-xl xl-max-w-6xl">
+  <header className="mt-16 lg-mt-32 mb-8 lg-mb-24 mx-auto px-4 flex justify-center flex-col max-w-xl xl-max-w-6xl">
     <div>
       <div className="text-center">
         <h1

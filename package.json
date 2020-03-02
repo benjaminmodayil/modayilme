@@ -48,6 +48,7 @@
     "tailwindcss-accessibility": "^1.0.0"
   },
   "devDependencies": {
+    "@tailwindcss/custom-forms": "^0.2.1",
     "autoprefixer": "^8.2.0",
     "cssnano": "^4.1.10",
     "eslint": "6.8.0",

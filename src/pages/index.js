@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useEffect } from 'react';
 import { Link } from 'gatsby';
 
 import Layout from '../components/layout';
@@ -11,9 +11,6 @@ import SocialLinks from '../components/SocialLinks';
 import SEO from '../components/seo';
 
 const IndexPage = () => {
-  useEffect(() => {
-    require('../../node_modules/mailtoui/dist/mailtoui-min.js').run();
-  });
   return (
     <Layout>
       <SEO

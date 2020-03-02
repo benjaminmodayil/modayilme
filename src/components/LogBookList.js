@@ -27,7 +27,6 @@ function LogBookList() {
     }
   `);
   const iterable = data.allMdx.edges;
-  console.log(iterable);
   const list = iterable.map(({ node }) => {
     const { frontmatter, fields } = node;
     return (

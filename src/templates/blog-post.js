@@ -18,27 +18,23 @@ class BlogPostTemplate extends React.Component {
           <MDXRenderer>{post.body}</MDXRenderer>
         </main>
         <hr />
-        <ul
-          style={{
-            display: `flex`,
-            flexWrap: `wrap`,
-            justifyContent: `space-between`,
-            listStyle: `none`,
-            padding: 0
-          }}
-        >
+        <ul className="flex max-w-3xl mx-auto justify-between mt-4">
           <li>
             {previous && (
-              <Link to={`blog${previous.fields.slug}`} rel="prev">
-                ← {previous.frontmatter.title}
-              </Link>
+              <Link
+                to={`blog${previous.fields.slug}`}
+                rel="prev"
+                dangerouslySetInnerHTML={{ __html: `← ${previous.frontmatter.title}` }}
+              />
             )}
           </li>
           <li>
             {next && (
-              <Link to={`blog${next.fields.slug}`} rel="next">
-                {next.frontmatter.title} →
-              </Link>
+              <Link
+                to={`blog${next.fields.slug}`}
+                rel="next"
+                dangerouslySetInnerHTML={{ __html: `${next.frontmatter.title} →` }}
+              />
             )}
           </li>
         </ul>

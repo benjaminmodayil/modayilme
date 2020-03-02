@@ -52,10 +52,10 @@ export default function Services() {
           <ServiceSummary
             onTap={() => setActiveTab('design')}
             isActiveCheck={isDesignActive}
-            initialPosX={0}
-            finalPosX="-30vw"
-            initialPosY={0}
-            finalPosY="-30vw"
+            initialPosX={'-30vw'}
+            finalPosX="0"
+            initialPosY={'30vh'}
+            finalPosY="0"
             Icon={IconDesign}
             iconRow={[IconSketch, IconInvisionStudio, IconWhimsical]}
             title="Design"
@@ -73,10 +73,10 @@ export default function Services() {
           <ServiceSummary
             onTap={() => setActiveTab('development')}
             isActiveCheck={isDevelopmentActive}
-            initialPosX={0}
-            finalPosX="30vw"
-            initialPosY={0}
-            finalPosY="30vh"
+            initialPosX={'30vw'}
+            finalPosX="0"
+            initialPosY={'30vh'}
+            finalPosY="0vh"
             Icon={IconDevelopment}
             iconRow={[IconSketch, IconInvisionStudio, IconWhimsical]}
             title="Development"

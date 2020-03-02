@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import LinkedIn from '../images/icon-linkedin.svg';
 import Instagram from '../images/icon-instagram.svg';
 import Twitter from '../images/icon-twitter.svg';
@@ -6,6 +6,10 @@ import Letter from '../images/icon-letter.svg';
 import Mixer from '../images/icon-mixer.svg';
 
 const SocialLinks = () => {
+  useEffect(() => {
+    require('../../node_modules/mailtoui/dist/mailtoui-min.js').run();
+  });
+
   return (
     <ul className="list-reset flex justify-between max-w-xs mx-auto mt-12 items-center">
       <li>

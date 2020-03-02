@@ -152,4 +152,20 @@ details summary::-webkit-details-marker {
   }
 }
 
+.thank-you-svg {
+  stroke-dasharray: 600;
+  stroke-dashoffset: 600;
+  animation: offset 4s forwards ease-in-out;
+}
+
+@keyframes offset {
+  from {
+    fill: transparent;
+  }
+  to {
+    fill: #f56565;
+    stroke-dashoffset: 0;
+  }
+}
+
 @tailwind utilities;

@@ -57,7 +57,7 @@ const Testimonials = () => {
         {data.map((item, index) => {
           if (index === active) {
             return (
-              <button onClick={() => cycle(index)}>
+              <button onClick={() => cycle(index)} key={item.title}>
                 <img src={ExcitedFace} alt="" />{' '}
                 <span className="sr-only">Active Testimonial</span>
               </button>
@@ -67,6 +67,7 @@ const Testimonials = () => {
             <button
               onClick={() => cycle(index)}
               className="opacity-50 hover-opacity-90 transition duration-150 ease-in"
+              key={item.title}
             >
               <img src={HappyFace} alt="" />{' '}
               <span className="sr-only">Other Testimonial</span>
