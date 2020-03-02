@@ -48,7 +48,7 @@ export default function Services() {
             Sometimes you need someone that can touch design and development.
           </p>
         </details>
-        <div className="mt-16 flex justify-center min-h-half">
+        <div className="mt-16 flex justify-center py-64 relative">
           <ServiceSummary
             onTap={() => setActiveTab('design')}
             isActiveCheck={isDesignActive}

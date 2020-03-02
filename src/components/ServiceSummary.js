@@ -23,7 +23,7 @@ export default function ServiceSummary({
 
   return (
     <motion.div
-      className={`bg-white shadow-md rounded p-4 lg-p-8 max-w-lg lg-max-w-2xl w-full absolute ${!isActiveCheck &&
+      className={`bg-white shadow-md rounded p-4 lg-p-8 max-w-lg lg-max-w-2xl w-full absolute top-0 ${!isActiveCheck &&
         'cursor-pointer'} ${isActiveCheck ? 'z-10' : 'z-0'}`}
       initial={{ opacity: 0.7, x: initialPosX, y: initialPosY }}
       animate={{
