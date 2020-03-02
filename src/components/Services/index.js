@@ -54,7 +54,7 @@ export default function Services() {
             isActiveCheck={isDesignActive}
             initialPosX={'-30vw'}
             finalPosX="0"
-            initialPosY={'30vh'}
+            initialPosY={'400px'}
             finalPosY="0"
             Icon={IconDesign}
             iconRow={[IconSketch, IconInvisionStudio, IconWhimsical]}
@@ -75,7 +75,7 @@ export default function Services() {
             isActiveCheck={isDevelopmentActive}
             initialPosX={'30vw'}
             finalPosX="0"
-            initialPosY={'30vh'}
+            initialPosY={'400px'}
             finalPosY="0vh"
             Icon={IconDevelopment}
             iconRow={[IconSketch, IconInvisionStudio, IconWhimsical]}
