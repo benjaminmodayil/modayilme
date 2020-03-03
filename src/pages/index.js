@@ -68,7 +68,7 @@ const IndexPage = () => {
       </header>
       <main>
         <Services />
-        <section className="px-4 py-16">
+        <section className="px-4 py-32">
           <h2 className="sr-only">Writings</h2>
           <LogBookList />
         </section>
@@ -77,7 +77,7 @@ const IndexPage = () => {
           <Testimonials />
         </section>
 
-        <section className="pt-64 pb-32 px-2">
+        <section className="py-16 lg-pt-64 lg-pb-32 px-2">
           <div className="bg-white max-w-4xl mx-auto">
             <h2 className="sr-only">Contact Me</h2>
             <p className="text-3xl leading-normal text-center mb-48 max-w-xl mx-auto font-light px-3">
