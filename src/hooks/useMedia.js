@@ -4,7 +4,7 @@ import React, { useState, useEffect } from 'react';
 export default function useMedia(queries, values, defaultValue) {
   // Array containing a media query list for each query
   const mediaQueryLists = queries.map(q => {
-    if (window) {
+    if (typeof window !== `undefined`) {
       return window.matchMedia(q);
     }
   });
