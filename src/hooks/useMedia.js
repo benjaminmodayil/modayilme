@@ -12,7 +12,7 @@ export default function useMedia(queries, values, defaultValue) {
   // Function that gets value based on matching media query
   const getValue = () => {
     // Get index of first media query that matches
-    const index = mediaQueryLists.findIndex(mql => mql.matches);
+    const index = mediaQueryLists.findIndex(mql => mql && mql.matches);
     // Return related value or defaultValue if none
     return typeof values[index] !== 'undefined' ? values[index] : defaultValue;
   };
