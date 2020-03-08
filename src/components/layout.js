@@ -57,7 +57,7 @@ const Layout = props => (
             </Link>
           </div>
         </nav>
-        <div>{props.children}</div>
+        <div className="overflow-x-hidden">{props.children}</div>
         <footer className="container mx-auto text-center opacity-50 my-4">
           © {new Date().getFullYear()}
         </footer>

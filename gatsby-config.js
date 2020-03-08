@@ -19,12 +19,7 @@ module.exports = {
       resolve: 'gatsby-plugin-web-font-loader',
       options: {
         google: {
-          families: [
-            'Permanent Marker',
-            'Raleway:300,400,500,600,700',
-            'Open Sans:300,400,500,600,700',
-            'Merriweather:300,400,500,600,700'
-          ]
+          families: ['Permanent Marker', 'Inter']
         }
       }
     },
@@ -50,14 +45,15 @@ module.exports = {
     //   }
     // },
     {
-      resolve: `gatsby-plugin-mdx`,
-      gatsbyRemarkPlugins: [`gatsby-remark-prismjs`]
+      resolve: 'gatsby-remark-prismjs',
+      options: {
+        inlineCodeMarker: '÷'
+      }
     },
     {
-      resolve: `gatsby-transformer-remark`,
-      options: {
-        plugins: [`gatsby-remark-prismjs`]
-      }
+      resolve: `gatsby-plugin-mdx`,
+      extensions: ['.md', '.mdx'],
+      gatsbyRemarkPlugins: [`gatsby-remark-prismjs`]
     },
     {
       resolve: `gatsby-plugin-manifest`,

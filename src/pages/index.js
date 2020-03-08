@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React from 'react';
 import { Link } from 'gatsby';
 
 import Layout from '../components/layout';
@@ -39,7 +39,7 @@ const IndexPage = () => {
                 Ben Modayil
               </span>
             </p>
-            <p className="text-center lg-text-left text-3xl font-light leading-normal mt-8">
+            <p className="text-gray-700 text-center lg-text-left text-3xl leading-normal mt-8">
               I'm a freelance{' '}
               <span className="font-special font-normal text-purple-500">
                 front-end engineer
@@ -73,14 +73,14 @@ const IndexPage = () => {
           <LogBookList />
         </section>
 
-        <section className="home-testimonials pt-64 pb-32 px-4">
+        <section className="home-testimonials py-16 lg-pt-64 lg-pb-32 px-4">
           <Testimonials />
         </section>
 
         <section className="py-16 lg-pt-64 lg-pb-32 px-2">
           <div className="bg-white max-w-4xl mx-auto">
             <h2 className="sr-only">Contact Me</h2>
-            <p className="text-3xl leading-normal text-center mb-48 max-w-xl mx-auto font-light px-3">
+            <p className="text-3xl leading-normal text-center mb-24 lg-mb-48 max-w-xl mx-auto font-light px-3">
               If you’re looking for another engineer or have a project idea feel free to{' '}
               <br className="hidden lg-block" />
               <Link to="/contact" className="link">

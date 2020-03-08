@@ -4,6 +4,12 @@ import SEO from '../components/seo';
 import Header from '../components/header';
 import ThankYouSVG from '../images/ThankYou';
 
+const encode = data => {
+  return Object.keys(data)
+    .map(key => encodeURIComponent(key) + '=' + encodeURIComponent(data[key]))
+    .join('&');
+};
+
 export default function Contact() {
   const [status, showThankYou] = useState('form');
   useEffect(() => {
@@ -42,11 +48,18 @@ export default function Contact() {
             data-netlify="true"
             netlify-honeypot="bot-field"
             onSubmit={e => {
+              const { email, subject, message } = e.target;
+              fetch('/', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+                body: encode({ 'form-name': 'contact', email, subject, message })
+              })
+                .then(() => showThankYou('thank-you'))
+                .catch(error => alert(error));
+
               e.preventDefault();
-              showThankYou('thank-you');
             }}
           >
-            <input type="hidden" name="form-name" value="contact" />
             <label htmlFor="email" className="text-sm mb-1">
               Email
             </label>
