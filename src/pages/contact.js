@@ -52,7 +52,12 @@ export default function Contact() {
               fetch('/', {
                 method: 'POST',
                 headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
-                body: encode({ 'form-name': 'contact', email, subject, message })
+                body: encode({
+                  'form-name': 'contact',
+                  email: email.value,
+                  subject: subject.value,
+                  message: message.value
+                })
               })
                 .then(() => showThankYou('thank-you'))
                 .catch(error => alert(error));
