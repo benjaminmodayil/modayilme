@@ -52,7 +52,7 @@ export default function ServiceSummary({
       <Link
         isExternal="true"
         to={url}
-        className={`bg-purple-200 rounded flex max-w-lg mx-auto mt-12 ${!isActiveCheck &&
+        className={`shadow rounded flex max-w-lg mx-auto mt-12 ${!isActiveCheck &&
           'pointer-events-none'}`}
       >
         <span

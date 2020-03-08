@@ -39,7 +39,7 @@ const IndexPage = () => {
                 Ben Modayil
               </span>
             </p>
-            <p className="text-gray-700 text-center lg-text-left text-lg md-text-xl lg-text-3xl leading-normal mt-8 px-16 lg-px-0">
+            <p className="text-gray-700 text-center lg-text-left text-lg md-text-xl lg-text-3xl leading-normal mt-8 md-px-8 lg-px-0">
               I'm a freelance{' '}
               <span className="font-special font-normal text-purple-500 text-xl lg-text-3xl">
                 front-end engineer
@@ -47,7 +47,7 @@ const IndexPage = () => {
               living in Philadelphia, PA.
             </p>
 
-            <p className="text-center lg-text-left text-base md-text-lg lg-text-xl font-light leading-normal px-16 lg-px-0 mt-8">
+            <p className="text-center lg-text-left text-base md-text-lg lg-text-xl font-light leading-normal md-px-8 lg-px-0 mt-8">
               When I’m not working you can catch me streaming games on{' '}
               <a
                 className="link"
@@ -73,16 +73,16 @@ const IndexPage = () => {
           <LogBookList />
         </section>
 
-        <section className="home-testimonials py-16 lg-pt-64 lg-pb-32 px-4">
+        <section className="home-testimonials py-16 lg-pt-64 lg-pb-32 lg-px-4">
           <Testimonials />
         </section>
 
-        <section className="py-16 lg-pt-64 lg-pb-32 px-2">
+        <section className="py-16 lg-pt-64 lg-pb-32 px-4 lg-px-0">
           <div className="bg-white max-w-4xl mx-auto">
             <h2 className="sr-only">Contact Me</h2>
-            <p className="text-xl lg-text-3xl leading-normal text-center mb-24 lg-mb-48 max-w-xl mx-auto font-light px-3">
+            <p className="text-xl lg-text-3xl leading-normal text-center mb-24 lg-mb-48 max-w-xl mx-auto font-light px-4 lg-px-0">
               If you’re looking for another engineer or have a project idea feel free to{' '}
-              <br className="hidden lg-block" />
+              <br className="lg-hidden" />
               <Link to="/contact" className="link">
                 contact me.
               </Link>

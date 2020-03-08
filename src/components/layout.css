@@ -15,6 +15,7 @@ body,
 #___gatsby,
 #gatsby-focus-wrapper {
   @apply min-h-screen;
+  scroll-behavior: smooth;
 }
 
 details summary::-webkit-details-marker {

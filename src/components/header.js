@@ -5,11 +5,11 @@ const Header = ({ primary, secondary }) => (
     <div>
       <div className="text-center">
         <h1
-          className="block font-special text-red-500 text-3xl lg-text-6xl text-center"
+          className="block font-special text-red-500 text-4xl lg-text-6xl text-center leading-none"
           dangerouslySetInnerHTML={{ __html: primary }}
         />
         <p
-          className="text-lg lg-text-2xl font-light leading-normal mt-4 px-16 lg-px-0 lg-mt-8 max-w-md mx-auto"
+          className="text-lg lg-text-2xl font-light leading-normal mt-4 px-2 md-px-16 lg-px-0 lg-mt-8 max-w-md mx-auto"
           dangerouslySetInnerHTML={{ __html: secondary }}
         />
       </div>

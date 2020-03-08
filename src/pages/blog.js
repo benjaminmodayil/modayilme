@@ -39,7 +39,7 @@ const Blog = ({ data }) => {
       <SEO title="Blog | Benjamin Modayil" />
       <Header
         primary={'Blog'}
-        secondary={'Just some thoughts or random code stuff I thought was worth sharing.'}
+        secondary={'Just some thoughts <br class="lg-hidden"/> on Code and Life.'}
       />
       <main>
         <ul className="list-reset text-left grid-container">{listItems}</ul>

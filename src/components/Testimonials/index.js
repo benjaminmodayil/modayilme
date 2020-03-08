@@ -42,14 +42,14 @@ const Testimonials = () => {
   return (
     <div className="bg-white max-w-3xl mx-auto py-8">
       <h2 className="sr-only">Testimonials</h2>
-      <p className="text-xl md-text-2xl lg-text-3xl font-medium font-sans leading-normal text-center mb-4 lg-mb-8">
-        Hear what others have to say about me
+      <p className="text-xl md-text-2xl lg-text-3xl font-medium font-sans leading-normal text-center mb-4 lg-mb-8 px-4 lg-px-0">
+        Hear what others have <br className="lg-hidden" /> to say about me
       </p>
       <div
         className="list-reset flex max-w-4xl mx-auto h-72 items-center justify-center"
         aria-live="polite"
       >
-        <article className="max-w-2xl px-4 mb-8 bg-white rounded shadow-md flex-0">
+        <article className="max-w-2xl px-2 lg-px-4 mb-8 bg-white rounded shadow-md flex-0">
           <Quote testimonial={data[active]} />
         </article>
       </div>

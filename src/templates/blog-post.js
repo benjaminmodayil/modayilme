@@ -14,7 +14,7 @@ class BlogPostTemplate extends React.Component {
       <Layout>
         <SEO title="Blog | Benjamin Modayil" />
         <Header primary={post.frontmatter.title} secondary={post.frontmatter.date} />
-        <main className="post__page leading-normal mt-32 pb-16">
+        <main className="post__page leading-normal mt-8 lg-mt-16 pb-16">
           <MDXRenderer>{post.body}</MDXRenderer>
         </main>
         <hr />
