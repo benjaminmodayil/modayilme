@@ -87,7 +87,7 @@ details summary::-webkit-details-marker {
 }
 
 .grid-container {
-  @apply max-w-6xl mx-auto justify-between px-4 mb-32;
+  @apply max-w-6xl mx-auto justify-center px-4 mb-32;
   display: grid;
   gap: 4rem 1rem;
   grid-template-columns: repeat(auto-fit, minmax(15.625rem, 22rem));
@@ -288,6 +288,12 @@ pre[class*='language-'] {
 
 .token.inserted {
   color: green;
+}
+
+@screen lg {
+  .grid-container {
+    @apply justify-between;
+  }
 }
 
 @tailwind utilities;

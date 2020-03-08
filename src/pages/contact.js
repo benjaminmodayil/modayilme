@@ -39,7 +39,7 @@ export default function Contact() {
         }
       />
       ;
-      <div className="flex flex-col mx-auto relative bg-gray-100 pt-32 pb-64 px-4">
+      <div className="flex flex-col mx-auto relative bg-gray-100 pt-16 pb-32 lg-pt-32 px-4">
         {status === 'form' && (
           <form
             className="flex flex-col max-w-md mx-auto max-w-xs bg-white w-full shadow-md p-8 rounded"

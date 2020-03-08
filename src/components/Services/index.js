@@ -26,15 +26,17 @@ export default function Services() {
     <section className="bg-gray-100 py-32 px-4" id="services">
       <h2 className="sr-only">Services</h2>
       <div className="xl-max-w-6xl mx-auto">
-        <p className="text-3xl font-medium font-sans leading-normal text-center mb-8">
-          I provide services in Design and Development
+        <p className="max-w-xs px-8 md-max-w-full mx-auto lg-px-0 text-xl md-text-2xl lg-text-3xl font-medium font-sans leading-normal text-center mb-8">
+          I provide services in{' '}
+          <span className="font-special font-special text-red-500">Design</span> and{' '}
+          <span className="font-special text-red-500">Development</span>
         </p>
         <details className="max-w-md mx-auto" onClick={onDetailClick}>
-          <summary className="text-xl font-light leading-normal mt-2 cursor-pointer">
+          <summary className="text-base lg-text-xl font-light leading-normal mt-2 cursor-pointer">
             <Arrow
               width="16"
               height="16"
-              className={`text-purple absolute -ml-8 mt-3 transition duration-150 ease-in ${
+              className={`text-purple-500 absolute -ml-8 mt-3 transition duration-150 ease-in ${
                 isDetailOpen ? '' : 'rotate-180'
               }`}
             />
@@ -48,14 +50,14 @@ export default function Services() {
             Sometimes you need someone that can touch design and development.
           </p>
         </details>
-        <div className="mt-16 flex justify-center py-64 relative">
+        <div className="mt-16 flex flex-col lg-flex-row justify-center lg-py-64 relative">
           <ServiceSummary
             onTap={() => setActiveTab('design')}
             isActiveCheck={isDesignActive}
             initialPosX={'-30vw'}
             finalPosX="0"
-            initialPosY={'400px'}
-            finalPosY="0"
+            // initialPosY={'400px'}
+            // finalPosY="0"
             Icon={IconDesign}
             iconRow={[IconSketch, IconInvisionStudio, IconWhimsical]}
             title="Design"
@@ -75,8 +77,8 @@ export default function Services() {
             isActiveCheck={isDevelopmentActive}
             initialPosX={'30vw'}
             finalPosX="0"
-            initialPosY={'400px'}
-            finalPosY="0vh"
+            // initialPosY={'400px'}
+            // finalPosY="0vh"
             Icon={IconDevelopment}
             iconRow={[IconSketch, IconInvisionStudio, IconWhimsical]}
             title="Development"

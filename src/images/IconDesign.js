@@ -7,7 +7,6 @@ function Icon({ width, height, className }) {
       xmlnsXlink="http://www.w3.org/1999/xlink"
       width={width}
       height={height}
-      viewBox={`0 0 ${width} ${height}`}
       className={`fill-current ${className}`}
     >
       <defs>

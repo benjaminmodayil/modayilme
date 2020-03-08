@@ -6,8 +6,8 @@ import useMedia from '../hooks/useMedia';
 export default function ServiceSummary({
   onTap,
   isActiveCheck,
-  initialPosY,
-  finalPosY,
+  // initialPosY,
+  // finalPosY,
   initialPosX,
   finalPosX,
   Icon,
@@ -23,23 +23,22 @@ export default function ServiceSummary({
 
   return (
     <motion.div
-      className={`bg-white shadow-md rounded p-4 lg-p-8 max-w-lg lg-max-w-2xl w-full absolute top-0 ${!isActiveCheck &&
+      className={`bg-white shadow-md rounded pt-4 lg-p-8 max-w-lg lg-max-w-2xl w-full lg-absolute top-0 mb-16 lg-mb-0 ${!isActiveCheck &&
         'cursor-pointer'} ${isActiveCheck ? 'z-10' : 'z-0'}`}
-      initial={{ opacity: 0.7, x: initialPosX, y: initialPosY }}
+      initial={{ opacity: size !== 'sm' && 0.7, x: initialPosX }}
       animate={{
         x: size === 'sm' ? 0 : isActiveCheck ? finalPosX : initialPosX,
-        y: size === 'lg' ? 0 : isActiveCheck ? finalPosY : initialPosY,
-        opacity: isActiveCheck ? 1 : 0.7,
-        scale: isActiveCheck ? 1 : 0.5
+        opacity: isActiveCheck || size === 'sm' ? 1 : 0.7,
+        scale: isActiveCheck || size === 'sm' ? 1 : 0.5
       }}
       onTap={onTap}
     >
-      <h3 className="flex justify-center items-center text-2xl leading-none text-lg font-semibold font-sans text-purple-600 -ml-12">
-        <Icon
-          width="52"
-          height="52"
+      <h3 className="flex justify-center items-center text-2xl leading-none text-lg font-semibold font-special text-red-500">
+        {/*        <Icon
+          width="40"
+          height="40"
           className="mr-2 stroke-current group-hover-text-white"
-        />
+        /> */}
         {title}
       </h3>
       <div className="mt-6 flex justify-between w-48 mx-auto">
@@ -47,13 +46,13 @@ export default function ServiceSummary({
           return <Icon key={index} width="60" height="60" />;
         })}
       </div>
-      <p className="mt-4 leading-normal max-w-lg mx-auto text-base lg-text-lg">
+      <p className="mt-4 leading-relaxed max-w-lg mx-auto text-sm lg-text-lg px-4">
         {description}
       </p>
       <Link
         isExternal="true"
         to={url}
-        className={`bg-white rounded flex block shadow-md max-w-lg mx-auto mt-12 ${!isActiveCheck &&
+        className={`bg-purple-200 rounded flex max-w-lg mx-auto mt-12 ${!isActiveCheck &&
           'pointer-events-none'}`}
       >
         <span
@@ -67,7 +66,7 @@ export default function ServiceSummary({
           }}
         />
         <div className="p-4">
-          <h4 className="font-semibold mb-2">{siteName}</h4>
+          <h4 className="font-semibold mb-2 text-purple-600">{siteName}</h4>
           <p className="mb-2 text-sm italic leading-normal">{workDescription}</p>
 
           <span className="text-sm text-purple-600 font-semibold self-end hover-underline">

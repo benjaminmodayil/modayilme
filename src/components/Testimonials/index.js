@@ -42,7 +42,7 @@ const Testimonials = () => {
   return (
     <div className="bg-white max-w-3xl mx-auto py-8">
       <h2 className="sr-only">Testimonials</h2>
-      <p className="text-3xl font-medium font-sans leading-normal text-center mb-12">
+      <p className="text-xl md-text-2xl lg-text-3xl font-medium font-sans leading-normal text-center mb-4 lg-mb-8">
         Hear what others have to say about me
       </p>
       <div

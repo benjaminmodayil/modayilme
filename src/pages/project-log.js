@@ -1,4 +1,5 @@
 import React from 'react';
+import { graphql } from 'gatsby';
 import Link from '../components/Link';
 import Layout from '../components/layout';
 import Header from '../components/header';
@@ -37,7 +38,7 @@ const ProjectLog = ({ data }) => {
       <SEO title="Project Log | Benjamin Modayil" />
       <Header
         primary={'Project Log'}
-        secondary={'A side-hustle/project for better Project Management.'}
+        secondary={'A side-hustle/project for better <br/>Project Management.'}
       />
       <main>
         <ul className="list-reset text-left grid-container">{listItems}</ul>

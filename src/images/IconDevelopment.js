@@ -5,7 +5,6 @@ export default function Icon({ width, height, className }) {
     <svg
       width={width}
       height={height}
-      viewBox={`0 0 ${width} ${height}`}
       className={`fill-current stroke-current ${className}`}
     >
       <defs>

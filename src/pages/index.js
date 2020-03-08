@@ -27,27 +27,27 @@ const IndexPage = () => {
           `video games`
         ]}
       />
-      <header className="py-16 lg-py-64 px-4 flex flex-col justify-center max-w-5xl xl-max-w-6xl mx-auto">
+      <header className="py-16 lg-py-64 flex flex-col justify-center max-w-5xl xl-max-w-6xl mx-auto">
         <div className="flex items-center justify-center flex-col lg-flex-row lg-justify-between mb-16">
           <h1 className="sr-only">Ben Modayil's Homepage</h1>
-          <div className="max-w-lg mb-32 lg-mb-0 font-sans">
+          <div className="max-w-lg mb-32 lg-mb-0 font-sans px-4">
             <p>
               <span className="text-center lg-text-left block text-3xl font-light">
                 Hi, I'm
               </span>{' '}
-              <span className="block font-special text-red-500 text-6xl text-center lg-text-left">
+              <span className="block font-special text-red-500 text-4xl md-text-5xl lg-text-6xl text-center lg-text-left">
                 Ben Modayil
               </span>
             </p>
-            <p className="text-gray-700 text-center lg-text-left text-3xl leading-normal mt-8">
+            <p className="text-gray-700 text-center lg-text-left text-lg md-text-xl lg-text-3xl leading-normal mt-8 px-16 lg-px-0">
               I'm a freelance{' '}
-              <span className="font-special font-normal text-purple-500">
+              <span className="font-special font-normal text-purple-500 text-xl lg-text-3xl">
                 front-end engineer
               </span>{' '}
               living in Philadelphia, PA.
             </p>
 
-            <p className="text-center lg-text-left text-xl font-light leading-normal mt-8">
+            <p className="text-center lg-text-left text-base md-text-lg lg-text-xl font-light leading-normal px-16 lg-px-0 mt-8">
               When I’m not working you can catch me streaming games on{' '}
               <a
                 className="link"
@@ -80,7 +80,7 @@ const IndexPage = () => {
         <section className="py-16 lg-pt-64 lg-pb-32 px-2">
           <div className="bg-white max-w-4xl mx-auto">
             <h2 className="sr-only">Contact Me</h2>
-            <p className="text-3xl leading-normal text-center mb-24 lg-mb-48 max-w-xl mx-auto font-light px-3">
+            <p className="text-xl lg-text-3xl leading-normal text-center mb-24 lg-mb-48 max-w-xl mx-auto font-light px-3">
               If you’re looking for another engineer or have a project idea feel free to{' '}
               <br className="hidden lg-block" />
               <Link to="/contact" className="link">
@@ -89,7 +89,7 @@ const IndexPage = () => {
             </p>
 
             <div className="social-media">
-              <p className="text-center text-2xl max-w-md font-light mx-auto">
+              <p className="text-center text-lg lg-text-2xl max-w-md font-light mx-auto">
                 When I’m not working, you can catch up with me on the links below.
               </p>
               <SocialLinks />
