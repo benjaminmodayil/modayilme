@@ -46,7 +46,6 @@ export default function Contact() {
             name="contact"
             method="post"
             data-netlify="true"
-            netlify-honeypot="bot-field"
             onSubmit={e => {
               const { email, subject, message } = e.target;
               fetch('/', {
