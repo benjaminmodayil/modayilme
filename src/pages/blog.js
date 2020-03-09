@@ -11,7 +11,7 @@ const Blog = ({ data }) => {
   const listItems = posts.map(({ node }) => {
     const { excerpt, fields, frontmatter } = node;
     return (
-      <li className="bg-white shadow-md hover-shadow-xl rounded transition duration-150 ease-in">
+      <li className="bg-white shadow-md hover-shadow-xl hover-bg-purple-100 rounded transition duration-150 ease-in">
         <Link
           // isExternal={frontmatter.isExternal}
           to={`blog${fields.slug}`}
@@ -19,11 +19,11 @@ const Blog = ({ data }) => {
         >
           <div className="flex flex-col justify-center">
             <h3
-              className="text-lg font-semibold text-gray-700 mb-1"
+              className="text-base lg-text-lg font-semibold text-purple-600 mb-1"
               dangerouslySetInnerHTML={{ __html: frontmatter.title }}
             ></h3>
             <p
-              className="text-base text-red-dark font-medium mb-2"
+              className="text-base text-gray-800 font-medium lg-mb-2"
               dangerouslySetInnerHTML={{ __html: frontmatter.description }}
             ></p>
             <span className="text-sm text-purple-500 font-semibold self-end">

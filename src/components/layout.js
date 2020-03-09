@@ -1,6 +1,7 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { StaticQuery, graphql } from 'gatsby';
 import Link from 'gatsby-link';
+import SocialLinks from '../components/SocialLinks';
 import 'normalize.css';
 import './layout.css';
 
@@ -58,8 +59,16 @@ const Layout = props => (
           </div>
         </nav>
         <div className="overflow-x-hidden">{props.children}</div>
-        <footer className="container mx-auto text-center opacity-50 my-4">
-          © {new Date().getFullYear()}
+        <footer>
+          <div className="social-media mb-16">
+            <p className="text-center text-lg lg-text-2xl max-w-md font-light mx-auto">
+              When I’m not working, you can catch up with me on the links below.
+            </p>
+            <SocialLinks />
+          </div>
+          <div className="container mx-auto text-center opacity-50 mt-8 py-2">
+            © {new Date().getFullYear()}
+          </div>
         </footer>
       </>
     )}

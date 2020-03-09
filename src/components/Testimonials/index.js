@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { Fragment, useState } from 'react';
 import Quote from '../Quote';
 import HappyFace from '../../images/emoji-happy.svg';
 import ExcitedFace from '../../images/emoji-excited.svg';
@@ -40,20 +40,22 @@ const Testimonials = () => {
   };
 
   return (
-    <div className="bg-white max-w-3xl mx-auto py-8">
-      <h2 className="sr-only">Testimonials</h2>
-      <p className="text-xl md-text-2xl lg-text-3xl font-medium font-sans leading-normal text-center mb-4 lg-mb-8 px-4 lg-px-0">
-        Hear what others have <br className="lg-hidden" /> to say about me
-      </p>
-      <div
-        className="list-reset flex max-w-4xl mx-auto h-72 items-center justify-center"
-        aria-live="polite"
-      >
-        <article className="max-w-2xl px-2 lg-px-4 mb-8 bg-white rounded shadow-md flex-0">
-          <Quote testimonial={data[active]} />
-        </article>
+    <Fragment>
+      <div className="bg-white max-w-3xl mx-auto pt-8">
+        <h2 className="sr-only">Testimonials</h2>
+        <p className="text-xl md-text-2xl lg-text-3xl font-medium font-sans leading-normal text-center mb-4 lg-mb-8 px-4 lg-px-0">
+          Hear what others have <br className="lg-hidden" /> to say about me
+        </p>
+        <div
+          className="list-reset flex max-w-4xl mx-auto h-72 items-center justify-center"
+          aria-live="polite"
+        >
+          <article className="max-w-2xl px-2 lg-px-4 bg-white rounded shadow-md flex-0">
+            <Quote testimonial={data[active]} />
+          </article>
+        </div>
       </div>
-      <div className="flex justify-between mx-auto w-48">
+      <div className="flex justify-between mx-auto w-48 pt-8">
         {data.map((item, index) => {
           if (index === active) {
             return (
@@ -75,7 +77,7 @@ const Testimonials = () => {
           );
         })}
       </div>
-    </div>
+    </Fragment>
   );
 };
 

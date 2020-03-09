@@ -293,6 +293,12 @@ pre[class*='language-'] {
 
 @screen lg {
   .grid-container {
+    @apply justify-around;
+  }
+}
+
+@screen lg {
+  .grid-container {
     @apply justify-between;
   }
 }

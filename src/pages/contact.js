@@ -103,7 +103,7 @@ export default function Contact() {
 
             <input
               value="clear form"
-              className="bg-transparent text-purple-500 text-sm italic underline hover-font-bold cursor-pointer mt-4"
+              className="bg-transparent text-purple-500 text-sm italic underline hover-font-semibold cursor-pointer mt-4"
               type="reset"
             />
           </form>

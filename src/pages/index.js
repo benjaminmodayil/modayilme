@@ -7,7 +7,6 @@ import Testimonials from '../components/Testimonials';
 import HeaderGraphic from '../images/HeaderGraphic';
 import LogBookList from '../components/LogBookList';
 
-import SocialLinks from '../components/SocialLinks';
 import SEO from '../components/seo';
 
 const IndexPage = () => {
@@ -30,7 +29,7 @@ const IndexPage = () => {
       <header className="py-16 lg-py-64 flex flex-col justify-center max-w-5xl xl-max-w-6xl mx-auto">
         <div className="flex items-center justify-center flex-col lg-flex-row lg-justify-between mb-16">
           <h1 className="sr-only">Ben Modayil's Homepage</h1>
-          <div className="max-w-lg mb-32 lg-mb-0 font-sans px-4">
+          <div className="max-w-lg mb-32 lg-mb-0 font-sans px-4 xl-px-0">
             <p>
               <span className="text-center lg-text-left block text-3xl font-light">
                 Hi, I'm
@@ -44,11 +43,14 @@ const IndexPage = () => {
               <span className="font-special font-normal text-purple-500 text-xl lg-text-3xl">
                 front-end engineer
               </span>{' '}
+              <br className="lg-hidden" />
               living in Philadelphia, PA.
             </p>
 
             <p className="text-center lg-text-left text-base md-text-lg lg-text-xl font-light leading-normal md-px-8 lg-px-0 mt-8">
-              When I’m not working you can catch me streaming games on{' '}
+              When I’m not working you can catch
+              <br className="lg-hidden" />
+              me streaming games on{' '}
               <a
                 className="link"
                 rel="noopener noreferrer"
@@ -77,23 +79,16 @@ const IndexPage = () => {
           <Testimonials />
         </section>
 
-        <section className="py-16 lg-pt-64 lg-pb-32 px-4 lg-px-0">
+        <section className="pt-16 lg-pt-64 px-4 lg-px-0">
           <div className="bg-white max-w-4xl mx-auto">
             <h2 className="sr-only">Contact Me</h2>
-            <p className="text-xl lg-text-3xl leading-normal text-center mb-24 lg-mb-48 max-w-xl mx-auto font-light px-4 lg-px-0">
+            <p className="text-xl lg-text-3xl leading-normal text-center mb-24 max-w-xl mx-auto font-light px-4 lg-px-0">
               If you’re looking for another engineer or have a project idea feel free to{' '}
-              <br className="lg-hidden" />
+              <br className="md-hidden" />
               <Link to="/contact" className="link">
                 contact me.
               </Link>
             </p>
-
-            <div className="social-media">
-              <p className="text-center text-lg lg-text-2xl max-w-md font-light mx-auto">
-                When I’m not working, you can catch up with me on the links below.
-              </p>
-              <SocialLinks />
-            </div>
           </div>
         </section>
       </main>
