@@ -9,7 +9,7 @@ import SEO from '../components/seo';
 const Blog = ({ data }) => {
   const posts = data.allMdx.edges;
   const listItems = posts.map(({ node }) => {
-    const { excerpt, fields, frontmatter } = node;
+    const { fields, frontmatter } = node;
     return (
       <li className="bg-white shadow-md hover-shadow-xl hover-bg-purple-100 rounded transition duration-150 ease-in">
         <Link

@@ -140,6 +140,10 @@ details summary::-webkit-details-marker {
     @apply no-underline;
   }
 
+  strong {
+    @apply font-black text-gray-800;
+  }
+
   blockquote {
     @apply italic leading-loose mx-auto font-serif mb-8 opacity-90 py-4;
     border-bottom: 2px solid #f49a98;

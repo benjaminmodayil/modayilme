@@ -3,7 +3,12 @@ import React from 'react';
 const Quote = ({ testimonial }) => {
   const { name, title, company, URL, projectURL, quotation } = testimonial;
   return (
-    <a href={projectURL} target="_blank" className="no-underline px-2 py-6 lg-p-6 block">
+    <a
+      href={projectURL}
+      target="_blank"
+      className="no-underline px-2 py-6 lg-p-6 block"
+      rel="noopener noreferrer"
+    >
       <blockquote cite={URL}>
         <p className="mb-2 text-base italic leading-normal text-gray-900">{quotation}</p>
         <footer className="text-right text-sm">

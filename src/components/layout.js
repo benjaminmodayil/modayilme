@@ -4,6 +4,7 @@ import Link from 'gatsby-link';
 import SocialLinks from '../components/SocialLinks';
 import 'normalize.css';
 import './layout.css';
+import IconResume from '../images/IconResume';
 
 const Layout = props => (
   <StaticQuery
@@ -57,11 +58,19 @@ const Layout = props => (
               contact me
             </Link>
           </div>
+          <a
+            href="/assets/resume.pdf"
+            className="top-0 right-0 absolute mr-6 mt-6 opacity-75 hover-opacity-100 transition-opacity duration-200"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <IconResume />
+          </a>
         </nav>
         <div className="overflow-x-hidden">{props.children}</div>
         <footer>
           <div className="social-media mb-16">
-            <p className="text-center text-lg lg-text-2xl max-w-md font-light mx-auto">
+            <p className="text-center text-lg lg-text-2xl font-light mx-auto max-w-ch-6">
               When I’m not working, you can catch up with me on the links below.
             </p>
             <SocialLinks />

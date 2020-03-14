@@ -1,0 +1,52 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" height="48" width="48">
+  <defs>
+    <rect id="rect-1" opacity="1" x="0" y="0" width="48" height="48"/>
+    <mask id="mask-2" maskUnits="userSpaceOnUse" maskContentUnits="userSpaceOnUse">
+      <rect opacity="1" x="0" y="0" width="48" height="48" fill="Black"/>
+      <use xlink:href="#rect-1" fill="White"/>
+    </mask>
+    <rect id="rect-7" opacity="1" x="15" y="4" width="18" height="18"/>
+    <mask id="mask-8" maskUnits="userSpaceOnUse" maskContentUnits="userSpaceOnUse">
+      <rect opacity="1" x="0" y="0" width="48" height="48" fill="Black"/>
+      <use xlink:href="#rect-7" fill="White"/>
+    </mask>
+  </defs>
+  <g>
+    <g opacity="1">
+      <g opacity="1">
+        <g/>
+        <g mask="url(#mask-2)">
+          <g opacity="1">
+            <g opacity="1">
+              <path fill="rgb(224,109,112)" fill-opacity="1" opacity="1" fill-rule="evenodd" d="M44 27L4 27L1 23L5 19L43 19L47 23L44 27Z"/>
+            </g>
+            <g opacity="1">
+              <path fill="rgb(230,230,230)" fill-opacity="1" opacity="1" fill-rule="evenodd" d="M41 47L7 47C5.895 47 5 46.105 5 45L5 3.0000000000000004C5 1.8949999999999998 5.895 1 7 1L31 1L43 13L43 45C43 46.105 42.105 47 41 47L41 47Z"/>
+            </g>
+            <g opacity="1">
+              <path fill="rgb(179,179,179)" fill-opacity="1" opacity="1" fill-rule="evenodd" d="M31 1L31 11C31 12.105 31.895 13 33 13L43 13L31 1L31 1Z"/>
+            </g>
+            <g opacity="1">
+              <path fill="rgb(224,109,112)" fill-opacity="1" opacity="1" fill-rule="evenodd" d="M45 41L3.0000000000000004 41C1.8949999999999998 41 1 40.105 1 39L1 23L47 23L47 39C47 40.105 46.105 41 45 41L45 41Z"/>
+            </g>
+          </g>
+        </g>
+      </g>
+      <g opacity="1">
+        <text font-size="0" transform="translate(7, 28)">
+          <tspan font-size="8" font-family="Inter V" font-weight="700" style="white-space: pre;text-transform: none" fill="rgb(255,255,255)" x="0" y="8">RESUME</tspan>
+        </text>
+      </g>
+      <g opacity="1">
+        <g/>
+        <g mask="url(#mask-8)">
+          <g opacity="1">
+            <g opacity="1">
+              <path fill="rgb(114,196,114)" fill-opacity="1" opacity="1" fill-rule="evenodd" d="M28.12500000000003 12.625000000000023L24.750000000000014 12.625000000000023L24.750000000000014 4.749999999999988C24.750000000000014 4.542893218813439 24.58210678118656 4.374999999999986 24.375000000000014 4.374999999999986L23.62500000000001 4.374999999999986C23.41789321881346 4.374999999999986 23.250000000000007 4.542893218813439 23.250000000000007 4.749999999999988L23.250000000000007 12.625000000000023L19.874999999999993 12.625000000000023C19.731438373660442 12.625025566087418 19.600490610349965 12.707010459490014 19.537760586035038 12.836141730916925C19.47503056172011 12.965273002343833 19.491528911238834 13.118884993820444 19.580249999999992 13.231750000000025L23.70525000000001 18.481750000000048C23.77634917523298 18.572143977160117 23.884994939999924 18.62491506410815 24.00000000000001 18.62491506410815C24.1150050600001 18.62491506410815 24.22365082476704 18.572143977160117 24.294750000000015 18.481750000000048L28.419750000000032 13.231750000000025C28.508471088761183 13.118884993820444 28.52496943827991 12.965273002343832 28.462239413964987 12.836141730916925C28.399509389650056 12.707010459490014 28.268561626339583 12.625025566087418 28.12500000000003 12.625000000000023L28.12500000000003 12.625000000000023Z"/>
+            </g>
+          </g>
+        </g>
+      </g>
+    </g>
+  </g>
+</svg>

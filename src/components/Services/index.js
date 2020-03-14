@@ -7,6 +7,11 @@ import IconDevelopment from '../../images/IconDevelopment';
 import IconSketch from '../../images/IconSketch';
 import IconInvisionStudio from '../../images/IconInvisionStudio';
 import IconWhimsical from '../../images/IconWhimsical';
+import IconReact from '../../images/IconReact';
+import IconTailwind from '../../images/IconTailwind';
+import IconGatsby from '../../images/IconGatsby';
+import IconNetlify from '../../images/IconNetlify';
+// import IconWhimsical from '../../images/IconWhimsical';
 import HacktopiaThumbnail from '../../images/hacktopia-thumbnail.jpg';
 import MarvinKnorrThumbnail from '../../images/thumbnail-marvinknorrlaw.jpg';
 
@@ -36,25 +41,10 @@ export default function Services() {
             Development
           </span>
         </p>
-        <details className="max-w-md mx-auto" onClick={onDetailClick}>
-          <summary className="text-base lg-text-xl font-light leading-normal mt-2 cursor-pointer">
-            <Arrow
-              width="16"
-              height="16"
-              className={`text-purple-500 absolute -ml-8 mt-3 transition duration-150 ease-in ${
-                isDetailOpen ? '' : 'rotate-180'
-              }`}
-            />
-            I work across the spectrum between design and development to bridge the gap
-            that traditional organizations suffer from.
-          </summary>
-          <p className="py-8 leading-normal">
-            In my experience so far, while it can be ideal to specialize in one capacity
-            versus another (front-end versus back-end), it can also be especially
-            impractical at the start of a project or for a project under a serious growth.
-            Sometimes you need someone that can touch design and development.
-          </p>
-        </details>
+        <p className="text-lg lg-text-2xl font-light mx-auto max-w-ch-8">
+          I work across the spectrum between design and development to bridge the gap that
+          traditional organizations suffer from.
+        </p>
         <div className="mt-16 flex flex-col lg-flex-row justify-center lg-py-64 relative">
           <ServiceSummary
             onTap={() => setActiveTab('design')}
@@ -64,7 +54,11 @@ export default function Services() {
             // initialPosY={'400px'}
             // finalPosY="0"
             Icon={IconDesign}
-            iconRow={[IconSketch, IconInvisionStudio, IconWhimsical]}
+            iconRow={[
+              <IconSketch width="60" height="60" />,
+              <IconInvisionStudio width="60" height="60" />,
+              <IconWhimsical width="60" height="60" />
+            ]}
             title="Design"
             description="My typical process can include me researching your market competitors,
       looking at current design trends in your industry, providing mood boards,
@@ -85,12 +79,14 @@ export default function Services() {
             // initialPosY={'400px'}
             // finalPosY="0vh"
             Icon={IconDevelopment}
-            iconRow={[IconSketch, IconInvisionStudio, IconWhimsical]}
+            iconRow={[
+              <IconReact width="40" height="40" />,
+              <IconTailwind width="40" height="20.45" />,
+              <IconGatsby width="40" height="40" />,
+              <IconNetlify width="40" height="40" />
+            ]}
             title="Development"
-            description="My typical process can include me researching your market competitors,
-        looking at current design trends in your industry, providing mood boards,
-        designing wireframes, and designing full artboards in sketch. All while you
-        approve and provide feedback throughout the process."
+            description={`For freelance projects and once a design is finalized, I start developing using many <a href="https://jamstack.org" class="link" rel="noopener noreferrer" target="_blank">JAMstack</a> to help keep monthly costs low. Projects can vary, but for the most part I like to stick with GatsbyJS and TailwindCSS for development, Netlify CMS as the content management system, and use Netlify as a hosting platform.`}
             url="http://master--hacktopia.netlify.com"
             image={HacktopiaThumbnail}
             siteName="Hacktopia"

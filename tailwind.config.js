@@ -150,6 +150,26 @@ module.exports = {
       '56': '14rem',
       '64': '16rem'
     },
+    characters: {
+      '0': '0',
+      'ch-1': '10ch',
+      'ch-2': '15ch',
+      'ch-3': '20ch',
+      'ch-4': '25ch',
+      'ch-5': '30ch',
+      'ch-6': '35ch',
+      'ch-8': '40ch',
+      'ch-10': '45ch',
+      'ch-12': '50ch',
+      'ch-16': '55ch',
+      'ch-20': '60ch',
+      'ch-24': '75ch',
+      'ch-32': '80ch',
+      'ch-40': '85ch',
+      'ch-48': '90ch',
+      'ch-56': '95ch',
+      'ch-64': '100ch'
+    },
     backgroundColor: theme => theme('colors'),
     backgroundPosition: {
       bottom: 'bottom',
@@ -317,7 +337,8 @@ module.exports = {
       full: '100%',
       screen: '100vh'
     },
-    maxWidth: {
+    maxWidth: theme => ({
+      ...theme('characters'),
       xs: '20rem',
       sm: '24rem',
       md: '28rem',
@@ -329,7 +350,7 @@ module.exports = {
       '5xl': '64rem',
       '6xl': '72rem',
       full: '100%'
-    },
+    }),
     minHeight: theme => ({
       '0': '0',
       ...theme('spacing'),
@@ -387,6 +408,7 @@ module.exports = {
     width: theme => ({
       auto: 'auto',
       ...theme('spacing'),
+      ...theme('characters'),
       '1-2': '50%',
       '1-3': '33.333333%',
       '2-3': '66.666667%',

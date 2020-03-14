@@ -82,12 +82,12 @@ const IndexPage = () => {
         <section className="pt-16 lg-pt-64 px-4 lg-px-0">
           <div className="bg-white max-w-4xl mx-auto">
             <h2 className="sr-only">Contact Me</h2>
-            <p className="text-xl lg-text-3xl leading-normal text-center mb-24 max-w-xl mx-auto font-light px-4 lg-px-0">
+            <p className="text-xl lg-text-3xl leading-normal text-center mb-24 max-w-ch-8 mx-auto font-light px-4 lg-px-0">
               If you’re looking for another engineer or have a project idea feel free to{' '}
-              <br className="md-hidden" />
               <Link to="/contact" className="link">
-                contact me.
+                contact me
               </Link>
+              .
             </p>
           </div>
         </section>

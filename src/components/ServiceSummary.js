@@ -41,14 +41,15 @@ export default function ServiceSummary({
         /> */}
         {title}
       </h3>
-      <div className="mt-6 flex justify-between w-48 mx-auto">
+      <div className="mt-6 flex justify-between items-center w-48 mx-auto">
         {iconRow.map((Icon, index) => {
-          return <Icon key={index} width="60" height="60" />;
+          return Icon;
         })}
       </div>
-      <p className="mt-4 leading-relaxed max-w-lg mx-auto text-sm lg-text-lg px-4">
-        {description}
-      </p>
+      <p
+        className="mt-4 leading-relaxed max-w-lg mx-auto text-base lg-text-lg px-4"
+        dangerouslySetInnerHTML={{ __html: description }}
+      />
       <Link
         isExternal="true"
         to={url}
