@@ -86,7 +86,7 @@ export default function Services() {
               <IconNetlify width="40" height="40" />
             ]}
             title="Development"
-            description={`For freelance projects and once a design is finalized, I start developing using many <a href="https://jamstack.org" class="link" rel="noopener noreferrer" target="_blank">JAMstack</a> to help keep monthly costs low. Projects can vary, but for the most part I like to stick with GatsbyJS and TailwindCSS for development, Netlify CMS as the content management system, and use Netlify as a hosting platform.`}
+            description={`Once a design is finalized, I start developing using <a href="https://jamstack.org" class="link" rel="noopener noreferrer" target="_blank">JAMstack</a> technologies to keep recurring costs low. For most projects I like to use GatsbyJS and TailwindCSS for development, Netlify CMS as the content management system, and use Netlify as a hosting platform. Not all projects are the same though, so I recommend getting in contact if you have other needs.`}
             url="http://master--hacktopia.netlify.com"
             image={HacktopiaThumbnail}
             siteName="Hacktopia"

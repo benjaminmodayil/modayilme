@@ -272,7 +272,7 @@ module.exports = {
         '"Courier New"',
         'monospace'
       ],
-      special: ['Permanent Marker', 'cursive']
+      special: ['Permanent Marker', 'sans-serif']
     },
     fontSize: {
       xs: '0.75rem',
