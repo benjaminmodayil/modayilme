@@ -32,10 +32,8 @@ export default function Services() {
       <h2 className="sr-only">Services</h2>
       <div className="xl-max-w-6xl mx-auto">
         <p className="max-w-xs px-4 md-max-w-full mx-auto lg-px-0 text-xl md-text-2xl lg-text-3xl font-medium font-sans leading-normal text-center mb-8">
-          I provide services in <br className="lg-hidden" />
-          <span className="font-special text-red-500 text-2xl lg-text-3xl">
-            Design
-          </span>{' '}
+          I provide services in{' '}
+          <span className="font-special text-red-500 text-2xl lg-text-3xl">Design</span>{' '}
           and{' '}
           <span className="font-special text-red-500 text-2xl lg-text-3xl">
             Development

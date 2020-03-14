@@ -68,7 +68,7 @@ const Layout = props => (
           </a>
         </nav>
         <div className="overflow-x-hidden">{props.children}</div>
-        <footer>
+        <footer className="pt-12">
           <div className="social-media mb-16">
             <p className="text-center text-lg lg-text-2xl font-light mx-auto max-w-ch-6">
               When I’m not working, you can catch up with me on the links below.

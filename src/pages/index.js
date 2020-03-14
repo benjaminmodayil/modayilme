@@ -38,19 +38,16 @@ const IndexPage = () => {
                 Ben Modayil
               </span>
             </p>
-            <p className="text-gray-700 text-center lg-text-left text-lg md-text-xl lg-text-3xl leading-normal mt-8 md-px-8 lg-px-0">
+            <p className="text-gray-700 text-center lg-text-left text-lg md-text-xl lg-text-3xl leading-normal mt-8 lg-px-0 max-w-ch-5 mx-auto">
               I'm a freelance{' '}
               <span className="font-special font-normal text-purple-500 text-xl lg-text-3xl">
                 front-end engineer
               </span>{' '}
-              <br className="lg-hidden" />
               living in Philadelphia, PA.
             </p>
 
-            <p className="text-center lg-text-left text-base md-text-lg lg-text-xl font-light leading-normal md-px-8 lg-px-0 mt-8">
-              When I’m not working you can catch
-              <br className="lg-hidden" />
-              me streaming games on{' '}
+            <p className="text-center lg-text-left text-base md-text-lg lg-text-xl font-light leading-normal md-px-8 lg-px-0 mt-8 max-w-ch-6">
+              When I’m not working you can catch me streaming games on{' '}
               <a
                 className="link"
                 rel="noopener noreferrer"

@@ -44,7 +44,7 @@ const Testimonials = () => {
       <div className="bg-white max-w-3xl mx-auto pt-8">
         <h2 className="sr-only">Testimonials</h2>
         <p className="text-xl md-text-2xl lg-text-3xl font-medium font-sans leading-normal text-center mb-4 lg-mb-8 px-4 lg-px-0">
-          Hear what others have <br className="lg-hidden" /> to say about me
+          Hear what others have to say about me
         </p>
         <div
           className="list-reset flex max-w-4xl mx-auto h-72 items-center justify-center"
