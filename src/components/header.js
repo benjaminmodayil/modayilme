@@ -1,15 +1,15 @@
 import React from 'react';
 
 const Header = ({ primary, secondary }) => (
-  <header className="mt-16 lg-mt-32 mb-8 lg-mb-24 mx-auto px-4 flex justify-center flex-col` max-w-ch-12">
+  <header className="mb-32 mt-128 px-4">
     <div>
-      <div className="text-center">
+      <div className="text-center mx-auto flex justify-center max-w-ch-12 bg-gray-100 rounded shadow">
         <h1
-          className="block font-special text-red-500 text-4xl lg-text-6xl text-center leading-none"
+          className="heading text-48 w-full mx-auto -mt-24 absolute"
           dangerouslySetInnerHTML={{ __html: primary }}
         />
         <p
-          className="text-lg lg-text-2xl font-light leading-normal mt-4 px-2 lg-px-0 lg-mt-8 mx-auto"
+          className="text-18 font-light leading-normal pt-48 pb-24 mx-auto"
           dangerouslySetInnerHTML={{ __html: secondary }}
         />
       </div>

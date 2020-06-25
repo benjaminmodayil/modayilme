@@ -10,8 +10,8 @@ const Quote = ({ testimonial }) => {
       rel="noopener noreferrer"
     >
       <blockquote cite={URL}>
-        <p className="mb-2 text-base italic leading-normal text-gray-900">{quotation}</p>
-        <footer className="text-right text-sm">
+        <p className="mb-2 text-16 italic leading-normal text-gray-900">{quotation}</p>
+        <footer className="text-right text-14">
           <span className="block font-semibold">{name}</span>
           <span className="block italic">
             {company !== null || company !== undefined || company.length !== 0

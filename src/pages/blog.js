@@ -1,45 +1,31 @@
 import React from 'react';
 import { graphql } from 'gatsby';
-import Link from '../components/Link';
 import Layout from '../components/layout';
 import Header from '../components/header';
 import SEO from '../components/seo';
-// const listItems = [];
+import ArticleCard from '../components/ArticleCard';
 
-const Blog = ({ data }) => {
+const Blog = ({ location, data }) => {
   const posts = data.allMdx.edges;
   const listItems = posts.map(({ node }) => {
     const { fields, frontmatter } = node;
     return (
-      <li className="bg-white shadow-md hover-shadow-xl hover-bg-purple-100 rounded transition duration-150 ease-in">
-        <Link
-          // isExternal={frontmatter.isExternal}
-          to={`blog${fields.slug}`}
-          className="no-underline p-4 block h-full"
-        >
-          <div className="flex flex-col justify-center">
-            <h3
-              className="text-base lg-text-lg font-semibold text-purple-600 mb-1"
-              dangerouslySetInnerHTML={{ __html: frontmatter.title }}
-            ></h3>
-            <p
-              className="text-base text-gray-800 font-medium lg-mb-2"
-              dangerouslySetInnerHTML={{ __html: frontmatter.description }}
-            ></p>
-            <span className="text-sm text-purple-500 font-semibold self-end">
-              Read more
-            </span>
-          </div>
-        </Link>
-      </li>
+      <ArticleCard
+        as="li"
+        className="mb-24 p-4"
+        link={`blog${fields.slug}`}
+        isExternal={false}
+        title={frontmatter.title}
+        preview={frontmatter.description}
+      />
     );
   });
   return (
-    <Layout>
+    <Layout path={location.pathname}>
       <SEO title="Blog | Benjamin Modayil" />
       <Header primary={'Blog'} secondary={'Just some thoughts on Code and Life.'} />
       <main>
-        <ul className="list-reset text-left grid-container">{listItems}</ul>
+        <ul className="list-reset text-left max-w-sm mx-auto">{listItems}</ul>
       </main>
     </Layout>
   );

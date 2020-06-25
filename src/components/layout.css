@@ -1,8 +1,30 @@
 @tailwind base;
 @tailwind components;
+
+@font-face {
+  font-family: 'Bluu Next', serif;
+  src: url('/assets/fonts/bluunext-bold-webfont.woff2') format('woff2'),
+    url('/assets/fonts/bluunext-bold-webfont.woff') format('woff'),
+    url('/assets/fonts/bluunext-bold.ttf') format('truetype'),
+    url('/assets/fonts/bluunext-bold-webfont.svg#bluu_nextbold') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Bluu Next', serif;
+  src: url('/assets/fonts/bluunext-bolditalic-webfont.woff2') format('woff2'),
+    url('/assets/fonts/bluunext-bolditalic-webfont.woff') format('woff'),
+    url('/assets/fonts/bluunext-bolditalic.ttf') format('truetype'),
+    url('/assets/fonts/bluunext-bolditalic-webfont.svg#bluu_nextbold_italic')
+      format('svg');
+  font-weight: normal;
+  font-style: italic;
+}
 html {
-  @apply text-gray-700;
-  font-family: 'Raleway', sans-serif;
+  @apply text-gray-800;
+  font-family: 'Inter', sans-serif;
+  letter-spacing: -0.47px;
   text-decoration-color: #e06d70;
 
   @media screen and (min-width: 2400px) {
@@ -22,9 +44,21 @@ details summary::-webkit-details-marker {
   display: none;
 }
 
-/* 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.14) */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  @apply font-serif;
+  letter-spacing: normal;
+}
+
+.heading {
+  @apply block font-serif leading-none font-normal text-gray-800;
+}
+
 .skill-container {
-  /* box-shadow: -10px 0px 10px 1px; */
   @apply rounded;
   box-shadow: 1px 1px 0px rgba(0, 0, 0, 0.06), -1px 1px 0px rgba(0, 0, 0, 0.08);
 }
@@ -55,14 +89,11 @@ details summary::-webkit-details-marker {
 
 .link,
 .post__page a {
-  @apply text-gray-700;
+  @apply text-gray-800 text-14 font-sans font-medium transition duration-200 ease-in border-b-2 border-gray-400;
   transition: box-shadow 0.2s ease, color 0.2s ease;
-  box-shadow: inset 0 -3px 0 -1px #e06d70;
 
   &:hover {
-    @apply text-red-500 font-semibold;
-    box-shadow: inset 0 -30px 0 #f7dbdb;
-    /* color: #fff; */
+    @apply border-gray-600;
   }
 }
 
@@ -88,7 +119,7 @@ details summary::-webkit-details-marker {
 }
 
 .grid-container {
-  @apply max-w-6xl mx-auto justify-center px-4 mb-32;
+  @apply max-w-6xl mx-auto justify-center;
   display: grid;
   gap: 4rem 1rem;
   grid-template-columns: repeat(auto-fit, minmax(15.625rem, 22rem));
@@ -96,7 +127,8 @@ details summary::-webkit-details-marker {
 }
 
 .post__page {
-  @apply max-w-2xl mx-auto;
+  @apply max-w-2xl mx-auto font-sans font-normal;
+
   h1,
   h2,
   h3,
@@ -106,25 +138,38 @@ details summary::-webkit-details-marker {
   ul,
   ol,
   p,
-  pre,
   button {
-    @apply leading-relaxed mx-auto font-serif mt-4 px-4 opacity-90;
+    @apply leading-relaxed mx-auto mb-32;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    @apply font-serif font-normal mt-24;
   }
 
   h1 {
-    @apply text-xl font-bold mt-8;
+    @apply text-20;
   }
 
   h2 {
-    @apply text-2xl font-semibold mt-8;
+    @apply text-24;
   }
 
   h3 {
-    @apply text-xl mt-8;
+    @apply text-20;
   }
 
   h4 {
-    @apply text-lg font-bold;
+    @apply text-18;
+  }
+
+  ul,
+  ol {
+    @apply mb-24;
   }
 
   ul {
@@ -133,7 +178,7 @@ details summary::-webkit-details-marker {
   }
 
   p {
-    @apply text-base;
+    @apply text-16;
   }
 
   a {

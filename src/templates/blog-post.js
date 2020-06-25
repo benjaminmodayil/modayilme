@@ -16,8 +16,8 @@ class BlogPostTemplate extends React.Component {
         <main className="post__page leading-normal mt-8 lg-mt-16 pb-16">
           <MDXRenderer>{post.body}</MDXRenderer>
         </main>
-        <hr className="mb-16" />
-        <ul className="flex max-w-3xl mx-auto justify-between mt-4">
+        <hr className="mt-48" />
+        <ul className="flex max-w-3xl mx-auto justify-between py-24">
           <li>
             {previous && (
               <Link

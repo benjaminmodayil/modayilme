@@ -19,7 +19,7 @@ export default function Services() {
   const [activeTab, setActiveTab] = useState('design');
   const [isDetailOpen, setDetailOpen] = useState(false);
 
-  const onDetailClick = e => {
+  const onDetailClick = (e) => {
     // `current` points to the mounted text input element
     setDetailOpen(!e.currentTarget.open);
     // inputEl.current.focus();
@@ -31,15 +31,12 @@ export default function Services() {
     <section className="bg-gray-100 py-32 px-4" id="services">
       <h2 className="sr-only">Services</h2>
       <div className="xl-max-w-6xl mx-auto">
-        <p className="max-w-xs px-4 md-max-w-full mx-auto lg-px-0 text-xl md-text-2xl lg-text-3xl font-medium font-sans leading-normal text-center mb-8">
+        <p className="max-w-xs px-4 md-max-w-full mx-auto lg-px-0 text-20 md-text-24 lg-text-30 font-medium font-sans leading-normal text-center mb-8">
           I provide services in{' '}
-          <span className="font-special text-red-500 text-2xl lg-text-3xl">Design</span>{' '}
-          and{' '}
-          <span className="font-special text-red-500 text-2xl lg-text-3xl">
-            Development
-          </span>
+          <span className="font-serif text-red-500 text-24 lg-text-30">Design</span> and{' '}
+          <span className="font-serif text-red-500 text-24 lg-text-30">Development</span>
         </p>
-        <p className="text-lg lg-text-2xl font-light mx-auto max-w-ch-8">
+        <p className="text-18 lg-text-24 font-light mx-auto max-w-ch-8">
           I work across the spectrum between design and development to bridge the gap that
           traditional organizations suffer from.
         </p>
@@ -55,7 +52,7 @@ export default function Services() {
             iconRow={[
               <IconSketch width="60" height="60" />,
               <IconInvisionStudio width="60" height="60" />,
-              <IconWhimsical width="60" height="60" />
+              <IconWhimsical width="60" height="60" />,
             ]}
             title="Design"
             description="My typical process can include me researching your market competitors,
@@ -81,7 +78,7 @@ export default function Services() {
               <IconReact width="40" height="40" />,
               <IconTailwind width="40" height="20.45" />,
               <IconGatsby width="40" height="40" />,
-              <IconNetlify width="40" height="40" />
+              <IconNetlify width="40" height="40" />,
             ]}
             title="Development"
             description={`Once a design is finalized, I start developing using <a href="https://jamstack.org" class="link" rel="noopener noreferrer" target="_blank">JAMstack</a> technologies to keep recurring costs low. For most projects I like to use GatsbyJS and TailwindCSS for development, Netlify CMS as the content management system, and use Netlify as a hosting platform. Not all projects are the same though, so I recommend getting in contact if you have other needs.`}

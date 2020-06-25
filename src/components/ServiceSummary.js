@@ -17,7 +17,7 @@ export default function ServiceSummary({
   url,
   image,
   siteName,
-  workDescription
+  workDescription,
 }) {
   const size = useMedia(['(min-width: 1024px)', '(min-width: 0)'], ['lg', 'sm']);
 
@@ -29,11 +29,11 @@ export default function ServiceSummary({
       animate={{
         x: size === 'sm' ? 0 : isActiveCheck ? finalPosX : initialPosX,
         opacity: isActiveCheck || size === 'sm' ? 1 : 0.7,
-        scale: isActiveCheck || size === 'sm' ? 1 : 0.5
+        scale: isActiveCheck || size === 'sm' ? 1 : 0.5,
       }}
       onTap={onTap}
     >
-      <h3 className="flex justify-center items-center text-2xl leading-none text-lg font-semibold font-special text-red-500">
+      <h3 className="flex justify-center items-center text-24 leading-none text-18 font-semibold font-serif text-red-500">
         {/*        <Icon
           width="40"
           height="40"
@@ -47,7 +47,7 @@ export default function ServiceSummary({
         })}
       </div>
       <p
-        className="mt-4 leading-relaxed max-w-lg mx-auto text-base lg-text-lg px-4"
+        className="mt-4 leading-relaxed max-w-lg mx-auto text-16 lg-text-18 px-4"
         dangerouslySetInnerHTML={{ __html: description }}
       />
       <Link
@@ -63,14 +63,14 @@ export default function ServiceSummary({
             backgroundRepeat: 'no-repeat',
             backgroundImage: `url(${image})`,
             width: '240px',
-            height: 'auto'
+            height: 'auto',
           }}
         />
         <div className="p-4">
           <h4 className="font-semibold mb-2 text-purple-600">{siteName}</h4>
-          <p className="mb-2 text-sm italic leading-normal">{workDescription}</p>
+          <p className="mb-2 text-14 italic leading-normal">{workDescription}</p>
 
-          <span className="text-sm text-purple-600 font-semibold self-end hover-underline">
+          <span className="text-14 text-purple-600 font-semibold self-end hover-underline">
             Visit
           </span>
         </div>

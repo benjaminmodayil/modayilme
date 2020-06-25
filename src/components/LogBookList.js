@@ -35,9 +35,9 @@ function LogBookList() {
           className="text-gray-800 block leading-none p-6 hover-shadow group hover-bg-purple-200 hover-text-purple-800 transition duration-100 ease-in"
           to={`project-log${fields.slug}`}
         >
-          <h4 className="text-base font-semibold mb-2">{frontmatter.title}</h4>
-          <span className="text-sm block">{frontmatter.date}</span>
-          <span className="text-purple-500 group-hover-text-purple-800 text-sm block text-right font-semibold">
+          <h4 className="text-16 font-semibold mb-2">{frontmatter.title}</h4>
+          <span className="text-14 block">{frontmatter.date}</span>
+          <span className="text-purple-500 group-hover-text-purple-800 text-14 block text-right font-semibold">
             Read
           </span>
         </Link>
@@ -46,7 +46,7 @@ function LogBookList() {
   });
   return (
     <div className="shadow-md max-w-lg mx-auto bg-white relative z-10">
-      <h3 className="font-special text-3xl font-semibold italic text-center text-purple-100 bg-purple-600 rounded py-4 relative z-10">
+      <h3 className="font-serif text-30 font-semibold italic text-center text-purple-100 bg-purple-600 rounded py-4 relative z-10">
         Ben's (b)Logbook
       </h3>
       <ul className="relative z-10 bg-white">{list}</ul>

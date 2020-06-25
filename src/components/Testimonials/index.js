@@ -12,7 +12,7 @@ const Testimonials = () => {
       URL: 'https://hothouseinc.com',
       projectURL: null,
       quotation:
-        'Ben has been a great asset to our team and he has helped us tackle some very tough projects. His skills and thoughtfulness make big tech challenges much more manageable. In addition to being a reliable team player, he has also introduced new technologies and methodologies to our team that have significantly improved the quality and efficiency of our work.'
+        'Ben has been a great asset to our team and he has helped us tackle some very tough projects. His skills and thoughtfulness make big tech challenges much more manageable. In addition to being a reliable team player, he has also introduced new technologies and methodologies to our team that have significantly improved the quality and efficiency of our work.',
     },
     {
       name: 'Nancy Evbuomwan',
@@ -21,7 +21,7 @@ const Testimonials = () => {
       URL: 'https://hacktopia.io',
       // projectURL: 'https://hacktopia.io',
       quotation:
-        'When we initially spoke to Ben about working on a project for Hacktopia, we were blown away with his detailed account on how to best approach the project. His account focused both on high quality and speedy delivery. Throughout the actual process where the work was done, he managed our expectations and showed to be very reliable.'
+        'When we initially spoke to Ben about working on a project for Hacktopia, we were blown away with his detailed account on how to best approach the project. His account focused both on high quality and speedy delivery. Throughout the actual process where the work was done, he managed our expectations and showed to be very reliable.',
     },
     {
       name: 'Jennifer Moore',
@@ -30,12 +30,12 @@ const Testimonials = () => {
       URL: 'https://www.bravewingstherapy.com',
       projectURL: 'https://www.bravewingstherapy.com',
       quotation:
-        'Our experience with using his service for both of our websites was seamless, stress-free, and extremely productive! Users reported easy and quick access to the information they needed. During the process, Ben listened to our ideas and asked questions about what our business needs so he can design a site which reflects our business vision. He works efficiently and timely. He also responds very quickly to emails so we did not have to stress about waiting for the revisions or answers to our questions.'
-    }
+        'Our experience with using his service for both of our websites was seamless, stress-free, and extremely productive! Users reported easy and quick access to the information they needed. During the process, Ben listened to our ideas and asked questions about what our business needs so he can design a site which reflects our business vision. He works efficiently and timely. He also responds very quickly to emails so we did not have to stress about waiting for the revisions or answers to our questions.',
+    },
   ];
   const [active, setActive] = useState(0);
 
-  const cycle = index => {
+  const cycle = (index) => {
     setActive(index);
   };
 
@@ -43,7 +43,7 @@ const Testimonials = () => {
     <Fragment>
       <div className="bg-white max-w-3xl mx-auto pt-8">
         <h2 className="sr-only">Testimonials</h2>
-        <p className="text-xl md-text-2xl lg-text-3xl font-medium font-sans leading-normal text-center mb-4 lg-mb-8 px-4 lg-px-0">
+        <p className="text-20 md-text-24 lg-text-30 font-medium font-sans leading-normal text-center mb-4 lg-mb-8 px-4 lg-px-0">
           Hear what others have to say about me
         </p>
         <div
