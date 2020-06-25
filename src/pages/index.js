@@ -80,7 +80,7 @@ const IndexPage = ({ location }) => {
           </div>
         </header>
       </main>
-      <section className="mt-128 mb-64 lg-mb-192">
+      <section className="mt-128 mb-64 lg-mb-192 px-8 lg-px-0">
         <h2 className="font-normal text-18 text-gray-800 leading-none text-center">
           Looking to learn web development?
         </h2>

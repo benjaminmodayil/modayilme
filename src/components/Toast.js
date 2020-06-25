@@ -3,8 +3,8 @@ import React from 'react';
 export default function Toast() {
   return (
     <div className="flex justify-center bg-yellow-400 p-4">
-      <div className="w-full max-w-lg flex justify-between items-center text-14">
-        <div className="bg-yellow-200 rounded-full p-8">
+      <div className="w-full max-w-lg flex justify-around items-center text-14">
+        <div className="bg-yellow-200 rounded-full lg-p-8">
           <ConstructionSign className="w-20 h-20" />
         </div>
         <p>This site is under construction so some links don't work at the moment.</p>

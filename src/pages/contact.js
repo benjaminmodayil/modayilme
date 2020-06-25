@@ -35,7 +35,7 @@ export default function Contact({ location }) {
       <Header
         primary={'Contact Me'}
         secondary={
-          'Reach out to me below or send a message to my <a class="link mailtoui" href="mailto:modayilme@gmail.com" target="_blank" rel="noopener noreferrer"> email</a>.'
+          'Reach out to me below or send a message to my <a class="link text-18 mailtoui" href="mailto:modayilme@gmail.com" target="_blank" rel="noopener noreferrer"> email</a>.'
         }
       />
       <div className="flex flex-col mx-auto relative pt-16 pb-32 lg-pt-32 px-4">
