@@ -41,7 +41,7 @@ export default function Contact({ location }) {
       <div className="flex flex-col mx-auto relative pt-16 pb-32 lg-pt-32 px-4">
         {status === 'form' && (
           <form
-            className="flex flex-col max-w-ch-12 mx-auto bg-gray-100 py-24 w-full shadow-md px-16 rounded -mt-64"
+            className="flex flex-col max-w-ch-20 mx-auto bg-gray-100 py-24 w-full shadow-md px-64 rounded -mt-64"
             name="contact"
             method="post"
             data-netlify="true"

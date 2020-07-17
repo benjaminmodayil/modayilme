@@ -2,7 +2,7 @@ module.exports = {
   siteMetadata: {
     title: `Ben Modayil`,
     description: `Ben Modayil is a front-end engineer who streams games and code on twitch while helping clients build their brands through websites and applications.`,
-    author: `@modayilme`,
+    author: `@benmotv`,
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
@@ -19,7 +19,7 @@ module.exports = {
       resolve: 'gatsby-plugin-web-font-loader',
       options: {
         google: {
-          families: ['Inter'],
+          families: ['Inter:100,200,300,400,500,600,700,800,900'],
         },
       },
     },
@@ -34,8 +34,8 @@ module.exports = {
     {
       resolve: `gatsby-source-filesystem`,
       options: {
-        path: `${__dirname}/content/project-log`,
-        name: `project-log`,
+        path: `${__dirname}/content/work-journal`,
+        name: `work-journal`,
       },
     },
     // {

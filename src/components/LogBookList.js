@@ -7,7 +7,7 @@ function LogBookList() {
     query {
       allMdx(
         sort: { fields: [frontmatter___date], order: DESC }
-        filter: { fileAbsolutePath: { regex: "/project-log/" } }
+        filter: { fileAbsolutePath: { regex: "/work-journal/" } }
       ) {
         edges {
           node {
@@ -33,7 +33,7 @@ function LogBookList() {
       <li>
         <Link
           className="text-gray-800 block leading-none p-6 hover-shadow group hover-bg-purple-200 hover-text-purple-800 transition duration-100 ease-in"
-          to={`project-log${fields.slug}`}
+          to={`work-journal${fields.slug}`}
         >
           <h4 className="text-16 font-semibold mb-2">{frontmatter.title}</h4>
           <span className="text-14 block">{frontmatter.date}</span>

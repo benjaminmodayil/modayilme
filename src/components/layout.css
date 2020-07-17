@@ -28,7 +28,7 @@ html {
   text-decoration-color: #e06d70;
 
   @media screen and (min-width: 2400px) {
-    font-size: 0.8vw;
+    font-size: 0.65vw;
   }
 }
 
@@ -139,7 +139,7 @@ h6 {
   ol,
   p,
   button {
-    @apply leading-relaxed mx-auto mb-32;
+    @apply leading-normal mx-auto mb-32;
   }
 
   h1,
@@ -177,6 +177,10 @@ h6 {
     /* list-style-position: inside; */
   }
 
+  li {
+    @apply mb-24;
+  }
+
   p {
     @apply text-16;
   }
@@ -186,7 +190,7 @@ h6 {
   }
 
   strong {
-    @apply font-black text-gray-800;
+    @apply font-semibold font-sans text-gray-800;
   }
 
   blockquote {

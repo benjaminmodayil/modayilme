@@ -12,7 +12,7 @@ const Blog = ({ location, data }) => {
     return (
       <ArticleCard
         as="li"
-        className="mb-24 p-4"
+        className="mb-24 p-4 bg-white hover-shadow-md rounded"
         link={`blog${fields.slug}`}
         isExternal={false}
         title={frontmatter.title}

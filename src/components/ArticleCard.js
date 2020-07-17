@@ -12,10 +12,7 @@ export default function ArticleCard({
   ...restProps
 }) {
   return (
-    <Component
-      className={`bg-white hover-shadow-md rounded h duration-150 ease-in ${className}`}
-      {...restProps}
-    >
+    <Component className={`duration-150 ease-in ${className}`} {...restProps}>
       <Link
         // isExternal={frontmatter.isExternal}
         to={link}
@@ -28,7 +25,7 @@ export default function ArticleCard({
               dangerouslySetInnerHTML={{ __html: title }}
             />
             <p
-              className="text-14 text-gray-800 font-medium mb-12 leading-none"
+              className="text-14 text-gray-800 font-medium mb-12 leading-normal"
               dangerouslySetInnerHTML={{ __html: preview }}
             ></p>
             <span className="text-12 text-gray-800 font-thin leading-none">

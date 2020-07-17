@@ -5,7 +5,7 @@ import SocialLinks from '../components/SocialLinks';
 let links = [
   { name: 'Home', to: '/' },
   { name: 'Blog', to: '/blog' },
-  { name: 'Project Log', to: '/project-log' },
+  { name: 'Work Journal', to: '/work-journal' },
   { name: 'Contact', to: '/contact' },
 ];
 

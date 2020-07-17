@@ -23,7 +23,7 @@ exports.createPages = ({ graphql, actions }) => {
         }
       }
     `
-  ).then(result => {
+  ).then((result) => {
     if (result.errors) {
       throw result.errors;
     }
@@ -32,9 +32,9 @@ exports.createPages = ({ graphql, actions }) => {
     const blog = result.data.allMdx.edges.filter(({ node }) =>
       node.fileAbsolutePath.includes('blog')
     );
-    // Create project-log pages.
-    const projectLog = result.data.allMdx.edges.filter(({ node }) =>
-      node.fileAbsolutePath.includes('project-log')
+    // Create work-journal pages.
+    const workJournal = result.data.allMdx.edges.filter(({ node }) =>
+      node.fileAbsolutePath.includes('work-journal')
     );
 
     blog.forEach((item, index) => {
@@ -47,24 +47,24 @@ exports.createPages = ({ graphql, actions }) => {
         context: {
           slug: item.node.fields.slug,
           previous,
-          next
-        }
+          next,
+        },
       });
     });
 
-    projectLog.forEach((log, index) => {
+    workJournal.forEach((log, index) => {
       const previous =
-        index === projectLog.length - 1 ? null : projectLog[index + 1].node;
-      const next = index === 0 ? null : projectLog[index - 1].node;
+        index === workJournal.length - 1 ? null : workJournal[index + 1].node;
+      const next = index === 0 ? null : workJournal[index - 1].node;
 
       createPage({
-        path: `project-log${log.node.fields.slug}`,
+        path: `work-journal${log.node.fields.slug}`,
         component: blogPost,
         context: {
           slug: log.node.fields.slug,
           previous,
-          next
-        }
+          next,
+        },
       });
     });
 
@@ -84,7 +84,7 @@ exports.onCreateNode = ({ node, actions, getNode }) => {
     createNodeField({
       name: `slug`,
       node,
-      value
+      value,
     });
   }
 };

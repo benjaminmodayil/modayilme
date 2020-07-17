@@ -12,8 +12,8 @@ const ProjectLog = ({ location, data }) => {
     return (
       <ArticleCard
         as="li"
-        className="mb-24 p-4"
-        link={`project-log${fields.slug}`}
+        className="mb-24 p-4 bg-white hover-shadow-md rounded"
+        link={`work-journal${fields.slug}`}
         isExternal={false}
         title={frontmatter.title}
         preview={frontmatter.description}
@@ -22,10 +22,12 @@ const ProjectLog = ({ location, data }) => {
   });
   return (
     <Layout path={location.pathname}>
-      <SEO title="Project Log | Benjamin Modayil" />
+      <SEO title="Work Journal | Benjamin Modayil" />
       <Header
-        primary={'Project Log'}
-        secondary={'A side-hustle/project for better Project Management.'}
+        primary={'Work Journal'}
+        secondary={
+          'An "anything goes" space where I document what I did during the week as well as any side-hustle/projects.'
+        }
       />
       <main>
         <ul className="list-reset text-left max-w-sm mx-auto">{listItems}</ul>
@@ -38,7 +40,7 @@ export const pageQuery = graphql`
   query {
     allMdx(
       sort: { fields: [frontmatter___date], order: DESC }
-      filter: { fileAbsolutePath: { regex: "/project-log/" } }
+      filter: { fileAbsolutePath: { regex: "/work-journal/" } }
     ) {
       edges {
         node {
