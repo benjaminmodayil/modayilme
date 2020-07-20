@@ -15,7 +15,7 @@ const SocialLinks = () => {
       <li>
         <a
           className="group"
-          href="https://www.twitter.com/benmotv"
+          href="https://www.twitter.com/24props"
           target="_blank"
           rel="noopener noreferrer"
         >
@@ -35,7 +35,7 @@ const SocialLinks = () => {
       <li>
         <a
           className="group"
-          href="https://www.instagram.com/benmotv"
+          href="https://www.instagram.com/24props"
           target="_blank"
           rel="noopener noreferrer"
         >
@@ -45,7 +45,7 @@ const SocialLinks = () => {
       <li>
         <a
           className="group"
-          href="https://www.twitch.tv/benmotv"
+          href="https://www.twitch.tv/24props"
           target="_blank"
           rel="noopener noreferrer"
         >

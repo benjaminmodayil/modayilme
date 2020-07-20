@@ -2,7 +2,7 @@ module.exports = {
   siteMetadata: {
     title: `Ben Modayil`,
     description: `Ben Modayil is a front-end engineer who streams games and code on twitch while helping clients build their brands through websites and applications.`,
-    author: `@benmotv`,
+    author: `@24props`,
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
