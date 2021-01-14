@@ -1,35 +1,38 @@
-import React from 'react';
-import { graphql } from 'gatsby';
-import Layout from '../components/layout';
-import Header from '../components/header';
-import SEO from '../components/seo';
-import ArticleCard from '../components/ArticleCard';
+import React from "react"
+import { graphql } from "gatsby"
+import Layout from "../components/layout"
+import Header from "../components/header"
+import SEO from "../components/seo"
+import ArticleCard from "../components/ArticleCard"
 
 const Blog = ({ location, data }) => {
-  const posts = data.allMdx.edges;
+  const posts = data.allMdx.edges
   const listItems = posts.map(({ node }) => {
-    const { fields, frontmatter } = node;
+    const { fields, frontmatter } = node
     return (
       <ArticleCard
         as="li"
-        className="mb-24 p-4 bg-white hover-shadow-md rounded"
-        link={`blog${fields.slug}`}
+        link={`/blog${fields.slug}`}
         isExternal={false}
         title={frontmatter.title}
         preview={frontmatter.description}
+        date={frontmatter.date}
       />
-    );
-  });
+    )
+  })
   return (
     <Layout path={location.pathname}>
       <SEO title="Blog | Benjamin Modayil" />
-      <Header primary={'Blog'} secondary={'Just some thoughts on Code and Life.'} />
+      <Header
+        primary={"Blog"}
+        secondary={"Just some thoughts on Code and Life."}
+      />
       <main>
         <ul className="list-reset text-left max-w-sm mx-auto">{listItems}</ul>
       </main>
     </Layout>
-  );
-};
+  )
+}
 
 export const pageQuery = graphql`
   query {
@@ -53,5 +56,5 @@ export const pageQuery = graphql`
       }
     }
   }
-`;
-export default Blog;
+`
+export default Blog

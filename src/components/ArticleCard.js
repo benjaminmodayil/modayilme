@@ -1,18 +1,22 @@
-import React from 'react';
-import Link from '../components/Link';
-import IconArrowRight from '../images/IconArrowRight.js';
+import React from "react"
+import Link from "../components/Link"
+import IconArrowRight from "../images/IconArrowRight.js"
 
 export default function ArticleCard({
   className,
-  as: Component = 'li',
+  as: Component = "li",
   link,
   isExternal,
   title,
   preview,
+  date,
   ...restProps
 }) {
   return (
-    <Component className={`duration-150 ease-in ${className}`} {...restProps}>
+    <Component
+      {...restProps}
+      className={`${className} duration-150 ease-in mb-24 p-4 bg-white hover-shadow-md rounded`}
+    >
       <Link
         // isExternal={frontmatter.isExternal}
         to={link}
@@ -29,12 +33,12 @@ export default function ArticleCard({
               dangerouslySetInnerHTML={{ __html: preview }}
             ></p>
             <span className="text-12 text-gray-800 font-thin leading-none">
-              February 20, 2020
+              {date}
             </span>
           </div>
           <IconArrowRight />
         </div>
       </Link>
     </Component>
-  );
+  )
 }

@@ -114,7 +114,7 @@ h6 {
 }
 
 .home-testimonials {
-  background: url('../images/glamorous.svg');
+  background: url('./images/glamorous.svg');
   background-repeat: repeat;
 }
 

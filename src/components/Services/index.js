@@ -1,50 +1,55 @@
-import React, { useState } from 'react';
-import { motion } from 'framer-motion';
-import Link from '../Link';
-import ServiceSummary from '../ServiceSummary';
-import IconDesign from '../../images/IconDesign';
-import IconDevelopment from '../../images/IconDevelopment';
-import IconSketch from '../../images/IconSketch';
-import IconInvisionStudio from '../../images/IconInvisionStudio';
-import IconWhimsical from '../../images/IconWhimsical';
-import IconReact from '../../images/IconReact';
-import IconTailwind from '../../images/IconTailwind';
-import IconGatsby from '../../images/IconGatsby';
-import IconNetlify from '../../images/IconNetlify';
+import React, { useState } from "react"
+import { motion } from "framer-motion"
+import Link from "../Link"
+import ServiceSummary from "../ServiceSummary"
+import IconDesign from "../../images/IconDesign"
+import IconDevelopment from "../../images/IconDevelopment"
+import IconSketch from "../../images/IconSketch"
+import IconInvisionStudio from "../../images/IconInvisionStudio"
+import IconWhimsical from "../../images/IconWhimsical"
+import IconReact from "../../images/IconReact"
+import IconTailwind from "../../images/IconTailwind"
+import IconGatsby from "../../images/IconGatsby"
+import IconNetlify from "../../images/IconNetlify"
 // import IconWhimsical from '../../images/IconWhimsical';
-import HacktopiaThumbnail from '../../images/hacktopia-thumbnail.jpg';
-import MarvinKnorrThumbnail from '../../images/thumbnail-marvinknorrlaw.jpg';
+import HacktopiaThumbnail from "../../images/hacktopia-thumbnail.jpg"
+import MarvinKnorrThumbnail from "../../images/thumbnail-marvinknorrlaw.jpg"
 
 export default function Services() {
-  const [activeTab, setActiveTab] = useState('design');
-  const [isDetailOpen, setDetailOpen] = useState(false);
+  const [activeTab, setActiveTab] = useState("design")
+  const [isDetailOpen, setDetailOpen] = useState(false)
 
-  const onDetailClick = (e) => {
+  const onDetailClick = e => {
     // `current` points to the mounted text input element
-    setDetailOpen(!e.currentTarget.open);
+    setDetailOpen(!e.currentTarget.open)
     // inputEl.current.focus();
-  };
+  }
 
-  const isDesignActive = activeTab === 'design';
-  const isDevelopmentActive = activeTab === 'development';
+  const isDesignActive = activeTab === "design"
+  const isDevelopmentActive = activeTab === "development"
   return (
-    <section className="bg-gray-100 py-32 px-4" id="services">
+    <section className="bg-gray-50 py-32 px-4" id="services">
       <h2 className="sr-only">Services</h2>
       <div className="xl-max-w-6xl mx-auto">
         <p className="max-w-xs px-4 md-max-w-full mx-auto lg-px-0 text-20 md-text-24 lg-text-30 font-medium font-sans leading-normal text-center mb-8">
-          I provide services in{' '}
-          <span className="font-serif text-red-500 text-24 lg-text-30">Design</span> and{' '}
-          <span className="font-serif text-red-500 text-24 lg-text-30">Development</span>
+          I provide services in{" "}
+          <span className="font-serif text-red-500 text-24 lg-text-30">
+            Design
+          </span>{" "}
+          and{" "}
+          <span className="font-serif text-red-500 text-24 lg-text-30">
+            Development
+          </span>
         </p>
         <p className="text-18 lg-text-24 font-light mx-auto max-w-ch-8">
-          I work across the spectrum between design and development to bridge the gap that
-          traditional organizations suffer from.
+          I work across the spectrum between design and development to bridge
+          the gap that traditional organizations suffer from.
         </p>
         <div className="mt-16 flex flex-col lg-flex-row justify-center lg-py-64 relative">
           <ServiceSummary
-            onTap={() => setActiveTab('design')}
+            onTap={() => setActiveTab("design")}
             isActiveCheck={isDesignActive}
-            initialPosX={'-30vw'}
+            initialPosX={"-30vw"}
             finalPosX="0"
             // initialPosY={'400px'}
             // finalPosY="0"
@@ -67,9 +72,9 @@ export default function Services() {
           />
 
           <ServiceSummary
-            onTap={() => setActiveTab('development')}
+            onTap={() => setActiveTab("development")}
             isActiveCheck={isDevelopmentActive}
-            initialPosX={'30vw'}
+            initialPosX={"30vw"}
             finalPosX="0"
             // initialPosY={'400px'}
             // finalPosY="0vh"
@@ -90,7 +95,7 @@ export default function Services() {
         </div>
       </div>
     </section>
-  );
+  )
 }
 
 function Arrow({ width, height, className }) {
@@ -113,5 +118,5 @@ function Arrow({ width, height, className }) {
       </defs>
       <use transform="rotate(-180 9.19 4.57)" xlinkHref="#a" />
     </svg>
-  );
+  )
 }

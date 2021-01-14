@@ -1,0 +1,5 @@
+{
+  "quotes": true,
+  "arrowParens": "avoid",
+  "semi": false
+}

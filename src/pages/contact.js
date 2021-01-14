@@ -1,20 +1,20 @@
-import React, { useState, useEffect } from 'react';
-import Layout from '../components/layout';
-import SEO from '../components/seo';
-import Header from '../components/header';
-import ThankYouSVG from '../images/ThankYou';
+import React, { useState, useEffect } from "react"
+import Layout from "../components/layout"
+import SEO from "../components/seo"
+import Header from "../components/header"
+import ThankYouSVG from "../images/ThankYou"
 
-const encode = (data) => {
+const encode = data => {
   return Object.keys(data)
-    .map((key) => encodeURIComponent(key) + '=' + encodeURIComponent(data[key]))
-    .join('&');
-};
+    .map(key => encodeURIComponent(key) + "=" + encodeURIComponent(data[key]))
+    .join("&")
+}
 
 export default function Contact({ location }) {
-  const [status, showThankYou] = useState('form');
+  const [status, showThankYou] = useState("form")
   useEffect(() => {
-    require('../../node_modules/mailtoui/dist/mailtoui-min.js').run();
-  });
+    require("../../node_modules/mailtoui/dist/mailtoui-min.js").run()
+  })
 
   return (
     <Layout path={location.pathname}>
@@ -33,34 +33,36 @@ export default function Contact({ location }) {
         ]}
       />
       <Header
-        primary={'Contact Me'}
+        primary={"Contact Me"}
         secondary={
           'Reach out to me below or send a message to my <a class="link text-18 mailtoui" href="mailto:modayilme@gmail.com" target="_blank" rel="noopener noreferrer"> email</a>.'
         }
       />
       <div className="flex flex-col mx-auto relative pt-16 pb-32 lg-pt-32 px-4">
-        {status === 'form' && (
+        {status === "form" && (
           <form
-            className="flex flex-col max-w-ch-20 mx-auto bg-gray-100 py-24 w-full shadow-md px-64 rounded -mt-64"
+            className="flex flex-col max-w-ch-20 mx-auto bg-gray-50 py-24 w-full shadow-md px-64 rounded -mt-64"
             name="contact"
             method="post"
             data-netlify="true"
-            onSubmit={(e) => {
-              const { email, subject, message } = e.target;
-              fetch('/', {
-                method: 'POST',
-                headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+            onSubmit={e => {
+              const { email, subject, message } = e.target
+              fetch("/", {
+                method: "POST",
+                headers: {
+                  "Content-Type": "application/x-www-form-urlencoded",
+                },
                 body: encode({
-                  'form-name': 'contact',
+                  "form-name": "contact",
                   email: email.value,
                   subject: subject.value,
                   message: message.value,
                 }),
               })
-                .then(() => showThankYou('thank-you'))
-                .catch((error) => alert(error));
+                .then(() => showThankYou("thank-you"))
+                .catch(error => alert(error))
 
-              e.preventDefault();
+              e.preventDefault()
             }}
           >
             <label htmlFor="email" className="text-14 mb-1">
@@ -107,13 +109,15 @@ export default function Contact({ location }) {
           </form>
         )}
 
-        {status === 'thank-you' && (
+        {status === "thank-you" && (
           <div className="flex flex-col max-w-md mx-auto max-w-xs bg-white w-full shadow-md p-8 rounded justify-center items-center min-h-64">
             <ThankYouSVG />
-            <p className="mt-4">I'll reach out as soon as possible to your message!</p>
+            <p className="mt-4">
+              I'll reach out as soon as possible to your message!
+            </p>
           </div>
         )}
       </div>
     </Layout>
-  );
+  )
 }

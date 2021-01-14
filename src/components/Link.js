@@ -1,30 +1,30 @@
-import React from 'react';
-import { Link as InternalLink } from 'gatsby';
-import IconLink from '../images/IconArrowLink';
+import React from "react"
+import { Link as InternalLink } from "gatsby"
+import IconLink from "../images/IconArrowLink"
 
 export default function Link({
-  className = '',
+  className = "",
   isExternal = false,
   to,
   title,
-  style = 'link',
+  styleType = "link",
   children,
 }) {
-  const button = `bg-blue`;
-  const link = `text-gray-800 text-14 font-sans font-medium transition duration-200 ease-in`;
-  const ctaLink = `${link} border-b-2 border-gray-400 hover-border-gray-600`;
-  const underline = `${link} border-b-2 border-transparent hover-border-gray-600`;
-  const styleType = // TODO: I'm sickened with myself
-    style === 'button'
+  const button = `bg-blue`
+  const link = `text-gray-800 text-14 font-sans font-medium transition duration-200 ease-in`
+  const ctaLink = `${link} border-b-2 border-gray-400 hover-border-gray-600`
+  const underline = `${link} border-b-2 border-gray-400 hover-border-gray-600`
+  const styleClass = // TODO: I'm sickened with myself
+    styleType === "button"
       ? button
-      : style === 'cta'
+      : styleType === "cta"
       ? ctaLink
-      : style === 'underline'
+      : styleType === "underline"
       ? underline
-      : link;
+      : link
   const linkToRender = isExternal ? (
     <a
-      className={`${styleType} ${className} `}
+      className={`${styleClass} ${className} `}
       href={to}
       target="_blank"
       rel="noopener noreferrer"
@@ -33,12 +33,18 @@ export default function Link({
       {children}
     </a>
   ) : (
-    <InternalLink className={`${className} ${styleType}`} to={to} title={title}>
-      <span className={style === 'cta' ? 'inline-block mr-4 ' : ''}>{children}</span>
-      {style === 'cta' && (
-        <IconLink className={style === 'cta' ? 'inline-block ml-4 ' : ''} />
+    <InternalLink
+      className={`${className} ${styleClass}`}
+      to={to}
+      title={title}
+    >
+      <span className={styleType === "cta" ? "inline-block mr-4 " : ""}>
+        {children}
+      </span>
+      {styleType === "cta" && (
+        <IconLink className={styleType === "cta" ? "inline-block ml-4 " : ""} />
       )}
     </InternalLink>
-  );
-  return linkToRender;
+  )
+  return linkToRender
 }

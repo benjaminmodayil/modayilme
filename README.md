@@ -1,15 +1,15 @@
-[![Netlify Status](https://api.netlify.com/api/v1/badges/474de5b3-8d8d-4496-b829-02299ed66b09/deploy-status)](https://app.netlify.com/sites/fervent-wozniak-85e598/deploys)
+Todo: Add Interesting links page
 
-# Ben Modayil's personal site 👨‍💻
+Interesting links:
 
-Hey there, this is my personal site for blogging/possible employers to look up.
+https://blog.anggriawan.com/2020/01/building-small-business-that-works.html
 
-It's a static site generated using [GatsbyJS](https://www.gatsbyjs.org/) and React.
+https://www.youtube.com/watch?v=DvhM_Npm3Bk
 
-Currently, my blogging setup uses markdown. I'm in the process of switching over the reins to Contentful or similar for pulling in data for the site.
+https://www.youtube.com/watch?v=73Ch_EL4YVc
 
-It uses serves a different post template depending on the `type` of post it reads in the post's frontmatter.
+https://www.youtube.com/watch?v=hG3UHNCUdzQ&feature=youtu.be
 
-I'll be linking up a personal case study for the site here soon.
+https://calibreapp.com/blog/investigate-animation-performance-with-devtools
 
-Site: [www.modayil.me](http://www.modayil.me)
+https://rafaelquintanilha.com/react-testing-library-common-scenarios/#scenario-7---multiple-api-calls
